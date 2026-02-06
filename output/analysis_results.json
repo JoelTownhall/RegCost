@@ -1,0 +1,329 @@
+{
+  "analysis_date": "2026-01-22T21:56:59.671409",
+  "metadata": {
+    "data_source": "legislation.gov.au",
+    "scope": "Federal regulations - In Force",
+    "is_sample": false,
+    "max_items": 500,
+    "collection": "all",
+    "analysis_date": "2026-01-22T21:56:58.983321"
+  },
+  "bc_results": {
+    "total_requirements": 1220,
+    "total_regulations": 10,
+    "regulations_analyzed": 10,
+    "by_department": {
+      "Treasury": {
+        "count": 1220,
+        "regulations": 10
+      }
+    },
+    "by_word": {
+      "must": 898,
+      "shall": 0,
+      "required": 322
+    },
+    "top_regulations": [
+      {
+        "id": "C2004A00491",
+        "title": "A New Tax System (Family Assistance) (Administration) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 507227,
+        "total_requirements": 411,
+        "counts_by_word": {
+          "must": 305,
+          "shall": 0,
+          "required": 106
+        }
+      },
+      {
+        "id": "C2004A00446",
+        "title": "A New Tax System (Goods and Services Tax) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 592549,
+        "total_requirements": 323,
+        "counts_by_word": {
+          "must": 202,
+          "shall": 0,
+          "required": 121
+        }
+      },
+      {
+        "id": "C2004A00637",
+        "title": "A New Tax System (Family Assistance and Related Measures) Act 2000",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 485839,
+        "total_requirements": 301,
+        "counts_by_word": {
+          "must": 241,
+          "shall": 0,
+          "required": 60
+        }
+      },
+      {
+        "id": "C2004A00490",
+        "title": "A New Tax System (Family Assistance) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 596249,
+        "total_requirements": 120,
+        "counts_by_word": {
+          "must": 100,
+          "shall": 0,
+          "required": 20
+        }
+      },
+      {
+        "id": "C2004A00467",
+        "title": "A New Tax System (Australian Business Number) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 61298,
+        "total_requirements": 39,
+        "counts_by_word": {
+          "must": 35,
+          "shall": 0,
+          "required": 4
+        }
+      },
+      {
+        "id": "C2004A00448",
+        "title": "A New Tax System (Goods and Services Tax Transition) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 54678,
+        "total_requirements": 26,
+        "counts_by_word": {
+          "must": 15,
+          "shall": 0,
+          "required": 11
+        }
+      },
+      {
+        "id": "C2005A00003",
+        "title": "A New Tax System (Goods and Services Tax Imposition (Recipients)\u2014General) Act 2005",
+        "department": "Treasury",
+        "year": 2005,
+        "text_length": 2065,
+        "total_requirements": 0,
+        "counts_by_word": {
+          "must": 0,
+          "shall": 0,
+          "required": 0
+        }
+      },
+      {
+        "id": "C2004A00460",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014Customs) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2799,
+        "total_requirements": 0,
+        "counts_by_word": {
+          "must": 0,
+          "shall": 0,
+          "required": 0
+        }
+      },
+      {
+        "id": "C2004A00461",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014Excise) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2933,
+        "total_requirements": 0,
+        "counts_by_word": {
+          "must": 0,
+          "shall": 0,
+          "required": 0
+        }
+      },
+      {
+        "id": "C2004A00462",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014General) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2859,
+        "total_requirements": 0,
+        "counts_by_word": {
+          "must": 0,
+          "shall": 0,
+          "required": 0
+        }
+      }
+    ]
+  },
+  "regdata_results": {
+    "total_restrictions": 1397,
+    "total_regulations": 10,
+    "regulations_analyzed": 10,
+    "by_department": {
+      "Treasury": {
+        "count": 1397,
+        "regulations": 10
+      }
+    },
+    "by_word": {
+      "may not": 10,
+      "shall": 0,
+      "must": 990,
+      "required": 357,
+      "prohibited": 40
+    },
+    "top_regulations": [
+      {
+        "id": "C2004A00491",
+        "title": "A New Tax System (Family Assistance) (Administration) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 507227,
+        "total_restrictions": 497,
+        "counts_by_word": {
+          "may not": 1,
+          "shall": 0,
+          "must": 343,
+          "required": 115,
+          "prohibited": 38
+        }
+      },
+      {
+        "id": "C2004A00446",
+        "title": "A New Tax System (Goods and Services Tax) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 592549,
+        "total_restrictions": 364,
+        "counts_by_word": {
+          "may not": 3,
+          "shall": 0,
+          "must": 218,
+          "required": 143,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00637",
+        "title": "A New Tax System (Family Assistance and Related Measures) Act 2000",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 485839,
+        "total_restrictions": 317,
+        "counts_by_word": {
+          "may not": 3,
+          "shall": 0,
+          "must": 254,
+          "required": 60,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00490",
+        "title": "A New Tax System (Family Assistance) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 596249,
+        "total_restrictions": 137,
+        "counts_by_word": {
+          "may not": 2,
+          "shall": 0,
+          "must": 114,
+          "required": 21,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00467",
+        "title": "A New Tax System (Australian Business Number) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 61298,
+        "total_restrictions": 49,
+        "counts_by_word": {
+          "may not": 0,
+          "shall": 0,
+          "must": 43,
+          "required": 4,
+          "prohibited": 2
+        }
+      },
+      {
+        "id": "C2004A00448",
+        "title": "A New Tax System (Goods and Services Tax Transition) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 54678,
+        "total_restrictions": 33,
+        "counts_by_word": {
+          "may not": 1,
+          "shall": 0,
+          "must": 18,
+          "required": 14,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2005A00003",
+        "title": "A New Tax System (Goods and Services Tax Imposition (Recipients)\u2014General) Act 2005",
+        "department": "Treasury",
+        "year": 2005,
+        "text_length": 2065,
+        "total_restrictions": 0,
+        "counts_by_word": {
+          "may not": 0,
+          "shall": 0,
+          "must": 0,
+          "required": 0,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00460",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014Customs) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2799,
+        "total_restrictions": 0,
+        "counts_by_word": {
+          "may not": 0,
+          "shall": 0,
+          "must": 0,
+          "required": 0,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00461",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014Excise) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2933,
+        "total_restrictions": 0,
+        "counts_by_word": {
+          "may not": 0,
+          "shall": 0,
+          "must": 0,
+          "required": 0,
+          "prohibited": 0
+        }
+      },
+      {
+        "id": "C2004A00462",
+        "title": "A New Tax System (Goods and Services Tax Imposition\u2014General) Act 1999",
+        "department": "Treasury",
+        "year": 2004,
+        "text_length": 2859,
+        "total_restrictions": 0,
+        "counts_by_word": {
+          "may not": 0,
+          "shall": 0,
+          "must": 0,
+          "required": 0,
+          "prohibited": 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-01-30T17:42:11.427357",
+  "by_industry": {
+    "O": {
+      "primary_count": 319,
+      "primary_regdata": 22693,
+      "secondary_count": 2061,
+      "secondary_regdata": 20627
+    },
+    "M": {
+      "primary_count": 27,
+      "primary_regdata": 4734,
+      "secondary_count": 282,
+      "secondary_regdata": 11234
+    },
+    "F": {
+      "primary_count": 28,
+      "primary_regdata": 1692,
+      "secondary_count": 6654,
+      "secondary_regdata": 12056
+    },
+    "K": {
+      "primary_count": 275,
+      "primary_regdata": 18643,
+      "secondary_count": 1982,
+      "secondary_regdata": 31297
+    },
+    "D": {
+      "primary_count": 58,
+      "primary_regdata": 5382,
+      "secondary_count": 925,
+      "secondary_regdata": 6752
+    },
+    "I": {
+      "primary_count": 66,
+      "primary_regdata": 5449,
+      "secondary_count": 7276,
+      "secondary_regdata": 24700
+    },
+    "S": {
+      "primary_count": 26,
+      "primary_regdata": 1918,
+      "secondary_count": 197,
+      "secondary_regdata": 1204
+    },
+    "N": {
+      "primary_count": 44,
+      "primary_regdata": 3498,
+      "secondary_count": 351,
+      "secondary_regdata": 2090
+    },
+    "A": {
+      "primary_count": 25,
+      "primary_regdata": 3097,
+      "secondary_count": 200,
+      "secondary_regdata": 4767
+    },
+    "J": {
+      "primary_count": 37,
+      "primary_regdata": 3719,
+      "secondary_count": 490,
+      "secondary_regdata": 8490
+    },
+    "Q": {
+      "primary_count": 69,
+      "primary_regdata": 7683,
+      "secondary_count": 775,
+      "secondary_regdata": 16623
+    },
+    "X": {
+      "primary_count": 15,
+      "primary_regdata": 2178,
+      "secondary_count": 17,
+      "secondary_regdata": 56
+    },
+    "L": {
+      "primary_count": 40,
+      "primary_regdata": 3760,
+      "secondary_count": 132,
+      "secondary_regdata": 2853
+    },
+    "U": {
+      "primary_count": 55,
+      "primary_regdata": 5990,
+      "secondary_count": 373,
+      "secondary_regdata": 4307
+    },
+    "R": {
+      "primary_count": 31,
+      "primary_regdata": 2462,
+      "secondary_count": 246,
+      "secondary_regdata": 5480
+    },
+    "P": {
+      "primary_count": 39,
+      "primary_regdata": 3426,
+      "secondary_count": 290,
+      "secondary_regdata": 4787
+    },
+    "C": {
+      "primary_count": 17,
+      "primary_regdata": 2717,
+      "secondary_count": 161,
+      "secondary_regdata": 2262
+    },
+    "B": {
+      "primary_count": 49,
+      "primary_regdata": 3378,
+      "secondary_count": 201,
+      "secondary_regdata": 2302
+    },
+    "G": {
+      "primary_count": 2,
+      "primary_regdata": 833,
+      "secondary_count": 134,
+      "secondary_regdata": 2704
+    },
+    "E": {
+      "primary_count": 26,
+      "primary_regdata": 1663,
+      "secondary_count": 138,
+      "secondary_regdata": 2316
+    },
+    "H": {
+      "primary_count": 3,
+      "primary_regdata": 76,
+      "secondary_count": 18,
+      "secondary_regdata": 32
+    }
+  }
+}

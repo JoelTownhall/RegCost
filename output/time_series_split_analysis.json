@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-01-30T17:45:34.983055",
+  "results": {
+    "2010": {
+      "primary": {
+        "count": 895,
+        "bc": 69790,
+        "regdata": 83157
+      },
+      "secondary": {
+        "count": 15873,
+        "bc": 40061,
+        "regdata": 46170
+      }
+    },
+    "2015": {
+      "primary": {
+        "count": 1044,
+        "bc": 77556,
+        "regdata": 92598
+      },
+      "secondary": {
+        "count": 17557,
+        "bc": 56353,
+        "regdata": 63949
+      }
+    },
+    "2020": {
+      "primary": {
+        "count": 1131,
+        "bc": 81642,
+        "regdata": 97639
+      },
+      "secondary": {
+        "count": 19983,
+        "bc": 86727,
+        "regdata": 98219
+      }
+    },
+    "2025": {
+      "primary": {
+        "count": 1251,
+        "bc": 87726,
+        "regdata": 104991
+      },
+      "secondary": {
+        "count": 22903,
+        "bc": 148885,
+        "regdata": 166939
+      }
+    }
+  }
+}

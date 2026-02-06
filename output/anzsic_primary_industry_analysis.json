@@ -1,0 +1,441 @@
+{
+  "generated_at": "2026-01-29T22:27:58.594955",
+  "methodology": "ANZSIC Primary Industry Classification (1-digit)",
+  "total_documents": 24173,
+  "time_periods": [
+    "2010-07-01",
+    "2015-07-01",
+    "2020-07-01",
+    "2025-07-01"
+  ],
+  "by_time_period": {
+    "2010-07-01": {
+      "O": {
+        "document_count": 1177,
+        "bc_total": 25083,
+        "regdata_total": 30105
+      },
+      "D": {
+        "document_count": 695,
+        "bc_total": 5374,
+        "regdata_total": 6161
+      },
+      "F": {
+        "document_count": 5665,
+        "bc_total": 7569,
+        "regdata_total": 8057
+      },
+      "K": {
+        "document_count": 622,
+        "bc_total": 19237,
+        "regdata_total": 22165
+      },
+      "I": {
+        "document_count": 7153,
+        "bc_total": 14730,
+        "regdata_total": 18000
+      },
+      "B": {
+        "document_count": 160,
+        "bc_total": 2105,
+        "regdata_total": 2324
+      },
+      "S": {
+        "document_count": 143,
+        "bc_total": 2398,
+        "regdata_total": 2760
+      },
+      "N": {
+        "document_count": 263,
+        "bc_total": 2706,
+        "regdata_total": 3049
+      },
+      "A": {
+        "document_count": 37,
+        "bc_total": 2553,
+        "regdata_total": 3385
+      },
+      "J": {
+        "document_count": 179,
+        "bc_total": 3528,
+        "regdata_total": 4475
+      },
+      "Q": {
+        "document_count": 53,
+        "bc_total": 5118,
+        "regdata_total": 5910
+      },
+      "M": {
+        "document_count": 193,
+        "bc_total": 4655,
+        "regdata_total": 5343
+      },
+      "R": {
+        "document_count": 106,
+        "bc_total": 2650,
+        "regdata_total": 3415
+      },
+      "L": {
+        "document_count": 94,
+        "bc_total": 3595,
+        "regdata_total": 4197
+      },
+      "P": {
+        "document_count": 68,
+        "bc_total": 2633,
+        "regdata_total": 3037
+      },
+      "E": {
+        "document_count": 23,
+        "bc_total": 811,
+        "regdata_total": 903
+      },
+      "G": {
+        "document_count": 22,
+        "bc_total": 1052,
+        "regdata_total": 1304
+      },
+      "U": {
+        "document_count": 31,
+        "bc_total": 1814,
+        "regdata_total": 2098
+      },
+      "C": {
+        "document_count": 76,
+        "bc_total": 1856,
+        "regdata_total": 2086
+      },
+      "H": {
+        "document_count": 6,
+        "bc_total": 124,
+        "regdata_total": 169
+      },
+      "X": {
+        "document_count": 2,
+        "bc_total": 260,
+        "regdata_total": 384
+      }
+    },
+    "2015-07-01": {
+      "O": {
+        "document_count": 1330,
+        "bc_total": 27122,
+        "regdata_total": 32595
+      },
+      "D": {
+        "document_count": 754,
+        "bc_total": 6621,
+        "regdata_total": 7558
+      },
+      "F": {
+        "document_count": 6596,
+        "bc_total": 8594,
+        "regdata_total": 9086
+      },
+      "K": {
+        "document_count": 797,
+        "bc_total": 24998,
+        "regdata_total": 28378
+      },
+      "I": {
+        "document_count": 7283,
+        "bc_total": 17413,
+        "regdata_total": 20976
+      },
+      "B": {
+        "document_count": 202,
+        "bc_total": 2631,
+        "regdata_total": 2921
+      },
+      "S": {
+        "document_count": 152,
+        "bc_total": 2464,
+        "regdata_total": 2833
+      },
+      "N": {
+        "document_count": 281,
+        "bc_total": 3085,
+        "regdata_total": 3438
+      },
+      "A": {
+        "document_count": 58,
+        "bc_total": 3538,
+        "regdata_total": 4668
+      },
+      "J": {
+        "document_count": 195,
+        "bc_total": 3969,
+        "regdata_total": 4988
+      },
+      "Q": {
+        "document_count": 117,
+        "bc_total": 7597,
+        "regdata_total": 8942
+      },
+      "M": {
+        "document_count": 265,
+        "bc_total": 7808,
+        "regdata_total": 8715
+      },
+      "R": {
+        "document_count": 127,
+        "bc_total": 3157,
+        "regdata_total": 4067
+      },
+      "L": {
+        "document_count": 105,
+        "bc_total": 3726,
+        "regdata_total": 4345
+      },
+      "P": {
+        "document_count": 112,
+        "bc_total": 3958,
+        "regdata_total": 4522
+      },
+      "E": {
+        "document_count": 31,
+        "bc_total": 1417,
+        "regdata_total": 1646
+      },
+      "G": {
+        "document_count": 45,
+        "bc_total": 1198,
+        "regdata_total": 1462
+      },
+      "U": {
+        "document_count": 43,
+        "bc_total": 1836,
+        "regdata_total": 2130
+      },
+      "C": {
+        "document_count": 98,
+        "bc_total": 2391,
+        "regdata_total": 2720
+      },
+      "H": {
+        "document_count": 7,
+        "bc_total": 126,
+        "regdata_total": 172
+      },
+      "X": {
+        "document_count": 3,
+        "bc_total": 260,
+        "regdata_total": 385
+      }
+    },
+    "2020-07-01": {
+      "O": {
+        "document_count": 1870,
+        "bc_total": 31189,
+        "regdata_total": 37389
+      },
+      "D": {
+        "document_count": 839,
+        "bc_total": 7800,
+        "regdata_total": 8875
+      },
+      "F": {
+        "document_count": 6615,
+        "bc_total": 9738,
+        "regdata_total": 10578
+      },
+      "K": {
+        "document_count": 1410,
+        "bc_total": 32625,
+        "regdata_total": 36742
+      },
+      "I": {
+        "document_count": 7434,
+        "bc_total": 23799,
+        "regdata_total": 27981
+      },
+      "B": {
+        "document_count": 244,
+        "bc_total": 3254,
+        "regdata_total": 3602
+      },
+      "S": {
+        "document_count": 171,
+        "bc_total": 2618,
+        "regdata_total": 3007
+      },
+      "N": {
+        "document_count": 301,
+        "bc_total": 3195,
+        "regdata_total": 3570
+      },
+      "A": {
+        "document_count": 165,
+        "bc_total": 4891,
+        "regdata_total": 6594
+      },
+      "J": {
+        "document_count": 303,
+        "bc_total": 5855,
+        "regdata_total": 7190
+      },
+      "Q": {
+        "document_count": 543,
+        "bc_total": 10540,
+        "regdata_total": 12122
+      },
+      "M": {
+        "document_count": 350,
+        "bc_total": 8766,
+        "regdata_total": 9761
+      },
+      "R": {
+        "document_count": 184,
+        "bc_total": 3836,
+        "regdata_total": 4897
+      },
+      "L": {
+        "document_count": 126,
+        "bc_total": 4467,
+        "regdata_total": 5287
+      },
+      "P": {
+        "document_count": 217,
+        "bc_total": 5800,
+        "regdata_total": 6525
+      },
+      "E": {
+        "document_count": 52,
+        "bc_total": 2000,
+        "regdata_total": 2369
+      },
+      "G": {
+        "document_count": 100,
+        "bc_total": 2739,
+        "regdata_total": 3181
+      },
+      "U": {
+        "document_count": 48,
+        "bc_total": 1905,
+        "regdata_total": 2224
+      },
+      "C": {
+        "document_count": 124,
+        "bc_total": 2931,
+        "regdata_total": 3355
+      },
+      "H": {
+        "document_count": 11,
+        "bc_total": 136,
+        "regdata_total": 182
+      },
+      "X": {
+        "document_count": 7,
+        "bc_total": 285,
+        "regdata_total": 427
+      }
+    },
+    "2025-07-01": {
+      "O": {
+        "document_count": 2434,
+        "bc_total": 37099,
+        "regdata_total": 44166
+      },
+      "D": {
+        "document_count": 956,
+        "bc_total": 10371,
+        "regdata_total": 11725
+      },
+      "F": {
+        "document_count": 6648,
+        "bc_total": 13902,
+        "regdata_total": 15283
+      },
+      "K": {
+        "document_count": 2117,
+        "bc_total": 49316,
+        "regdata_total": 54548
+      },
+      "I": {
+        "document_count": 7593,
+        "bc_total": 26474,
+        "regdata_total": 31086
+      },
+      "B": {
+        "document_count": 270,
+        "bc_total": 4496,
+        "regdata_total": 4922
+      },
+      "S": {
+        "document_count": 233,
+        "bc_total": 3395,
+        "regdata_total": 3838
+      },
+      "N": {
+        "document_count": 333,
+        "bc_total": 3834,
+        "regdata_total": 4370
+      },
+      "A": {
+        "document_count": 237,
+        "bc_total": 8588,
+        "regdata_total": 10422
+      },
+      "J": {
+        "document_count": 496,
+        "bc_total": 10637,
+        "regdata_total": 13200
+      },
+      "Q": {
+        "document_count": 1128,
+        "bc_total": 23893,
+        "regdata_total": 26930
+      },
+      "M": {
+        "document_count": 458,
+        "bc_total": 10519,
+        "regdata_total": 11662
+      },
+      "R": {
+        "document_count": 262,
+        "bc_total": 7115,
+        "regdata_total": 8565
+      },
+      "L": {
+        "document_count": 162,
+        "bc_total": 5134,
+        "regdata_total": 6085
+      },
+      "P": {
+        "document_count": 342,
+        "bc_total": 7947,
+        "regdata_total": 8928
+      },
+      "E": {
+        "document_count": 95,
+        "bc_total": 3949,
+        "regdata_total": 4540
+      },
+      "G": {
+        "document_count": 140,
+        "bc_total": 3474,
+        "regdata_total": 4038
+      },
+      "U": {
+        "document_count": 62,
+        "bc_total": 1918,
+        "regdata_total": 2244
+      },
+      "C": {
+        "document_count": 152,
+        "bc_total": 3957,
+        "regdata_total": 4578
+      },
+      "H": {
+        "document_count": 21,
+        "bc_total": 152,
+        "regdata_total": 198
+      },
+      "X": {
+        "document_count": 15,
+        "bc_total": 441,
+        "regdata_total": 602
+      }
+    }
+  }
+}

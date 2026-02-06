@@ -1,0 +1,274 @@
+ cd C:\Users\joelr\projects\regcost
+  python playwright_scraper.py --collection all --delay 1.5 --resume
+
+
+================================================================================
+AUSTRALIAN FEDERAL REGULATORY BURDEN ANALYSIS
+Methodology Summary and Next Steps
+================================================================================
+Date: 21 January 2026
+Author: Regulatory Analysis Project
+
+--------------------------------------------------------------------------------
+1. OBJECTIVE
+--------------------------------------------------------------------------------
+
+To measure the current stock of regulatory burden in Australian federal
+legislation using two established methodologies:
+
+  1. BC-style Requirements Counting (British Columbia methodology)
+  2. RegData-style Restrictions Counting (Mercatus Center/QuantGov methodology)
+
+--------------------------------------------------------------------------------
+2. DATA SOURCE
+--------------------------------------------------------------------------------
+
+Source:     Open Australian Legal Corpus
+            https://huggingface.co/datasets/isaacus/open-australian-legal-corpus
+
+Provider:   Isaacus (via Hugging Face)
+DOI:        10.57967/hf/2833
+
+The corpus aggregates legal documents from multiple Australian sources including
+the Federal Register of Legislation (legislation.gov.au).
+
+Initial Approach Attempted:
+---------------------------
+We first attempted to scrape directly from legislation.gov.au but encountered:
+  - JavaScript-rendered pages (Angular SPA) difficult to parse
+  - Frequent timeouts and HTTP 500 errors
+  - Pagination not functioning correctly with simple HTTP requests
+
+Final Approach Used:
+--------------------
+Downloaded the pre-compiled Open Australian Legal Corpus from Hugging Face,
+which contains 232,560 documents from various Australian legal sources.
+
+--------------------------------------------------------------------------------
+3. DATA FILTERING
+--------------------------------------------------------------------------------
+
+From the full corpus, we filtered for:
+
+  Source:  "federal_register_of_legislation" only
+  Types:   "primary_legislation" (Acts) and "secondary_legislation" (Regulations)
+
+Excluded:
+  - Court decisions (federal_court_of_australia, high_court_of_australia)
+  - State/territory legislation (NSW, QLD, SA, TAS, WA)
+  - Bills (not yet enacted)
+
+Result: 32,355 documents
+  - 4,818 primary legislation (Acts)
+  - 27,537 secondary legislation (Regulations/Legislative Instruments)
+
+--------------------------------------------------------------------------------
+4. COUNTING METHODOLOGIES
+--------------------------------------------------------------------------------
+
+BC Method (Requirements):
+-------------------------
+Counts instances of binding obligation words:
+  - "must"
+  - "shall"
+  - "required"
+
+Excludes:
+  - Prohibitions: "must not", "shall not"
+  - Discretionary language: "may"
+
+RegData Method (Restrictions):
+------------------------------
+Counts restriction words per Mercatus Center approach:
+  - "must"
+  - "shall"
+  - "required"
+  - "may not"
+  - "prohibited"
+
+Key Difference: RegData includes prohibitions, BC method excludes them.
+
+--------------------------------------------------------------------------------
+5. RESULTS
+--------------------------------------------------------------------------------
+
+Documents Analyzed:     32,355
+
+BC Method Total:        424,279 requirements
+  - must:               252,605
+  - shall:              104,588
+  - required:           67,086
+
+RegData Method Total:   499,359 restrictions
+  - must:               294,612
+  - shall:              116,080
+  - required:           74,908
+  - may not:            5,447
+  - prohibited:         8,312
+
+Difference:             +17.7% (RegData higher due to including prohibitions)
+
+--------------------------------------------------------------------------------
+6. KNOWN LIMITATIONS AND UNCERTAINTIES
+--------------------------------------------------------------------------------
+
+** CRITICAL: Data Verification Required **
+
+The following aspects need confirmation before these results can be relied upon:
+
+A. Currency of Data
+   - The Open Australian Legal Corpus was last updated [date unknown]
+   - Need to verify the corpus reflects CURRENT in-force legislation
+   - Some documents may be historical versions or repealed legislation
+
+B. In-Force Status
+   - The corpus may include legislation that has since been repealed
+   - Need to cross-reference against current Federal Register of Legislation
+   - The corpus "when_scraped" field should be checked for recency
+
+C. Commonwealth Only
+   - We filtered for "federal_register_of_legislation" source
+   - Need to confirm no state/territory legislation was inadvertently included
+   - Some instruments may apply to territories (ACT, NT) - clarify if in scope
+
+D. Document Completeness
+   - Some legislation text may be truncated or incomplete
+   - PDF extraction quality varies
+   - Schedules and annexures may be missing
+
+E. Counting Accuracy
+   - Simple word matching does not account for context
+   - "must" in a definition vs. "must" as an obligation counted equally
+   - Repeated provisions in schedules may inflate counts
+
+--------------------------------------------------------------------------------
+7. RECOMMENDED NEXT STEPS
+--------------------------------------------------------------------------------
+
+PHASE 1: Data Validation (Priority: HIGH)
+-----------------------------------------
+
+1.1 Verify Currency
+    - Check the "when_scraped" dates in the corpus
+    - Compare document count against current legislation.gov.au statistics
+    - Identify any major Acts/Regulations missing from the corpus
+
+1.2 Confirm In-Force Status
+    - Cross-reference a sample (e.g., 100 documents) against legislation.gov.au
+    - Check if the corpus includes repealed legislation
+    - Consider using legislation.gov.au's "In Force" filter as ground truth
+
+1.3 Validate Commonwealth Scope
+    - Review jurisdiction field for all documents
+    - Confirm exclusion of state/territory instruments
+    - Document any edge cases (e.g., applied laws, Norfolk Island)
+
+1.4 Manual Spot Checks
+    - Select 10-20 major Acts and manually verify word counts
+    - Compare our counts against the actual legislation text
+    - Identify any systematic counting errors
+
+
+PHASE 2: Refresh Data Source (Priority: HIGH)
+---------------------------------------------
+
+2.1 Direct Scraping Improvement
+    - Implement Playwright/Selenium for JavaScript rendering
+    - Build robust scraper that can handle legislation.gov.au
+    - Focus on "In Force" principal legislation only
+
+2.2 Alternative: Use Official API
+    - Investigate if legislation.gov.au has an official API
+    - Contact Office of Parliamentary Counsel for data access options
+    - Consider Freedom of Information request for bulk data
+
+2.3 Establish Update Schedule
+    - Determine how frequently to refresh the data
+    - Build automated pipeline for regular updates
+    - Track changes between snapshots
+
+
+PHASE 3: Time Series Analysis (Priority: MEDIUM)
+------------------------------------------------
+
+3.1 Historical Data Collection
+    - Identify sources for historical legislation text
+    - Options:
+      a) Historical versions on legislation.gov.au
+      b) AustLII archives
+      c) Parliamentary library resources
+      d) Wayback Machine/Internet Archive
+
+3.2 Define Time Points
+    - Annual snapshots (e.g., end of each calendar year)
+    - Or by Parliamentary term
+    - Go back to 1990, 2000, or as far as data permits
+
+3.3 Tracking Methodology
+    - Count at each time point using same methodology
+    - Track: total burden, by department, by type (Act vs Regulation)
+    - Account for machinery of government changes
+
+3.4 Visualization
+    - Line chart showing burden over time
+    - Stacked area chart by department/portfolio
+    - Annotations for major regulatory reform events
+
+
+PHASE 4: Enhanced Analysis (Priority: LOW)
+------------------------------------------
+
+4.1 Industry Classification
+    - Use QuantGov's industry mapping methodology
+    - Identify which regulations affect which industries
+    - Requires machine learning/NLP techniques
+
+4.2 Complexity Metrics
+    - Word count, sentence length, readability scores
+    - Cross-references and dependencies between instruments
+    - Amendment frequency
+
+4.3 Comparison Studies
+    - Compare against other jurisdictions (UK, Canada, NZ)
+    - Benchmark against BC's published counts
+    - Track Australia's relative regulatory burden
+
+--------------------------------------------------------------------------------
+8. FILES PRODUCED
+--------------------------------------------------------------------------------
+
+Data Files:
+  data/regulations_data.json          - Full legislation corpus (738 MB)
+  data/federal_legislation_corpus.json - Alternative format (737 MB)
+
+Output Files:
+  output/regulatory_burden_report.pdf  - One-page visual report
+  output/analysis_results.json         - Detailed results in JSON
+  output/comparison_chart.png          - Bar chart comparison
+  output/methodology_and_next_steps.txt - This document
+
+Code Files:
+  main.py                - Main orchestration script
+  download_corpus.py     - Hugging Face corpus downloader
+  bc_counter.py          - BC methodology implementation
+  regdata_counter.py     - RegData methodology implementation
+  report_generator.py    - PDF report generator
+  scraper.py             - Direct scraping (backup approach)
+  config.py              - Configuration settings
+
+--------------------------------------------------------------------------------
+9. CONTACTS AND REFERENCES
+--------------------------------------------------------------------------------
+
+Data Sources:
+  - Federal Register of Legislation: https://www.legislation.gov.au/
+  - Open Australian Legal Corpus: https://huggingface.co/datasets/isaacus/open-australian-legal-corpus
+
+Methodology References:
+  - BC Regulatory Requirements Count: https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/regulatory-reform
+  - Mercatus RegData: https://www.mercatus.org/research/regdata
+  - QuantGov: https://www.quantgov.org/
+
+================================================================================
+END OF REPORT
+================================================================================

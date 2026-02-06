@@ -1,0 +1,501 @@
+{
+  "generated_at": "2026-01-29T17:45:57.165240",
+  "total_documents": 24173,
+  "time_periods": [
+    2010,
+    2015,
+    2020,
+    2025
+  ],
+  "methodology": "CEDA RegCost - ANZSIC Industry Classification",
+  "by_time_period": {
+    "2010": {
+      "_Unclassified": {
+        "total_restrictions": 60329,
+        "requirements": 50224,
+        "prohibitions": 10105,
+        "document_count": 573
+      },
+      "A_Agriculture": {
+        "total_restrictions": 11553,
+        "requirements": 9746,
+        "prohibitions": 1807,
+        "document_count": 66
+      },
+      "B_Mining": {
+        "total_restrictions": 13924,
+        "requirements": 11884,
+        "prohibitions": 2040,
+        "document_count": 78
+      },
+      "C_Manufacturing": {
+        "total_restrictions": 13594,
+        "requirements": 11559,
+        "prohibitions": 2035,
+        "document_count": 73
+      },
+      "D_Electricity_Gas_Water_Waste": {
+        "total_restrictions": 16278,
+        "requirements": 13952,
+        "prohibitions": 2326,
+        "document_count": 90
+      },
+      "E_Construction": {
+        "total_restrictions": 11807,
+        "requirements": 9960,
+        "prohibitions": 1847,
+        "document_count": 67
+      },
+      "F_Wholesale_Trade": {
+        "total_restrictions": 11610,
+        "requirements": 9795,
+        "prohibitions": 1815,
+        "document_count": 70
+      },
+      "G_Retail_Trade": {
+        "total_restrictions": 11959,
+        "requirements": 10028,
+        "prohibitions": 1931,
+        "document_count": 69
+      },
+      "H_Accommodation_Food": {
+        "total_restrictions": 11614,
+        "requirements": 9794,
+        "prohibitions": 1820,
+        "document_count": 68
+      },
+      "I_Transport_Postal_Warehousing": {
+        "total_restrictions": 14325,
+        "requirements": 11801,
+        "prohibitions": 2524,
+        "document_count": 85
+      },
+      "J_Information_Media_Telecom": {
+        "total_restrictions": 14818,
+        "requirements": 12312,
+        "prohibitions": 2506,
+        "document_count": 85
+      },
+      "K_Financial_Insurance": {
+        "total_restrictions": 18225,
+        "requirements": 15305,
+        "prohibitions": 2920,
+        "document_count": 144
+      },
+      "L_Rental_Real_Estate": {
+        "total_restrictions": 12423,
+        "requirements": 10494,
+        "prohibitions": 1929,
+        "document_count": 81
+      },
+      "M_Professional_Scientific_Technical": {
+        "total_restrictions": 12502,
+        "requirements": 10563,
+        "prohibitions": 1939,
+        "document_count": 79
+      },
+      "N_Administrative_Support": {
+        "total_restrictions": 17151,
+        "requirements": 14346,
+        "prohibitions": 2805,
+        "document_count": 104
+      },
+      "O_Public_Administration_Safety": {
+        "total_restrictions": 24046,
+        "requirements": 20108,
+        "prohibitions": 3938,
+        "document_count": 130
+      },
+      "P_Education_Training": {
+        "total_restrictions": 13716,
+        "requirements": 11577,
+        "prohibitions": 2139,
+        "document_count": 75
+      },
+      "Q_Health_Social_Assistance": {
+        "total_restrictions": 17574,
+        "requirements": 14861,
+        "prohibitions": 2713,
+        "document_count": 94
+      },
+      "R_Arts_Recreation": {
+        "total_restrictions": 12062,
+        "requirements": 10089,
+        "prohibitions": 1973,
+        "document_count": 71
+      },
+      "S_Other_Services": {
+        "total_restrictions": 15261,
+        "requirements": 13023,
+        "prohibitions": 2238,
+        "document_count": 95
+      }
+    },
+    "2015": {
+      "_Unclassified": {
+        "total_restrictions": 64680,
+        "requirements": 53783,
+        "prohibitions": 10897,
+        "document_count": 649
+      },
+      "A_Agriculture": {
+        "total_restrictions": 14262,
+        "requirements": 12049,
+        "prohibitions": 2213,
+        "document_count": 89
+      },
+      "B_Mining": {
+        "total_restrictions": 16228,
+        "requirements": 13884,
+        "prohibitions": 2344,
+        "document_count": 102
+      },
+      "C_Manufacturing": {
+        "total_restrictions": 15932,
+        "requirements": 13597,
+        "prohibitions": 2335,
+        "document_count": 95
+      },
+      "D_Electricity_Gas_Water_Waste": {
+        "total_restrictions": 18948,
+        "requirements": 16255,
+        "prohibitions": 2693,
+        "document_count": 118
+      },
+      "E_Construction": {
+        "total_restrictions": 14222,
+        "requirements": 12075,
+        "prohibitions": 2147,
+        "document_count": 90
+      },
+      "F_Wholesale_Trade": {
+        "total_restrictions": 13943,
+        "requirements": 11826,
+        "prohibitions": 2117,
+        "document_count": 94
+      },
+      "G_Retail_Trade": {
+        "total_restrictions": 14326,
+        "requirements": 12063,
+        "prohibitions": 2263,
+        "document_count": 92
+      },
+      "H_Accommodation_Food": {
+        "total_restrictions": 13769,
+        "requirements": 11668,
+        "prohibitions": 2101,
+        "document_count": 89
+      },
+      "I_Transport_Postal_Warehousing": {
+        "total_restrictions": 17292,
+        "requirements": 14363,
+        "prohibitions": 2929,
+        "document_count": 111
+      },
+      "J_Information_Media_Telecom": {
+        "total_restrictions": 17188,
+        "requirements": 14367,
+        "prohibitions": 2821,
+        "document_count": 109
+      },
+      "K_Financial_Insurance": {
+        "total_restrictions": 21887,
+        "requirements": 18433,
+        "prohibitions": 3454,
+        "document_count": 176
+      },
+      "L_Rental_Real_Estate": {
+        "total_restrictions": 14617,
+        "requirements": 12378,
+        "prohibitions": 2239,
+        "document_count": 103
+      },
+      "M_Professional_Scientific_Technical": {
+        "total_restrictions": 14922,
+        "requirements": 12662,
+        "prohibitions": 2260,
+        "document_count": 103
+      },
+      "N_Administrative_Support": {
+        "total_restrictions": 19960,
+        "requirements": 16753,
+        "prohibitions": 3207,
+        "document_count": 130
+      },
+      "O_Public_Administration_Safety": {
+        "total_restrictions": 27776,
+        "requirements": 23376,
+        "prohibitions": 4400,
+        "document_count": 164
+      },
+      "P_Education_Training": {
+        "total_restrictions": 16491,
+        "requirements": 13971,
+        "prohibitions": 2520,
+        "document_count": 103
+      },
+      "Q_Health_Social_Assistance": {
+        "total_restrictions": 21810,
+        "requirements": 18441,
+        "prohibitions": 3369,
+        "document_count": 123
+      },
+      "R_Arts_Recreation": {
+        "total_restrictions": 15125,
+        "requirements": 12808,
+        "prohibitions": 2317,
+        "document_count": 95
+      },
+      "S_Other_Services": {
+        "total_restrictions": 17457,
+        "requirements": 14909,
+        "prohibitions": 2548,
+        "document_count": 118
+      }
+    },
+    "2020": {
+      "_Unclassified": {
+        "total_restrictions": 67423,
+        "requirements": 56140,
+        "prohibitions": 11283,
+        "document_count": 710
+      },
+      "A_Agriculture": {
+        "total_restrictions": 14572,
+        "requirements": 12319,
+        "prohibitions": 2253,
+        "document_count": 94
+      },
+      "B_Mining": {
+        "total_restrictions": 16595,
+        "requirements": 14201,
+        "prohibitions": 2394,
+        "document_count": 108
+      },
+      "C_Manufacturing": {
+        "total_restrictions": 16729,
+        "requirements": 14267,
+        "prohibitions": 2462,
+        "document_count": 102
+      },
+      "D_Electricity_Gas_Water_Waste": {
+        "total_restrictions": 19849,
+        "requirements": 17019,
+        "prohibitions": 2830,
+        "document_count": 126
+      },
+      "E_Construction": {
+        "total_restrictions": 15162,
+        "requirements": 12904,
+        "prohibitions": 2258,
+        "document_count": 97
+      },
+      "F_Wholesale_Trade": {
+        "total_restrictions": 15314,
+        "requirements": 12886,
+        "prohibitions": 2428,
+        "document_count": 100
+      },
+      "G_Retail_Trade": {
+        "total_restrictions": 14636,
+        "requirements": 12333,
+        "prohibitions": 2303,
+        "document_count": 97
+      },
+      "H_Accommodation_Food": {
+        "total_restrictions": 14079,
+        "requirements": 11938,
+        "prohibitions": 2141,
+        "document_count": 94
+      },
+      "I_Transport_Postal_Warehousing": {
+        "total_restrictions": 17602,
+        "requirements": 14633,
+        "prohibitions": 2969,
+        "document_count": 116
+      },
+      "J_Information_Media_Telecom": {
+        "total_restrictions": 17498,
+        "requirements": 14637,
+        "prohibitions": 2861,
+        "document_count": 114
+      },
+      "K_Financial_Insurance": {
+        "total_restrictions": 22759,
+        "requirements": 19185,
+        "prohibitions": 3574,
+        "document_count": 187
+      },
+      "L_Rental_Real_Estate": {
+        "total_restrictions": 15123,
+        "requirements": 12809,
+        "prohibitions": 2314,
+        "document_count": 110
+      },
+      "M_Professional_Scientific_Technical": {
+        "total_restrictions": 15232,
+        "requirements": 12932,
+        "prohibitions": 2300,
+        "document_count": 108
+      },
+      "N_Administrative_Support": {
+        "total_restrictions": 20908,
+        "requirements": 17594,
+        "prohibitions": 3314,
+        "document_count": 137
+      },
+      "O_Public_Administration_Safety": {
+        "total_restrictions": 28760,
+        "requirements": 24245,
+        "prohibitions": 4515,
+        "document_count": 172
+      },
+      "P_Education_Training": {
+        "total_restrictions": 17105,
+        "requirements": 14514,
+        "prohibitions": 2591,
+        "document_count": 110
+      },
+      "Q_Health_Social_Assistance": {
+        "total_restrictions": 22220,
+        "requirements": 18795,
+        "prohibitions": 3425,
+        "document_count": 130
+      },
+      "R_Arts_Recreation": {
+        "total_restrictions": 15524,
+        "requirements": 13139,
+        "prohibitions": 2385,
+        "document_count": 101
+      },
+      "S_Other_Services": {
+        "total_restrictions": 17767,
+        "requirements": 15179,
+        "prohibitions": 2588,
+        "document_count": 123
+      }
+    },
+    "2025": {
+      "_Unclassified": {
+        "total_restrictions": 71229,
+        "requirements": 59284,
+        "prohibitions": 11945,
+        "document_count": 797
+      },
+      "A_Agriculture": {
+        "total_restrictions": 15328,
+        "requirements": 12954,
+        "prohibitions": 2374,
+        "document_count": 103
+      },
+      "B_Mining": {
+        "total_restrictions": 17351,
+        "requirements": 14836,
+        "prohibitions": 2515,
+        "document_count": 117
+      },
+      "C_Manufacturing": {
+        "total_restrictions": 17830,
+        "requirements": 15184,
+        "prohibitions": 2646,
+        "document_count": 113
+      },
+      "D_Electricity_Gas_Water_Waste": {
+        "total_restrictions": 21545,
+        "requirements": 18430,
+        "prohibitions": 3115,
+        "document_count": 138
+      },
+      "E_Construction": {
+        "total_restrictions": 16580,
+        "requirements": 14092,
+        "prohibitions": 2488,
+        "document_count": 108
+      },
+      "F_Wholesale_Trade": {
+        "total_restrictions": 16070,
+        "requirements": 13521,
+        "prohibitions": 2549,
+        "document_count": 109
+      },
+      "G_Retail_Trade": {
+        "total_restrictions": 15392,
+        "requirements": 12968,
+        "prohibitions": 2424,
+        "document_count": 106
+      },
+      "H_Accommodation_Food": {
+        "total_restrictions": 14835,
+        "requirements": 12573,
+        "prohibitions": 2262,
+        "document_count": 103
+      },
+      "I_Transport_Postal_Warehousing": {
+        "total_restrictions": 18686,
+        "requirements": 15531,
+        "prohibitions": 3155,
+        "document_count": 127
+      },
+      "J_Information_Media_Telecom": {
+        "total_restrictions": 19012,
+        "requirements": 15860,
+        "prohibitions": 3152,
+        "document_count": 125
+      },
+      "K_Financial_Insurance": {
+        "total_restrictions": 24181,
+        "requirements": 20370,
+        "prohibitions": 3811,
+        "document_count": 203
+      },
+      "L_Rental_Real_Estate": {
+        "total_restrictions": 16029,
+        "requirements": 13563,
+        "prohibitions": 2466,
+        "document_count": 120
+      },
+      "M_Professional_Scientific_Technical": {
+        "total_restrictions": 16085,
+        "requirements": 13652,
+        "prohibitions": 2433,
+        "document_count": 118
+      },
+      "N_Administrative_Support": {
+        "total_restrictions": 22006,
+        "requirements": 18542,
+        "prohibitions": 3464,
+        "document_count": 147
+      },
+      "O_Public_Administration_Safety": {
+        "total_restrictions": 30264,
+        "requirements": 25504,
+        "prohibitions": 4760,
+        "document_count": 185
+      },
+      "P_Education_Training": {
+        "total_restrictions": 17909,
+        "requirements": 15182,
+        "prohibitions": 2727,
+        "document_count": 120
+      },
+      "Q_Health_Social_Assistance": {
+        "total_restrictions": 24994,
+        "requirements": 21162,
+        "prohibitions": 3832,
+        "document_count": 146
+      },
+      "R_Arts_Recreation": {
+        "total_restrictions": 16406,
+        "requirements": 13871,
+        "prohibitions": 2535,
+        "document_count": 111
+      },
+      "S_Other_Services": {
+        "total_restrictions": 18977,
+        "requirements": 16175,
+        "prohibitions": 2802,
+        "document_count": 133
+      }
+    }
+  }
+}

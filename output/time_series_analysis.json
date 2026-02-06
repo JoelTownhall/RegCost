@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-01-29T23:06:12.505432",
+  "methodology": "BC and RegData with proper in-force filtering",
+  "total_titles": 80798,
+  "corpus_size": 24173,
+  "results": {
+    "2010-07-01": {
+      "date": "2010-07-01",
+      "documents_in_force": 29395,
+      "documents_with_text": 16671,
+      "documents_without_text": 12724,
+      "bc_requirements": 109732,
+      "regdata_restrictions": 129140
+    },
+    "2015-07-01": {
+      "date": "2015-07-01",
+      "documents_in_force": 31159,
+      "documents_with_text": 18457,
+      "documents_without_text": 12702,
+      "bc_requirements": 128105,
+      "regdata_restrictions": 150261
+    },
+    "2020-07-01": {
+      "date": "2020-07-01",
+      "documents_in_force": 38489,
+      "documents_with_text": 20887,
+      "documents_without_text": 17602,
+      "bc_requirements": 163170,
+      "regdata_restrictions": 190114
+    },
+    "2025-07-01": {
+      "date": "2025-07-01",
+      "documents_in_force": 45092,
+      "documents_with_text": 23790,
+      "documents_without_text": 21302,
+      "bc_requirements": 229010,
+      "regdata_restrictions": 263337
+    }
+  }
+}

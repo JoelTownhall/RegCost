@@ -1,0 +1,186 @@
+# Project: Measure Australian Federal Regulatory Burden Stock
+
+## Objective
+Build a Python tool to measure the current stock of regulatory burden in Australian federal regulations using two methodologies:
+1. **BC-style Requirements Counting** - Simple counting of binding obligation words
+2. **RegData-style Restrictions Counting** - Using QuantGov library approach
+
+Output a one-page PDF report comparing both methodologies with a bar chart visualization.
+
+## Background Context
+
+### British Columbia Methodology
+BC counts "regulatory requirements" as any action or step that must be taken under legislation, regulation, or policy. Their approach:
+- **Count these binding words:** "must", "shall", "required"
+- **Counting rules:**
+  - Each distinct action/information requirement = 1 count
+  - Multiple requirements in one provision = count each separately
+  - Options (person must do A OR B) = 1 count (only one needed)
+  - Conditional requirements (if you choose X, then must do Y) = count the "must"
+  - Do NOT count: "may" (discretionary), qualifiers (e.g., "in writing"), prohibitions ("must not"), duplications
+- **On forms:** Count complete pieces of information (e.g., "full name" = 1, not separate first/last)
+
+### RegData/QuantGov Methodology  
+Mercatus Center's approach counts regulatory "restrictions":
+- **Count these words:** "shall", "must", "may not", "required", "prohibited"
+- Uses natural language processing
+- Can map restrictions to industries using machine learning
+- Available as Python package: `quantgov`
+
+## Data Source
+Australian federal legislation is available at: https://www.legislation.gov.au/
+
+Focus on:
+- **Current in-force regulations** under the "Browse" section
+- Start with Federal Register of Legislation database
+- Prioritize regulations over primary legislation for initial scope
+- Extract text from current consolidated versions
+
+## Technical Requirements
+
+### Part 1: Data Collection
+1. Scrape or download current Australian federal regulations from legislation.gov.au
+   - Focus on principal regulations (not amendments)
+   - Get consolidated current text
+   - Store locally in structured format (e.g., JSON or database)
+   - Include metadata: regulation name, year, administering agency
+
+2. Handle different document formats:
+   - HTML (most common on site)
+   - PDF (if necessary, use text extraction)
+   - Consider rate limiting and respectful scraping
+
+### Part 2: BC-Style Counting Implementation
+Create a function that:
+1. Counts instances of "must", "shall", "required" (case-insensitive)
+2. Implements exclusion rules:
+   - Exclude "must not" / "shall not" (prohibitions)
+   - Exclude "may" contexts (discretionary)
+   - Handle duplications (same requirement repeated)
+3. Returns:
+   - Total requirement count
+   - Count by regulation
+   - Count by administering agency (if metadata available)
+
+### Part 3: RegData-Style Counting Implementation
+1. Install and use `quantgov` library: `pip install quantgov`
+2. Alternatively, implement simple restriction counter:
+   - Count: "shall", "must", "may not", "required", "prohibited"
+   - Case-insensitive matching
+3. Returns:
+   - Total restriction count
+   - Count by regulation
+   - Count by administering agency
+
+### Part 4: Generate One-Page Report
+Create a professional PDF report containing:
+
+**Report Structure:**
+1. **Header Section:**
+   - Title: "Australian Federal Regulatory Burden Stock Assessment"
+   - Date of analysis
+   - Data source and scope
+
+2. **Summary Statistics Box:**
+   - Total regulations analyzed
+   - BC Method Total Requirements
+   - RegData Method Total Restrictions
+   - Percentage difference between methods
+
+3. **Bar Chart Comparison:**
+   - Side-by-side bars comparing BC vs RegData totals
+   - Clear labels and legend
+   - Professional styling
+
+4. **Methodology Notes (Brief):**
+   - 2-3 sentences explaining each method
+   - Note on what each metric represents
+
+5. **Top 10 Most Burdensome Regulations:**
+   - Table showing regulation name and count (using BC method)
+   - Or by agency if that's more meaningful
+
+**Technical specs for PDF:**
+- Use `matplotlib` for bar chart
+- Use `reportlab` or `fpdf` for PDF generation
+- Single page, professional layout
+- Include page border or header/footer
+
+## Code Structure Suggestions
+
+```python
+# Suggested file structure:
+# main.py - orchestrates the analysis
+# scraper.py - handles data collection from legislation.gov.au  
+# bc_counter.py - implements BC methodology
+# regdata_counter.py - implements RegData methodology
+# report_generator.py - creates PDF report
+# config.py - configuration variables
+```
+
+## Deliverables
+1. Python scripts implementing both methodologies
+2. Data file(s) containing scraped regulations
+3. One-page PDF report with comparison
+4. README with:
+   - How to run the code
+   - Dependencies
+   - Interpretation of results
+   - Known limitations
+
+## Important Considerations
+
+### Scope Management
+- Start with a **manageable subset** if full federal regulations are too large
+  - E.g., regulations from 3-5 major departments
+  - Or regulations containing "business" or "company" in the title
+- Document the scope clearly in the report
+
+### Data Quality
+- Note any regulations that couldn't be processed
+- Handle encoding issues gracefully
+- Log errors to separate file
+
+### Methodology Fidelity
+- BC method: The simple counting approach is intentional - don't over-complicate
+- RegData method: If `quantgov` library is complex, a simple word count of the 5 terms is acceptable for this initial analysis
+- Document any deviations from official methodologies
+
+### Performance
+- If processing is slow, implement progress bars
+- Consider caching scraped data
+- Parallelize where appropriate
+
+## Expected Differences Between Methods
+The two methods WILL produce different numbers because:
+- RegData includes "may not" and "prohibited" (prohibitions), BC excludes these
+- BC excludes qualifiers more strictly
+- BC has more nuanced rules for options and conditional requirements
+
+The report should note this is expected and both metrics are valid measures of different aspects of regulatory burden.
+
+## Validation
+Manually verify counts on 2-3 sample regulations to ensure:
+- Counts are in reasonable range
+- Major patterns make sense
+- No obvious bugs in counting logic
+
+## Output Example
+The final report might show something like:
+- **Total Regulations Analyzed:** 450
+- **BC Requirements Count:** 125,000
+- **RegData Restrictions Count:** 140,000  
+- **Difference:** +12% (RegData counts more due to including prohibitions)
+
+---
+
+## Getting Started
+1. Explore legislation.gov.au structure and identify best scraping approach
+2. Build data collection pipeline first
+3. Test counting methods on small sample
+4. Generate report with sample data
+5. Scale to full dataset
+6. Refine report formatting
+
+Please implement this analysis, documenting your approach and any challenges encountered. Focus on producing accurate counts and a clear, professional report rather than perfect coverage of every regulation.
+

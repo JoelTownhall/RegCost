@@ -1,0 +1,20 @@
+{
+  "our_total": 24174,
+  "our_non_aviation": 14837,
+  "our_acts": 1241,
+  "our_instruments": 13596,
+  "mandala_total": 9600,
+  "mandala_acts": 1200,
+  "mandala_instruments": 8400,
+  "aviation_excluded": 9337,
+  "additional_exclusions": {
+    "statement_of_principles": 744,
+    "licence_area_plans": 116,
+    "superannuation_family_law": 48
+  },
+  "validation_notes": [
+    "Acts count validates within 3% of Mandala",
+    "Instruments gap primarily explained by SOP, LAP, and time difference",
+    "All documents in our corpus are confirmed in-force (queried with isInForce=true)"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "generated_at": "2026-02-06T23:35:24.772941",
+  "methodology": "Mandala-aligned (excluding aviation and tariff concessions)",
+  "exclusions": {
+    "aviation": 9337,
+    "tariff_concessions": 6541,
+    "total_excluded": 15878
+  },
+  "documents_analyzed": 8296,
+  "time_series": {
+    "2010": {
+      "primary": {
+        "count": 884,
+        "bc": 68584,
+        "regdata": 81665
+      },
+      "secondary": {
+        "count": 1331,
+        "bc": 25467,
+        "regdata": 30237
+      }
+    },
+    "2015": {
+      "primary": {
+        "count": 1033,
+        "bc": 76350,
+        "regdata": 91106
+      },
+      "secondary": {
+        "count": 1944,
+        "bc": 39824,
+        "regdata": 45968
+      }
+    },
+    "2020": {
+      "primary": {
+        "count": 1119,
+        "bc": 80435,
+        "regdata": 96145
+      },
+      "secondary": {
+        "count": 4263,
+        "bc": 69608,
+        "regdata": 79469
+      }
+    },
+    "2025": {
+      "primary": {
+        "count": 1239,
+        "bc": 86519,
+        "regdata": 103497
+      },
+      "secondary": {
+        "count": 7037,
+        "bc": 130269,
+        "regdata": 146352
+      }
+    }
+  },
+  "anzsic_2025": {
+    "O": {
+      "primary_count": 329,
+      "primary_regdata": 22972,
+      "secondary_count": 1593,
+      "secondary_regdata": 21139
+    },
+    "M": {
+      "primary_count": 27,
+      "primary_regdata": 4734,
+      "secondary_count": 175,
+      "secondary_regdata": 11832
+    },
+    "F": {
+      "primary_count": 18,
+      "primary_regdata": 1421,
+      "secondary_count": 51,
+      "secondary_regdata": 4927
+    },
+    "K": {
+      "primary_count": 274,
+      "primary_regdata": 18625,
+      "secondary_count": 1970,
+      "secondary_regdata": 31277
+    },
+    "D": {
+      "primary_count": 59,
+      "primary_regdata": 5383,
+      "secondary_count": 242,
+      "secondary_regdata": 6213
+    },
+    "I": {
+      "primary_count": 48,
+      "primary_regdata": 3356,
+      "secondary_count": 241,
+      "secondary_regdata": 12488
+    },
+    "B": {
+      "primary_count": 50,
+      "primary_regdata": 3408,
+      "secondary_count": 86,
+      "secondary_regdata": 2245
+    },
+    "S": {
+      "primary_count": 26,
+      "primary_regdata": 1918,
+      "secondary_count": 76,
+      "secondary_regdata": 971
+    },
+    "N": {
+      "primary_count": 44,
+      "primary_regdata": 3498,
+      "secondary_count": 59,
+      "secondary_regdata": 1821
+    },
+    "A": {
+      "primary_count": 25,
+      "primary_regdata": 3097,
+      "secondary_count": 202,
+      "secondary_regdata": 4775
+    },
+    "J": {
+      "primary_count": 37,
+      "primary_regdata": 3719,
+      "secondary_count": 453,
+      "secondary_regdata": 8401
+    },
+    "Q": {
+      "primary_count": 69,
+      "primary_regdata": 7683,
+      "secondary_count": 765,
+      "secondary_regdata": 16645
+    },
+    "X": {
+      "primary_count": 15,
+      "primary_regdata": 2178,
+      "secondary_count": 18,
+      "secondary_regdata": 56
+    },
+    "L": {
+      "primary_count": 42,
+      "primary_regdata": 4112,
+      "secondary_count": 86,
+      "secondary_regdata": 2794
+    },
+    "U": {
+      "primary_count": 57,
+      "primary_regdata": 6215,
+      "secondary_count": 185,
+      "secondary_regdata": 3904
+    },
+    "R": {
+      "primary_count": 31,
+      "primary_regdata": 2462,
+      "secondary_count": 227,
+      "secondary_regdata": 5452
+    },
+    "P": {
+      "primary_count": 39,
+      "primary_regdata": 3426,
+      "secondary_count": 268,
+      "secondary_regdata": 4285
+    },
+    "C": {
+      "primary_count": 18,
+      "primary_regdata": 2718,
+      "secondary_count": 73,
+      "secondary_regdata": 2049
+    },
+    "G": {
+      "primary_count": 2,
+      "primary_regdata": 833,
+      "secondary_count": 115,
+      "secondary_regdata": 2679
+    },
+    "E": {
+      "primary_count": 26,
+      "primary_regdata": 1663,
+      "secondary_count": 135,
+      "secondary_regdata": 2368
+    },
+    "H": {
+      "primary_count": 3,
+      "primary_regdata": 76,
+      "secondary_count": 17,
+      "secondary_regdata": 31
+    }
+  }
+}
