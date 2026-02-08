@@ -1,6 +1,7 @@
 """Chart 1: Growth in Legislation and Legislative Requirements."""
 
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import pandas as pd
 import streamlit as st
 
@@ -72,56 +73,68 @@ def create_legislation_growth_chart(
     primary_req = [primary_data.loc[y, "req_count"] if y in primary_data.index else 0 for y in years]
     secondary_req = [secondary_data.loc[y, "req_count"] if y in secondary_data.index else 0 for y in years]
 
-    # Create figure
-    fig = go.Figure()
+    # Create figure with secondary y-axis
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    # Add legislation bars (offset to the left)
-    fig.add_trace(go.Bar(
-        name="Primary Legislation",
-        x=years,
-        y=primary_leg,
-        marker_color=COLOURS["Primary"],
-        offsetgroup=0,
-        legendgroup="legislation",
-        legendgrouptitle_text="Legislation Count",
-        hovertemplate="<b>Primary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
-    ))
+    # Add legislation bars (left Y-axis, offset to the left)
+    fig.add_trace(
+        go.Bar(
+            name="Primary Legislation",
+            x=years,
+            y=primary_leg,
+            marker_color=COLOURS["Primary"],
+            offsetgroup=0,
+            legendgroup="legislation",
+            legendgrouptitle_text="Legislation Count",
+            hovertemplate="<b>Primary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+        ),
+        secondary_y=False,
+    )
 
-    fig.add_trace(go.Bar(
-        name="Secondary Legislation",
-        x=years,
-        y=secondary_leg,
-        marker_color=COLOURS["Secondary"],
-        offsetgroup=0,
-        base=primary_leg,  # Stack on top of primary
-        legendgroup="legislation",
-        hovertemplate="<b>Secondary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
-    ))
+    fig.add_trace(
+        go.Bar(
+            name="Secondary Legislation",
+            x=years,
+            y=secondary_leg,
+            marker_color=COLOURS["Secondary"],
+            offsetgroup=0,
+            base=primary_leg,  # Stack on top of primary
+            legendgroup="legislation",
+            hovertemplate="<b>Secondary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+        ),
+        secondary_y=False,
+    )
 
-    # Add requirements bars (offset to the right)
-    fig.add_trace(go.Bar(
-        name="Primary Requirements",
-        x=years,
-        y=primary_req,
-        marker_color=COLOURS["Primary"],
-        marker_pattern_shape="/",  # Add pattern to distinguish from legislation
-        offsetgroup=1,
-        legendgroup="requirements",
-        legendgrouptitle_text="Requirements Count",
-        hovertemplate="<b>Primary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
-    ))
+    # Add requirements bars (right Y-axis, offset to the right)
+    fig.add_trace(
+        go.Bar(
+            name="Primary Requirements",
+            x=years,
+            y=primary_req,
+            marker_color=COLOURS["Primary"],
+            marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+            offsetgroup=1,
+            legendgroup="requirements",
+            legendgrouptitle_text="Requirements Count",
+            hovertemplate="<b>Primary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+        ),
+        secondary_y=True,
+    )
 
-    fig.add_trace(go.Bar(
-        name="Secondary Requirements",
-        x=years,
-        y=secondary_req,
-        marker_color=COLOURS["Secondary"],
-        marker_pattern_shape="/",  # Add pattern to distinguish from legislation
-        offsetgroup=1,
-        base=primary_req,  # Stack on top of primary
-        legendgroup="requirements",
-        hovertemplate="<b>Secondary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
-    ))
+    fig.add_trace(
+        go.Bar(
+            name="Secondary Requirements",
+            x=years,
+            y=secondary_req,
+            marker_color=COLOURS["Secondary"],
+            marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+            offsetgroup=1,
+            base=primary_req,  # Stack on top of primary
+            legendgroup="requirements",
+            hovertemplate="<b>Secondary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+        ),
+        secondary_y=True,
+    )
 
     # Update layout
     fig.update_layout(
@@ -151,10 +164,20 @@ def create_legislation_growth_chart(
         dtick=2,  # Show every 2 years
     )
 
+    # Update left Y-axis (legislation count)
     fig.update_yaxes(
-        title_text="Count",
+        title_text="Count of Legislation",
         showgrid=True,
         gridcolor="#eee",
+        secondary_y=False,
+    )
+
+    # Update right Y-axis (requirements count)
+    fig.update_yaxes(
+        title_text="Count of Requirements",
+        showgrid=True,
+        gridcolor="#eee",
+        secondary_y=True,
     )
 
     return fig
