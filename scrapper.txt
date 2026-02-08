@@ -1,0 +1,481 @@
+#!/usr/bin/env python3
+"""
+Simple Australian Legislation Downloader
+
+A more direct approach that:
+1. Scrapes the alphabetical index pages
+2. Extracts legislation IDs and titles
+3. Downloads PDFs and metadata
+
+This is more reliable than trying to parse complex search results.
+
+Usage:
+    python simple_au_leg_downloader.py --output ./legislation
+"""
+
+import os
+import re
+import sys
+import json
+import time
+import string
+import argparse
+import logging
+from pathlib import Path
+from datetime import datetime
+from urllib.parse import urljoin
+from concurrent.futures import ThreadPoolExecutor
+from typing import Optional, Dict, List, Tuple
+
+try:
+    import requests
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("Installing required packages...")
+    os.system("pip install requests beautifulsoup4 lxml --break-system-packages")
+    import requests
+    from bs4 import BeautifulSoup
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+class SimpleLegislationDownloader:
+    """
+    Downloads Australian federal legislation using the browse/index pages.
+    
+    The site has alphabetical browse pages:
+    - https://www.legislation.gov.au/browse/act/inforce/a
+    - https://www.legislation.gov.au/browse/act/notinforce/a
+    - https://www.legislation.gov.au/browse/legislativeinstrument/inforce/a
+    etc.
+    """
+    
+    BASE_URL = "https://www.legislation.gov.au"
+    
+    # Browse URL patterns
+    BROWSE_PATTERNS = {
+        'act': {
+            'inforce': '/browse/act/inforce/{letter}',
+            'notinforce': '/browse/act/notinforce/{letter}',
+        },
+        'legislativeinstrument': {
+            'inforce': '/browse/legislativeinstrument/inforce/{letter}',
+            'notinforce': '/browse/legislativeinstrument/notinforce/{letter}',
+        },
+        'notifiableinstrument': {
+            'inforce': '/browse/notifiableinstrument/inforce/{letter}',
+            'notinforce': '/browse/notifiableinstrument/notinforce/{letter}',
+        }
+    }
+    
+    # Alternative: search with sort
+    SEARCH_PATTERNS = {
+        'act': {
+            'inforce': '/search/collection(Act)/status(InForce)/sort(title%20asc)',
+            'notinforce': '/search/collection(Act)/status(NotInForce)/sort(title%20asc)',
+        },
+        'legislativeinstrument': {
+            'inforce': '/search/collection(LegislativeInstrument)/status(InForce)/sort(title%20asc)',
+            'notinforce': '/search/collection(LegislativeInstrument)/status(NotInForce)/sort(title%20asc)',
+        },
+        'notifiableinstrument': {
+            'inforce': '/search/collection(NotifiableInstrument)/status(InForce)/sort(title%20asc)',
+            'notinforce': '/search/collection(NotifiableInstrument)/status(NotInForce)/sort(title%20asc)',
+        }
+    }
+    
+    def __init__(self, output_dir: str, delay: float = 1.5):
+        self.output_dir = Path(output_dir)
+        self.delay = delay
+        
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (compatible; LegislationResearchBot/1.0)',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-AU,en;q=0.9',
+        })
+        
+        # Setup directories
+        self.dirs = {
+            'acts': self.output_dir / 'acts',
+            'instruments': self.output_dir / 'legislative_instruments', 
+            'notifiable': self.output_dir / 'notifiable_instruments',
+            'metadata': self.output_dir / 'metadata',
+        }
+        for d in self.dirs.values():
+            d.mkdir(parents=True, exist_ok=True)
+        
+        # Progress tracking
+        self.index_file = self.output_dir / 'legislation_index.json'
+        self.progress_file = self.output_dir / 'download_progress.json'
+        self.index = self._load_index()
+        self.progress = self._load_progress()
+    
+    def _load_index(self) -> Dict:
+        if self.index_file.exists():
+            with open(self.index_file) as f:
+                return json.load(f)
+        return {'acts': {}, 'instruments': {}, 'notifiable': {}}
+    
+    def _save_index(self):
+        with open(self.index_file, 'w') as f:
+            json.dump(self.index, f, indent=2)
+    
+    def _load_progress(self) -> Dict:
+        if self.progress_file.exists():
+            with open(self.progress_file) as f:
+                return json.load(f)
+        return {'downloaded': set(), 'failed': set()}
+    
+    def _save_progress(self):
+        # Convert sets to lists for JSON
+        progress = {
+            'downloaded': list(self.progress['downloaded']),
+            'failed': list(self.progress['failed'])
+        }
+        with open(self.progress_file, 'w') as f:
+            json.dump(progress, f, indent=2)
+    
+    def _get(self, url: str, retries: int = 3) -> Optional[requests.Response]:
+        """Make HTTP GET request with retry logic."""
+        for attempt in range(retries):
+            try:
+                time.sleep(self.delay)
+                response = self.session.get(url, timeout=30)
+                
+                if response.status_code == 200:
+                    return response
+                elif response.status_code == 429:  # Rate limited
+                    wait_time = int(response.headers.get('Retry-After', 60))
+                    logger.warning(f"Rate limited. Waiting {wait_time}s...")
+                    time.sleep(wait_time)
+                elif response.status_code == 404:
+                    return None
+                else:
+                    logger.warning(f"HTTP {response.status_code} for {url}")
+                    
+            except requests.RequestException as e:
+                logger.error(f"Request error (attempt {attempt+1}): {e}")
+                time.sleep(5 * (attempt + 1))
+        
+        return None
+    
+    def scrape_search_page(self, url: str, page: int = 1) -> Tuple[List[Dict], int]:
+        """
+        Scrape a search results page and return items + total pages.
+        """
+        if page > 1:
+            url = f"{url}/page({page})"
+        
+        full_url = urljoin(self.BASE_URL, url)
+        logger.info(f"Fetching: {full_url}")
+        
+        response = self._get(full_url)
+        if not response:
+            return [], 0
+        
+        soup = BeautifulSoup(response.text, 'lxml')
+        items = []
+        
+        # Find legislation links - they have IDs like C2024A00001 or F2024L00001
+        # Look for links that match the pattern
+        for link in soup.find_all('a', href=True):
+            href = link['href']
+            
+            # Match legislation detail page URLs
+            match = re.match(r'^/([CF]\d{4}[A-Z]\d+)', href)
+            if match:
+                register_id = match.group(1)
+                title = link.get_text(strip=True)
+                
+                # Skip if it's just the ID with no title
+                if title and title != register_id:
+                    items.append({
+                        'register_id': register_id,
+                        'title': title,
+                        'url': urljoin(self.BASE_URL, href)
+                    })
+        
+        # Deduplicate
+        seen = set()
+        unique_items = []
+        for item in items:
+            if item['register_id'] not in seen:
+                seen.add(item['register_id'])
+                unique_items.append(item)
+        
+        # Get total pages
+        total_pages = 1
+        page_links = soup.find_all('a', href=re.compile(r'/page\(\d+\)'))
+        for pl in page_links:
+            m = re.search(r'/page\((\d+)\)', pl['href'])
+            if m:
+                total_pages = max(total_pages, int(m.group(1)))
+        
+        # Also check for "of X" text
+        text = soup.get_text()
+        m = re.search(r'of (\d+)\s*$', text, re.MULTILINE)
+        if m:
+            total_pages = max(total_pages, int(m.group(1)))
+        
+        return unique_items, total_pages
+    
+    def get_download_links(self, register_id: str) -> Dict[str, str]:
+        """Get PDF and other download links for a legislation item."""
+        url = f"{self.BASE_URL}/{register_id}"
+        
+        response = self._get(url)
+        if not response:
+            return {}
+        
+        soup = BeautifulSoup(response.text, 'lxml')
+        links = {}
+        
+        # Look for download links in common patterns
+        # PDF - usually the authorised version
+        for a in soup.find_all('a', href=True):
+            href = a['href'].lower()
+            text = a.get_text(strip=True).lower()
+            
+            if '.pdf' in href or 'pdf' in text:
+                if 'authorised' in text or 'download' in text or 'pdf' in text:
+                    links['pdf'] = urljoin(self.BASE_URL, a['href'])
+                    
+            elif '.docx' in href or 'word' in text:
+                links['docx'] = urljoin(self.BASE_URL, a['href'])
+                
+            elif '.rtf' in href:
+                links['rtf'] = urljoin(self.BASE_URL, a['href'])
+        
+        # Also look for specific download buttons/links
+        download_section = soup.find(class_=re.compile(r'download|file', re.I))
+        if download_section:
+            for a in download_section.find_all('a', href=True):
+                href = a['href']
+                if '.pdf' in href.lower() and 'pdf' not in links:
+                    links['pdf'] = urljoin(self.BASE_URL, href)
+        
+        return links
+    
+    def download_file(self, url: str, filepath: Path) -> bool:
+        """Download a file."""
+        if filepath.exists():
+            logger.debug(f"Skipping (exists): {filepath}")
+            return True
+        
+        try:
+            time.sleep(self.delay)
+            response = self.session.get(url, timeout=120, stream=True)
+            response.raise_for_status()
+            
+            filepath.parent.mkdir(parents=True, exist_ok=True)
+            
+            with open(filepath, 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            
+            logger.info(f"Downloaded: {filepath.name}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Download failed {url}: {e}")
+            return False
+    
+    def process_item(self, item: Dict, collection: str) -> bool:
+        """Process a single legislation item - get links and download."""
+        register_id = item['register_id']
+        
+        if register_id in self.progress['downloaded']:
+            return True
+        
+        if register_id in self.progress['failed']:
+            logger.debug(f"Skipping previously failed: {register_id}")
+            return False
+        
+        # Get download links
+        links = self.get_download_links(register_id)
+        
+        if not links:
+            logger.warning(f"No download links found for {register_id}")
+            self.progress['failed'].add(register_id)
+            self._save_progress()
+            return False
+        
+        # Determine output directory
+        if collection == 'act':
+            base_dir = self.dirs['acts']
+        elif collection == 'notifiableinstrument':
+            base_dir = self.dirs['notifiable']
+        else:
+            base_dir = self.dirs['instruments']
+        
+        # Organize by year
+        year_match = re.match(r'[CF](\d{4})', register_id)
+        if year_match:
+            subdir = base_dir / year_match.group(1)
+        else:
+            subdir = base_dir / 'other'
+        
+        success = False
+        
+        # Download PDF (priority)
+        if 'pdf' in links:
+            pdf_path = subdir / f"{register_id}.pdf"
+            if self.download_file(links['pdf'], pdf_path):
+                success = True
+        
+        # Download DOCX if available
+        if 'docx' in links:
+            docx_path = subdir / f"{register_id}.docx"
+            self.download_file(links['docx'], docx_path)
+        
+        # Save metadata
+        meta = {
+            'register_id': register_id,
+            'title': item.get('title', ''),
+            'collection': collection,
+            'url': item.get('url', f"{self.BASE_URL}/{register_id}"),
+            'download_links': links,
+            'downloaded_at': datetime.now().isoformat()
+        }
+        
+        meta_path = self.dirs['metadata'] / f"{register_id}.json"
+        with open(meta_path, 'w') as f:
+            json.dump(meta, f, indent=2)
+        
+        if success:
+            self.progress['downloaded'].add(register_id)
+            
+            # Update index
+            index_key = {
+                'act': 'acts',
+                'legislativeinstrument': 'instruments',
+                'notifiableinstrument': 'notifiable'
+            }.get(collection, 'instruments')
+            
+            self.index[index_key][register_id] = {
+                'title': item.get('title', ''),
+                'downloaded': True
+            }
+        else:
+            self.progress['failed'].add(register_id)
+        
+        self._save_progress()
+        return success
+    
+    def scrape_collection(self, collection: str, status: str = 'inforce'):
+        """Scrape all items from a collection."""
+        logger.info(f"Scraping {collection} ({status})...")
+        
+        search_url = self.SEARCH_PATTERNS.get(collection, {}).get(status)
+        if not search_url:
+            logger.error(f"Unknown collection/status: {collection}/{status}")
+            return
+        
+        # Get first page to find total
+        items, total_pages = self.scrape_search_page(search_url, page=1)
+        logger.info(f"Found {total_pages} pages for {collection} ({status})")
+        
+        # Process first page items
+        for item in items:
+            self.process_item(item, collection)
+        
+        # Process remaining pages
+        for page in range(2, total_pages + 1):
+            logger.info(f"Processing page {page}/{total_pages}")
+            items, _ = self.scrape_search_page(search_url, page=page)
+            
+            for item in items:
+                self.process_item(item, collection)
+            
+            # Save periodically
+            if page % 10 == 0:
+                self._save_index()
+        
+        self._save_index()
+    
+    def run(self, collections: List[str] = None, status: str = 'all'):
+        """Run the full download process."""
+        if collections is None:
+            collections = ['act', 'legislativeinstrument', 'notifiableinstrument']
+        
+        statuses = ['inforce', 'notinforce'] if status == 'all' else [status]
+        
+        for coll in collections:
+            for stat in statuses:
+                try:
+                    self.scrape_collection(coll, stat)
+                except KeyboardInterrupt:
+                    logger.info("Interrupted. Saving progress...")
+                    self._save_index()
+                    self._save_progress()
+                    raise
+                except Exception as e:
+                    logger.error(f"Error scraping {coll}/{stat}: {e}")
+                    continue
+        
+        self._generate_summary()
+    
+    def _generate_summary(self):
+        """Generate a summary of what was downloaded."""
+        summary = {
+            'generated': datetime.now().isoformat(),
+            'counts': {
+                'acts': len(self.index['acts']),
+                'legislative_instruments': len(self.index['instruments']),
+                'notifiable_instruments': len(self.index['notifiable']),
+            },
+            'total_downloaded': len(self.progress['downloaded']),
+            'total_failed': len(self.progress['failed'])
+        }
+        
+        summary_path = self.output_dir / 'summary.json'
+        with open(summary_path, 'w') as f:
+            json.dump(summary, f, indent=2)
+        
+        logger.info(f"""
+Download Summary
+================
+Acts: {summary['counts']['acts']}
+Legislative Instruments: {summary['counts']['legislative_instruments']}  
+Notifiable Instruments: {summary['counts']['notifiable_instruments']}
+Total Downloaded: {summary['total_downloaded']}
+Failed: {summary['total_failed']}
+        """)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='Download Australian Federal Legislation'
+    )
+    parser.add_argument('--output', '-o', required=True,
+                       help='Output directory')
+    parser.add_argument('--collection', '-c', 
+                       choices=['act', 'legislativeinstrument', 'notifiableinstrument', 'all'],
+                       default='all',
+                       help='Collection to download')
+    parser.add_argument('--status', '-s',
+                       choices=['inforce', 'notinforce', 'all'],
+                       default='all',
+                       help='Legislation status')
+    parser.add_argument('--delay', '-d', type=float, default=1.5,
+                       help='Delay between requests (seconds)')
+    
+    args = parser.parse_args()
+    
+    collections = None if args.collection == 'all' else [args.collection]
+    
+    downloader = SimpleLegislationDownloader(
+        output_dir=args.output,
+        delay=args.delay
+    )
+    
+    downloader.run(collections=collections, status=args.status)
+
+
+if __name__ == '__main__':
+    main()

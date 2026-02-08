@@ -1,11 +1,29 @@
-# Australian Federal Regulatory Burden Analysis Tool
+# RegCost: Australian Federal Regulatory Burden Analysis
 
-A Python tool to measure the current stock of regulatory burden in Australian federal regulations using two methodologies:
+A Python toolkit to measure and visualise the regulatory burden in Australian federal regulations using two methodologies:
 
 1. **BC-style Requirements Counting** - British Columbia methodology counting binding obligation words
 2. **RegData-style Restrictions Counting** - Mercatus Center/QuantGov approach
 
-The tool scrapes legislation from [legislation.gov.au](https://www.legislation.gov.au/), analyzes regulatory text, and generates a one-page PDF report comparing both methodologies.
+The tool scrapes legislation from [legislation.gov.au](https://www.legislation.gov.au/), analyzes regulatory text, and provides both a PDF report and an interactive Streamlit web application.
+
+## Web Application
+
+The RegCost Streamlit app provides three interactive visualisations:
+
+1. **Growth in Legislation and Requirements** - Shows cumulative legislation counts and requirement totals over time
+2. **Industry Impacts** - Displays how regulatory requirements are distributed across ANZSIC industry divisions
+3. **Regulation vs Economic Performance** - Compares regulatory growth against economic indicators (GVA, employment, productivity)
+
+### Running the Web App
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
+```
 
 ## Installation
 
@@ -26,6 +44,9 @@ pip install -r requirements.txt
 - `reportlab` - PDF report generation
 - `matplotlib` - Chart visualization
 - `numpy` - Numerical operations
+- `streamlit` - Interactive web application
+- `plotly` - Interactive charts
+- `pandas` - Data processing
 
 ## Usage
 
@@ -84,8 +105,45 @@ After running, you'll find:
 - `output/regulatory_burden_report.pdf` - One-page comparison report
 - `output/analysis_results.json` - Detailed results in JSON format
 - `output/comparison_chart.png` - Bar chart visualization
+- `output/webapp_data_base.csv` - Legislation data for web app
+- `output/webapp_data_timeseries.csv` - Time series data for web app
+- `output/economic_indicators.csv` - ABS economic indicators
 - `data/regulations_data.json` - Scraped regulation data
 - `data/metadata/` - Individual regulation metadata files
+
+## Project Structure
+
+```
+regcost/
+├── app.py                          # Streamlit web application
+├── main.py                         # Main orchestration script
+├── config.py                       # Configuration settings
+├── scraper.py                      # Data collection from legislation.gov.au
+├── bc_counter.py                   # BC methodology implementation
+├── regdata_counter.py              # RegData methodology implementation
+├── report_generator.py             # PDF report generation
+├── requirements.txt                # Python dependencies
+├── README.md                       # This file
+├── .streamlit/
+│   └── config.toml                 # Streamlit theme
+├── charts/                         # Web app chart modules
+│   ├── chart_legislation_growth.py
+│   ├── chart_industry_impacts.py
+│   └── chart_regulation_vs_economy.py
+├── config/                         # Web app configuration
+│   ├── colours.py
+│   ├── annotations.py
+│   └── anzsic.py
+├── data/                           # Data modules and scraped data
+│   ├── fetch_legislation.py
+│   ├── fetch_abs.py
+│   ├── industry_mapping.py
+│   └── process.py
+├── output/                         # Generated reports and data
+├── utils/
+│   └── helpers.py
+└── logs/                           # Log files
+```
 
 ## Methodology
 
@@ -116,60 +174,26 @@ RegData typically produces higher counts because it includes prohibitions ("may 
 - **BC Method**: Affirmative obligations (things you MUST do)
 - **RegData Method**: All restrictions including prohibitions (things you MUST do AND things you MAY NOT do)
 
-## Project Structure
+## Data Sources
 
-```
-regcost/
-├── main.py              # Main orchestration script
-├── config.py            # Configuration settings
-├── scraper.py           # Data collection from legislation.gov.au
-├── bc_counter.py        # BC methodology implementation
-├── regdata_counter.py   # RegData methodology implementation
-├── report_generator.py  # PDF report generation
-├── requirements.txt     # Python dependencies
-├── README.md            # This file
-├── data/                # Scraped data storage
-│   ├── acts/
-│   ├── legislative_instruments/
-│   ├── metadata/
-│   └── pdfs/
-├── output/              # Generated reports
-└── logs/                # Log files
-```
-
-## Interpreting Results
-
-A typical output might show:
-
-```
-BC Method (Requirements):     125,000
-RegData Method (Restrictions): 140,000
-Difference: RegData is +12% higher than BC
-```
-
-This difference is expected because:
-1. RegData includes "may not" and "prohibited" - phrases indicating prohibitions
-2. BC method focuses strictly on affirmative obligations
-3. Both are valid measures of different regulatory burden aspects
+- **Federal Register of Legislation** (legislation.gov.au) - Acts, Legislative Instruments, Notifiable Instruments
+- **Australian Bureau of Statistics** - Economic indicators (GVA, employment, productivity by industry)
 
 ## Limitations
 
 1. **Text Extraction**: Some PDFs may not extract cleanly, affecting counts
-2. **Context Sensitivity**: Simple word counting doesn't consider context (e.g., "must" in a definition vs. an actual requirement)
-3. **Website Changes**: The scraper may need updates if legislation.gov.au changes its structure
-4. **Scope**: Currently focuses on principal in-force regulations (not amendments or historical versions)
+2. **Context Sensitivity**: Simple word counting doesn't consider context
+3. **Repeal Data**: Repeal data is not currently incorporated; counts show gross cumulative totals
+4. **Industry Classification**: Approximate, based on administering department and keyword matching
+5. **Scope**: Currently focuses on principal in-force regulations (not amendments or historical versions)
 
-## Data Source
+## Deployment
 
-All data is sourced from the [Federal Register of Legislation](https://www.legislation.gov.au/), managed by the Office of Parliamentary Counsel under the Legislation Act 2003.
+The Streamlit app can be deployed to Streamlit Community Cloud:
 
-## Contributing
-
-Contributions welcome. Areas for improvement:
-- More sophisticated NLP for context-aware counting
-- Industry classification using machine learning
-- Historical trend analysis
-- State/territory legislation support
+1. Push the repository to GitHub
+2. Connect to Streamlit Community Cloud
+3. Set main file path to `app.py`
 
 ## License
 
