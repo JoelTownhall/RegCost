@@ -8,10 +8,12 @@ import streamlit as st
 from utils.helpers import truncate_list, format_number, format_percentage
 
 
-# Colours for Primary/Secondary legislation
+# Colours for Primary/Secondary legislation and requirements
 COLOURS = {
-    "Primary": "#1f4e79",      # Dark blue for Acts
-    "Secondary": "#2e86ab",    # Lighter blue for Instruments
+    "Primary_Legislation": "#1f4e79",      # Dark blue for Primary Legislation
+    "Secondary_Legislation": "#7fb3d5",    # Light blue for Secondary Legislation
+    "Primary_Requirements": "#c0392b",     # Dark red for Primary Requirements
+    "Secondary_Requirements": "#f1948a",   # Light red for Secondary Requirements
 }
 
 
@@ -82,7 +84,7 @@ def create_legislation_growth_chart(
             name="Primary Legislation",
             x=years,
             y=primary_leg,
-            marker_color=COLOURS["Primary"],
+            marker_color=COLOURS["Primary_Legislation"],
             offsetgroup=0,
             legendgroup="legislation",
             legendgrouptitle_text="Legislation Count",
@@ -96,7 +98,7 @@ def create_legislation_growth_chart(
             name="Secondary Legislation",
             x=years,
             y=secondary_leg,
-            marker_color=COLOURS["Secondary"],
+            marker_color=COLOURS["Secondary_Legislation"],
             offsetgroup=0,
             base=primary_leg,  # Stack on top of primary
             legendgroup="legislation",
@@ -111,8 +113,7 @@ def create_legislation_growth_chart(
             name="Primary Requirements",
             x=years,
             y=primary_req,
-            marker_color=COLOURS["Primary"],
-            marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+            marker_color=COLOURS["Primary_Requirements"],
             offsetgroup=1,
             legendgroup="requirements",
             legendgrouptitle_text="Requirements Count",
@@ -126,8 +127,7 @@ def create_legislation_growth_chart(
             name="Secondary Requirements",
             x=years,
             y=secondary_req,
-            marker_color=COLOURS["Secondary"],
-            marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+            marker_color=COLOURS["Secondary_Requirements"],
             offsetgroup=1,
             base=primary_req,  # Stack on top of primary
             legendgroup="requirements",
