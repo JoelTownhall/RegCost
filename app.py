@@ -57,7 +57,7 @@ with st.sidebar:
         "Year Range",
         min_value=MIN_YEAR,
         max_value=MAX_YEAR,
-        value=(MIN_YEAR, MAX_YEAR),
+        value=(2010, MAX_YEAR),
     )
 
     with st.expander("About Exploring Regulations in Australia"):
@@ -113,7 +113,7 @@ if not leg_ts_df.empty:
     with col2:
         exclude_tco = st.checkbox(
             "Exclude Tariff Concession Orders",
-            value=False,
+            value=True,
             help="Exclude TCOs from the count (6,541 documents)",
             key="chart1_exclude_tco"
         )
@@ -121,7 +121,7 @@ if not leg_ts_df.empty:
     with col3:
         exclude_aviation = st.checkbox(
             "Exclude Aviation-specific legislation",
-            value=False,
+            value=True,
             help="Exclude Aviation Airworthiness Directives and related instruments (~9,300 documents)",
             key="chart1_exclude_aviation"
         )
@@ -145,7 +145,7 @@ if not leg_ts_df.empty:
         year_end=year_range[1],
         methodology=methodology,
     )
-    st.plotly_chart(fig1, width="stretch")
+    st.plotly_chart(fig1, use_container_width=True)
 
     # Explorer section
     st.subheader("Explore Requirements by Legislation")
@@ -170,7 +170,7 @@ if not leg_ts_df.empty:
             st.markdown(f"**Legislation in {selected_year}, ranked by requirement count:**")
             st.dataframe(
                 detail_df,
-                width="stretch",
+                use_container_width=True,
                 hide_index=True,
                 height=400
             )
@@ -230,7 +230,7 @@ if not leg_ts_df.empty:
         include_cross_cutting=True,  # Always include cross-cutting
         display_mode=display_mode_c2,
     )
-    st.plotly_chart(fig2, width="stretch")
+    st.plotly_chart(fig2, use_container_width=True)
 
     # Industry detail selector
     available_industries = get_available_industries(leg_ts_df, display_year)
@@ -265,7 +265,7 @@ if not leg_ts_df.empty:
                 leg_ts_df, display_year, selected_industry, methodology_c2
             )
             if not industry_detail.empty:
-                st.dataframe(industry_detail, width="stretch", hide_index=True)
+                st.dataframe(industry_detail, use_container_width=True, hide_index=True)
             else:
                 st.info("No legislation found for this industry.")
 
@@ -307,7 +307,7 @@ if not leg_ts_df.empty:
         base_year=int(base_year_3a),
         methodology=methodology_c3,
     )
-    st.plotly_chart(fig3a, width="stretch")
+    st.plotly_chart(fig3a, use_container_width=True)
 
     if econ_df.empty:
         st.info("Economic data not available. Only legislation metrics are shown.")
@@ -350,7 +350,7 @@ if industries_with_data:
         base_year=int(base_year_3b),
         methodology=methodology_c3,
     )
-    st.plotly_chart(fig3b, width="stretch")
+    st.plotly_chart(fig3b, use_container_width=True)
 else:
     st.info("No industry-level data available.")
 
