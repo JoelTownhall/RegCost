@@ -200,7 +200,7 @@ industry divisions, including cross-cutting regulation. Industries are ranked by
 
 if not leg_ts_df.empty:
     # Controls
-    col1, col2 = st.columns([1, 2])
+    col1, col2, col3 = st.columns([1, 1, 2])
     with col1:
         display_year = st.selectbox(
             "Display year",
@@ -209,6 +209,13 @@ if not leg_ts_df.empty:
             key="chart2_year"
         )
     with col2:
+        display_mode_c2 = st.radio(
+            "Display",
+            ["Requirements", "Legislation"],
+            horizontal=True,
+            key="chart2_display_mode"
+        )
+    with col3:
         methodology_c2 = st.radio(
             "Counting Method",
             ["BC Method", "Mercatus Method"],
@@ -221,6 +228,7 @@ if not leg_ts_df.empty:
         year=display_year,
         methodology=methodology_c2,
         include_cross_cutting=True,  # Always include cross-cutting
+        display_mode=display_mode_c2,
     )
     st.plotly_chart(fig2, width="stretch")
 

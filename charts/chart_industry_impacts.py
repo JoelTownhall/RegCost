@@ -14,10 +14,11 @@ def create_industry_impacts_chart(
     year: int,
     methodology: str = "BC Method",
     include_cross_cutting: bool = True,
-    highlight_top_n: int = 5
+    highlight_top_n: int = 5,
+    display_mode: str = "Requirements"
 ) -> go.Figure:
     """
-    Create horizontal bar chart showing requirements by ANZSIC industry.
+    Create horizontal bar chart showing requirements or legislation by ANZSIC industry.
 
     Args:
         df: Time series DataFrame with legislation data
@@ -25,6 +26,7 @@ def create_industry_impacts_chart(
         methodology: "BC Method" or "RegData Method"
         include_cross_cutting: Whether to include cross-cutting regulation
         highlight_top_n: Number of top industries to highlight
+        display_mode: "Requirements" for requirement counts, "Legislation" for legislation counts
 
     Returns:
         Plotly Figure object
@@ -48,6 +50,20 @@ def create_industry_impacts_chart(
     if not include_cross_cutting:
         df_year = df_year[df_year["anzsic_code"] != "X"]
 
+    if display_mode == "Legislation":
+        return _create_legislation_count_chart(df_year, year, highlight_top_n)
+    else:
+        return _create_requirements_count_chart(df_year, year, methodology, req_col, highlight_top_n)
+
+
+def _create_requirements_count_chart(
+    df_year: pd.DataFrame,
+    year: int,
+    methodology: str,
+    req_col: str,
+    highlight_top_n: int
+) -> go.Figure:
+    """Create horizontal bar chart showing requirements by industry."""
     # Aggregate by ANZSIC
     grouped = df_year.groupby(["anzsic_code", "anzsic_name"]).agg(
         leg_count=("register_id", "count"),
@@ -105,6 +121,124 @@ def create_industry_impacts_chart(
         plot_bgcolor="white",
         height=max(400, len(grouped) * 30),  # Dynamic height
         margin=dict(l=250),  # Space for long labels
+    )
+
+    fig.update_xaxes(showgrid=True, gridcolor="#eee")
+    fig.update_yaxes(showgrid=False)
+
+    return fig
+
+
+def _create_legislation_count_chart(
+    df_year: pd.DataFrame,
+    year: int,
+    highlight_top_n: int
+) -> go.Figure:
+    """Create stacked horizontal bar chart showing legislation count by industry, split by Primary/Secondary."""
+    # Colors for Primary and Secondary
+    PRIMARY_COLOR = "#1f4e79"
+    SECONDARY_COLOR = "#2e86ab"
+
+    # Aggregate by ANZSIC and type (Primary/Secondary)
+    grouped = df_year.groupby(["anzsic_code", "anzsic_name", "type"]).agg(
+        leg_count=("register_id", "count"),
+    ).reset_index()
+
+    # Pivot to get Primary and Secondary as separate columns
+    pivot = grouped.pivot_table(
+        index=["anzsic_code", "anzsic_name"],
+        columns="type",
+        values="leg_count",
+        fill_value=0
+    ).reset_index()
+
+    # Ensure both Primary and Secondary columns exist
+    if "Primary" not in pivot.columns:
+        pivot["Primary"] = 0
+    if "Secondary" not in pivot.columns:
+        pivot["Secondary"] = 0
+
+    # Calculate total for sorting
+    pivot["total"] = pivot["Primary"] + pivot["Secondary"]
+
+    # Calculate percentage
+    total_leg = pivot["total"].sum()
+    pivot["pct_of_total"] = (pivot["total"] / total_leg * 100).round(1) if total_leg > 0 else 0
+
+    # Sort by total legislation count
+    pivot = pivot.sort_values("total", ascending=True)
+
+    # Create labels with ANZSIC code
+    pivot["label"] = pivot.apply(
+        lambda row: f"{row['anzsic_code']}: {row['anzsic_name']}", axis=1
+    )
+
+    # Build hover text for Primary
+    hover_primary = []
+    for _, row in pivot.iterrows():
+        hover_primary.append(
+            f"<b>{row['anzsic_name']}</b><br>"
+            f"Primary: {format_number(row['Primary'])}<br>"
+            f"Secondary: {format_number(row['Secondary'])}<br>"
+            f"Total: {format_number(row['total'])}<br>"
+            f"Share of Total: {row['pct_of_total']:.1f}%"
+        )
+
+    # Build hover text for Secondary
+    hover_secondary = []
+    for _, row in pivot.iterrows():
+        hover_secondary.append(
+            f"<b>{row['anzsic_name']}</b><br>"
+            f"Primary: {format_number(row['Primary'])}<br>"
+            f"Secondary: {format_number(row['Secondary'])}<br>"
+            f"Total: {format_number(row['total'])}<br>"
+            f"Share of Total: {row['pct_of_total']:.1f}%"
+        )
+
+    # Create figure with stacked bars
+    fig = go.Figure()
+
+    # Primary legislation bar
+    fig.add_trace(go.Bar(
+        y=pivot["label"],
+        x=pivot["Primary"],
+        orientation="h",
+        name="Primary",
+        marker_color=PRIMARY_COLOR,
+        hovertemplate="%{customdata}<extra></extra>",
+        customdata=hover_primary,
+    ))
+
+    # Secondary legislation bar
+    fig.add_trace(go.Bar(
+        y=pivot["label"],
+        x=pivot["Secondary"],
+        orientation="h",
+        name="Secondary",
+        marker_color=SECONDARY_COLOR,
+        hovertemplate="%{customdata}<extra></extra>",
+        customdata=hover_secondary,
+    ))
+
+    # Update layout
+    fig.update_layout(
+        title=dict(
+            text=f"Legislation by Industry ({year})",
+            font=dict(size=16),
+        ),
+        xaxis_title="Number of Legislation",
+        yaxis_title="",
+        plot_bgcolor="white",
+        height=max(400, len(pivot) * 30),  # Dynamic height
+        margin=dict(l=250),  # Space for long labels
+        barmode="stack",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
     )
 
     fig.update_xaxes(showgrid=True, gridcolor="#eee")
