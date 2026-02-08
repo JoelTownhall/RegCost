@@ -34,7 +34,11 @@ def create_headline_chart(
     Returns:
         Plotly Figure object
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
 
     # Aggregate legislation data by year
     leg_by_year = leg_df[
@@ -175,7 +179,11 @@ def create_industry_chart(
     Returns:
         Plotly Figure object
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
     industry_name = ANZSIC_DIVISIONS.get(anzsic_code, "Unknown")
 
     # Get industry legislation requirements by year

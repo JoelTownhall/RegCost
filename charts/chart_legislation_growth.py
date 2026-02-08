@@ -9,6 +9,13 @@ from config.colours import LEG_COLOURS
 from utils.helpers import truncate_list, format_number, format_percentage
 
 
+# Colours for Primary/Secondary legislation
+LEG_TYPE_COLOURS = {
+    "Primary": "#1f4e79",      # Dark blue for Acts
+    "Secondary": "#2e86ab",    # Lighter blue for Instruments
+}
+
+
 def create_legislation_growth_chart(
     df: pd.DataFrame,
     year_start: int,
@@ -22,12 +29,16 @@ def create_legislation_growth_chart(
         df: Time series DataFrame with legislation data
         year_start: Start year for display
         year_end: End year for display
-        methodology: "BC Method" or "RegData Method"
+        methodology: "BC Method" or "Mercatus Method"
 
     Returns:
         Plotly Figure object
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology == "Mercatus Method":
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
 
     # Filter to year range
     df_filtered = df[(df["as_of_year"] >= year_start) & (df["as_of_year"] <= year_end)]
@@ -38,24 +49,18 @@ def create_legislation_growth_chart(
                           xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False)
         return fig
 
-    # Standardize type names
     df_filtered = df_filtered.copy()
-    df_filtered["display_type"] = df_filtered["subtype"].map({
-        "Act": "Act",
-        "Legislative instrument": "Legislative Instrument",
-        "Notifiable instrument": "Notifiable Instrument",
-    }).fillna(df_filtered["subtype"])
 
-    # Aggregate by year and type
-    grouped = df_filtered.groupby(["as_of_year", "display_type"]).agg(
+    # Aggregate by year and type (Primary/Secondary)
+    grouped = df_filtered.groupby(["as_of_year", "type"]).agg(
         leg_count=("register_id", "count"),
         req_count=(req_col, "sum"),
         titles=("title", lambda x: list(x.head(15)))
     ).reset_index()
 
     # Pivot for stacked bars
-    pivot_counts = grouped.pivot(index="as_of_year", columns="display_type", values="leg_count").fillna(0)
-    pivot_titles = grouped.pivot(index="as_of_year", columns="display_type", values="titles")
+    pivot_counts = grouped.pivot(index="as_of_year", columns="type", values="leg_count").fillna(0)
+    pivot_titles = grouped.pivot(index="as_of_year", columns="type", values="titles")
 
     # Total requirements by year (for line chart)
     total_reqs = grouped.groupby("as_of_year")["req_count"].sum().reset_index()
@@ -65,8 +70,8 @@ def create_legislation_growth_chart(
     # Create figure with secondary y-axis
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    # Add stacked bars for each legislation type
-    leg_types = ["Act", "Legislative Instrument", "Notifiable Instrument"]
+    # Add stacked bars for Primary and Secondary
+    leg_types = ["Primary", "Secondary"]
     for leg_type in leg_types:
         if leg_type not in pivot_counts.columns:
             continue
@@ -81,18 +86,18 @@ def create_legislation_growth_chart(
             else:
                 titles_str = "No titles"
             hover_texts.append(
-                f"<b>{leg_type}</b><br>"
+                f"<b>{leg_type} Legislation</b><br>"
                 f"Year: {year}<br>"
                 f"Count: {format_number(count)}<br>"
-                f"<br>Legislation:<br>{titles_str}"
+                f"<br>Sample titles:<br>{titles_str}"
             )
 
         fig.add_trace(
             go.Bar(
-                name=leg_type,
+                name=f"{leg_type} Legislation",
                 x=pivot_counts.index,
                 y=pivot_counts[leg_type],
-                marker_color=LEG_COLOURS.get(leg_type, "#999"),
+                marker_color=LEG_TYPE_COLOURS.get(leg_type, "#999"),
                 hovertemplate="%{customdata}<extra></extra>",
                 customdata=hover_texts,
             ),
@@ -105,7 +110,7 @@ def create_legislation_growth_chart(
         yoy = format_percentage(row["yoy_pct"]) if pd.notna(row["yoy_pct"]) else "N/A"
         change = format_number(row["yoy_change"]) if pd.notna(row["yoy_change"]) else "N/A"
         hover_reqs.append(
-            f"<b>Requirements</b><br>"
+            f"<b>Requirements ({methodology})</b><br>"
             f"Year: {int(row['as_of_year'])}<br>"
             f"Total: {format_number(row['req_count'])}<br>"
             f"YoY Change: {change} ({yoy})"
@@ -113,7 +118,7 @@ def create_legislation_growth_chart(
 
     fig.add_trace(
         go.Scatter(
-            name="Requirements",
+            name=f"Requirements ({methodology})",
             x=total_reqs["as_of_year"],
             y=total_reqs["req_count"],
             mode="lines+markers",
@@ -129,7 +134,7 @@ def create_legislation_growth_chart(
     fig.update_layout(
         barmode="stack",
         title=dict(
-            text=f"Cumulative Legislation and Requirements ({methodology})",
+            text=f"Cumulative Legislation and Requirements",
             font=dict(size=16),
         ),
         legend=dict(
@@ -165,6 +170,44 @@ def create_legislation_growth_chart(
     return fig
 
 
+def get_legislation_requirements_detail(
+    df: pd.DataFrame,
+    year: int,
+    methodology: str = "BC Method"
+) -> pd.DataFrame:
+    """
+    Get all legislation for a year, ranked by requirement count (most to least).
+
+    Args:
+        df: Time series DataFrame
+        year: Selected year
+        methodology: Counting methodology
+
+    Returns:
+        DataFrame for display with columns: Title, Type, Subtype, Requirements
+    """
+    # Handle methodology name variations
+    if methodology == "Mercatus Method":
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
+
+    # Filter to specified year
+    filtered = df[df["as_of_year"] == year].copy()
+
+    if filtered.empty:
+        return pd.DataFrame()
+
+    # Select columns for display
+    result = filtered[["title", "type", "subtype", "register_id", req_col]].copy()
+    result.columns = ["Title", "Type", "Subtype", "Register ID", "Requirement Count"]
+
+    # Sort by requirement count descending
+    result = result.sort_values("Requirement Count", ascending=False)
+
+    return result
+
+
 def render_legislation_detail_table(
     df: pd.DataFrame,
     year: int,
@@ -173,6 +216,7 @@ def render_legislation_detail_table(
 ) -> pd.DataFrame:
     """
     Get legislation details for display in expandable table.
+    (Legacy function for compatibility)
 
     Args:
         df: Time series DataFrame
@@ -183,7 +227,11 @@ def render_legislation_detail_table(
     Returns:
         DataFrame for display
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology == "Mercatus Method":
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
 
     # Standardize type names
     df = df.copy()

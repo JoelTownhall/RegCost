@@ -29,7 +29,11 @@ def create_industry_impacts_chart(
     Returns:
         Plotly Figure object
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
 
     # Filter to specified year
     df_year = df[df["as_of_year"] == year].copy()
@@ -129,7 +133,11 @@ def get_industry_detail(
     Returns:
         DataFrame with top legislation details
     """
-    req_col = "bc_requirements" if methodology == "BC Method" else "regdata_requirements"
+    # Handle methodology name variations
+    if methodology in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
 
     # Standardize type names
     df = df.copy()
