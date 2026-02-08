@@ -271,17 +271,17 @@ if not leg_ts_df.empty:
 
 st.divider()
 
-# --- Chart 3: Regulation vs Economic Performance ---
-st.header("Regulation vs Economic Performance")
+# --- Chart 3: Regulation in a Macro Economic Context ---
+st.header("Chart 3: Regulation in a Macro Economic Context")
 st.markdown("""
-These charts compare the growth trajectory of legislation and requirements against
+These charts compare the growth trajectory of regulatory requirements against
 key economic indicators, all indexed to 100 at a common base year.
 """)
 
 # Chart 3a: Headline
 st.subheader("Australia - Headline")
 
-col1, col2, col3 = st.columns([1, 1, 2])
+col1, col2 = st.columns([1, 2])
 with col1:
     base_year_3a = st.number_input(
         "Base year (= 100)",
@@ -291,12 +291,6 @@ with col1:
         key="chart3a_base"
     )
 with col2:
-    show_annotations = st.checkbox(
-        "Show regulatory events",
-        value=False,
-        help="Mark key regulatory policy changes on the chart"
-    )
-with col3:
     methodology_c3 = st.radio(
         "Counting Method",
         ["BC Method", "Mercatus Method"],
@@ -312,7 +306,6 @@ if not leg_ts_df.empty:
         year_end=year_range[1],
         base_year=int(base_year_3a),
         methodology=methodology_c3,
-        show_annotations=show_annotations,
     )
     st.plotly_chart(fig3a, width="stretch")
 

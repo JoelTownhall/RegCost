@@ -17,7 +17,6 @@ def create_headline_chart(
     year_end: int,
     base_year: int,
     methodology: str = "BC Method",
-    show_annotations: bool = True
 ) -> go.Figure:
     """
     Create indexed line chart comparing regulation growth to economic indicators.
@@ -29,7 +28,6 @@ def create_headline_chart(
         year_end: End year for display
         base_year: Year to use as index base (= 100)
         methodology: "BC Method" or "RegData Method"
-        show_annotations: Whether to show regulatory event annotations
 
     Returns:
         Plotly Figure object
@@ -74,18 +72,16 @@ def create_headline_chart(
 
     # Index to base year
     combined = index_to_base(combined, base_year, [
-        "leg_count", "req_count", "gva_millions", "employment_thousands", "productivity"
+        "req_count", "gva_millions", "productivity"
     ])
 
     # Create figure
     fig = go.Figure()
 
-    # Define series to plot
+    # Define series to plot (simplified: Requirements, Real GVA, Productivity)
     series_config = [
-        ("leg_count_idx", "Legislation Count", MACRO_COLOURS["Legislation"]),
         ("req_count_idx", "Requirements", MACRO_COLOURS["Requirements"]),
         ("gva_millions_idx", "Real GVA", MACRO_COLOURS["Real GDP"]),
-        ("employment_thousands_idx", "Employment", MACRO_COLOURS["Employment"]),
         ("productivity_idx", "Productivity", MACRO_COLOURS["Productivity"]),
     ]
 
@@ -123,17 +119,20 @@ def create_headline_chart(
     # Add reference line at 100
     fig.add_hline(y=100, line_dash="dash", line_color="#ccc", annotation_text=f"Base year ({base_year})")
 
-    # Add event annotations if requested
-    if show_annotations:
-        fig.update_layout(
-            annotations=get_event_annotations(),
-            shapes=get_vline_shapes(),
-        )
+    # Always show COVID response annotation
+    fig.add_vline(
+        x=2020,
+        line_dash="dash",
+        line_color="#999",
+        annotation_text="COVID response",
+        annotation_position="top",
+        annotation_font=dict(size=10, color="#666"),
+    )
 
     # Update layout
     fig.update_layout(
         title=dict(
-            text=f"Regulation vs Economic Performance (Indexed to {base_year} = 100)",
+            text=f"Regulation in a Macro Economic Context (Indexed to {base_year} = 100)",
             font=dict(size=16),
         ),
         xaxis_title="Year",
@@ -201,7 +200,11 @@ def create_industry_chart(
         (econ_df["anzsic_code"] == anzsic_code) &
         (econ_df["year"] >= year_start) &
         (econ_df["year"] <= year_end)
-    ][["year", "gva_millions", "employment_thousands"]].copy()
+    ][["year", "gva_millions", "hours_worked_millions"]].copy()
+
+    # Calculate productivity (GVA per hour worked)
+    if "hours_worked_millions" in industry_econ.columns and "gva_millions" in industry_econ.columns:
+        industry_econ["productivity"] = industry_econ["gva_millions"] / industry_econ["hours_worked_millions"]
 
     # Merge
     combined = industry_leg.merge(industry_econ, on="year", how="outer")
@@ -215,7 +218,7 @@ def create_industry_chart(
 
     # Index to base year
     combined = index_to_base(combined, base_year, [
-        "req_count", "gva_millions", "employment_thousands"
+        "req_count", "gva_millions", "productivity"
     ])
 
     # Create figure
@@ -224,7 +227,7 @@ def create_industry_chart(
     series_config = [
         ("req_count_idx", "Industry Requirements", ACCESSIBLE_PALETTE[1]),
         ("gva_millions_idx", "Industry GVA", ACCESSIBLE_PALETTE[2]),
-        ("employment_thousands_idx", "Industry Employment", ACCESSIBLE_PALETTE[3]),
+        ("productivity_idx", "Industry Productivity", ACCESSIBLE_PALETTE[3]),
     ]
 
     for col, name, color in series_config:
@@ -243,9 +246,19 @@ def create_industry_chart(
     # Add reference line
     fig.add_hline(y=100, line_dash="dash", line_color="#ccc")
 
+    # Always show COVID response annotation
+    fig.add_vline(
+        x=2020,
+        line_dash="dash",
+        line_color="#999",
+        annotation_text="COVID response",
+        annotation_position="top",
+        annotation_font=dict(size=10, color="#666"),
+    )
+
     fig.update_layout(
         title=dict(
-            text=f"{anzsic_code}: {industry_name} (Indexed to {base_year} = 100)",
+            text=f"{anzsic_code}: {industry_name} - Macro Context (Indexed to {base_year} = 100)",
             font=dict(size=16),
         ),
         xaxis_title="Year",
