@@ -1,0 +1,92 @@
+ABOUT THIS PROJECT
+==================
+
+Exploring Regulations in Australia provides an interactive view of Australia's
+federal regulatory landscape, tracking the stock of legislation and the binding
+requirements within it over time and by industry.
+
+IMPORTANT CAVEAT
+----------------
+This is a project for a vibe-coding club and has not been closely checked.
+Use with appropriate caution.
+
+
+PURPOSE
+-------
+This project is not about estimating regulatory cost per se. Rather, it focuses
+on exploring the regulatory landscape and building up the foundational data
+needed to understand Australia's regulatory environment. Better data enables
+better analysis and more informed policy discussions.
+
+
+FOUNDATIONAL APPROACH
+---------------------
+This work draws inspiration from the Australian Law Reform Commission (ALRC),
+which has pioneered empirical analysis of legislative complexity in Australia.
+The ALRC's Corporations and Financial Services Legislation Inquiry produced
+groundbreaking data analysis providing fresh insights into the causes and
+consequences of legislative complexity. The ALRC has recommended a Legislative
+Data Framework to monitor the development of legislation - a principle that
+guides this exploratory project.
+
+Learn more: https://www.alrc.gov.au/
+
+
+DATA SOURCES
+------------
+- Federal Register of Legislation (legislation.gov.au)
+- Australian Bureau of Statistics (economic indicators, business counts)
+
+Note: While direct API access would enable more robust and timely data collection,
+the current approach relies on web scraping which presents challenges around
+data completeness and maintenance.
+
+
+COUNTING METHODOLOGIES
+----------------------
+Two approaches are used to count binding requirements in legislation:
+
+BC Method: Counts occurrences of "must", "shall", "required" (excluding "must not",
+"shall not") - based on British Columbia's regulatory counting approach.
+
+Mercatus Method: Counts "shall", "must", "may not", "required", "prohibited" -
+based on the Mercatus Center's RegData methodology.
+
+
+CURRENT LIMITATIONS
+-------------------
+- Repeal data is not currently incorporated; counts show gross cumulative totals
+- Industry classification is approximate, based on administering department
+  and keyword matching
+- Firm count data (ABS 8165.0) covers 2010-2023 only
+
+
+RECENT POLICY CONTEXT
+---------------------
+Several major reports have recently examined Australia's regulatory burden:
+
+Mandala Partners / AICD Report (2025)
+"$160 billion and counting: The cost of Commonwealth regulatory complexity"
+Found that compliance costs have risen to $160 billion (5.8% of GDP), up from
+$65 billion in 2013. Board time on compliance has doubled from 24% to 55%
+in ten years.
+https://www.aicd.com.au/news-media/research-and-reports/economic-cost-of-regulatory-complexity.html
+
+CEDA Report (2024)
+"Towards a more seamless Australian economy"
+Makes the case for sustained commitment to better regulation and harmonisation
+across Australia. Estimates that unfinished reforms from the 2009-2013 Seamless
+National Economy agreement offer billions in annual benefits.
+https://www.ceda.com.au/research-and-policy/research/economy/towards-a-more-seamless-australian-economy
+
+Productivity Commission Five Pillars (2024)
+Five inquiries identifying priority reforms across the economy. Recommends the
+government make regulatory reform a key priority with an ambitious agenda
+targeting a $10 billion reduction in regulatory burden.
+https://www.pc.gov.au/inquiries-and-research/five-productivity-inquiries/
+
+
+CONTACT
+-------
+For feedback or questions about this project, please raise an issue at the
+project repository.

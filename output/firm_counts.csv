@@ -1,0 +1,267 @@
+year,anzsic_code,firm_count,firm_count_small,firm_count_large,anzsic_name
+2010,A,154100,152900,1200,"Agriculture, Forestry and Fishing"
+2010,B,12000,10600,1400,Mining
+2010,C,108300,101500,6800,Manufacturing
+2010,D,3800,2900,900,"Electricity, Gas, Water and Waste Services"
+2010,E,257600,252200,5400,Construction
+2010,F,100100,95300,4800,Wholesale Trade
+2010,G,166100,157400,8700,Retail Trade
+2010,H,79200,69500,9700,Accommodation and Food Services
+2010,I,67100,65400,1700,"Transport, Postal and Warehousing"
+2010,J,23000,21300,1700,Information Media and Telecommunications
+2010,K,164400,162200,2200,Financial and Insurance Services
+2010,L,233800,232600,1200,"Rental, Hiring and Real Estate Services"
+2010,M,194500,191500,3000,"Professional, Scientific and Technical Services"
+2010,N,74900,70800,4100,Administrative and Support Services
+2010,O,10000,8100,1900,Public Administration and Safety
+2010,P,32900,29500,3400,Education and Training
+2010,Q,74800,64800,10000,Health Care and Social Assistance
+2010,R,36500,34600,1900,Arts and Recreation Services
+2010,S,100700,98600,2100,Other Services
+2011,A,151800,150600,1200,"Agriculture, Forestry and Fishing"
+2011,B,11600,10200,1400,Mining
+2011,C,105700,98800,6900,Manufacturing
+2011,D,3900,3000,900,"Electricity, Gas, Water and Waste Services"
+2011,E,269600,264000,5600,Construction
+2011,F,98700,93900,4800,Wholesale Trade
+2011,G,164000,155200,8800,Retail Trade
+2011,H,80400,70600,9800,Accommodation and Food Services
+2011,I,69900,68100,1800,"Transport, Postal and Warehousing"
+2011,J,23400,21700,1700,Information Media and Telecommunications
+2011,K,170300,168000,2300,Financial and Insurance Services
+2011,L,239100,237800,1300,"Rental, Hiring and Real Estate Services"
+2011,M,202700,199600,3100,"Professional, Scientific and Technical Services"
+2011,N,77500,73300,4200,Administrative and Support Services
+2011,O,10100,8200,1900,Public Administration and Safety
+2011,P,33600,30200,3400,Education and Training
+2011,Q,77400,67200,10200,Health Care and Social Assistance
+2011,R,36700,34800,1900,Arts and Recreation Services
+2011,S,101300,99200,2100,Other Services
+2012,A,149600,148400,1200,"Agriculture, Forestry and Fishing"
+2012,B,11200,9800,1400,Mining
+2012,C,103200,96200,7000,Manufacturing
+2012,D,4000,3100,900,"Electricity, Gas, Water and Waste Services"
+2012,E,282000,276200,5800,Construction
+2012,F,97300,92500,4800,Wholesale Trade
+2012,G,162000,153100,8900,Retail Trade
+2012,H,81600,71700,9900,Accommodation and Food Services
+2012,I,72900,71000,1900,"Transport, Postal and Warehousing"
+2012,J,23800,22100,1700,Information Media and Telecommunications
+2012,K,176500,174100,2400,Financial and Insurance Services
+2012,L,244700,243300,1400,"Rental, Hiring and Real Estate Services"
+2012,M,211400,208100,3300,"Professional, Scientific and Technical Services"
+2012,N,80300,76000,4300,Administrative and Support Services
+2012,O,10200,8300,1900,Public Administration and Safety
+2012,P,34300,30900,3400,Education and Training
+2012,Q,80100,69700,10400,Health Care and Social Assistance
+2012,R,36800,34900,1900,Arts and Recreation Services
+2012,S,102000,99900,2100,Other Services
+2013,A,147400,146200,1200,"Agriculture, Forestry and Fishing"
+2013,B,10800,9400,1400,Mining
+2013,C,100800,93700,7100,Manufacturing
+2013,D,4100,3200,900,"Electricity, Gas, Water and Waste Services"
+2013,E,294700,288800,5900,Construction
+2013,F,96000,91200,4800,Wholesale Trade
+2013,G,160100,151100,9000,Retail Trade
+2013,H,82900,72900,10000,Accommodation and Food Services
+2013,I,76100,74100,2000,"Transport, Postal and Warehousing"
+2013,J,24200,22500,1700,Information Media and Telecommunications
+2013,K,183000,180500,2500,Financial and Insurance Services
+2013,L,250600,249100,1500,"Rental, Hiring and Real Estate Services"
+2013,M,220500,217000,3500,"Professional, Scientific and Technical Services"
+2013,N,83200,78800,4400,Administrative and Support Services
+2013,O,10300,8400,1900,Public Administration and Safety
+2013,P,35100,31600,3500,Education and Training
+2013,Q,83000,72400,10600,Health Care and Social Assistance
+2013,R,37000,35100,1900,Arts and Recreation Services
+2013,S,102700,100600,2100,Other Services
+2014,A,145300,144100,1200,"Agriculture, Forestry and Fishing"
+2014,B,10400,9000,1400,Mining
+2014,C,98500,91300,7200,Manufacturing
+2014,D,4200,3300,900,"Electricity, Gas, Water and Waste Services"
+2014,E,307800,301700,6100,Construction
+2014,F,94700,89900,4800,Wholesale Trade
+2014,G,158300,149200,9100,Retail Trade
+2014,H,84200,74100,10100,Accommodation and Food Services
+2014,I,79500,77400,2100,"Transport, Postal and Warehousing"
+2014,J,24700,22900,1800,Information Media and Telecommunications
+2014,K,189800,187200,2600,Financial and Insurance Services
+2014,L,256800,255300,1500,"Rental, Hiring and Real Estate Services"
+2014,M,230100,226400,3700,"Professional, Scientific and Technical Services"
+2014,N,86300,81800,4500,Administrative and Support Services
+2014,O,10400,8500,1900,Public Administration and Safety
+2014,P,35900,32300,3600,Education and Training
+2014,Q,86100,75200,10900,Health Care and Social Assistance
+2014,R,37200,35300,1900,Arts and Recreation Services
+2014,S,103500,101400,2100,Other Services
+2015,A,143200,142000,1200,"Agriculture, Forestry and Fishing"
+2015,B,10000,8600,1400,Mining
+2015,C,96300,89000,7300,Manufacturing
+2015,D,4300,3400,900,"Electricity, Gas, Water and Waste Services"
+2015,E,321300,315000,6300,Construction
+2015,F,93500,88700,4800,Wholesale Trade
+2015,G,156600,147400,9200,Retail Trade
+2015,H,85600,75400,10200,Accommodation and Food Services
+2015,I,83100,80900,2200,"Transport, Postal and Warehousing"
+2015,J,25200,23400,1800,Information Media and Telecommunications
+2015,K,197000,194300,2700,Financial and Insurance Services
+2015,L,263400,261800,1600,"Rental, Hiring and Real Estate Services"
+2015,M,240200,236300,3900,"Professional, Scientific and Technical Services"
+2015,N,89600,85000,4600,Administrative and Support Services
+2015,O,10500,8600,1900,Public Administration and Safety
+2015,P,36700,33100,3600,Education and Training
+2015,Q,89300,78200,11100,Health Care and Social Assistance
+2015,R,37400,35500,1900,Arts and Recreation Services
+2015,S,104300,102200,2100,Other Services
+2016,A,141200,140000,1200,"Agriculture, Forestry and Fishing"
+2016,B,9700,8300,1400,Mining
+2016,C,94200,86800,7400,Manufacturing
+2016,D,4400,3500,900,"Electricity, Gas, Water and Waste Services"
+2016,E,335200,328600,6600,Construction
+2016,F,92300,87400,4900,Wholesale Trade
+2016,G,155000,145700,9300,Retail Trade
+2016,H,87100,76800,10300,Accommodation and Food Services
+2016,I,86900,84600,2300,"Transport, Postal and Warehousing"
+2016,J,25700,23900,1800,Information Media and Telecommunications
+2016,K,204600,201800,2800,Financial and Insurance Services
+2016,L,270400,268700,1700,"Rental, Hiring and Real Estate Services"
+2016,M,250800,246700,4100,"Professional, Scientific and Technical Services"
+2016,N,93100,88400,4700,Administrative and Support Services
+2016,O,10600,8700,1900,Public Administration and Safety
+2016,P,37600,33900,3700,Education and Training
+2016,Q,92700,81400,11300,Health Care and Social Assistance
+2016,R,37600,35700,1900,Arts and Recreation Services
+2016,S,105200,103100,2100,Other Services
+2017,A,139300,138100,1200,"Agriculture, Forestry and Fishing"
+2017,B,9500,8100,1400,Mining
+2017,C,92200,84800,7400,Manufacturing
+2017,D,4500,3600,900,"Electricity, Gas, Water and Waste Services"
+2017,E,349500,342700,6800,Construction
+2017,F,91200,86200,5000,Wholesale Trade
+2017,G,153500,144100,9400,Retail Trade
+2017,H,88600,78200,10400,Accommodation and Food Services
+2017,I,90900,88400,2500,"Transport, Postal and Warehousing"
+2017,J,26300,24500,1800,Information Media and Telecommunications
+2017,K,212500,209600,2900,Financial and Insurance Services
+2017,L,277800,276000,1800,"Rental, Hiring and Real Estate Services"
+2017,M,261900,257600,4300,"Professional, Scientific and Technical Services"
+2017,N,96800,91900,4900,Administrative and Support Services
+2017,O,10700,8800,1900,Public Administration and Safety
+2017,P,38500,34700,3800,Education and Training
+2017,Q,96300,84700,11600,Health Care and Social Assistance
+2017,R,37900,35900,2000,Arts and Recreation Services
+2017,S,106200,104000,2200,Other Services
+2018,A,137400,136200,1200,"Agriculture, Forestry and Fishing"
+2018,B,9600,8200,1400,Mining
+2018,C,90300,82900,7400,Manufacturing
+2018,D,4600,3700,900,"Electricity, Gas, Water and Waste Services"
+2018,E,364200,357200,7000,Construction
+2018,F,90100,85000,5100,Wholesale Trade
+2018,G,152100,142600,9500,Retail Trade
+2018,H,90200,79700,10500,Accommodation and Food Services
+2018,I,95100,92400,2700,"Transport, Postal and Warehousing"
+2018,J,26900,25000,1900,Information Media and Telecommunications
+2018,K,220800,217800,3000,Financial and Insurance Services
+2018,L,285600,283700,1900,"Rental, Hiring and Real Estate Services"
+2018,M,273500,269000,4500,"Professional, Scientific and Technical Services"
+2018,N,100700,95600,5100,Administrative and Support Services
+2018,O,10900,9000,1900,Public Administration and Safety
+2018,P,39500,35600,3900,Education and Training
+2018,Q,100100,88200,11900,Health Care and Social Assistance
+2018,R,38200,36200,2000,Arts and Recreation Services
+2018,S,107200,105000,2200,Other Services
+2019,A,135600,134400,1200,"Agriculture, Forestry and Fishing"
+2019,B,9800,8400,1400,Mining
+2019,C,88500,81000,7500,Manufacturing
+2019,D,4800,3900,900,"Electricity, Gas, Water and Waste Services"
+2019,E,379400,372200,7200,Construction
+2019,F,89100,83900,5200,Wholesale Trade
+2019,G,150800,141200,9600,Retail Trade
+2019,H,91800,81200,10600,Accommodation and Food Services
+2019,I,99400,96600,2800,"Transport, Postal and Warehousing"
+2019,J,27500,25600,1900,Information Media and Telecommunications
+2019,K,229500,226400,3100,Financial and Insurance Services
+2019,L,293800,291800,2000,"Rental, Hiring and Real Estate Services"
+2019,M,285600,280900,4700,"Professional, Scientific and Technical Services"
+2019,N,104800,99500,5300,Administrative and Support Services
+2019,O,11000,9100,1900,Public Administration and Safety
+2019,P,40500,36500,4000,Education and Training
+2019,Q,104100,91800,12300,Health Care and Social Assistance
+2019,R,38500,36500,2000,Arts and Recreation Services
+2019,S,108300,106000,2300,Other Services
+2020,A,133800,132600,1200,"Agriculture, Forestry and Fishing"
+2020,B,10000,8600,1400,Mining
+2020,C,86800,79200,7600,Manufacturing
+2020,D,5000,4000,1000,"Electricity, Gas, Water and Waste Services"
+2020,E,395100,387600,7500,Construction
+2020,F,88100,82900,5200,Wholesale Trade
+2020,G,149600,139800,9800,Retail Trade
+2020,H,92500,81800,10700,Accommodation and Food Services
+2020,I,103900,100900,3000,"Transport, Postal and Warehousing"
+2020,J,28200,26200,2000,Information Media and Telecommunications
+2020,K,238600,235300,3300,Financial and Insurance Services
+2020,L,302400,300300,2100,"Rental, Hiring and Real Estate Services"
+2020,M,298200,293300,4900,"Professional, Scientific and Technical Services"
+2020,N,109100,103600,5500,Administrative and Support Services
+2020,O,11200,9200,2000,Public Administration and Safety
+2020,P,41600,37500,4100,Education and Training
+2020,Q,108400,95700,12700,Health Care and Social Assistance
+2020,R,38800,36800,2000,Arts and Recreation Services
+2020,S,109400,107000,2400,Other Services
+2021,A,132100,130900,1200,"Agriculture, Forestry and Fishing"
+2021,B,10200,8800,1400,Mining
+2021,C,85100,77500,7600,Manufacturing
+2021,D,5200,4200,1000,"Electricity, Gas, Water and Waste Services"
+2021,E,411200,403500,7700,Construction
+2021,F,87200,82000,5200,Wholesale Trade
+2021,G,148500,138600,9900,Retail Trade
+2021,H,88700,77800,10900,Accommodation and Food Services
+2021,I,108600,105400,3200,"Transport, Postal and Warehousing"
+2021,J,28900,26900,2000,Information Media and Telecommunications
+2021,K,248100,244700,3400,Financial and Insurance Services
+2021,L,311500,309400,2100,"Rental, Hiring and Real Estate Services"
+2021,M,311400,306200,5200,"Professional, Scientific and Technical Services"
+2021,N,113800,108100,5700,Administrative and Support Services
+2021,O,11400,9400,2000,Public Administration and Safety
+2021,P,42800,38600,4200,Education and Training
+2021,Q,112900,99900,13000,Health Care and Social Assistance
+2021,R,39200,37200,2000,Arts and Recreation Services
+2021,S,110600,108200,2400,Other Services
+2022,A,130500,129200,1300,"Agriculture, Forestry and Fishing"
+2022,B,10800,9300,1500,Mining
+2022,C,83600,75800,7800,Manufacturing
+2022,D,5500,4500,1000,"Electricity, Gas, Water and Waste Services"
+2022,E,432500,424200,8300,Construction
+2022,F,86300,81000,5300,Wholesale Trade
+2022,G,147800,137800,10000,Retail Trade
+2022,H,93400,82200,11200,Accommodation and Food Services
+2022,I,113200,109800,3400,"Transport, Postal and Warehousing"
+2022,J,29800,27700,2100,Information Media and Telecommunications
+2022,K,258400,254800,3600,Financial and Insurance Services
+2022,L,321200,319000,2200,"Rental, Hiring and Real Estate Services"
+2022,M,326800,321300,5500,"Professional, Scientific and Technical Services"
+2022,N,118900,112900,6000,Administrative and Support Services
+2022,O,11600,9600,2000,Public Administration and Safety
+2022,P,44100,39800,4300,Education and Training
+2022,Q,117500,104100,13400,Health Care and Social Assistance
+2022,R,40800,38700,2100,Arts and Recreation Services
+2022,S,111900,109400,2500,Other Services
+2023,A,128800,127500,1300,"Agriculture, Forestry and Fishing"
+2023,B,11400,9800,1600,Mining
+2023,C,82300,74200,8100,Manufacturing
+2023,D,5900,4800,1100,"Electricity, Gas, Water and Waste Services"
+2023,E,447800,439200,8600,Construction
+2023,F,85900,80500,5400,Wholesale Trade
+2023,G,148100,137800,10300,Retail Trade
+2023,H,97100,85600,11500,Accommodation and Food Services
+2023,I,117500,113800,3700,"Transport, Postal and Warehousing"
+2023,J,30700,28500,2200,Information Media and Telecommunications
+2023,K,269000,265200,3800,Financial and Insurance Services
+2023,L,331700,329400,2300,"Rental, Hiring and Real Estate Services"
+2023,M,341900,336100,5800,"Professional, Scientific and Technical Services"
+2023,N,123700,117400,6300,Administrative and Support Services
+2023,O,11900,9800,2100,Public Administration and Safety
+2023,P,45700,41200,4500,Education and Training
+2023,Q,122200,108400,13800,Health Care and Social Assistance
+2023,R,42400,40200,2200,Arts and Recreation Services
+2023,S,113400,110800,2600,Other Services

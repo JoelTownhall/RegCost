@@ -60,28 +60,57 @@ with st.sidebar:
         value=(2010, MAX_YEAR),
     )
 
-    with st.expander("About Exploring Regulations in Australia"):
+    with st.expander("About this project", expanded=False):
         st.markdown("""
-        **Exploring Regulations in Australia** measures the stock of Australian
-        federal legislation and the binding requirements within it.
+**Exploring Regulations in Australia** provides an interactive view of
+Australia's federal regulatory landscape, tracking the stock of legislation
+and the binding requirements within it over time and by industry.
 
-        **Note:** This is a project for a vibe-coding club and has not been
-        closely checked. Use with appropriate caution.
+**Caveat:** This is a vibe-coding club project and has not been closely
+checked. Use with appropriate caution.
 
-        **Data Sources:**
-        - Federal Register of Legislation (legislation.gov.au)
-        - Australian Bureau of Statistics (economic indicators)
+**Purpose:** This project is not about estimating regulatory cost per se.
+Rather, it focuses on exploring the regulatory landscape and building up
+the foundational data needed to understand Australia's regulatory environment.
 
-        **Counting Methodologies:**
-        - **BC Method**: Counts occurrences of "must", "shall", "required"
-          (excluding "must not", "shall not") - based on British Columbia approach
-        - **Mercatus Method**: Counts "shall", "must", "may not", "required",
-          "prohibited" - based on Mercatus Center RegData methodology
+**Foundational approach:** This work draws inspiration from the
+[Australian Law Reform Commission (ALRC)](https://www.alrc.gov.au/), which
+has pioneered empirical analysis of legislative complexity. The ALRC's
+recommended Legislative Data Framework guides this exploratory project.
+While direct API access would enable more robust data collection, the current
+approach relies on web scraping which presents challenges.
 
-        **Limitations:**
-        - Repeal data is not currently incorporated; counts show gross cumulative totals
-        - Industry classification is approximate, based on administering department
-          and keyword matching
+**Data Sources:**
+- Federal Register of Legislation (legislation.gov.au)
+- Australian Bureau of Statistics (economic indicators, business counts)
+
+**Counting Methodologies:**
+- **BC Method**: Counts "must", "shall", "required" (excluding negatives)
+  - based on British Columbia approach
+- **Mercatus Method**: Counts "shall", "must", "may not", "required",
+  "prohibited" - based on Mercatus Center RegData methodology
+
+**Limitations:**
+- Repeal data not incorporated; counts show gross cumulative totals
+- Industry classification is approximate
+- Firm count data (ABS 8165.0) covers 2010-2023 only
+        """)
+
+    with st.expander("Recent policy context", expanded=False):
+        st.markdown("""
+Several major reports have recently examined Australia's regulatory burden:
+
+**[Mandala/AICD Report (2025)](https://www.aicd.com.au/news-media/research-and-reports/economic-cost-of-regulatory-complexity.html)**
+"$160 billion and counting" - Found compliance costs have risen to $160bn
+(5.8% of GDP), up from $65bn in 2013.
+
+**[CEDA Report (2024)](https://www.ceda.com.au/research-and-policy/research/economy/towards-a-more-seamless-australian-economy)**
+"Towards a more seamless Australian economy" - Makes the case for sustained
+commitment to better regulation and harmonisation.
+
+**[PC Five Pillars (2024)](https://www.pc.gov.au/inquiries-and-research/five-productivity-inquiries/)**
+Recommends regulatory reform as a key priority, targeting $10bn reduction
+in regulatory burden.
         """)
 
 # --- Header ---
@@ -253,11 +282,34 @@ if not leg_ts_df.empty:
                     stats_row = industry_year_stats.iloc[0]
                     col1, col2 = st.columns(2)
                     with col1:
-                        gva = stats_row.get("gva_millions", 0)
+                        gva = stats_row["gva_millions"] if "gva_millions" in stats_row.index else None
                         st.metric("Gross Value Added", f"${gva:,.0f}M" if pd.notna(gva) else "N/A")
                     with col2:
-                        firms = stats_row.get("firm_count", 0)
-                        st.metric("Number of Firms", f"{firms:,.0f}" if pd.notna(firms) else "N/A")
+                        firms = stats_row["firm_count"] if "firm_count" in stats_row.index else None
+                        st.metric("Number of Firms", f"{int(firms):,}" if pd.notna(firms) else "N/A")
+
+                    # Show firm size breakdown if available (ABS 8165.0 data: 2010-2023)
+                    firm_small = stats_row["firm_count_small"] if "firm_count_small" in stats_row.index else None
+                    firm_large = stats_row["firm_count_large"] if "firm_count_large" in stats_row.index else None
+                    if pd.notna(firm_small) and pd.notna(firm_large) and pd.notna(firms) and firms > 0:
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            pct_small = (firm_small / firms * 100)
+                            st.metric(
+                                "Small Firms (0-19 emp)",
+                                f"{int(firm_small):,}",
+                                delta=f"{pct_small:.1f}%",
+                                delta_color="off"
+                            )
+                        with col2:
+                            pct_large = (firm_large / firms * 100)
+                            st.metric(
+                                "Large Firms (20+ emp)",
+                                f"{int(firm_large):,}",
+                                delta=f"{pct_large:.1f}%",
+                                delta_color="off"
+                            )
+                        st.caption("Source: ABS 8165.0 (data available 2010-2023)")
                     st.divider()
 
             # Show legislation detail
@@ -287,7 +339,7 @@ with col1:
         "Base year (= 100)",
         min_value=year_range[0],
         max_value=year_range[1] - 2,
-        value=max(2005, year_range[0]),
+        value=year_range[0],
         key="chart3a_base"
     )
 with col2:
@@ -337,7 +389,7 @@ if industries_with_data:
             "Base year (= 100)",
             min_value=year_range[0],
             max_value=year_range[1] - 2,
-            value=max(2005, year_range[0]),
+            value=year_range[0],
             key="chart3b_base"
         )
 

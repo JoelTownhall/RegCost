@@ -1,495 +1,495 @@
-year,anzsic_code,anzsic_name,gva_millions,hours_worked_millions,gva_per_hour,gva_growth_pct
-2000,A,"Agriculture, Forestry and Fishing",31358.0,,,
-2000,B,Mining,32472.0,,,
-2000,C,Manufacturing,29965.0,,,
-2000,D,"Electricity, Gas, Water and Waste Services",28326.0,,,
-2000,E,Construction,27588.0,,,
-2000,F,Wholesale Trade,56888.0,,,
-2000,G,Retail Trade,55382.0,,,
-2000,H,Accommodation and Food Services,41948.0,,,
-2000,I,"Transport, Postal and Warehousing",17281.0,,,
-2000,J,Information Media and Telecommunications,7015.0,,,
-2000,K,Financial and Insurance Services,50256.0,,,
-2000,L,"Rental, Hiring and Real Estate Services",4954.0,,,
-2000,M,"Professional, Scientific and Technical Services",6513.0,,,
-2000,N,Administrative and Support Services,43036.0,,,
-2000,O,Public Administration and Safety,73298.0,,,
-2000,P,Education and Training,76477.0,,,
-2000,Q,Health Care and Social Assistance,68955.0,,,
-2000,R,Arts and Recreation Services,9325.0,,,
-2000,S,Other Services,28237.0,,,
-2001,A,"Agriculture, Forestry and Fishing",32583.0,,,3.9064991389756942
-2001,B,Mining,40132.0,,,23.589554077358965
-2001,C,Manufacturing,31362.0,,,4.662105790088433
-2001,D,"Electricity, Gas, Water and Waste Services",28794.0,,,1.652192332133029
-2001,E,Construction,22729.0,,,-17.612730172538782
-2001,F,Wholesale Trade,56852.0,,,-0.06328223878497852
-2001,G,Retail Trade,57606.0,,,4.015745187967212
-2001,H,Accommodation and Food Services,43511.0,,,3.726041765996002
-2001,I,"Transport, Postal and Warehousing",17917.0,,,3.6803425727677697
-2001,J,Information Media and Telecommunications,7279.0,,,3.7633642195295858
-2001,K,Financial and Insurance Services,50135.0,,,-0.24076727156956412
-2001,L,"Rental, Hiring and Real Estate Services",4923.0,,,-0.6257569640694349
-2001,M,"Professional, Scientific and Technical Services",7362.0,,,13.035467526485501
-2001,N,Administrative and Support Services,46406.0,,,7.830653406450416
-2001,O,Public Administration and Safety,75061.0,,,2.4052498021774227
-2001,P,Education and Training,78018.0,,,2.0149848974201356
-2001,Q,Health Care and Social Assistance,72859.0,,,5.6616634036690705
-2001,R,Arts and Recreation Services,9767.0,,,4.739946380697058
-2001,S,Other Services,29801.0,,,5.538832028898244
-2002,A,"Agriculture, Forestry and Fishing",33815.0,,,3.781112850259327
-2002,B,Mining,40530.0,,,0.9917272999103055
-2002,C,Manufacturing,31354.0,,,-0.025508577259103493
-2002,D,"Electricity, Gas, Water and Waste Services",28732.0,,,-0.21532263666041995
-2002,E,Construction,25896.0,,,13.93374103568128
-2002,F,Wholesale Trade,58494.0,,,2.8882009427988464
-2002,G,Retail Trade,61222.0,,,6.277123910703741
-2002,H,Accommodation and Food Services,43570.0,,,0.1355978947852332
-2002,I,"Transport, Postal and Warehousing",19035.0,,,6.239883909136568
-2002,J,Information Media and Telecommunications,7499.0,,,3.0223931858771813
-2002,K,Financial and Insurance Services,50439.0,,,0.6063628203849536
-2002,L,"Rental, Hiring and Real Estate Services",5044.0,,,2.4578509039203666
-2002,M,"Professional, Scientific and Technical Services",8479.0,,,15.17250747079597
-2002,N,Administrative and Support Services,49203.0,,,6.027237857173651
-2002,O,Public Administration and Safety,78391.0,,,4.4363917347224335
-2002,P,Education and Training,79747.0,,,2.2161552462252265
-2002,Q,Health Care and Social Assistance,77126.0,,,5.856517382890236
-2002,R,Arts and Recreation Services,9826.0,,,0.6040749462475681
-2002,S,Other Services,30129.0,,,1.100634206905804
-2003,A,"Agriculture, Forestry and Fishing",25074.0,,,-25.849475085021446
-2003,B,Mining,40530.0,,,0.0
-2003,C,Manufacturing,31789.0,,,1.3873827900746427
-2003,D,"Electricity, Gas, Water and Waste Services",28739.0,,,0.02436307949325034
-2003,E,Construction,29612.0,,,14.349706518381211
-2003,F,Wholesale Trade,61262.0,,,4.732109276165075
-2003,G,Retail Trade,64238.0,,,4.926333670902627
-2003,H,Accommodation and Food Services,45058.0,,,3.415193940784933
-2003,I,"Transport, Postal and Warehousing",20358.0,,,6.950354609929077
-2003,J,Information Media and Telecommunications,8023.0,,,6.9875983464462
-2003,K,Financial and Insurance Services,50265.0,,,-0.34497115327425387
-2003,L,"Rental, Hiring and Real Estate Services",5409.0,,,7.236320380650274
-2003,M,"Professional, Scientific and Technical Services",9089.0,,,7.194244604316546
-2003,N,Administrative and Support Services,49468.0,,,0.5385850456272934
-2003,O,Public Administration and Safety,77971.0,,,-0.5357757905881999
-2003,P,Education and Training,81321.0,,,1.9737419589451743
-2003,Q,Health Care and Social Assistance,80472.0,,,4.338355418406237
-2003,R,Arts and Recreation Services,10243.0,,,4.2438428658660765
-2003,S,Other Services,31561.0,,,4.7528958810448385
-2004,A,"Agriculture, Forestry and Fishing",32478.0,,,29.528595357741082
-2004,B,Mining,41686.0,,,2.852208240809273
-2004,C,Manufacturing,31855.0,,,0.2076189877001422
-2004,D,"Electricity, Gas, Water and Waste Services",29311.0,,,1.9903267337068042
-2004,E,Construction,32562.0,,,9.96217749560988
-2004,F,Wholesale Trade,64355.0,,,5.048806764389013
-2004,G,Retail Trade,67940.0,,,5.7629440518073505
-2004,H,Accommodation and Food Services,46933.0,,,4.1613032091970314
-2004,I,"Transport, Postal and Warehousing",21979.0,,,7.962471755575207
-2004,J,Information Media and Telecommunications,8327.0,,,3.789106319331914
-2004,K,Financial and Insurance Services,53057.0,,,5.554560827613653
-2004,L,"Rental, Hiring and Real Estate Services",5492.0,,,1.5344795710852344
-2004,M,"Professional, Scientific and Technical Services",9359.0,,,2.970623831004504
-2004,N,Administrative and Support Services,49478.0,,,0.02021508854208598
-2004,O,Public Administration and Safety,79526.0,,,1.9943312257121315
-2004,P,Education and Training,82872.0,,,1.907256428228865
-2004,Q,Health Care and Social Assistance,84068.0,,,4.4686350531861985
-2004,R,Arts and Recreation Services,10982.0,,,7.214683198281757
-2004,S,Other Services,32979.0,,,4.492886790659356
-2005,A,"Agriculture, Forestry and Fishing",34029.0,,,4.775540365786068
-2005,B,Mining,40906.0,,,-1.8711317948471917
-2005,C,Manufacturing,32267.0,,,1.293360539946642
-2005,D,"Electricity, Gas, Water and Waste Services",29780.0,,,1.6000818805226746
-2005,E,Construction,33849.0,,,3.952459922609175
-2005,F,Wholesale Trade,66571.0,,,3.443399891228349
-2005,G,Retail Trade,71392.0,,,5.080953782749487
-2005,H,Accommodation and Food Services,49284.0,,,5.0092685317367325
-2005,I,"Transport, Postal and Warehousing",23259.0,,,5.8237408435324545
-2005,J,Information Media and Telecommunications,8528.0,,,2.413834514230806
-2005,K,Financial and Insurance Services,57234.0,,,7.872665246810029
-2005,L,"Rental, Hiring and Real Estate Services",5421.0,,,-1.2927895120174782
-2005,M,"Professional, Scientific and Technical Services",9545.0,,,1.9873918153648917
-2005,N,Administrative and Support Services,51564.0,,,4.216015198674161
-2005,O,Public Administration and Safety,82322.0,,,3.5158313004552078
-2005,P,Education and Training,84425.0,,,1.8739743218457283
-2005,Q,Health Care and Social Assistance,87307.0,,,3.8528334205643056
-2005,R,Arts and Recreation Services,11581.0,,,5.454379894372607
-2005,S,Other Services,32349.0,,,-1.910306558719188
-2006,A,"Agriculture, Forestry and Fishing",35117.0,,,3.1972729142790035
-2006,B,Mining,39170.0,,,-4.243876203979857
-2006,C,Manufacturing,31875.0,,,-1.214863482815265
-2006,D,"Electricity, Gas, Water and Waste Services",30884.0,,,3.707186030893217
-2006,E,Construction,33424.0,,,-1.2555762356347255
-2006,F,Wholesale Trade,68811.0,,,3.3648285289390234
-2006,G,Retail Trade,72375.0,,,1.3769049753473706
-2006,H,Accommodation and Food Services,50570.0,,,2.6093661228796305
-2006,I,"Transport, Postal and Warehousing",24346.0,,,4.673459736016161
-2006,J,Information Media and Telecommunications,8819.0,,,3.4122889305816084
-2006,K,Financial and Insurance Services,60320.0,,,5.391899919628185
-2006,L,"Rental, Hiring and Real Estate Services",5664.0,,,4.482567791920311
-2006,M,"Professional, Scientific and Technical Services",9839.0,,,3.0801466736511296
-2006,N,Administrative and Support Services,54814.0,,,6.302846947482732
-2006,O,Public Administration and Safety,84005.0,,,2.0444109715507475
-2006,P,Education and Training,85525.0,,,1.3029315960912058
-2006,Q,Health Care and Social Assistance,90572.0,,,3.739677230920768
-2006,R,Arts and Recreation Services,11742.0,,,1.390208099473278
-2006,S,Other Services,32199.0,,,-0.4636928498562565
-2007,A,"Agriculture, Forestry and Fishing",28755.0,,,-18.116581712560865
-2007,B,Mining,44978.0,,,14.827674240490163
-2007,C,Manufacturing,32257.0,,,1.1984313725490248
-2007,D,"Electricity, Gas, Water and Waste Services",31008.0,,,0.4015023960626918
-2007,E,Construction,35174.0,,,5.235758736237428
-2007,F,Wholesale Trade,70324.0,,,2.198776358431065
-2007,G,Retail Trade,77249.0,,,6.73436960276339
-2007,H,Accommodation and Food Services,51560.0,,,1.9576824204073473
-2007,I,"Transport, Postal and Warehousing",26970.0,,,10.777951203483127
-2007,J,Information Media and Telecommunications,9214.0,,,4.4789658691461565
-2007,K,Financial and Insurance Services,72817.0,,,20.717838196286475
-2007,L,"Rental, Hiring and Real Estate Services",5365.0,,,-5.278954802259883
-2007,M,"Professional, Scientific and Technical Services",9482.0,,,-3.628417522105909
-2007,N,Administrative and Support Services,57173.0,,,4.303645054183236
-2007,O,Public Administration and Safety,88040.0,,,4.803285518719114
-2007,P,Education and Training,87459.0,,,2.261327097339949
-2007,Q,Health Care and Social Assistance,92501.0,,,2.129797288345192
-2007,R,Arts and Recreation Services,12630.0,,,7.562595809913142
-2007,S,Other Services,32891.0,,,2.149135066306407
-2008,A,"Agriculture, Forestry and Fishing",31606.0,,,9.914797426534516
-2008,B,Mining,52002.0,,,15.616523633776502
-2008,C,Manufacturing,32259.0,,,0.006200204606754411
-2008,D,"Electricity, Gas, Water and Waste Services",31869.0,,,2.776702786377716
-2008,E,Construction,36076.0,,,2.5643941547734084
-2008,F,Wholesale Trade,72620.0,,,3.264888231613683
-2008,G,Retail Trade,82297.0,,,6.534712423461797
-2008,H,Accommodation and Food Services,51606.0,,,0.08921644685802033
-2008,I,"Transport, Postal and Warehousing",28688.0,,,6.370040786058584
-2008,J,Information Media and Telecommunications,9654.0,,,4.775341871065764
-2008,K,Financial and Insurance Services,78060.0,,,7.200241701800403
-2008,L,"Rental, Hiring and Real Estate Services",5085.0,,,-5.219012115563837
-2008,M,"Professional, Scientific and Technical Services",10025.0,,,5.726639949377765
-2008,N,Administrative and Support Services,61139.0,,,6.936840816469303
-2008,O,Public Administration and Safety,88518.0,,,0.5429350295320212
-2008,P,Education and Training,89669.0,,,2.5268983180690485
-2008,Q,Health Care and Social Assistance,98426.0,,,6.405336158528008
-2008,R,Arts and Recreation Services,12884.0,,,2.011084718923195
-2008,S,Other Services,33553.0,,,2.0127086437019326
-2009,A,"Agriculture, Forestry and Fishing",37809.0,,,19.626020375877996
-2009,B,Mining,51112.0,,,-1.7114726356678545
-2009,C,Manufacturing,31191.0,,,-3.310703989584307
-2009,D,"Electricity, Gas, Water and Waste Services",33698.0,,,5.739119520537206
-2009,E,Construction,36746.0,,,1.8571903758731523
-2009,F,Wholesale Trade,73446.0,,,1.1374277058661564
-2009,G,Retail Trade,82167.0,,,-0.1579644458485685
-2009,H,Accommodation and Food Services,50538.0,,,-2.069526799209398
-2009,I,"Transport, Postal and Warehousing",26992.0,,,-5.911879531511433
-2009,J,Information Media and Telecommunications,9792.0,,,1.429459291485391
-2009,K,Financial and Insurance Services,84804.0,,,8.639508070714829
-2009,L,"Rental, Hiring and Real Estate Services",5355.0,,,5.3097345132743445
-2009,M,"Professional, Scientific and Technical Services",11118.0,,,10.902743142144633
-2009,N,Administrative and Support Services,57166.0,,,-6.498307136197845
-2009,O,Public Administration and Safety,93895.0,,,6.074470729117243
-2009,P,Education and Training,92787.0,,,3.4772329344589625
-2009,Q,Health Care and Social Assistance,104529.0,,,6.2005974031251965
-2009,R,Arts and Recreation Services,13987.0,,,8.561005898789187
-2009,S,Other Services,34486.0,,,2.780675349447148
-2010,A,"Agriculture, Forestry and Fishing",37492.0,,,-0.8384247136925094
-2010,B,Mining,53609.0,,,4.8853498200031265
-2010,C,Manufacturing,32180.0,,,3.170786444807794
-2010,D,"Electricity, Gas, Water and Waste Services",34318.0,,,1.8398718024808636
-2010,E,Construction,38154.0,,,3.8317095738311657
-2010,F,Wholesale Trade,75565.0,,,2.8851128720420505
-2010,G,Retail Trade,83564.0,,,1.7001959424099766
-2010,H,Accommodation and Food Services,50008.0,,,-1.0487158178004719
-2010,I,"Transport, Postal and Warehousing",27697.0,,,2.611885002963832
-2010,J,Information Media and Telecommunications,9997.0,,,2.093545751633985
-2010,K,Financial and Insurance Services,87982.0,,,3.747464742229134
-2010,L,"Rental, Hiring and Real Estate Services",5536.0,,,3.3800186741363314
-2010,M,"Professional, Scientific and Technical Services",13489.0,,,21.32577801762907
-2010,N,Administrative and Support Services,56503.0,,,-1.159780288982959
-2010,O,Public Administration and Safety,94220.0,,,0.3461313168965363
-2010,P,Education and Training,95341.0,,,2.7525407654089395
-2010,Q,Health Care and Social Assistance,109826.0,,,5.067493231543407
-2010,R,Arts and Recreation Services,14073.0,,,0.6148566526059884
-2010,S,Other Services,34486.0,,,0.0
-2011,A,"Agriculture, Forestry and Fishing",38999.0,,,4.0195241651552305
-2011,B,Mining,48369.0,,,-9.774478165979595
-2011,C,Manufacturing,32043.0,,,-0.4257302672467378
-2011,D,"Electricity, Gas, Water and Waste Services",34330.0,,,0.03496707267323096
-2011,E,Construction,36629.0,,,-3.9969596896786697
-2011,F,Wholesale Trade,75275.0,,,-0.3837755574670809
-2011,G,Retail Trade,85409.0,,,2.2078885644535973
-2011,H,Accommodation and Food Services,51117.0,,,2.217645176771721
-2011,I,"Transport, Postal and Warehousing",27154.0,,,-1.9605011373072911
-2011,J,Information Media and Telecommunications,10121.0,,,1.240372111633481
-2011,K,Financial and Insurance Services,90443.0,,,2.7971630560796434
-2011,L,"Rental, Hiring and Real Estate Services",5715.0,,,3.2333815028901647
-2011,M,"Professional, Scientific and Technical Services",16200.0,,,20.097857513529547
-2011,N,Administrative and Support Services,60079.0,,,6.328867493761403
-2011,O,Public Administration and Safety,96815.0,,,2.7541923158564963
-2011,P,Education and Training,96498.0,,,1.2135387713575474
-2011,Q,Health Care and Social Assistance,111963.0,,,1.9458051827436096
-2011,R,Arts and Recreation Services,14443.0,,,2.6291480139273737
-2011,S,Other Services,34842.0,,,1.0323029635214365
-2012,A,"Agriculture, Forestry and Fishing",39205.0,,,0.5282186722736393
-2012,B,Mining,50168.0,,,3.719324360644216
-2012,C,Manufacturing,32946.0,,,2.818088193989321
-2012,D,"Electricity, Gas, Water and Waste Services",33756.0,,,-1.6720069909699986
-2012,E,Construction,34679.0,,,-5.323650659313661
-2012,F,Wholesale Trade,79777.0,,,5.980737296579219
-2012,G,Retail Trade,88350.0,,,3.4434310201501006
-2012,H,Accommodation and Food Services,52836.0,,,3.362873408063849
-2012,I,"Transport, Postal and Warehousing",27058.0,,,-0.35353907343300683
-2012,J,Information Media and Telecommunications,10367.0,,,2.4305898626618028
-2012,K,Financial and Insurance Services,94784.0,,,4.799708103446365
-2012,L,"Rental, Hiring and Real Estate Services",6276.0,,,9.816272965879257
-2012,M,"Professional, Scientific and Technical Services",17813.0,,,9.956790123456782
-2012,N,Administrative and Support Services,59752.0,,,-0.544283360242348
-2012,O,Public Administration and Safety,100082.0,,,3.3744770954913905
-2012,P,Education and Training,98428.0,,,2.000041451636303
-2012,Q,Health Care and Social Assistance,115281.0,,,2.963479006457481
-2012,R,Arts and Recreation Services,14807.0,,,2.5202520252025185
-2012,S,Other Services,36465.0,,,4.6581711727225805
-2013,A,"Agriculture, Forestry and Fishing",38808.0,,,-1.012625940568801
-2013,B,Mining,60224.0,,,20.044649976080375
-2013,C,Manufacturing,33666.0,,,2.1853942815516225
-2013,D,"Electricity, Gas, Water and Waste Services",33301.0,,,-1.3479085199668228
-2013,E,Construction,33637.0,,,-3.004700250872283
-2013,F,Wholesale Trade,83102.0,,,4.167867931860059
-2013,G,Retail Trade,91138.0,,,3.1556310130164134
-2013,H,Accommodation and Food Services,52580.0,,,-0.4845181315769498
-2013,I,"Transport, Postal and Warehousing",27020.0,,,-0.14043905684085756
-2013,J,Information Media and Telecommunications,10785.0,,,4.032024693739755
-2013,K,Financial and Insurance Services,97862.0,,,3.2473835246455085
-2013,L,"Rental, Hiring and Real Estate Services",6886.0,,,9.719566602931806
-2013,M,"Professional, Scientific and Technical Services",20237.0,,,13.608039072587431
-2013,N,Administrative and Support Services,59309.0,,,-0.7413977774802571
-2013,O,Public Administration and Safety,101338.0,,,1.2549709238424578
-2013,P,Education and Training,99761.0,,,1.3542894298370411
-2013,Q,Health Care and Social Assistance,120406.0,,,4.445658868330438
-2013,R,Arts and Recreation Services,14793.0,,,-0.09454987505909118
-2013,S,Other Services,35347.0,,,-3.0659536541889465
-2014,A,"Agriculture, Forestry and Fishing",39227.0,,,1.079674293960009
-2014,B,Mining,64489.0,,,7.081894261424027
-2014,C,Manufacturing,33569.0,,,-0.2881245173171787
-2014,D,"Electricity, Gas, Water and Waste Services",32904.0,,,-1.19215639169995
-2014,E,Construction,36254.0,,,7.780123078752554
-2014,F,Wholesale Trade,81838.0,,,-1.5210223580659932
-2014,G,Retail Trade,92287.0,,,1.2607254932081036
-2014,H,Accommodation and Food Services,53216.0,,,1.209585393685808
-2014,I,"Transport, Postal and Warehousing",27495.0,,,1.757957068837901
-2014,J,Information Media and Telecommunications,11631.0,,,7.844228094575789
-2014,K,Financial and Insurance Services,99340.0,,,1.5102900002043729
-2014,L,"Rental, Hiring and Real Estate Services",6916.0,,,0.435666569851878
-2014,M,"Professional, Scientific and Technical Services",20773.0,,,2.648613924988874
-2014,N,Administrative and Support Services,62667.0,,,5.661872565715154
-2014,O,Public Administration and Safety,104195.0,,,2.8192780595630573
-2014,P,Education and Training,102011.0,,,2.25539038301541
-2014,Q,Health Care and Social Assistance,126514.0,,,5.072836901815525
-2014,R,Arts and Recreation Services,15394.0,,,4.062732373419853
-2014,S,Other Services,36809.0,,,4.136136022859094
-2015,A,"Agriculture, Forestry and Fishing",39918.0,,,1.7615417951920787
-2015,B,Mining,68023.0,,,5.480004341825739
-2015,C,Manufacturing,32541.0,,,-3.0623491912180834
-2015,D,"Electricity, Gas, Water and Waste Services",32964.0,,,0.18234865061999006
-2015,E,Construction,37980.0,,,4.760853974733825
-2015,F,Wholesale Trade,84388.0,,,3.1159119235562915
-2015,G,Retail Trade,95569.0,,,3.5562972032897378
-2015,H,Accommodation and Food Services,55399.0,,,4.1021497294046805
-2015,I,"Transport, Postal and Warehousing",27930.0,,,1.5821058374249963
-2015,J,Information Media and Telecommunications,12631.0,,,8.597713008339781
-2015,K,Financial and Insurance Services,104840.0,,,5.536541171733433
-2015,L,"Rental, Hiring and Real Estate Services",6763.0,,,-2.2122614227877424
-2015,M,"Professional, Scientific and Technical Services",22558.0,,,8.592884994945372
-2015,N,Administrative and Support Services,64218.0,,,2.474986835176418
-2015,O,Public Administration and Safety,104660.0,,,0.44627861221748777
-2015,P,Education and Training,104355.0,,,2.2977914146513623
-2015,Q,Health Care and Social Assistance,132376.0,,,4.633479298733745
-2015,R,Arts and Recreation Services,15609.0,,,1.3966480446927276
-2015,S,Other Services,37574.0,,,2.0782960688962016
-2016,A,"Agriculture, Forestry and Fishing",36329.0,,,-8.990931409389248
-2016,B,Mining,69204.0,,,1.7361774693853471
-2016,C,Manufacturing,31998.0,,,-1.6686641467686947
-2016,D,"Electricity, Gas, Water and Waste Services",33850.0,,,2.6877806091493817
-2016,E,Construction,39091.0,,,2.9252238020010424
-2016,F,Wholesale Trade,87329.0,,,3.4850926672038707
-2016,G,Retail Trade,98711.0,,,3.287676966380304
-2016,H,Accommodation and Food Services,57873.0,,,4.465784580949106
-2016,I,"Transport, Postal and Warehousing",28153.0,,,0.7984246330110967
-2016,J,Information Media and Telecommunications,13705.0,,,8.50288971577864
-2016,K,Financial and Insurance Services,108264.0,,,3.2659290347195835
-2016,L,"Rental, Hiring and Real Estate Services",6958.0,,,2.883335797722908
-2016,M,"Professional, Scientific and Technical Services",23451.0,,,3.9586842805213296
-2016,N,Administrative and Support Services,65883.0,,,2.5927310099971956
-2016,O,Public Administration and Safety,108730.0,,,3.888782725014339
-2016,P,Education and Training,106997.0,,,2.531742609362264
-2016,Q,Health Care and Social Assistance,136591.0,,,3.184111923611521
-2016,R,Arts and Recreation Services,16180.0,,,3.6581459414440465
-2016,S,Other Services,38452.0,,,2.3367222015223232
-2017,A,"Agriculture, Forestry and Fishing",40092.0,,,10.358116105590565
-2017,B,Mining,69324.0,,,0.17340038148083714
-2017,C,Manufacturing,31809.0,,,-0.5906619163697724
-2017,D,"Electricity, Gas, Water and Waste Services",33372.0,,,-1.412112259970455
-2017,E,Construction,39893.0,,,2.05162313576015
-2017,F,Wholesale Trade,92108.0,,,5.47240893632126
-2017,G,Retail Trade,100019.0,,,1.3250802848719934
-2017,H,Accommodation and Food Services,58191.0,,,0.5494790316727949
-2017,I,"Transport, Postal and Warehousing",28660.0,,,1.8008737967534438
-2017,J,Information Media and Telecommunications,14608.0,,,6.588836191171099
-2017,K,Financial and Insurance Services,111327.0,,,2.8291953003768633
-2017,L,"Rental, Hiring and Real Estate Services",7381.0,,,6.079333141707388
-2017,M,"Professional, Scientific and Technical Services",25220.0,,,7.543388341648538
-2017,N,Administrative and Support Services,67983.0,,,3.1874686945039032
-2017,O,Public Administration and Safety,109379.0,,,0.5968913823231947
-2017,P,Education and Training,108243.0,,,1.164518631363487
-2017,Q,Health Care and Social Assistance,143442.0,,,5.015703816503292
-2017,R,Arts and Recreation Services,16364.0,,,1.1372064276885085
-2017,S,Other Services,38876.0,,,1.1026734630188217
-2018,A,"Agriculture, Forestry and Fishing",38731.0,,,-3.394692207921779
-2018,B,Mining,70500.0,,,1.6963822052968647
-2018,C,Manufacturing,33091.0,,,4.030305888270624
-2018,D,"Electricity, Gas, Water and Waste Services",32983.0,,,-1.1656478484957433
-2018,E,Construction,41832.0,,,4.8605018424285
-2018,F,Wholesale Trade,92922.0,,,0.8837451687149889
-2018,G,Retail Trade,102668.0,,,2.6484967856107433
-2018,H,Accommodation and Food Services,59533.0,,,2.306198553040839
-2018,I,"Transport, Postal and Warehousing",28716.0,,,0.19539427773900275
-2018,J,Information Media and Telecommunications,16013.0,,,9.61801752464404
-2018,K,Financial and Insurance Services,111381.0,,,0.04850575332129292
-2018,L,"Rental, Hiring and Real Estate Services",8617.0,,,16.745698414848942
-2018,M,"Professional, Scientific and Technical Services",28611.0,,,13.445678033306896
-2018,N,Administrative and Support Services,72527.0,,,6.684023947163253
-2018,O,Public Administration and Safety,111206.0,,,1.6703389133197355
-2018,P,Education and Training,109936.0,,,1.5640734273809853
-2018,Q,Health Care and Social Assistance,152054.0,,,6.00382035944842
-2018,R,Arts and Recreation Services,16785.0,,,2.572720606208745
-2018,S,Other Services,39635.0,,,1.9523613540487705
-2019,A,"Agriculture, Forestry and Fishing",34305.0,,,-11.427538664119187
-2019,B,Mining,69415.0,,,-1.5390070921985854
-2019,C,Manufacturing,33335.0,,,0.7373606116466647
-2019,D,"Electricity, Gas, Water and Waste Services",33114.0,,,0.39717430191310577
-2019,E,Construction,42337.0,,,1.207209791547137
-2019,F,Wholesale Trade,93910.0,,,1.0632573556315972
-2019,G,Retail Trade,103586.0,,,0.8941442318930903
-2019,H,Accommodation and Food Services,60045.0,,,0.8600272117984975
-2019,I,"Transport, Postal and Warehousing",29401.0,,,2.385429725588528
-2019,J,Information Media and Telecommunications,16561.0,,,3.4222194466995592
-2019,K,Financial and Insurance Services,112798.0,,,1.2722098023900008
-2019,L,"Rental, Hiring and Real Estate Services",9332.0,,,8.29755135197865
-2019,M,"Professional, Scientific and Technical Services",32000.0,,,11.84509454405649
-2019,N,Administrative and Support Services,77419.0,,,6.745074248211003
-2019,O,Public Administration and Safety,115643.0,,,3.9898926316925376
-2019,P,Education and Training,112612.0,,,2.4341435016737023
-2019,Q,Health Care and Social Assistance,163566.0,,,7.570994515106477
-2019,R,Arts and Recreation Services,17749.0,,,5.743223115877272
-2019,S,Other Services,41024.0,,,3.504478365081365
-2020,A,"Agriculture, Forestry and Fishing",30367.0,,,-11.479376184229706
-2020,B,Mining,71820.0,,,3.464669019664335
-2020,C,Manufacturing,33599.0,,,0.7919604019799076
-2020,D,"Electricity, Gas, Water and Waste Services",31792.0,,,-3.9922691308811986
-2020,E,Construction,41435.0,,,-2.1305241278314457
-2020,F,Wholesale Trade,93234.0,,,-0.7198381429027845
-2020,G,Retail Trade,103681.0,,,0.09171123510898216
-2020,H,Accommodation and Food Services,54482.0,,,-9.264718128070616
-2020,I,"Transport, Postal and Warehousing",29886.0,,,1.6496037549743159
-2020,J,Information Media and Telecommunications,17584.0,,,6.177163214781722
-2020,K,Financial and Insurance Services,113191.0,,,0.34841043280908757
-2020,L,"Rental, Hiring and Real Estate Services",9332.0,,,0.0
-2020,M,"Professional, Scientific and Technical Services",34940.0,,,9.187499999999993
-2020,N,Administrative and Support Services,76280.0,,,-1.4712150764024323
-2020,O,Public Administration and Safety,121016.0,,,4.646195619276572
-2020,P,Education and Training,114112.0,,,1.3320072461194155
-2020,Q,Health Care and Social Assistance,170626.0,,,4.31630045363951
-2020,R,Arts and Recreation Services,16219.0,,,-8.620203955152405
-2020,S,Other Services,37981.0,,,-7.417609204368169
-2021,A,"Agriculture, Forestry and Fishing",38528.0,,,26.874567787400807
-2021,B,Mining,63808.0,,,-11.15566694514063
-2021,C,Manufacturing,34075.0,,,1.4167088306199505
-2021,D,"Electricity, Gas, Water and Waste Services",31833.0,,,0.12896326119777868
-2021,E,Construction,41457.0,,,0.053095209364073526
-2021,F,Wholesale Trade,97506.0,,,4.582019434970075
-2021,G,Retail Trade,109058.0,,,5.18609967110657
-2021,H,Accommodation and Food Services,55987.0,,,2.7623802356741667
-2021,I,"Transport, Postal and Warehousing",31571.0,,,5.638091414040014
-2021,J,Information Media and Telecommunications,18059.0,,,2.7013193812556846
-2021,K,Financial and Insurance Services,116267.0,,,2.7175305457147747
-2021,L,"Rental, Hiring and Real Estate Services",9351.0,,,0.20360051435919235
-2021,M,"Professional, Scientific and Technical Services",36912.0,,,5.643961076130499
-2021,N,Administrative and Support Services,73720.0,,,-3.356056633455684
-2021,O,Public Administration and Safety,125064.0,,,3.3450122297878027
-2021,P,Education and Training,117618.0,,,3.0724200785193556
-2021,Q,Health Care and Social Assistance,182080.0,,,6.712927689801096
-2021,R,Arts and Recreation Services,15736.0,,,-2.9779887785930104
-2021,S,Other Services,37032.0,,,-2.498617729917585
-2022,A,"Agriculture, Forestry and Fishing",45428.0,,,17.90905315614617
-2022,B,Mining,58425.0,,,-8.43624623871615
-2022,C,Manufacturing,35067.0,,,2.9112252384446036
-2022,D,"Electricity, Gas, Water and Waste Services",32323.0,,,1.5392831338548074
-2022,E,Construction,41846.0,,,0.9383216344646339
-2022,F,Wholesale Trade,98977.0,,,1.5086251102496284
-2022,G,Retail Trade,112101.0,,,2.790258394615708
-2022,H,Accommodation and Food Services,57037.0,,,1.8754353689249381
-2022,I,"Transport, Postal and Warehousing",33971.0,,,7.601913148142292
-2022,J,Information Media and Telecommunications,19901.0,,,10.199900326706901
-2022,K,Financial and Insurance Services,120502.0,,,3.6424780892256647
-2022,L,"Rental, Hiring and Real Estate Services",9669.0,,,3.400705806865578
-2022,M,"Professional, Scientific and Technical Services",42388.0,,,14.835283918508878
-2022,N,Administrative and Support Services,82297.0,,,11.634563212154102
-2022,O,Public Administration and Safety,129319.0,,,3.402258043881523
-2022,P,Education and Training,119078.0,,,1.241306602730874
-2022,Q,Health Care and Social Assistance,193255.0,,,6.137412126537778
-2022,R,Arts and Recreation Services,17667.0,,,12.271225216065073
-2022,S,Other Services,38870.0,,,4.963275005400725
-2023,A,"Agriculture, Forestry and Fishing",47448.0,,,4.446596812538517
-2023,B,Mining,57091.0,,,-2.2832691484809597
-2023,C,Manufacturing,35534.0,,,1.3317363903385004
-2023,D,"Electricity, Gas, Water and Waste Services",31946.0,,,-1.1663521331559568
-2023,E,Construction,41743.0,,,-0.2461406108110742
-2023,F,Wholesale Trade,106017.0,,,7.112763571334746
-2023,G,Retail Trade,115404.0,,,2.9464500762705015
-2023,H,Accommodation and Food Services,66759.0,,,17.0450760032961
-2023,I,"Transport, Postal and Warehousing",34741.0,,,2.2666391922522067
-2023,J,Information Media and Telecommunications,21655.0,,,8.813627455906747
-2023,K,Financial and Insurance Services,122222.0,,,1.4273622014572274
-2023,L,"Rental, Hiring and Real Estate Services",10546.0,,,9.070224428586204
-2023,M,"Professional, Scientific and Technical Services",45295.0,,,6.858073039539492
-2023,N,Administrative and Support Services,89636.0,,,8.917700523712902
-2023,O,Public Administration and Safety,131668.0,,,1.8164384197217665
-2023,P,Education and Training,122082.0,,,2.5227162028250483
-2023,Q,Health Care and Social Assistance,203477.0,,,5.289384491992455
-2023,R,Arts and Recreation Services,19661.0,,,11.286579498500027
-2023,S,Other Services,41970.0,,,7.97530228968355
-2024,A,"Agriculture, Forestry and Fishing",45538.0,,,-4.025459450345636
-2024,B,Mining,57891.0,,,1.4012716540260373
-2024,C,Manufacturing,37049.0,,,4.263522260370345
-2024,D,"Electricity, Gas, Water and Waste Services",32808.0,,,2.698303386965506
-2024,E,Construction,42084.0,,,0.8169034329108982
-2024,F,Wholesale Trade,106271.0,,,0.2395842176254659
-2024,G,Retail Trade,114575.0,,,-0.7183459845412687
-2024,H,Accommodation and Food Services,64710.0,,,-3.0692490900103397
-2024,I,"Transport, Postal and Warehousing",34834.0,,,0.2676952304193847
-2024,J,Information Media and Telecommunications,23087.0,,,6.612791503117066
-2024,K,Financial and Insurance Services,123212.0,,,0.8100014727299598
-2024,L,"Rental, Hiring and Real Estate Services",10510.0,,,-0.34136165370756144
-2024,M,"Professional, Scientific and Technical Services",46761.0,,,3.2365603267468845
-2024,N,Administrative and Support Services,89235.0,,,-0.44736489803204327
-2024,O,Public Administration and Safety,137943.0,,,4.765774523802291
-2024,P,Education and Training,123575.0,,,1.2229485100178517
-2024,Q,Health Care and Social Assistance,211767.0,,,4.074170545073885
-2024,R,Arts and Recreation Services,19798.0,,,0.6968109455266713
-2024,S,Other Services,42889.0,,,2.1896592804384163
-2025,A,"Agriculture, Forestry and Fishing",49804.0,,,9.368000351354922
-2025,B,Mining,57725.0,,,-0.28674578086403946
-2025,C,Manufacturing,37786.0,,,1.9892574698372467
-2025,D,"Electricity, Gas, Water and Waste Services",34419.0,,,4.910387710314557
-2025,E,Construction,42595.0,,,1.2142381902860988
-2025,F,Wholesale Trade,106204.0,,,-0.06304636260127117
-2025,G,Retail Trade,115339.0,,,0.6668121317914055
-2025,H,Accommodation and Food Services,64390.0,,,-0.49451398547365466
-2025,I,"Transport, Postal and Warehousing",35761.0,,,2.6611930872136424
-2025,J,Information Media and Telecommunications,24012.0,,,4.006583791744278
-2025,K,Financial and Insurance Services,126168.0,,,2.3991169691263803
-2025,L,"Rental, Hiring and Real Estate Services",10612.0,,,0.9705042816365417
-2025,M,"Professional, Scientific and Technical Services",46753.0,,,-0.01710827398900827
-2025,N,Administrative and Support Services,90498.0,,,1.415363926710378
-2025,O,Public Administration and Safety,142661.0,,,3.4202532930268204
-2025,P,Education and Training,124602.0,,,0.8310742464090692
-2025,Q,Health Care and Social Assistance,218594.0,,,3.2238261863274165
-2025,R,Arts and Recreation Services,20523.0,,,3.661986059197897
-2025,S,Other Services,42564.0,,,-0.7577700575905233
+year,anzsic_code,anzsic_name,gva_millions,gva_growth_pct,hours_worked_millions,gva_per_hour,firm_count,firm_count_small,firm_count_large
+2000,A,"Agriculture, Forestry and Fishing",31358.0,,986.81,31.78,,,
+2000,B,Mining,32472.0,,165.11,196.67,,,
+2000,C,Manufacturing,29965.0,,1904.2,15.74,,,
+2000,D,"Electricity, Gas, Water and Waste Services",28326.0,,161.36,175.55,,,
+2000,E,Construction,27588.0,,1175.54,23.47,,,
+2000,F,Wholesale Trade,56888.0,,900.35,63.18,,,
+2000,G,Retail Trade,55382.0,,1453.22,38.11,,,
+2000,H,Accommodation and Food Services,41948.0,,1081.69,38.78,,,
+2000,I,"Transport, Postal and Warehousing",17281.0,,884.97,19.53,,,
+2000,J,Information Media and Telecommunications,7015.0,,303.72,23.1,,,
+2000,K,Financial and Insurance Services,50256.0,,614.71,81.76,,,
+2000,L,"Rental, Hiring and Real Estate Services",4954.0,,307.06,16.13,,,
+2000,M,"Professional, Scientific and Technical Services",6513.0,,1137.19,5.73,,,
+2000,N,Administrative and Support Services,43036.0,,664.11,64.8,,,
+2000,O,Public Administration and Safety,73298.0,,887.24,82.61,,,
+2000,P,Education and Training,76477.0,,1100.26,69.51,,,
+2000,Q,Health Care and Social Assistance,68955.0,,1141.47,60.41,,,
+2000,R,Arts and Recreation Services,9325.0,,248.22,37.57,,,
+2000,S,Other Services,28237.0,,726.97,38.84,,,
+2001,A,"Agriculture, Forestry and Fishing",32583.0,3.91,989.7,32.92,,,
+2001,B,Mining,40132.0,23.59,168.67,237.93,,,
+2001,C,Manufacturing,31362.0,4.66,1815.29,17.28,,,
+2001,D,"Electricity, Gas, Water and Waste Services",28794.0,1.65,162.74,176.93,,,
+2001,E,Construction,22729.0,-17.61,1086.48,20.92,,,
+2001,F,Wholesale Trade,56852.0,-0.06,875.05,64.97,,,
+2001,G,Retail Trade,57606.0,4.02,1436.11,40.11,,,
+2001,H,Accommodation and Food Services,43511.0,3.73,1037.75,41.93,,,
+2001,I,"Transport, Postal and Warehousing",17917.0,3.68,867.43,20.66,,,
+2001,J,Information Media and Telecommunications,7279.0,3.76,283.93,25.64,,,
+2001,K,Financial and Insurance Services,50135.0,-0.24,608.27,82.42,,,
+2001,L,"Rental, Hiring and Real Estate Services",4923.0,-0.63,317.73,15.49,,,
+2001,M,"Professional, Scientific and Technical Services",7362.0,13.04,1192.2,6.18,,,
+2001,N,Administrative and Support Services,46406.0,7.83,708.78,65.47,,,
+2001,O,Public Administration and Safety,75061.0,2.41,938.26,80.0,,,
+2001,P,Education and Training,78018.0,2.01,1094.86,71.26,,,
+2001,Q,Health Care and Social Assistance,72859.0,5.66,1209.82,60.22,,,
+2001,R,Arts and Recreation Services,9767.0,4.74,250.34,39.01,,,
+2001,S,Other Services,29801.0,5.54,720.06,41.39,,,
+2002,A,"Agriculture, Forestry and Fishing",33815.0,3.78,1013.84,33.35,,,
+2002,B,Mining,40530.0,0.99,170.55,237.64,,,
+2002,C,Manufacturing,31354.0,-0.03,1814.26,17.28,,,
+2002,D,"Electricity, Gas, Water and Waste Services",28732.0,-0.22,157.69,182.21,,,
+2002,E,Construction,25896.0,13.93,1197.95,21.62,,,
+2002,F,Wholesale Trade,58494.0,2.89,856.31,68.31,,,
+2002,G,Retail Trade,61222.0,6.28,1460.97,41.91,,,
+2002,H,Accommodation and Food Services,43570.0,0.14,1026.8,42.43,,,
+2002,I,"Transport, Postal and Warehousing",19035.0,6.24,856.71,22.22,,,
+2002,J,Information Media and Telecommunications,7499.0,3.02,265.06,28.29,,,
+2002,K,Financial and Insurance Services,50439.0,0.61,607.06,83.09,,,
+2002,L,"Rental, Hiring and Real Estate Services",5044.0,2.46,320.06,15.76,,,
+2002,M,"Professional, Scientific and Technical Services",8479.0,15.17,1241.71,6.83,,,
+2002,N,Administrative and Support Services,49203.0,6.03,754.11,65.25,,,
+2002,O,Public Administration and Safety,78391.0,4.44,992.95,78.95,,,
+2002,P,Education and Training,79747.0,2.22,1073.69,74.27,,,
+2002,Q,Health Care and Social Assistance,77126.0,5.86,1209.6,63.76,,,
+2002,R,Arts and Recreation Services,9826.0,0.6,240.67,40.83,,,
+2002,S,Other Services,30129.0,1.1,732.85,41.11,,,
+2003,A,"Agriculture, Forestry and Fishing",25074.0,-25.85,984.8,25.46,,,
+2003,B,Mining,40530.0,0.0,174.4,232.4,,,
+2003,C,Manufacturing,31789.0,1.39,1801.43,17.65,,,
+2003,D,"Electricity, Gas, Water and Waste Services",28739.0,0.02,164.29,174.93,,,
+2003,E,Construction,29612.0,14.35,1338.27,22.13,,,
+2003,F,Wholesale Trade,61262.0,4.73,850.58,72.02,,,
+2003,G,Retail Trade,64238.0,4.93,1468.05,43.76,,,
+2003,H,Accommodation and Food Services,45058.0,3.42,1044.04,43.16,,,
+2003,I,"Transport, Postal and Warehousing",20358.0,6.95,860.65,23.65,,,
+2003,J,Information Media and Telecommunications,8023.0,6.99,254.88,31.48,,,
+2003,K,Financial and Insurance Services,50265.0,-0.34,608.06,82.66,,,
+2003,L,"Rental, Hiring and Real Estate Services",5409.0,7.24,350.15,15.45,,,
+2003,M,"Professional, Scientific and Technical Services",9089.0,7.19,1264.01,7.19,,,
+2003,N,Administrative and Support Services,49468.0,0.54,787.35,62.83,,,
+2003,O,Public Administration and Safety,77971.0,-0.54,1018.83,76.53,,,
+2003,P,Education and Training,81321.0,1.97,1101.2,73.85,,,
+2003,Q,Health Care and Social Assistance,80472.0,4.34,1245.2,64.63,,,
+2003,R,Arts and Recreation Services,10243.0,4.24,248.41,41.23,,,
+2003,S,Other Services,31561.0,4.75,745.63,42.33,,,
+2004,A,"Agriculture, Forestry and Fishing",32478.0,29.53,999.09,32.51,,,
+2004,B,Mining,41686.0,2.85,168.36,247.6,,,
+2004,C,Manufacturing,31855.0,0.21,1758.75,18.11,,,
+2004,D,"Electricity, Gas, Water and Waste Services",29311.0,1.99,166.25,176.31,,,
+2004,E,Construction,32562.0,9.96,1386.2,23.49,,,
+2004,F,Wholesale Trade,64355.0,5.05,835.4,77.03,,,
+2004,G,Retail Trade,67940.0,5.76,1507.17,45.08,,,
+2004,H,Accommodation and Food Services,46933.0,4.16,1044.66,44.93,,,
+2004,I,"Transport, Postal and Warehousing",21979.0,7.96,915.62,24.0,,,
+2004,J,Information Media and Telecommunications,8327.0,3.79,266.7,31.22,,,
+2004,K,Financial and Insurance Services,53057.0,5.55,594.08,89.31,,,
+2004,L,"Rental, Hiring and Real Estate Services",5492.0,1.53,366.9,14.97,,,
+2004,M,"Professional, Scientific and Technical Services",9359.0,2.97,1345.33,6.96,,,
+2004,N,Administrative and Support Services,49478.0,0.02,833.68,59.35,,,
+2004,O,Public Administration and Safety,79526.0,1.99,1037.09,76.68,,,
+2004,P,Education and Training,82872.0,1.91,1090.9,75.97,,,
+2004,Q,Health Care and Social Assistance,84068.0,4.47,1282.86,65.53,,,
+2004,R,Arts and Recreation Services,10982.0,7.21,232.77,47.18,,,
+2004,S,Other Services,32979.0,4.49,730.53,45.14,,,
+2005,A,"Agriculture, Forestry and Fishing",34029.0,4.78,934.13,36.43,,,
+2005,B,Mining,40906.0,-1.87,194.94,209.84,,,
+2005,C,Manufacturing,32267.0,1.29,1798.62,17.94,,,
+2005,D,"Electricity, Gas, Water and Waste Services",29780.0,1.6,178.56,166.78,,,
+2005,E,Construction,33849.0,3.95,1472.15,22.99,,,
+2005,F,Wholesale Trade,66571.0,3.44,851.19,78.21,,,
+2005,G,Retail Trade,71392.0,5.08,1571.53,45.43,,,
+2005,H,Accommodation and Food Services,49284.0,5.01,1103.3,44.67,,,
+2005,I,"Transport, Postal and Warehousing",23259.0,5.82,973.87,23.88,,,
+2005,J,Information Media and Telecommunications,8528.0,2.41,292.41,29.16,,,
+2005,K,Financial and Insurance Services,57234.0,7.87,636.26,89.95,,,
+2005,L,"Rental, Hiring and Real Estate Services",5421.0,-1.29,400.66,13.53,,,
+2005,M,"Professional, Scientific and Technical Services",9545.0,1.99,1371.11,6.96,,,
+2005,N,Administrative and Support Services,51564.0,4.22,864.17,59.67,,,
+2005,O,Public Administration and Safety,82322.0,3.52,1047.9,78.56,,,
+2005,P,Education and Training,84425.0,1.87,1148.83,73.49,,,
+2005,Q,Health Care and Social Assistance,87307.0,3.85,1330.47,65.62,,,
+2005,R,Arts and Recreation Services,11581.0,5.45,238.48,48.56,,,
+2005,S,Other Services,32349.0,-1.91,706.12,45.81,,,
+2006,A,"Agriculture, Forestry and Fishing",35117.0,3.2,912.17,38.5,,,
+2006,B,Mining,39170.0,-4.24,229.16,170.93,,,
+2006,C,Manufacturing,31875.0,-1.21,1753.44,18.18,,,
+2006,D,"Electricity, Gas, Water and Waste Services",30884.0,3.71,178.09,173.42,,,
+2006,E,Construction,33424.0,-1.26,1565.6,21.35,,,
+2006,F,Wholesale Trade,68811.0,3.36,893.97,76.97,,,
+2006,G,Retail Trade,72375.0,1.38,1571.26,46.06,,,
+2006,H,Accommodation and Food Services,50570.0,2.61,1025.2,49.33,,,
+2006,I,"Transport, Postal and Warehousing",24346.0,4.67,986.41,24.68,,,
+2006,J,Information Media and Telecommunications,8819.0,3.41,283.53,31.1,,,
+2006,K,Financial and Insurance Services,60320.0,5.39,684.8,88.08,,,
+2006,L,"Rental, Hiring and Real Estate Services",5664.0,4.48,405.5,13.97,,,
+2006,M,"Professional, Scientific and Technical Services",9839.0,3.08,1432.08,6.87,,,
+2006,N,Administrative and Support Services,54814.0,6.3,899.67,60.93,,,
+2006,O,Public Administration and Safety,84005.0,2.04,1082.33,77.61,,,
+2006,P,Education and Training,85525.0,1.3,1142.07,74.89,,,
+2006,Q,Health Care and Social Assistance,90572.0,3.74,1420.11,63.78,,,
+2006,R,Arts and Recreation Services,11742.0,1.39,246.15,47.7,,,
+2006,S,Other Services,32199.0,-0.46,725.69,44.37,,,
+2007,A,"Agriculture, Forestry and Fishing",28755.0,-18.12,900.2,31.94,,,
+2007,B,Mining,44978.0,14.83,237.94,189.03,,,
+2007,C,Manufacturing,32257.0,1.2,1750.69,18.43,,,
+2007,D,"Electricity, Gas, Water and Waste Services",31008.0,0.4,180.0,172.27,,,
+2007,E,Construction,35174.0,5.24,1746.65,20.14,,,
+2007,F,Wholesale Trade,70324.0,2.2,946.56,74.29,,,
+2007,G,Retail Trade,77249.0,6.73,1629.62,47.4,,,
+2007,H,Accommodation and Food Services,51560.0,1.96,1058.46,48.71,,,
+2007,I,"Transport, Postal and Warehousing",26970.0,10.78,1001.44,26.93,,,
+2007,J,Information Media and Telecommunications,9214.0,4.48,300.26,30.69,,,
+2007,K,Financial and Insurance Services,72817.0,20.72,706.64,103.05,,,
+2007,L,"Rental, Hiring and Real Estate Services",5365.0,-5.28,419.06,12.8,,,
+2007,M,"Professional, Scientific and Technical Services",9482.0,-3.63,1513.88,6.26,,,
+2007,N,Administrative and Support Services,57173.0,4.3,968.22,59.05,,,
+2007,O,Public Administration and Safety,88040.0,4.8,1032.31,85.28,,,
+2007,P,Education and Training,87459.0,2.26,1118.92,78.16,,,
+2007,Q,Health Care and Social Assistance,92501.0,2.13,1470.47,62.91,,,
+2007,R,Arts and Recreation Services,12630.0,7.56,244.08,51.75,,,
+2007,S,Other Services,32891.0,2.15,734.9,44.76,,,
+2008,A,"Agriculture, Forestry and Fishing",31606.0,9.91,883.39,35.78,,,
+2008,B,Mining,52002.0,15.62,270.64,192.14,,,
+2008,C,Manufacturing,32259.0,0.01,1778.23,18.14,,,
+2008,D,"Electricity, Gas, Water and Waste Services",31869.0,2.78,186.81,170.6,,,
+2008,E,Construction,36076.0,2.56,1852.15,19.48,,,
+2008,F,Wholesale Trade,72620.0,3.26,977.94,74.26,,,
+2008,G,Retail Trade,82297.0,6.53,1694.84,48.56,,,
+2008,H,Accommodation and Food Services,51606.0,0.09,1061.25,48.63,,,
+2008,I,"Transport, Postal and Warehousing",28688.0,6.37,1023.4,28.03,,,
+2008,J,Information Media and Telecommunications,9654.0,4.78,292.93,32.96,,,
+2008,K,Financial and Insurance Services,78060.0,7.2,678.05,115.12,,,
+2008,L,"Rental, Hiring and Real Estate Services",5085.0,-5.22,421.35,12.07,,,
+2008,M,"Professional, Scientific and Technical Services",10025.0,5.73,1571.79,6.38,,,
+2008,N,Administrative and Support Services,61139.0,6.94,960.64,63.64,,,
+2008,O,Public Administration and Safety,88518.0,0.54,1066.42,83.0,,,
+2008,P,Education and Training,89669.0,2.53,1159.6,77.33,,,
+2008,Q,Health Care and Social Assistance,98426.0,6.41,1582.76,62.19,,,
+2008,R,Arts and Recreation Services,12884.0,2.01,248.88,51.77,,,
+2008,S,Other Services,33553.0,2.01,777.01,43.18,,,
+2009,A,"Agriculture, Forestry and Fishing",37809.0,19.63,827.34,45.7,,,
+2009,B,Mining,51112.0,-1.71,286.02,178.7,,,
+2009,C,Manufacturing,31191.0,-3.31,1681.62,18.55,,,
+2009,D,"Electricity, Gas, Water and Waste Services",33698.0,5.74,187.43,179.79,,,
+2009,E,Construction,36746.0,1.86,1813.78,20.26,,,
+2009,F,Wholesale Trade,73446.0,1.14,944.58,77.76,,,
+2009,G,Retail Trade,82167.0,-0.16,1685.93,48.74,,,
+2009,H,Accommodation and Food Services,50538.0,-2.07,1100.32,45.93,,,
+2009,I,"Transport, Postal and Warehousing",26992.0,-5.91,996.94,27.07,,,
+2009,J,Information Media and Telecommunications,9792.0,1.43,311.83,31.4,,,
+2009,K,Financial and Insurance Services,84804.0,8.64,659.67,128.56,,,
+2009,L,"Rental, Hiring and Real Estate Services",5355.0,5.31,393.03,13.62,,,
+2009,M,"Professional, Scientific and Technical Services",11118.0,10.9,1565.62,7.1,,,
+2009,N,Administrative and Support Services,57166.0,-6.5,872.77,65.5,,,
+2009,O,Public Administration and Safety,93895.0,6.07,1113.95,84.29,,,
+2009,P,Education and Training,92787.0,3.48,1254.9,73.94,,,
+2009,Q,Health Care and Social Assistance,104529.0,6.2,1635.32,63.92,,,
+2009,R,Arts and Recreation Services,13987.0,8.56,252.14,55.47,,,
+2009,S,Other Services,34486.0,2.78,740.24,46.59,,,
+2010,A,"Agriculture, Forestry and Fishing",37492.0,-0.84,843.04,44.47,154100.0,152900.0,1200.0
+2010,B,Mining,53609.0,4.89,308.64,173.69,12000.0,10600.0,1400.0
+2010,C,Manufacturing,32180.0,3.17,1687.44,19.07,108300.0,101500.0,6800.0
+2010,D,"Electricity, Gas, Water and Waste Services",34318.0,1.84,204.21,168.05,3800.0,2900.0,900.0
+2010,E,Construction,38154.0,3.83,1830.06,20.85,257600.0,252200.0,5400.0
+2010,F,Wholesale Trade,75565.0,2.89,972.98,77.66,100100.0,95300.0,4800.0
+2010,G,Retail Trade,83564.0,1.7,1723.64,48.48,166100.0,157400.0,8700.0
+2010,H,Accommodation and Food Services,50008.0,-1.05,1093.38,45.74,79200.0,69500.0,9700.0
+2010,I,"Transport, Postal and Warehousing",27697.0,2.61,1047.96,26.43,67100.0,65400.0,1700.0
+2010,J,Information Media and Telecommunications,9997.0,2.09,300.92,33.22,23000.0,21300.0,1700.0
+2010,K,Financial and Insurance Services,87982.0,3.75,672.34,130.86,164400.0,162200.0,2200.0
+2010,L,"Rental, Hiring and Real Estate Services",5536.0,3.38,404.81,13.68,233800.0,232600.0,1200.0
+2010,M,"Professional, Scientific and Technical Services",13489.0,21.33,1581.68,8.53,194500.0,191500.0,3000.0
+2010,N,Administrative and Support Services,56503.0,-1.16,959.68,58.88,74900.0,70800.0,4100.0
+2010,O,Public Administration and Safety,94220.0,0.35,1065.69,88.41,10000.0,8100.0,1900.0
+2010,P,Education and Training,95341.0,2.75,1271.71,74.97,32900.0,29500.0,3400.0
+2010,Q,Health Care and Social Assistance,109826.0,5.07,1714.79,64.05,74800.0,64800.0,10000.0
+2010,R,Arts and Recreation Services,14073.0,0.61,264.55,53.2,36500.0,34600.0,1900.0
+2010,S,Other Services,34486.0,0.0,771.3,44.71,100700.0,98600.0,2100.0
+2011,A,"Agriculture, Forestry and Fishing",38999.0,4.02,884.01,44.12,151800.0,150600.0,1200.0
+2011,B,Mining,48369.0,-9.77,345.32,140.07,11600.0,10200.0,1400.0
+2011,C,Manufacturing,32043.0,-0.43,1636.88,19.58,105700.0,98800.0,6900.0
+2011,D,"Electricity, Gas, Water and Waste Services",34330.0,0.03,203.67,168.56,3900.0,3000.0,900.0
+2011,E,Construction,36629.0,-4.0,1932.26,18.96,269600.0,264000.0,5600.0
+2011,F,Wholesale Trade,75275.0,-0.38,1003.73,75.0,98700.0,93900.0,4800.0
+2011,G,Retail Trade,85409.0,2.21,1754.15,48.69,164000.0,155200.0,8800.0
+2011,H,Accommodation and Food Services,51117.0,2.22,1106.1,46.21,80400.0,70600.0,9800.0
+2011,I,"Transport, Postal and Warehousing",27154.0,-1.96,1030.29,26.36,69900.0,68100.0,1800.0
+2011,J,Information Media and Telecommunications,10121.0,1.24,311.09,32.53,23400.0,21700.0,1700.0
+2011,K,Financial and Insurance Services,90443.0,2.8,679.28,133.15,170300.0,168000.0,2300.0
+2011,L,"Rental, Hiring and Real Estate Services",5715.0,3.23,410.81,13.91,239100.0,237800.0,1300.0
+2011,M,"Professional, Scientific and Technical Services",16200.0,20.1,1554.73,10.42,202700.0,199600.0,3100.0
+2011,N,Administrative and Support Services,60079.0,6.33,1031.72,58.23,77500.0,73300.0,4200.0
+2011,O,Public Administration and Safety,96815.0,2.75,1108.79,87.32,10100.0,8200.0,1900.0
+2011,P,Education and Training,96498.0,1.21,1296.06,74.45,33600.0,30200.0,3400.0
+2011,Q,Health Care and Social Assistance,111963.0,1.95,1810.31,61.85,77400.0,67200.0,10200.0
+2011,R,Arts and Recreation Services,14443.0,2.63,269.38,53.62,36700.0,34800.0,1900.0
+2011,S,Other Services,34842.0,1.03,742.08,46.95,101300.0,99200.0,2100.0
+2012,A,"Agriculture, Forestry and Fishing",39205.0,0.53,864.2,45.37,149600.0,148400.0,1200.0
+2012,B,Mining,50168.0,3.72,414.47,121.04,11200.0,9800.0,1400.0
+2012,C,Manufacturing,32946.0,2.82,1593.99,20.67,103200.0,96200.0,7000.0
+2012,D,"Electricity, Gas, Water and Waste Services",33756.0,-1.67,213.81,157.88,4000.0,3100.0,900.0
+2012,E,Construction,34679.0,-5.32,1864.63,18.6,282000.0,276200.0,5800.0
+2012,F,Wholesale Trade,79777.0,5.98,1008.68,79.09,97300.0,92500.0,4800.0
+2012,G,Retail Trade,88350.0,3.44,1713.06,51.57,162000.0,153100.0,8900.0
+2012,H,Accommodation and Food Services,52836.0,3.36,1161.25,45.5,81600.0,71700.0,9900.0
+2012,I,"Transport, Postal and Warehousing",27058.0,-0.35,1041.73,25.97,72900.0,71000.0,1900.0
+2012,J,Information Media and Telecommunications,10367.0,2.43,302.91,34.22,23800.0,22100.0,1700.0
+2012,K,Financial and Insurance Services,94784.0,4.8,662.2,143.14,176500.0,174100.0,2400.0
+2012,L,"Rental, Hiring and Real Estate Services",6276.0,9.82,439.69,14.27,244700.0,243300.0,1400.0
+2012,M,"Professional, Scientific and Technical Services",17813.0,9.96,1659.16,10.74,211400.0,208100.0,3300.0
+2012,N,Administrative and Support Services,59752.0,-0.54,1054.09,56.69,80300.0,76000.0,4300.0
+2012,O,Public Administration and Safety,100082.0,3.37,1129.4,88.62,10200.0,8300.0,1900.0
+2012,P,Education and Training,98428.0,2.0,1273.74,77.27,34300.0,30900.0,3400.0
+2012,Q,Health Care and Social Assistance,115281.0,2.96,1866.69,61.76,80100.0,69700.0,10400.0
+2012,R,Arts and Recreation Services,14807.0,2.52,264.34,56.01,36800.0,34900.0,1900.0
+2012,S,Other Services,36465.0,4.66,736.16,49.53,102000.0,99900.0,2100.0
+2013,A,"Agriculture, Forestry and Fishing",38808.0,-1.01,866.85,44.77,147400.0,146200.0,1200.0
+2013,B,Mining,60224.0,20.04,404.07,149.04,10800.0,9400.0,1400.0
+2013,C,Manufacturing,33666.0,2.19,1563.62,21.53,100800.0,93700.0,7100.0
+2013,D,"Electricity, Gas, Water and Waste Services",33301.0,-1.35,216.01,154.16,4100.0,3200.0,900.0
+2013,E,Construction,33637.0,-3.0,1884.02,17.85,294700.0,288800.0,5900.0
+2013,F,Wholesale Trade,83102.0,4.17,960.79,86.49,96000.0,91200.0,4800.0
+2013,G,Retail Trade,91138.0,3.16,1742.7,52.3,160100.0,151100.0,9000.0
+2013,H,Accommodation and Food Services,52580.0,-0.48,1147.54,45.82,82900.0,72900.0,10000.0
+2013,I,"Transport, Postal and Warehousing",27020.0,-0.14,1070.82,25.23,76100.0,74100.0,2000.0
+2013,J,Information Media and Telecommunications,10785.0,4.03,297.37,36.27,24200.0,22500.0,1700.0
+2013,K,Financial and Insurance Services,97862.0,3.25,653.2,149.82,183000.0,180500.0,2500.0
+2013,L,"Rental, Hiring and Real Estate Services",6886.0,9.72,428.04,16.09,250600.0,249100.0,1500.0
+2013,M,"Professional, Scientific and Technical Services",20237.0,13.61,1674.63,12.08,220500.0,217000.0,3500.0
+2013,N,Administrative and Support Services,59309.0,-0.74,1089.3,54.45,83200.0,78800.0,4400.0
+2013,O,Public Administration and Safety,101338.0,1.25,1129.62,89.71,10300.0,8400.0,1900.0
+2013,P,Education and Training,99761.0,1.35,1350.32,73.88,35100.0,31600.0,3500.0
+2013,Q,Health Care and Social Assistance,120406.0,4.45,1889.61,63.72,83000.0,72400.0,10600.0
+2013,R,Arts and Recreation Services,14793.0,-0.09,268.55,55.08,37000.0,35100.0,1900.0
+2013,S,Other Services,35347.0,-3.07,769.9,45.91,102700.0,100600.0,2100.0
+2014,A,"Agriculture, Forestry and Fishing",39227.0,1.08,886.02,44.27,145300.0,144100.0,1200.0
+2014,B,Mining,64489.0,7.08,401.59,160.58,10400.0,9000.0,1400.0
+2014,C,Manufacturing,33569.0,-0.29,1507.12,22.27,98500.0,91300.0,7200.0
+2014,D,"Electricity, Gas, Water and Waste Services",32904.0,-1.19,208.29,157.97,4200.0,3300.0,900.0
+2014,E,Construction,36254.0,7.78,1949.14,18.6,307800.0,301700.0,6100.0
+2014,F,Wholesale Trade,81838.0,-1.52,1004.75,81.45,94700.0,89900.0,4800.0
+2014,G,Retail Trade,92287.0,1.26,1699.15,54.31,158300.0,149200.0,9100.0
+2014,H,Accommodation and Food Services,53216.0,1.21,1145.19,46.47,84200.0,74100.0,10100.0
+2014,I,"Transport, Postal and Warehousing",27495.0,1.76,1035.77,26.55,79500.0,77400.0,2100.0
+2014,J,Information Media and Telecommunications,11631.0,7.84,293.89,39.58,24700.0,22900.0,1800.0
+2014,K,Financial and Insurance Services,99340.0,1.51,690.24,143.92,189800.0,187200.0,2600.0
+2014,L,"Rental, Hiring and Real Estate Services",6916.0,0.44,447.8,15.44,256800.0,255300.0,1500.0
+2014,M,"Professional, Scientific and Technical Services",20773.0,2.65,1607.41,12.92,230100.0,226400.0,3700.0
+2014,N,Administrative and Support Services,62667.0,5.66,1044.25,60.01,86300.0,81800.0,4500.0
+2014,O,Public Administration and Safety,104195.0,2.82,1109.41,93.92,10400.0,8500.0,1900.0
+2014,P,Education and Training,102011.0,2.26,1375.09,74.18,35900.0,32300.0,3600.0
+2014,Q,Health Care and Social Assistance,126514.0,5.07,1975.85,64.03,86100.0,75200.0,10900.0
+2014,R,Arts and Recreation Services,15394.0,4.06,265.0,58.09,37200.0,35300.0,1900.0
+2014,S,Other Services,36809.0,4.14,811.48,45.36,103500.0,101400.0,2100.0
+2015,A,"Agriculture, Forestry and Fishing",39918.0,1.76,850.33,46.94,143200.0,142000.0,1200.0
+2015,B,Mining,68023.0,5.48,370.3,183.7,10000.0,8600.0,1400.0
+2015,C,Manufacturing,32541.0,-3.06,1500.38,21.69,96300.0,89000.0,7300.0
+2015,D,"Electricity, Gas, Water and Waste Services",32964.0,0.18,206.82,159.38,4300.0,3400.0,900.0
+2015,E,Construction,37980.0,4.76,1982.67,19.16,321300.0,315000.0,6300.0
+2015,F,Wholesale Trade,84388.0,3.12,957.15,88.17,93500.0,88700.0,4800.0
+2015,G,Retail Trade,95569.0,3.56,1764.45,54.16,156600.0,147400.0,9200.0
+2015,H,Accommodation and Food Services,55399.0,4.1,1198.11,46.24,85600.0,75400.0,10200.0
+2015,I,"Transport, Postal and Warehousing",27930.0,1.58,1049.44,26.61,83100.0,80900.0,2200.0
+2015,J,Information Media and Telecommunications,12631.0,8.6,294.25,42.93,25200.0,23400.0,1800.0
+2015,K,Financial and Insurance Services,104840.0,5.54,694.0,151.07,197000.0,194300.0,2700.0
+2015,L,"Rental, Hiring and Real Estate Services",6763.0,-2.21,453.24,14.92,263400.0,261800.0,1600.0
+2015,M,"Professional, Scientific and Technical Services",22558.0,8.59,1681.74,13.41,240200.0,236300.0,3900.0
+2015,N,Administrative and Support Services,64218.0,2.47,1095.62,58.61,89600.0,85000.0,4600.0
+2015,O,Public Administration and Safety,104660.0,0.45,1127.48,92.83,10500.0,8600.0,1900.0
+2015,P,Education and Training,104355.0,2.3,1403.69,74.34,36700.0,33100.0,3600.0
+2015,Q,Health Care and Social Assistance,132376.0,4.63,2087.33,63.42,89300.0,78200.0,11100.0
+2015,R,Arts and Recreation Services,15609.0,1.4,275.89,56.58,37400.0,35500.0,1900.0
+2015,S,Other Services,37574.0,2.08,811.19,46.32,104300.0,102200.0,2100.0
+2016,A,"Agriculture, Forestry and Fishing",36329.0,-8.99,873.36,41.6,141200.0,140000.0,1200.0
+2016,B,Mining,69204.0,1.74,351.89,196.66,9700.0,8300.0,1400.0
+2016,C,Manufacturing,31998.0,-1.67,1480.47,21.61,94200.0,86800.0,7400.0
+2016,D,"Electricity, Gas, Water and Waste Services",33850.0,2.69,199.07,170.04,4400.0,3500.0,900.0
+2016,E,Construction,39091.0,2.93,1996.69,19.58,335200.0,328600.0,6600.0
+2016,F,Wholesale Trade,87329.0,3.49,960.07,90.96,92300.0,87400.0,4900.0
+2016,G,Retail Trade,98711.0,3.29,1775.44,55.6,155000.0,145700.0,9300.0
+2016,H,Accommodation and Food Services,57873.0,4.47,1175.84,49.22,87100.0,76800.0,10300.0
+2016,I,"Transport, Postal and Warehousing",28153.0,0.8,1052.13,26.76,86900.0,84600.0,2300.0
+2016,J,Information Media and Telecommunications,13705.0,8.5,307.91,44.51,25700.0,23900.0,1800.0
+2016,K,Financial and Insurance Services,108264.0,3.27,713.99,151.63,204600.0,201800.0,2800.0
+2016,L,"Rental, Hiring and Real Estate Services",6958.0,2.88,470.86,14.78,270400.0,268700.0,1700.0
+2016,M,"Professional, Scientific and Technical Services",23451.0,3.96,1742.32,13.46,250800.0,246700.0,4100.0
+2016,N,Administrative and Support Services,65883.0,2.59,1083.78,60.79,93100.0,88400.0,4700.0
+2016,O,Public Administration and Safety,108730.0,3.89,1167.98,93.09,10600.0,8700.0,1900.0
+2016,P,Education and Training,106997.0,2.53,1441.15,74.24,37600.0,33900.0,3700.0
+2016,Q,Health Care and Social Assistance,136591.0,3.18,2185.63,62.5,92700.0,81400.0,11300.0
+2016,R,Arts and Recreation Services,16180.0,3.66,267.21,60.55,37600.0,35700.0,1900.0
+2016,S,Other Services,38452.0,2.34,803.36,47.86,105200.0,103100.0,2100.0
+2017,A,"Agriculture, Forestry and Fishing",40092.0,10.36,847.28,47.32,139300.0,138100.0,1200.0
+2017,B,Mining,69324.0,0.17,355.88,194.8,9500.0,8100.0,1400.0
+2017,C,Manufacturing,31809.0,-0.59,1505.86,21.12,92200.0,84800.0,7400.0
+2017,D,"Electricity, Gas, Water and Waste Services",33372.0,-1.41,200.68,166.29,4500.0,3600.0,900.0
+2017,E,Construction,39893.0,2.05,2004.19,19.9,349500.0,342700.0,6800.0
+2017,F,Wholesale Trade,92108.0,5.47,968.95,95.06,91200.0,86200.0,5000.0
+2017,G,Retail Trade,100019.0,1.33,1780.05,56.19,153500.0,144100.0,9400.0
+2017,H,Accommodation and Food Services,58191.0,0.55,1252.69,46.45,88600.0,78200.0,10400.0
+2017,I,"Transport, Postal and Warehousing",28660.0,1.8,1140.4,25.13,90900.0,88400.0,2500.0
+2017,J,Information Media and Telecommunications,14608.0,6.59,301.89,48.39,26300.0,24500.0,1800.0
+2017,K,Financial and Insurance Services,111327.0,2.83,733.83,151.71,212500.0,209600.0,2900.0
+2017,L,"Rental, Hiring and Real Estate Services",7381.0,6.08,474.33,15.56,277800.0,276000.0,1800.0
+2017,M,"Professional, Scientific and Technical Services",25220.0,7.54,1829.44,13.79,261900.0,257600.0,4300.0
+2017,N,Administrative and Support Services,67983.0,3.19,1116.48,60.89,96800.0,91900.0,4900.0
+2017,O,Public Administration and Safety,109379.0,0.6,1176.65,92.96,10700.0,8800.0,1900.0
+2017,P,Education and Training,108243.0,1.16,1476.83,73.29,38500.0,34700.0,3800.0
+2017,Q,Health Care and Social Assistance,143442.0,5.02,2260.95,63.44,96300.0,84700.0,11600.0
+2017,R,Arts and Recreation Services,16364.0,1.14,267.41,61.19,37900.0,35900.0,2000.0
+2017,S,Other Services,38876.0,1.1,866.59,44.86,106200.0,104000.0,2200.0
+2018,A,"Agriculture, Forestry and Fishing",38731.0,-3.39,799.34,48.45,137400.0,136200.0,1200.0
+2018,B,Mining,70500.0,1.7,381.99,184.56,9600.0,8200.0,1400.0
+2018,C,Manufacturing,33091.0,4.03,1499.56,22.07,90300.0,82900.0,7400.0
+2018,D,"Electricity, Gas, Water and Waste Services",32983.0,-1.17,213.93,154.18,4600.0,3700.0,900.0
+2018,E,Construction,41832.0,4.86,2084.18,20.07,364200.0,357200.0,7000.0
+2018,F,Wholesale Trade,92922.0,0.88,973.4,95.46,90100.0,85000.0,5100.0
+2018,G,Retail Trade,102668.0,2.65,1786.89,57.46,152100.0,142600.0,9500.0
+2018,H,Accommodation and Food Services,59533.0,2.31,1239.17,48.04,90200.0,79700.0,10500.0
+2018,I,"Transport, Postal and Warehousing",28716.0,0.2,1154.55,24.87,95100.0,92400.0,2700.0
+2018,J,Information Media and Telecommunications,16013.0,9.62,306.82,52.19,26900.0,25000.0,1900.0
+2018,K,Financial and Insurance Services,111381.0,0.05,734.17,151.71,220800.0,217800.0,3000.0
+2018,L,"Rental, Hiring and Real Estate Services",8617.0,16.75,477.13,18.06,285600.0,283700.0,1900.0
+2018,M,"Professional, Scientific and Technical Services",28611.0,13.45,1925.51,14.86,273500.0,269000.0,4500.0
+2018,N,Administrative and Support Services,72527.0,6.68,1170.6,61.96,100700.0,95600.0,5100.0
+2018,O,Public Administration and Safety,111206.0,1.67,1229.16,90.47,10900.0,9000.0,1900.0
+2018,P,Education and Training,109936.0,1.56,1519.92,72.33,39500.0,35600.0,3900.0
+2018,Q,Health Care and Social Assistance,152054.0,6.0,2364.89,64.3,100100.0,88200.0,11900.0
+2018,R,Arts and Recreation Services,16785.0,2.57,284.8,58.94,38200.0,36200.0,2000.0
+2018,S,Other Services,39635.0,1.95,826.51,47.95,107200.0,105000.0,2200.0
+2019,A,"Agriculture, Forestry and Fishing",34305.0,-11.43,780.58,43.95,135600.0,134400.0,1200.0
+2019,B,Mining,69415.0,-1.54,394.19,176.1,9800.0,8400.0,1400.0
+2019,C,Manufacturing,33335.0,0.74,1512.69,22.04,88500.0,81000.0,7500.0
+2019,D,"Electricity, Gas, Water and Waste Services",33114.0,0.4,217.88,151.98,4800.0,3900.0,900.0
+2019,E,Construction,42337.0,1.21,2094.02,20.22,379400.0,372200.0,7200.0
+2019,F,Wholesale Trade,93910.0,1.06,990.6,94.8,89100.0,83900.0,5200.0
+2019,G,Retail Trade,103586.0,0.89,1759.51,58.87,150800.0,141200.0,9600.0
+2019,H,Accommodation and Food Services,60045.0,0.86,1284.08,46.76,91800.0,81200.0,10600.0
+2019,I,"Transport, Postal and Warehousing",29401.0,2.39,1158.2,25.39,99400.0,96600.0,2800.0
+2019,J,Information Media and Telecommunications,16561.0,3.42,305.82,54.15,27500.0,25600.0,1900.0
+2019,K,Financial and Insurance Services,112798.0,1.27,749.17,150.56,229500.0,226400.0,3100.0
+2019,L,"Rental, Hiring and Real Estate Services",9332.0,8.3,474.1,19.68,293800.0,291800.0,2000.0
+2019,M,"Professional, Scientific and Technical Services",32000.0,11.85,2010.65,15.92,285600.0,280900.0,4700.0
+2019,N,Administrative and Support Services,77419.0,6.75,1218.01,63.56,104800.0,99500.0,5300.0
+2019,O,Public Administration and Safety,115643.0,3.99,1210.0,95.57,11000.0,9100.0,1900.0
+2019,P,Education and Training,112612.0,2.43,1554.81,72.43,40500.0,36500.0,4000.0
+2019,Q,Health Care and Social Assistance,163566.0,7.57,2505.43,65.28,104100.0,91800.0,12300.0
+2019,R,Arts and Recreation Services,17749.0,5.74,293.86,60.4,38500.0,36500.0,2000.0
+2019,S,Other Services,41024.0,3.5,863.98,47.48,108300.0,106000.0,2300.0
+2020,A,"Agriculture, Forestry and Fishing",30367.0,-11.48,739.39,41.07,133800.0,132600.0,1200.0
+2020,B,Mining,71820.0,3.46,399.91,179.59,10000.0,8600.0,1400.0
+2020,C,Manufacturing,33599.0,0.79,1452.12,23.14,86800.0,79200.0,7600.0
+2020,D,"Electricity, Gas, Water and Waste Services",31792.0,-3.99,222.19,143.08,5000.0,4000.0,1000.0
+2020,E,Construction,41435.0,-2.13,1972.89,21.0,395100.0,387600.0,7500.0
+2020,F,Wholesale Trade,93234.0,-0.72,988.02,94.36,88100.0,82900.0,5200.0
+2020,G,Retail Trade,103681.0,0.09,1717.84,60.36,149600.0,139800.0,9800.0
+2020,H,Accommodation and Food Services,54482.0,-9.26,1068.86,50.97,92500.0,81800.0,10700.0
+2020,I,"Transport, Postal and Warehousing",29886.0,1.65,1046.73,28.55,103900.0,100900.0,3000.0
+2020,J,Information Media and Telecommunications,17584.0,6.18,297.77,59.05,28200.0,26200.0,2000.0
+2020,K,Financial and Insurance Services,113191.0,0.35,821.09,137.85,238600.0,235300.0,3300.0
+2020,L,"Rental, Hiring and Real Estate Services",9332.0,0.0,438.57,21.28,302400.0,300300.0,2100.0
+2020,M,"Professional, Scientific and Technical Services",34940.0,9.19,1933.53,18.07,298200.0,293300.0,4900.0
+2020,N,Administrative and Support Services,76280.0,-1.47,1068.51,71.39,109100.0,103600.0,5500.0
+2020,O,Public Administration and Safety,121016.0,4.65,1205.43,100.39,11200.0,9200.0,2000.0
+2020,P,Education and Training,114112.0,1.33,1533.39,74.42,41600.0,37500.0,4100.0
+2020,Q,Health Care and Social Assistance,170626.0,4.32,2559.91,66.65,108400.0,95700.0,12700.0
+2020,R,Arts and Recreation Services,16219.0,-8.62,249.08,65.12,38800.0,36800.0,2000.0
+2020,S,Other Services,37981.0,-7.42,717.63,52.93,109400.0,107000.0,2400.0
+2021,A,"Agriculture, Forestry and Fishing",38528.0,26.87,767.0,50.23,132100.0,130900.0,1200.0
+2021,B,Mining,63808.0,-11.16,405.46,157.37,10200.0,8800.0,1400.0
+2021,C,Manufacturing,34075.0,1.42,1528.63,22.29,85100.0,77500.0,7600.0
+2021,D,"Electricity, Gas, Water and Waste Services",31833.0,0.13,231.43,137.55,5200.0,4200.0,1000.0
+2021,E,Construction,41457.0,0.05,2071.75,20.01,411200.0,403500.0,7700.0
+2021,F,Wholesale Trade,97506.0,4.58,963.27,101.22,87200.0,82000.0,5200.0
+2021,G,Retail Trade,109058.0,5.19,1787.33,61.02,148500.0,138600.0,9900.0
+2021,H,Accommodation and Food Services,55987.0,2.76,1057.6,52.94,88700.0,77800.0,10900.0
+2021,I,"Transport, Postal and Warehousing",31571.0,5.64,1084.29,29.12,108600.0,105400.0,3200.0
+2021,J,Information Media and Telecommunications,18059.0,2.7,320.92,56.27,28900.0,26900.0,2000.0
+2021,K,Financial and Insurance Services,116267.0,2.72,829.95,140.09,248100.0,244700.0,3400.0
+2021,L,"Rental, Hiring and Real Estate Services",9351.0,0.2,472.62,19.79,311500.0,309400.0,2100.0
+2021,M,"Professional, Scientific and Technical Services",36912.0,5.64,1976.44,18.68,311400.0,306200.0,5200.0
+2021,N,Administrative and Support Services,73720.0,-3.36,1131.07,65.18,113800.0,108100.0,5700.0
+2021,O,Public Administration and Safety,125064.0,3.35,1282.25,97.53,11400.0,9400.0,2000.0
+2021,P,Education and Training,117618.0,3.07,1539.14,76.42,42800.0,38600.0,4200.0
+2021,Q,Health Care and Social Assistance,182080.0,6.71,2692.07,67.64,112900.0,99900.0,13000.0
+2021,R,Arts and Recreation Services,15736.0,-2.98,247.0,63.71,39200.0,37200.0,2000.0
+2021,S,Other Services,37032.0,-2.5,800.18,46.28,110600.0,108200.0,2400.0
+2022,A,"Agriculture, Forestry and Fishing",45428.0,17.91,803.95,56.51,130500.0,129200.0,1300.0
+2022,B,Mining,58425.0,-8.44,422.94,138.14,10800.0,9300.0,1500.0
+2022,C,Manufacturing,35067.0,2.91,1558.16,22.51,83600.0,75800.0,7800.0
+2022,D,"Electricity, Gas, Water and Waste Services",32323.0,1.54,236.57,136.63,5500.0,4500.0,1000.0
+2022,E,Construction,41846.0,0.94,2202.13,19.0,432500.0,424200.0,8300.0
+2022,F,Wholesale Trade,98977.0,1.51,1059.0,93.46,86300.0,81000.0,5300.0
+2022,G,Retail Trade,112101.0,2.79,1846.99,60.69,147800.0,137800.0,10000.0
+2022,H,Accommodation and Food Services,57037.0,1.88,1209.39,47.16,93400.0,82200.0,11200.0
+2022,I,"Transport, Postal and Warehousing",33971.0,7.6,1173.02,28.96,113200.0,109800.0,3400.0
+2022,J,Information Media and Telecommunications,19901.0,10.2,330.38,60.24,29800.0,27700.0,2100.0
+2022,K,Financial and Insurance Services,120502.0,3.64,840.23,143.42,258400.0,254800.0,3600.0
+2022,L,"Rental, Hiring and Real Estate Services",9669.0,3.4,493.36,19.6,321200.0,319000.0,2200.0
+2022,M,"Professional, Scientific and Technical Services",42388.0,14.84,2006.32,21.13,326800.0,321300.0,5500.0
+2022,N,Administrative and Support Services,82297.0,11.63,1220.5,67.43,118900.0,112900.0,6000.0
+2022,O,Public Administration and Safety,129319.0,3.4,1277.46,101.23,11600.0,9600.0,2000.0
+2022,P,Education and Training,119078.0,1.24,1592.51,74.77,44100.0,39800.0,4300.0
+2022,Q,Health Care and Social Assistance,193255.0,6.14,2865.89,67.43,117500.0,104100.0,13400.0
+2022,R,Arts and Recreation Services,17667.0,12.27,287.87,61.37,40800.0,38700.0,2100.0
+2022,S,Other Services,38870.0,4.96,853.72,45.53,111900.0,109400.0,2500.0
+2023,A,"Agriculture, Forestry and Fishing",47448.0,4.45,810.12,58.57,128800.0,127500.0,1300.0
+2023,B,Mining,57091.0,-2.28,454.15,125.71,11400.0,9800.0,1600.0
+2023,C,Manufacturing,35534.0,1.33,1606.28,22.12,82300.0,74200.0,8100.0
+2023,D,"Electricity, Gas, Water and Waste Services",31946.0,-1.17,247.45,129.1,5900.0,4800.0,1100.0
+2023,E,Construction,41743.0,-0.25,2219.23,18.81,447800.0,439200.0,8600.0
+2023,F,Wholesale Trade,106017.0,7.11,1065.16,99.53,85900.0,80500.0,5400.0
+2023,G,Retail Trade,115404.0,2.95,1910.76,60.4,148100.0,137800.0,10300.0
+2023,H,Accommodation and Food Services,66759.0,17.05,1374.46,48.57,97100.0,85600.0,11500.0
+2023,I,"Transport, Postal and Warehousing",34741.0,2.27,1239.44,28.03,117500.0,113800.0,3700.0
+2023,J,Information Media and Telecommunications,21655.0,8.81,348.41,62.15,30700.0,28500.0,2200.0
+2023,K,Financial and Insurance Services,122222.0,1.43,867.07,140.96,269000.0,265200.0,3800.0
+2023,L,"Rental, Hiring and Real Estate Services",10546.0,9.07,489.98,21.52,331700.0,329400.0,2300.0
+2023,M,"Professional, Scientific and Technical Services",45295.0,6.86,2115.01,21.42,341900.0,336100.0,5800.0
+2023,N,Administrative and Support Services,89636.0,8.92,1214.27,73.82,123700.0,117400.0,6300.0
+2023,O,Public Administration and Safety,131668.0,1.82,1342.44,98.08,11900.0,9800.0,2100.0
+2023,P,Education and Training,122082.0,2.52,1701.17,71.76,45700.0,41200.0,4500.0
+2023,Q,Health Care and Social Assistance,203477.0,5.29,3177.17,64.04,122200.0,108400.0,13800.0
+2023,R,Arts and Recreation Services,19661.0,11.29,327.56,60.02,42400.0,40200.0,2200.0
+2023,S,Other Services,41970.0,7.98,877.48,47.83,113400.0,110800.0,2600.0
+2024,A,"Agriculture, Forestry and Fishing",45538.0,-4.03,803.83,56.65,,,
+2024,B,Mining,57891.0,1.4,478.58,120.96,,,
+2024,C,Manufacturing,37049.0,4.26,1594.9,23.23,,,
+2024,D,"Electricity, Gas, Water and Waste Services",32808.0,2.7,252.25,130.06,,,
+2024,E,Construction,42084.0,0.82,2288.39,18.39,,,
+2024,F,Wholesale Trade,106271.0,0.24,1037.05,102.47,,,
+2024,G,Retail Trade,114575.0,-0.72,1929.91,59.37,,,
+2024,H,Accommodation and Food Services,64710.0,-3.07,1346.27,48.07,,,
+2024,I,"Transport, Postal and Warehousing",34834.0,0.27,1196.5,29.11,,,
+2024,J,Information Media and Telecommunications,23087.0,6.61,336.5,68.61,,,
+2024,K,Financial and Insurance Services,123212.0,0.81,861.73,142.98,,,
+2024,L,"Rental, Hiring and Real Estate Services",10510.0,-0.34,495.38,21.22,,,
+2024,M,"Professional, Scientific and Technical Services",46761.0,3.24,2146.75,21.78,,,
+2024,N,Administrative and Support Services,89235.0,-0.45,1155.41,77.23,,,
+2024,O,Public Administration and Safety,137943.0,4.77,1378.59,100.06,,,
+2024,P,Education and Training,123575.0,1.22,1776.97,69.54,,,
+2024,Q,Health Care and Social Assistance,211767.0,4.07,3315.1,63.88,,,
+2024,R,Arts and Recreation Services,19798.0,0.7,346.89,57.07,,,
+2024,S,Other Services,42889.0,2.19,861.21,49.8,,,
+2025,A,"Agriculture, Forestry and Fishing",49804.0,9.37,604.09,82.44,,,
+2025,B,Mining,57725.0,-0.29,367.3,157.16,,,
+2025,C,Manufacturing,37786.0,1.99,1172.4,32.23,,,
+2025,D,"Electricity, Gas, Water and Waste Services",34419.0,4.91,200.08,172.03,,,
+2025,E,Construction,42595.0,1.21,1746.17,24.39,,,
+2025,F,Wholesale Trade,106204.0,-0.06,783.68,135.52,,,
+2025,G,Retail Trade,115339.0,0.67,1457.24,79.15,,,
+2025,H,Accommodation and Food Services,64390.0,-0.49,1058.44,60.83,,,
+2025,I,"Transport, Postal and Warehousing",35761.0,2.66,914.62,39.1,,,
+2025,J,Information Media and Telecommunications,24012.0,4.01,246.68,97.34,,,
+2025,K,Financial and Insurance Services,126168.0,2.4,643.96,195.93,,,
+2025,L,"Rental, Hiring and Real Estate Services",10612.0,0.97,380.6,27.88,,,
+2025,M,"Professional, Scientific and Technical Services",46753.0,-0.02,1615.29,28.94,,,
+2025,N,Administrative and Support Services,90498.0,1.42,866.23,104.47,,,
+2025,O,Public Administration and Safety,142661.0,3.42,1058.38,134.79,,,
+2025,P,Education and Training,124602.0,0.83,1371.47,90.85,,,
+2025,Q,Health Care and Social Assistance,218594.0,3.22,2572.84,84.96,,,
+2025,R,Arts and Recreation Services,20523.0,3.66,260.4,78.81,,,
+2025,S,Other Services,42564.0,-0.76,653.21,65.16,,,

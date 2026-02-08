@@ -52,12 +52,11 @@ def create_headline_chart(
     if not econ_df.empty and "anzsic_code" in econ_df.columns:
         econ_total = econ_df.groupby("year").agg({
             "gva_millions": "sum",
-            "employment_thousands": "sum",
             "hours_worked_millions": "sum",
         }).reset_index()
         econ_total["productivity"] = econ_total["gva_millions"] / econ_total["hours_worked_millions"]
     else:
-        econ_total = pd.DataFrame(columns=["year", "gva_millions", "employment_thousands", "productivity"])
+        econ_total = pd.DataFrame(columns=["year", "gva_millions", "productivity"])
 
     # Merge datasets
     combined = leg_by_year.merge(econ_total, on="year", how="outer")
@@ -72,17 +71,18 @@ def create_headline_chart(
 
     # Index to base year
     combined = index_to_base(combined, base_year, [
-        "req_count", "gva_millions", "productivity"
+        "leg_count", "req_count", "gva_millions", "productivity"
     ])
 
     # Create figure
     fig = go.Figure()
 
-    # Define series to plot (simplified: Requirements, Real GVA, Productivity)
+    # Define series to plot: Legislation, Requirements, GVA, GVA per hour
     series_config = [
-        ("req_count_idx", "Requirements", MACRO_COLOURS["Requirements"]),
-        ("gva_millions_idx", "Real GVA", MACRO_COLOURS["Real GDP"]),
-        ("productivity_idx", "GVA per hour worked", MACRO_COLOURS["Productivity"]),
+        ("leg_count_idx", "Legislation Count", MACRO_COLOURS.get("Legislation", "#1f77b4")),
+        ("req_count_idx", "Requirements Count", MACRO_COLOURS.get("Requirements", "#ff7f0e")),
+        ("gva_millions_idx", "Real GVA", MACRO_COLOURS.get("Real GDP", "#2ca02c")),
+        ("productivity_idx", "GVA per hour worked", MACRO_COLOURS.get("Productivity", "#9467bd")),
     ]
 
     for col, name, color in series_config:
@@ -185,12 +185,13 @@ def create_industry_chart(
         req_col = "bc_requirements"
     industry_name = ANZSIC_DIVISIONS.get(anzsic_code, "Unknown")
 
-    # Get industry legislation requirements by year
+    # Get industry legislation and requirements by year
     industry_leg = leg_df[
         (leg_df["anzsic_code"] == anzsic_code) &
         (leg_df["as_of_year"] >= year_start) &
         (leg_df["as_of_year"] <= year_end)
     ].groupby("as_of_year").agg(
+        leg_count=("register_id", "count"),
         req_count=(req_col, "sum")
     ).reset_index()
     industry_leg.rename(columns={"as_of_year": "year"}, inplace=True)
@@ -218,16 +219,17 @@ def create_industry_chart(
 
     # Index to base year
     combined = index_to_base(combined, base_year, [
-        "req_count", "gva_millions", "productivity"
+        "leg_count", "req_count", "gva_millions", "productivity"
     ])
 
     # Create figure
     fig = go.Figure()
 
     series_config = [
-        ("req_count_idx", "Industry Requirements", ACCESSIBLE_PALETTE[1]),
+        ("leg_count_idx", "Legislation Count", ACCESSIBLE_PALETTE[0]),
+        ("req_count_idx", "Requirements Count", ACCESSIBLE_PALETTE[1]),
         ("gva_millions_idx", "Industry GVA", ACCESSIBLE_PALETTE[2]),
-        ("productivity_idx", "Industry GVA per hour worked", ACCESSIBLE_PALETTE[3]),
+        ("productivity_idx", "GVA per hour worked", ACCESSIBLE_PALETTE[3]),
     ]
 
     for col, name, color in series_config:
