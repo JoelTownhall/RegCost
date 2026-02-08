@@ -315,23 +315,24 @@ if not leg_ts_df.empty:
 # Chart 3b: By Industry
 st.subheader("By Industry")
 
-col1, col2 = st.columns([1, 3])
-with col1:
-    # Filter to industries that have data
-    industries_with_data = []
-    if not econ_df.empty and "anzsic_code" in econ_df.columns:
-        industries_with_data = sorted(econ_df["anzsic_code"].dropna().unique().tolist())
-    elif not leg_ts_df.empty:
-        industries_with_data = sorted(leg_ts_df["anzsic_code"].dropna().unique().tolist())
+# Filter to industries that have data
+industries_with_data = []
+if not econ_df.empty and "anzsic_code" in econ_df.columns:
+    industries_with_data = sorted(econ_df["anzsic_code"].dropna().unique().tolist())
+elif not leg_ts_df.empty:
+    industries_with_data = sorted(leg_ts_df["anzsic_code"].dropna().unique().tolist())
 
-    if industries_with_data:
+if industries_with_data:
+    # Controls in a row above the chart
+    col1, col2 = st.columns([2, 1])
+    with col1:
         selected_industry_3b = st.selectbox(
             "Select industry",
             industries_with_data,
             format_func=lambda x: get_anzsic_label(x),
             key="chart3b_industry"
         )
-
+    with col2:
         base_year_3b = st.number_input(
             "Base year (= 100)",
             min_value=year_range[0],
@@ -340,18 +341,18 @@ with col1:
             key="chart3b_base"
         )
 
-        fig3b = create_industry_chart(
-            leg_ts_df,
-            econ_df,
-            anzsic_code=selected_industry_3b,
-            year_start=year_range[0],
-            year_end=year_range[1],
-            base_year=int(base_year_3b),
-            methodology=methodology_c3,
-        )
-        st.plotly_chart(fig3b, width="stretch")
-    else:
-        st.info("No industry-level data available.")
+    fig3b = create_industry_chart(
+        leg_ts_df,
+        econ_df,
+        anzsic_code=selected_industry_3b,
+        year_start=year_range[0],
+        year_end=year_range[1],
+        base_year=int(base_year_3b),
+        methodology=methodology_c3,
+    )
+    st.plotly_chart(fig3b, width="stretch")
+else:
+    st.info("No industry-level data available.")
 
 # --- Footer ---
 st.divider()

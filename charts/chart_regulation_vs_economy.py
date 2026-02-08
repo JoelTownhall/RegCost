@@ -82,7 +82,7 @@ def create_headline_chart(
     series_config = [
         ("req_count_idx", "Requirements", MACRO_COLOURS["Requirements"]),
         ("gva_millions_idx", "Real GVA", MACRO_COLOURS["Real GDP"]),
-        ("productivity_idx", "Productivity", MACRO_COLOURS["Productivity"]),
+        ("productivity_idx", "GVA per hour worked", MACRO_COLOURS["Productivity"]),
     ]
 
     for col, name, color in series_config:
@@ -227,7 +227,7 @@ def create_industry_chart(
     series_config = [
         ("req_count_idx", "Industry Requirements", ACCESSIBLE_PALETTE[1]),
         ("gva_millions_idx", "Industry GVA", ACCESSIBLE_PALETTE[2]),
-        ("productivity_idx", "Industry Productivity", ACCESSIBLE_PALETTE[3]),
+        ("productivity_idx", "Industry GVA per hour worked", ACCESSIBLE_PALETTE[3]),
     ]
 
     for col, name, color in series_config:
