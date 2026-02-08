@@ -1,0 +1,297 @@
+{
+  "types": [
+    {
+      "code": "Primary",
+      "description": "Acts of Parliament"
+    },
+    {
+      "code": "Secondary",
+      "description": "Legislative Instruments (regulations, rules, etc.)"
+    }
+  ],
+  "subtypes": [
+    {
+      "code": "Aviation - Airworthiness Directive",
+      "count": 8631,
+      "percentage": 36.2
+    },
+    {
+      "code": "Tariff Concession Order",
+      "count": 6541,
+      "percentage": 27.5
+    },
+    {
+      "code": "Determination",
+      "count": 2064,
+      "percentage": 8.7
+    },
+    {
+      "code": "Act",
+      "count": 1075,
+      "percentage": 4.5
+    },
+    {
+      "code": "Other Instrument",
+      "count": 759,
+      "percentage": 3.2
+    },
+    {
+      "code": "Statement of Principles (RMA)",
+      "count": 744,
+      "percentage": 3.1
+    },
+    {
+      "code": "Instrument",
+      "count": 698,
+      "percentage": 2.9
+    },
+    {
+      "code": "Regulation",
+      "count": 638,
+      "percentage": 2.7
+    },
+    {
+      "code": "Declaration",
+      "count": 448,
+      "percentage": 1.9
+    },
+    {
+      "code": "Aviation - Airworthiness",
+      "count": 371,
+      "percentage": 1.6
+    },
+    {
+      "code": "Standard",
+      "count": 348,
+      "percentage": 1.5
+    },
+    {
+      "code": "Rules",
+      "count": 255,
+      "percentage": 1.1
+    },
+    {
+      "code": "Aviation - CASA Instrument",
+      "count": 199,
+      "percentage": 0.8
+    },
+    {
+      "code": "Approval",
+      "count": 151,
+      "percentage": 0.6
+    },
+    {
+      "code": "Direction",
+      "count": 131,
+      "percentage": 0.6
+    },
+    {
+      "code": "Notice",
+      "count": 119,
+      "percentage": 0.5
+    },
+    {
+      "code": "Biosecurity",
+      "count": 118,
+      "percentage": 0.5
+    },
+    {
+      "code": "Licence Area Plan",
+      "count": 116,
+      "percentage": 0.5
+    },
+    {
+      "code": "Aviation - Civil Aviation",
+      "count": 96,
+      "percentage": 0.4
+    },
+    {
+      "code": "Order",
+      "count": 82,
+      "percentage": 0.3
+    },
+    {
+      "code": "Proclamation",
+      "count": 64,
+      "percentage": 0.3
+    },
+    {
+      "code": "Superannuation Family Law",
+      "count": 48,
+      "percentage": 0.2
+    },
+    {
+      "code": "Exemption",
+      "count": 36,
+      "percentage": 0.2
+    },
+    {
+      "code": "Native Title",
+      "count": 29,
+      "percentage": 0.1
+    },
+    {
+      "code": "Export Control",
+      "count": 18,
+      "percentage": 0.1
+    },
+    {
+      "code": "Aviation - Transport Security",
+      "count": 13,
+      "percentage": 0.1
+    },
+    {
+      "code": "Aviation - Air Navigation",
+      "count": 6,
+      "percentage": 0.0
+    },
+    {
+      "code": "Aviation - Manual of Standards",
+      "count": 6,
+      "percentage": 0.0
+    },
+    {
+      "code": "Aviation - Airspace",
+      "count": 4,
+      "percentage": 0.0
+    },
+    {
+      "code": "Aviation - Aircraft Noise",
+      "count": 3,
+      "percentage": 0.0
+    },
+    {
+      "code": "Therapeutic Goods",
+      "count": 2,
+      "percentage": 0.0
+    }
+  ],
+  "subtype_groups": {
+    "Aviation": [
+      "Aviation - Airworthiness Directive",
+      "Aviation - Civil Aviation Order",
+      "Aviation - CASA Instrument",
+      "Aviation - Civil Aviation",
+      "Aviation - Transport Security",
+      "Aviation - Airspace",
+      "Aviation - Aircraft Noise",
+      "Aviation - Air Navigation",
+      "Aviation - Airworthiness",
+      "Aviation - Manual of Standards"
+    ],
+    "Administrative": [
+      "Tariff Concession Order",
+      "Statement of Principles (RMA)",
+      "Licence Area Plan",
+      "Superannuation Family Law"
+    ],
+    "Standard Instruments": [
+      "Act",
+      "Regulation",
+      "Determination",
+      "Order",
+      "Rules",
+      "Direction",
+      "Notice",
+      "Declaration",
+      "Standard",
+      "Exemption",
+      "Approval",
+      "Instrument",
+      "Proclamation",
+      "Other Instrument"
+    ],
+    "Sector-Specific": [
+      "Native Title",
+      "Biosecurity",
+      "Therapeutic Goods",
+      "Export Control"
+    ]
+  },
+  "anzsic_divisions": [
+    {
+      "code": "A",
+      "name": "Agriculture, Forestry and Fishing"
+    },
+    {
+      "code": "B",
+      "name": "Mining"
+    },
+    {
+      "code": "C",
+      "name": "Manufacturing"
+    },
+    {
+      "code": "D",
+      "name": "Electricity, Gas, Water and Waste Services"
+    },
+    {
+      "code": "E",
+      "name": "Construction"
+    },
+    {
+      "code": "F",
+      "name": "Wholesale Trade"
+    },
+    {
+      "code": "G",
+      "name": "Retail Trade"
+    },
+    {
+      "code": "H",
+      "name": "Accommodation and Food Services"
+    },
+    {
+      "code": "I",
+      "name": "Transport, Postal and Warehousing"
+    },
+    {
+      "code": "J",
+      "name": "Information Media and Telecommunications"
+    },
+    {
+      "code": "K",
+      "name": "Financial and Insurance Services"
+    },
+    {
+      "code": "L",
+      "name": "Rental, Hiring and Real Estate Services"
+    },
+    {
+      "code": "M",
+      "name": "Professional, Scientific and Technical Services"
+    },
+    {
+      "code": "N",
+      "name": "Administrative and Support Services"
+    },
+    {
+      "code": "O",
+      "name": "Public Administration and Safety"
+    },
+    {
+      "code": "P",
+      "name": "Education and Training"
+    },
+    {
+      "code": "Q",
+      "name": "Health Care and Social Assistance"
+    },
+    {
+      "code": "R",
+      "name": "Arts and Recreation Services"
+    },
+    {
+      "code": "S",
+      "name": "Other Services"
+    },
+    {
+      "code": "U",
+      "name": "Unclassified"
+    },
+    {
+      "code": "X",
+      "name": "Cross-cutting (Multiple Industries)"
+    }
+  ]
+}

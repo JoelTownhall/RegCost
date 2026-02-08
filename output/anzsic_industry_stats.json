@@ -1,0 +1,2557 @@
+{
+  "generated_at": "2026-02-08T11:07:55.528231",
+  "source": "ABS National Accounts (5206.0) and Business Counts (8165.0)",
+  "note": "Estimates based on recent ABS publications with growth rate interpolation",
+  "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "data": {
+    "2000": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 33610.0,
+        "firm_count": 176408
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 109546.0,
+        "firm_count": 7610
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 91476.0,
+        "firm_count": 119706
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 34879.0,
+        "firm_count": 9545
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 88671.0,
+        "firm_count": 222944
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 47562.0,
+        "firm_count": 75567
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 53903.0,
+        "firm_count": 115339
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 27868.0,
+        "firm_count": 72928
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 66586.0,
+        "firm_count": 72928
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 27868.0,
+        "firm_count": 19025
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 75059.0,
+        "firm_count": 60245
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 43069.0,
+        "firm_count": 183905
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 71002.0,
+        "firm_count": 129832
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 38002.0,
+        "firm_count": 88671
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 85611.0,
+        "firm_count": 11932
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 58270.0,
+        "firm_count": 25366
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 75059.0,
+        "firm_count": 73470
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 15854.0,
+        "firm_count": 31708
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 22195.0,
+        "firm_count": 143180
+      }
+    },
+    "2001": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 34282.0,
+        "firm_count": 174644
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 113928.0,
+        "firm_count": 7762
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 92391.0,
+        "firm_count": 118508
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 35576.0,
+        "firm_count": 9641
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 91331.0,
+        "firm_count": 229633
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 48513.0,
+        "firm_count": 76323
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 54981.0,
+        "firm_count": 116492
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 28704.0,
+        "firm_count": 74386
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 67918.0,
+        "firm_count": 74386
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 28704.0,
+        "firm_count": 19405
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 78062.0,
+        "firm_count": 61450
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 44361.0,
+        "firm_count": 187583
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 73842.0,
+        "firm_count": 135026
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 39142.0,
+        "firm_count": 91331
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 87323.0,
+        "firm_count": 12051
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 60018.0,
+        "firm_count": 25874
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 78062.0,
+        "firm_count": 75674
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 16171.0,
+        "firm_count": 32342
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 22639.0,
+        "firm_count": 144611
+      }
+    },
+    "2002": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 34968.0,
+        "firm_count": 172898
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 118485.0,
+        "firm_count": 7917
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 93314.0,
+        "firm_count": 117323
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 36288.0,
+        "firm_count": 9737
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 94071.0,
+        "firm_count": 236522
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 49483.0,
+        "firm_count": 77086
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 56081.0,
+        "firm_count": 117657
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 29565.0,
+        "firm_count": 75874
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 69276.0,
+        "firm_count": 75874
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 29565.0,
+        "firm_count": 19793
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 81184.0,
+        "firm_count": 62679
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 45692.0,
+        "firm_count": 191335
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 76796.0,
+        "firm_count": 140427
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 40316.0,
+        "firm_count": 94071
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 89070.0,
+        "firm_count": 12171
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 61818.0,
+        "firm_count": 26391
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 81184.0,
+        "firm_count": 77945
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 16494.0,
+        "firm_count": 32989
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 23092.0,
+        "firm_count": 146057
+      }
+    },
+    "2003": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 35667.0,
+        "firm_count": 171169
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 123224.0,
+        "firm_count": 8076
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 94248.0,
+        "firm_count": 116150
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 37013.0,
+        "firm_count": 9835
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 96893.0,
+        "firm_count": 243617
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 50473.0,
+        "firm_count": 77857
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 57203.0,
+        "firm_count": 118834
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 30452.0,
+        "firm_count": 77392
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 70662.0,
+        "firm_count": 77392
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 30452.0,
+        "firm_count": 20189
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 84432.0,
+        "firm_count": 63932
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 47062.0,
+        "firm_count": 195162
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 79868.0,
+        "firm_count": 146044
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 41526.0,
+        "firm_count": 96893
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 90851.0,
+        "firm_count": 12293
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 63673.0,
+        "firm_count": 26919
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 84432.0,
+        "firm_count": 80283
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 16824.0,
+        "firm_count": 33649
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 23554.0,
+        "firm_count": 147518
+      }
+    },
+    "2004": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 36381.0,
+        "firm_count": 169457
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 128153.0,
+        "firm_count": 8237
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 95190.0,
+        "firm_count": 114989
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 37754.0,
+        "firm_count": 9933
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 99800.0,
+        "firm_count": 250926
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 51482.0,
+        "firm_count": 78635
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 58347.0,
+        "firm_count": 120022
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 31366.0,
+        "firm_count": 78940
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 72075.0,
+        "firm_count": 78940
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 31366.0,
+        "firm_count": 20593
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 87809.0,
+        "firm_count": 65211
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 48474.0,
+        "firm_count": 199065
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 83062.0,
+        "firm_count": 151886
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 42771.0,
+        "firm_count": 99800
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 92668.0,
+        "firm_count": 12416
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 65583.0,
+        "firm_count": 27457
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 87809.0,
+        "firm_count": 82691
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 17161.0,
+        "firm_count": 34322
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 24025.0,
+        "firm_count": 148993
+      }
+    },
+    "2005": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 37108.0,
+        "firm_count": 167762
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 133280.0,
+        "firm_count": 8402
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 96142.0,
+        "firm_count": 113839
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 38509.0,
+        "firm_count": 10032
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 102794.0,
+        "firm_count": 258454
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 52512.0,
+        "firm_count": 79422
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 59514.0,
+        "firm_count": 121223
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 32307.0,
+        "firm_count": 80518
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 73517.0,
+        "firm_count": 80518
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 32307.0,
+        "firm_count": 21005
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 91321.0,
+        "firm_count": 66515
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 49929.0,
+        "firm_count": 203046
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 86385.0,
+        "firm_count": 157961
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 44055.0,
+        "firm_count": 102794
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 94522.0,
+        "firm_count": 12540
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 67550.0,
+        "firm_count": 28006
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 91321.0,
+        "firm_count": 85172
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 17504.0,
+        "firm_count": 35008
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 24506.0,
+        "firm_count": 150483
+      }
+    },
+    "2006": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 37851.0,
+        "firm_count": 166085
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 138611.0,
+        "firm_count": 8570
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 97103.0,
+        "firm_count": 112700
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 39279.0,
+        "firm_count": 10133
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 105878.0,
+        "firm_count": 266207
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 53562.0,
+        "firm_count": 80216
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 60704.0,
+        "firm_count": 122435
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 33276.0,
+        "firm_count": 82129
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 74987.0,
+        "firm_count": 82129
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 33276.0,
+        "firm_count": 21425
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 94974.0,
+        "firm_count": 67845
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 51426.0,
+        "firm_count": 207107
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 89840.0,
+        "firm_count": 164279
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 45376.0,
+        "firm_count": 105878
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 96412.0,
+        "firm_count": 12666
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 69577.0,
+        "firm_count": 28567
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 94974.0,
+        "firm_count": 87727
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 17854.0,
+        "firm_count": 35708
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 24996.0,
+        "firm_count": 151988
+      }
+    },
+    "2007": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 38608.0,
+        "firm_count": 164424
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 144155.0,
+        "firm_count": 8741
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 98074.0,
+        "firm_count": 111573
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 40065.0,
+        "firm_count": 10234
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 109054.0,
+        "firm_count": 274193
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 54633.0,
+        "firm_count": 81018
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 61918.0,
+        "firm_count": 123659
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 34274.0,
+        "firm_count": 83771
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 76487.0,
+        "firm_count": 83771
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 34274.0,
+        "firm_count": 21853
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 98773.0,
+        "firm_count": 69202
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 52969.0,
+        "firm_count": 211249
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 93434.0,
+        "firm_count": 170851
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 46738.0,
+        "firm_count": 109054
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 98340.0,
+        "firm_count": 12792
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 71664.0,
+        "firm_count": 29138
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 98773.0,
+        "firm_count": 90359
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 18211.0,
+        "firm_count": 36422
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 25496.0,
+        "firm_count": 153508
+      }
+    },
+    "2008": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 39380.0,
+        "firm_count": 162780
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 149921.0,
+        "firm_count": 8916
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 99055.0,
+        "firm_count": 110458
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 40866.0,
+        "firm_count": 10336
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 112326.0,
+        "firm_count": 282419
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 55726.0,
+        "firm_count": 81828
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 63156.0,
+        "firm_count": 124896
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 35302.0,
+        "firm_count": 85447
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 78017.0,
+        "firm_count": 85447
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 35302.0,
+        "firm_count": 22290
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 102724.0,
+        "firm_count": 70586
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 54558.0,
+        "firm_count": 215474
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 97171.0,
+        "firm_count": 177685
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 48140.0,
+        "firm_count": 112326
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 100307.0,
+        "firm_count": 12920
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 73814.0,
+        "firm_count": 29721
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 102724.0,
+        "firm_count": 93070
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 18575.0,
+        "firm_count": 37151
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 26006.0,
+        "firm_count": 155043
+      }
+    },
+    "2009": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 40167.0,
+        "firm_count": 161152
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 155918.0,
+        "firm_count": 9095
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 100046.0,
+        "firm_count": 109353
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 41683.0,
+        "firm_count": 10440
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 115696.0,
+        "firm_count": 290892
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 56841.0,
+        "firm_count": 82646
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 64419.0,
+        "firm_count": 126145
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 36361.0,
+        "firm_count": 87156
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 79577.0,
+        "firm_count": 87156
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 36361.0,
+        "firm_count": 22736
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 106833.0,
+        "firm_count": 71998
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 56195.0,
+        "firm_count": 219784
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 101058.0,
+        "firm_count": 184792
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 49584.0,
+        "firm_count": 115696
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 102313.0,
+        "firm_count": 13049
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 76029.0,
+        "firm_count": 30315
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 106833.0,
+        "firm_count": 95862
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 18947.0,
+        "firm_count": 37894
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 26526.0,
+        "firm_count": 156593
+      }
+    },
+    "2010": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 40971.0,
+        "firm_count": 159540
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 162155.0,
+        "firm_count": 9276
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 101046.0,
+        "firm_count": 108260
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 42517.0,
+        "firm_count": 10544
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 119166.0,
+        "firm_count": 299619
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 57977.0,
+        "firm_count": 83473
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 65708.0,
+        "firm_count": 127406
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 37452.0,
+        "firm_count": 88899
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 81168.0,
+        "firm_count": 88899
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 37452.0,
+        "firm_count": 23191
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 111106.0,
+        "firm_count": 73438
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 57881.0,
+        "firm_count": 224179
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 105100.0,
+        "firm_count": 192184
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 51071.0,
+        "firm_count": 119166
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 104359.0,
+        "firm_count": 13180
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 78309.0,
+        "firm_count": 30921
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 111106.0,
+        "firm_count": 98738
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 19326.0,
+        "firm_count": 38652
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 27056.0,
+        "firm_count": 158159
+      }
+    },
+    "2011": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 41790.0,
+        "firm_count": 157945
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 168641.0,
+        "firm_count": 9462
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 102057.0,
+        "firm_count": 107177
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 43367.0,
+        "firm_count": 10649
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 122741.0,
+        "firm_count": 308607
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 59137.0,
+        "firm_count": 84308
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 67022.0,
+        "firm_count": 128680
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 38576.0,
+        "firm_count": 90677
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 82792.0,
+        "firm_count": 90677
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 38576.0,
+        "firm_count": 23655
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 115550.0,
+        "firm_count": 74907
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 59617.0,
+        "firm_count": 228663
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 109304.0,
+        "firm_count": 199871
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 52603.0,
+        "firm_count": 122741
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 106447.0,
+        "firm_count": 13312
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 80659.0,
+        "firm_count": 31540
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 115550.0,
+        "firm_count": 101700
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 19712.0,
+        "firm_count": 39425
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 27597.0,
+        "firm_count": 159741
+      }
+    },
+    "2012": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 42626.0,
+        "firm_count": 156365
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 175387.0,
+        "firm_count": 9651
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 103077.0,
+        "firm_count": 106105
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 44234.0,
+        "firm_count": 10756
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 126424.0,
+        "firm_count": 317865
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 60320.0,
+        "firm_count": 85151
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 68362.0,
+        "firm_count": 129967
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 39733.0,
+        "firm_count": 92490
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 84448.0,
+        "firm_count": 92490
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 39733.0,
+        "firm_count": 24128
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 120172.0,
+        "firm_count": 76405
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 61406.0,
+        "firm_count": 233236
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 113677.0,
+        "firm_count": 207866
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 54182.0,
+        "firm_count": 126424
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 108576.0,
+        "firm_count": 13445
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 83078.0,
+        "firm_count": 32171
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 120172.0,
+        "firm_count": 104751
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 20107.0,
+        "firm_count": 40213
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 28149.0,
+        "firm_count": 161338
+      }
+    },
+    "2013": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 43478.0,
+        "firm_count": 154802
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 182402.0,
+        "firm_count": 9844
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 104108.0,
+        "firm_count": 105044
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 45119.0,
+        "firm_count": 10863
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 130216.0,
+        "firm_count": 327401
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 61526.0,
+        "firm_count": 86002
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 69730.0,
+        "firm_count": 131267
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 40925.0,
+        "firm_count": 94340
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 86137.0,
+        "firm_count": 94340
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 40925.0,
+        "firm_count": 24610
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 124979.0,
+        "firm_count": 77933
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 63248.0,
+        "firm_count": 237901
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 118224.0,
+        "firm_count": 216181
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 55807.0,
+        "firm_count": 130216
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 110747.0,
+        "firm_count": 13579
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 85571.0,
+        "firm_count": 32814
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 124979.0,
+        "firm_count": 107894
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 20509.0,
+        "firm_count": 41017
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 28712.0,
+        "firm_count": 162952
+      }
+    },
+    "2014": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 44348.0,
+        "firm_count": 153254
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 189698.0,
+        "firm_count": 10041
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 105149.0,
+        "firm_count": 103994
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 46022.0,
+        "firm_count": 10972
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 134123.0,
+        "firm_count": 337223
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 62757.0,
+        "firm_count": 86862
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 71124.0,
+        "firm_count": 132579
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 42153.0,
+        "firm_count": 96227
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 87859.0,
+        "firm_count": 96227
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 42153.0,
+        "firm_count": 25103
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 129979.0,
+        "firm_count": 79492
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 65145.0,
+        "firm_count": 242659
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 122953.0,
+        "firm_count": 224828
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 57481.0,
+        "firm_count": 134123
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 112962.0,
+        "firm_count": 13715
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 88138.0,
+        "firm_count": 33470
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 129979.0,
+        "firm_count": 111130
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 20919.0,
+        "firm_count": 41838
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 29286.0,
+        "firm_count": 164581
+      }
+    },
+    "2015": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 45235.0,
+        "firm_count": 151721
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 197286.0,
+        "firm_count": 10242
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 106201.0,
+        "firm_count": 102954
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 46942.0,
+        "firm_count": 11082
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 138147.0,
+        "firm_count": 347340
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 64012.0,
+        "firm_count": 87731
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 72547.0,
+        "firm_count": 133905
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 43418.0,
+        "firm_count": 98151
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 89616.0,
+        "firm_count": 98151
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 43418.0,
+        "firm_count": 25605
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 135178.0,
+        "firm_count": 81082
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 67100.0,
+        "firm_count": 247512
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 127871.0,
+        "firm_count": 233821
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 59206.0,
+        "firm_count": 138147
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 115221.0,
+        "firm_count": 13852
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 90782.0,
+        "firm_count": 34140
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 135178.0,
+        "firm_count": 114464
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 21337.0,
+        "firm_count": 42675
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 29872.0,
+        "firm_count": 166227
+      }
+    },
+    "2016": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 46140.0,
+        "firm_count": 150204
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 205178.0,
+        "firm_count": 10447
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 107263.0,
+        "firm_count": 101924
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 47881.0,
+        "firm_count": 11193
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 142291.0,
+        "firm_count": 357760
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 65292.0,
+        "firm_count": 88608
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 73998.0,
+        "firm_count": 135244
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 44720.0,
+        "firm_count": 100114
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 91409.0,
+        "firm_count": 100114
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 44720.0,
+        "firm_count": 26117
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 140585.0,
+        "firm_count": 82703
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 69113.0,
+        "firm_count": 252462
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 132986.0,
+        "firm_count": 243174
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 60982.0,
+        "firm_count": 142291
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 117526.0,
+        "firm_count": 13991
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 93506.0,
+        "firm_count": 34822
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 140585.0,
+        "firm_count": 117898
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 21764.0,
+        "firm_count": 43528
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 30470.0,
+        "firm_count": 167889
+      }
+    },
+    "2017": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 47062.0,
+        "firm_count": 148702
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 213385.0,
+        "firm_count": 10656
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 108335.0,
+        "firm_count": 100905
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 48838.0,
+        "firm_count": 11305
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 146560.0,
+        "firm_count": 368493
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 66598.0,
+        "firm_count": 89494
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 75478.0,
+        "firm_count": 136597
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 46062.0,
+        "firm_count": 102117
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 93237.0,
+        "firm_count": 102117
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 46062.0,
+        "firm_count": 26639
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 146208.0,
+        "firm_count": 84357
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 71186.0,
+        "firm_count": 257512
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 138305.0,
+        "firm_count": 252901
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 62811.0,
+        "firm_count": 146560
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 119876.0,
+        "firm_count": 14131
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 96311.0,
+        "firm_count": 35519
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 146208.0,
+        "firm_count": 121435
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 22199.0,
+        "firm_count": 44399
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 31079.0,
+        "firm_count": 169568
+      }
+    },
+    "2018": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 48004.0,
+        "firm_count": 147215
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 221920.0,
+        "firm_count": 10869
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 109419.0,
+        "firm_count": 99896
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 49815.0,
+        "firm_count": 11418
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 150957.0,
+        "firm_count": 379548
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 67930.0,
+        "firm_count": 90389
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 76987.0,
+        "firm_count": 137963
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 47443.0,
+        "firm_count": 104159
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 95102.0,
+        "firm_count": 104159
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 47443.0,
+        "firm_count": 27172
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 152057.0,
+        "firm_count": 86044
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 73322.0,
+        "firm_count": 262662
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 143837.0,
+        "firm_count": 263017
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 64696.0,
+        "firm_count": 150957
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 122274.0,
+        "firm_count": 14272
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 99200.0,
+        "firm_count": 36229
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 152057.0,
+        "firm_count": 125078
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 22643.0,
+        "firm_count": 45287
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 31701.0,
+        "firm_count": 171264
+      }
+    },
+    "2019": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 48964.0,
+        "firm_count": 145743
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 230797.0,
+        "firm_count": 11086
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 110513.0,
+        "firm_count": 98897
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 50811.0,
+        "firm_count": 11532
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 155485.0,
+        "firm_count": 390934
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 69288.0,
+        "firm_count": 91293
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 78527.0,
+        "firm_count": 139342
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 48867.0,
+        "firm_count": 106242
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 97004.0,
+        "firm_count": 106242
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 48867.0,
+        "firm_count": 27715
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 158139.0,
+        "firm_count": 87765
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 75521.0,
+        "firm_count": 267915
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 149591.0,
+        "firm_count": 273537
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 66637.0,
+        "firm_count": 155485
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 124719.0,
+        "firm_count": 14415
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 102176.0,
+        "firm_count": 36954
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 158139.0,
+        "firm_count": 128831
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 23096.0,
+        "firm_count": 46192
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 32335.0,
+        "firm_count": 172976
+      }
+    },
+    "2020": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 49943.0,
+        "firm_count": 144285
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 240029.0,
+        "firm_count": 11308
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 111618.0,
+        "firm_count": 97908
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 51828.0,
+        "firm_count": 11647
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 160150.0,
+        "firm_count": 402662
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 70674.0,
+        "firm_count": 92206
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 80097.0,
+        "firm_count": 140736
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 50333.0,
+        "firm_count": 108367
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 98944.0,
+        "firm_count": 108367
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 50333.0,
+        "firm_count": 28270
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 164464.0,
+        "firm_count": 89521
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 77787.0,
+        "firm_count": 273273
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 155574.0,
+        "firm_count": 284479
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 68636.0,
+        "firm_count": 160150
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 127214.0,
+        "firm_count": 14559
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 105241.0,
+        "firm_count": 37693
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 164464.0,
+        "firm_count": 132696
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 23558.0,
+        "firm_count": 47116
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 32981.0,
+        "firm_count": 174706
+      }
+    },
+    "2021": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 50942.0,
+        "firm_count": 142843
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 249630.0,
+        "firm_count": 11534
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 112734.0,
+        "firm_count": 96929
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 52864.0,
+        "firm_count": 11764
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 164954.0,
+        "firm_count": 414742
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 72088.0,
+        "firm_count": 93128
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 81699.0,
+        "firm_count": 142143
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 51843.0,
+        "firm_count": 110534
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 100923.0,
+        "firm_count": 110534
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 51843.0,
+        "firm_count": 28835
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 171043.0,
+        "firm_count": 91311
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 80121.0,
+        "firm_count": 278739
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 161797.0,
+        "firm_count": 295858
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 70695.0,
+        "firm_count": 164954
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 129758.0,
+        "firm_count": 14704
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 108399.0,
+        "firm_count": 38447
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 171043.0,
+        "firm_count": 136676
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 24029.0,
+        "firm_count": 48058
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 33641.0,
+        "firm_count": 176453
+      }
+    },
+    "2022": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 51961.0,
+        "firm_count": 141414
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 259615.0,
+        "firm_count": 11765
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 113861.0,
+        "firm_count": 95960
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 53922.0,
+        "firm_count": 11881
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 169903.0,
+        "firm_count": 427184
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 73529.0,
+        "firm_count": 94059
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 83333.0,
+        "firm_count": 143564
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 53398.0,
+        "firm_count": 112745
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 102941.0,
+        "firm_count": 112745
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 53398.0,
+        "firm_count": 29412
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 177885.0,
+        "firm_count": 93137
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 82524.0,
+        "firm_count": 284314
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 168269.0,
+        "firm_count": 307692
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 72816.0,
+        "firm_count": 169903
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 132353.0,
+        "firm_count": 14851
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 111650.0,
+        "firm_count": 39216
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 177885.0,
+        "firm_count": 140777
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 24510.0,
+        "firm_count": 49020
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 34314.0,
+        "firm_count": 178218
+      }
+    },
+    "2023": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 53000.0,
+        "firm_count": 140000
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 270000.0,
+        "firm_count": 12000
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 115000.0,
+        "firm_count": 95000
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 55000.0,
+        "firm_count": 12000
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 175000.0,
+        "firm_count": 440000
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 75000.0,
+        "firm_count": 95000
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 85000.0,
+        "firm_count": 145000
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 55000.0,
+        "firm_count": 115000
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 105000.0,
+        "firm_count": 115000
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 55000.0,
+        "firm_count": 30000
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 185000.0,
+        "firm_count": 95000
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 85000.0,
+        "firm_count": 290000
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 175000.0,
+        "firm_count": 320000
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 75000.0,
+        "firm_count": 175000
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 135000.0,
+        "firm_count": 15000
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 115000.0,
+        "firm_count": 40000
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 185000.0,
+        "firm_count": 145000
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 25000.0,
+        "firm_count": 50000
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 35000.0,
+        "firm_count": 180000
+      }
+    },
+    "2024": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 54060.0,
+        "firm_count": 138600
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 280800.0,
+        "firm_count": 12240
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 116150.0,
+        "firm_count": 94050
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 56100.0,
+        "firm_count": 12120
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 180250.0,
+        "firm_count": 453200
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 76500.0,
+        "firm_count": 95950
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 86700.0,
+        "firm_count": 146450
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 56650.0,
+        "firm_count": 117300
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 107100.0,
+        "firm_count": 117300
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 56650.0,
+        "firm_count": 30600
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 192400.0,
+        "firm_count": 96900
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 87550.0,
+        "firm_count": 295800
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 182000.0,
+        "firm_count": 332800
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 77250.0,
+        "firm_count": 180250
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 137700.0,
+        "firm_count": 15150
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 118450.0,
+        "firm_count": 40800
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 192400.0,
+        "firm_count": 149350
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 25500.0,
+        "firm_count": 51000
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 35700.0,
+        "firm_count": 181800
+      }
+    },
+    "2025": {
+      "A": {
+        "name": "Agriculture, Forestry and Fishing",
+        "gva_millions": 55141.0,
+        "firm_count": 137214
+      },
+      "B": {
+        "name": "Mining",
+        "gva_millions": 292032.0,
+        "firm_count": 12485
+      },
+      "C": {
+        "name": "Manufacturing",
+        "gva_millions": 117312.0,
+        "firm_count": 93110
+      },
+      "D": {
+        "name": "Electricity, Gas, Water and Waste Services",
+        "gva_millions": 57222.0,
+        "firm_count": 12241
+      },
+      "E": {
+        "name": "Construction",
+        "gva_millions": 185658.0,
+        "firm_count": 466796
+      },
+      "F": {
+        "name": "Wholesale Trade",
+        "gva_millions": 78030.0,
+        "firm_count": 96910
+      },
+      "G": {
+        "name": "Retail Trade",
+        "gva_millions": 88434.0,
+        "firm_count": 147914
+      },
+      "H": {
+        "name": "Accommodation and Food Services",
+        "gva_millions": 58350.0,
+        "firm_count": 119646
+      },
+      "I": {
+        "name": "Transport, Postal and Warehousing",
+        "gva_millions": 109242.0,
+        "firm_count": 119646
+      },
+      "J": {
+        "name": "Information Media and Telecommunications",
+        "gva_millions": 58350.0,
+        "firm_count": 31212
+      },
+      "K": {
+        "name": "Financial and Insurance Services",
+        "gva_millions": 200096.0,
+        "firm_count": 98838
+      },
+      "L": {
+        "name": "Rental, Hiring and Real Estate Services",
+        "gva_millions": 90176.0,
+        "firm_count": 301716
+      },
+      "M": {
+        "name": "Professional, Scientific and Technical Services",
+        "gva_millions": 189280.0,
+        "firm_count": 346112
+      },
+      "N": {
+        "name": "Administrative and Support Services",
+        "gva_millions": 79568.0,
+        "firm_count": 185658
+      },
+      "O": {
+        "name": "Public Administration and Safety",
+        "gva_millions": 140454.0,
+        "firm_count": 15302
+      },
+      "P": {
+        "name": "Education and Training",
+        "gva_millions": 122004.0,
+        "firm_count": 41616
+      },
+      "Q": {
+        "name": "Health Care and Social Assistance",
+        "gva_millions": 200096.0,
+        "firm_count": 153830
+      },
+      "R": {
+        "name": "Arts and Recreation Services",
+        "gva_millions": 26010.0,
+        "firm_count": 52020
+      },
+      "S": {
+        "name": "Other Services",
+        "gva_millions": 36414.0,
+        "firm_count": 183618
+      }
+    }
+  }
+}
