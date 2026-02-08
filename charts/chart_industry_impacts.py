@@ -118,10 +118,10 @@ def get_industry_detail(
     year: int,
     anzsic_code: str,
     methodology: str = "BC Method",
-    top_n: int = 20
+    top_n: int = 50
 ) -> pd.DataFrame:
     """
-    Get top legislation for a specific industry.
+    Get legislation for a specific industry, showing Primary/Secondary type.
 
     Args:
         df: Time series DataFrame
@@ -131,7 +131,7 @@ def get_industry_detail(
         top_n: Number of top legislation to return
 
     Returns:
-        DataFrame with top legislation details
+        DataFrame with legislation details (Title, Type, Requirement Count)
     """
     # Handle methodology name variations
     if methodology in ["Mercatus Method", "RegData Method"]:
@@ -139,23 +139,18 @@ def get_industry_detail(
     else:
         req_col = "bc_requirements"
 
-    # Standardize type names
-    df = df.copy()
-    df["display_type"] = df["subtype"].map({
-        "Act": "Act",
-        "Legislative instrument": "Legislative Instrument",
-        "Notifiable instrument": "Notifiable Instrument",
-    }).fillna(df["subtype"])
-
     # Filter
     filtered = df[
         (df["as_of_year"] == year) &
         (df["anzsic_code"] == anzsic_code)
-    ]
+    ].copy()
 
-    # Select and format columns
-    result = filtered[["title", "display_type", "making_year", req_col]].copy()
-    result.columns = ["Title", "Type", "Year Registered", "Requirement Count"]
+    if filtered.empty:
+        return pd.DataFrame()
+
+    # Select and format columns - use 'type' for Primary/Secondary
+    result = filtered[["title", "type", req_col]].copy()
+    result.columns = ["Title", "Type", "Requirement Count"]
     result = result.sort_values("Requirement Count", ascending=False).head(top_n)
 
     return result

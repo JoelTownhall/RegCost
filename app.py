@@ -10,7 +10,7 @@ from data.fetch_legislation import (
     load_legislation_base,
     load_legislation_timeseries,
 )
-from data.fetch_abs import load_economic_indicators
+from data.fetch_abs import load_economic_indicators, load_industry_stats
 from charts.chart_legislation_growth import (
     create_legislation_growth_chart,
     get_legislation_requirements_detail,
@@ -40,9 +40,10 @@ def load_all_data():
     leg_base = load_legislation_base()
     leg_ts = load_legislation_timeseries()
     econ = load_economic_indicators()
-    return leg_base, leg_ts, econ
+    industry_stats = load_industry_stats()
+    return leg_base, leg_ts, econ, industry_stats
 
-leg_base_df, leg_ts_df, econ_df = load_all_data()
+leg_base_df, leg_ts_df, econ_df, industry_stats_df = load_all_data()
 
 # Fixed year range: 2005-2025
 MIN_YEAR = 2005
@@ -190,30 +191,24 @@ else:
 
 st.divider()
 
-# --- Chart 2: Industry Impacts ---
-st.header("Industry Impacts")
+# --- Chart 2: Regulations by Industry ---
+st.header("Chart 2: Regulations by Industry")
 st.markdown("""
 This chart shows how regulatory requirements are distributed across the 19 ANZSIC
-industry divisions. Industries are ranked by total requirement count.
+industry divisions, including cross-cutting regulation. Industries are ranked by total requirement count.
 """)
 
 if not leg_ts_df.empty:
     # Controls
-    col1, col2, col3 = st.columns([1, 1, 2])
+    col1, col2 = st.columns([1, 2])
     with col1:
-        include_cross_cutting = st.checkbox(
-            "Include cross-cutting regulation",
-            value=True,
-            help="Include legislation that applies across all industries (e.g., tax, WHS, corporations law)"
-        )
-    with col2:
         display_year = st.selectbox(
             "Display year",
             sorted(leg_ts_df["as_of_year"].unique(), reverse=True),
             index=0,
             key="chart2_year"
         )
-    with col3:
+    with col2:
         methodology_c2 = st.radio(
             "Counting Method",
             ["BC Method", "Mercatus Method"],
@@ -225,7 +220,7 @@ if not leg_ts_df.empty:
         leg_ts_df,
         year=display_year,
         methodology=methodology_c2,
-        include_cross_cutting=include_cross_cutting,
+        include_cross_cutting=True,  # Always include cross-cutting
     )
     st.plotly_chart(fig2, width="stretch")
 
@@ -239,7 +234,25 @@ if not leg_ts_df.empty:
             key="chart2_industry"
         )
 
-        with st.expander(f"Top legislation for {get_anzsic_label(selected_industry)}"):
+        with st.expander(f"Legislation for {get_anzsic_label(selected_industry)}"):
+            # Show industry stats at the top
+            if not industry_stats_df.empty:
+                industry_year_stats = industry_stats_df[
+                    (industry_stats_df["anzsic_code"] == selected_industry) &
+                    (industry_stats_df["year"] == display_year)
+                ]
+                if not industry_year_stats.empty:
+                    stats_row = industry_year_stats.iloc[0]
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        gva = stats_row.get("gva_millions", 0)
+                        st.metric("Gross Value Added", f"${gva:,.0f}M" if pd.notna(gva) else "N/A")
+                    with col2:
+                        firms = stats_row.get("firm_count", 0)
+                        st.metric("Number of Firms", f"{firms:,.0f}" if pd.notna(firms) else "N/A")
+                    st.divider()
+
+            # Show legislation detail
             industry_detail = get_industry_detail(
                 leg_ts_df, display_year, selected_industry, methodology_c2
             )
