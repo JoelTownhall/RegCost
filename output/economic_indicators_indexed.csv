@@ -1,0 +1,521 @@
+year,anzsic_code,anzsic_name,gva_index,productivity_index
+2000,A,"Agriculture, Forestry and Fishing",100.0,100.0
+2001,A,"Agriculture, Forestry and Fishing",102.0,102.5
+2002,A,"Agriculture, Forestry and Fishing",104.0,105.1
+2003,A,"Agriculture, Forestry and Fishing",106.1,107.7
+2004,A,"Agriculture, Forestry and Fishing",108.2,110.4
+2005,A,"Agriculture, Forestry and Fishing",110.4,113.2
+2006,A,"Agriculture, Forestry and Fishing",112.6,116.1
+2007,A,"Agriculture, Forestry and Fishing",114.9,119.0
+2008,A,"Agriculture, Forestry and Fishing",117.2,122.0
+2009,A,"Agriculture, Forestry and Fishing",119.5,125.0
+2010,A,"Agriculture, Forestry and Fishing",121.9,128.2
+2011,A,"Agriculture, Forestry and Fishing",124.3,131.4
+2012,A,"Agriculture, Forestry and Fishing",126.8,134.7
+2013,A,"Agriculture, Forestry and Fishing",129.4,138.1
+2014,A,"Agriculture, Forestry and Fishing",131.9,141.5
+2015,A,"Agriculture, Forestry and Fishing",134.6,145.1
+2016,A,"Agriculture, Forestry and Fishing",137.3,148.7
+2017,A,"Agriculture, Forestry and Fishing",140.0,152.5
+2018,A,"Agriculture, Forestry and Fishing",142.8,156.3
+2019,A,"Agriculture, Forestry and Fishing",145.7,160.2
+2020,A,"Agriculture, Forestry and Fishing",148.6,164.3
+2021,A,"Agriculture, Forestry and Fishing",151.6,168.4
+2022,A,"Agriculture, Forestry and Fishing",154.6,172.6
+2023,A,"Agriculture, Forestry and Fishing",157.7,177.0
+2024,A,"Agriculture, Forestry and Fishing",160.8,181.4
+2025,A,"Agriculture, Forestry and Fishing",164.1,186.0
+2000,B,Mining,100.0,100.0
+2001,B,Mining,104.0,102.0
+2002,B,Mining,108.2,104.0
+2003,B,Mining,112.5,106.0
+2004,B,Mining,117.0,108.1
+2005,B,Mining,121.7,110.2
+2006,B,Mining,126.5,112.4
+2007,B,Mining,131.6,114.6
+2008,B,Mining,136.9,116.8
+2009,B,Mining,142.3,119.1
+2010,B,Mining,148.0,121.4
+2011,B,Mining,153.9,123.8
+2012,B,Mining,160.1,126.2
+2013,B,Mining,166.5,128.7
+2014,B,Mining,173.2,131.2
+2015,B,Mining,180.1,133.8
+2016,B,Mining,187.3,136.4
+2017,B,Mining,194.8,139.1
+2018,B,Mining,202.6,141.8
+2019,B,Mining,210.7,144.6
+2020,B,Mining,219.1,147.5
+2021,B,Mining,227.9,150.3
+2022,B,Mining,237.0,153.3
+2023,B,Mining,246.5,156.3
+2024,B,Mining,256.3,159.4
+2025,B,Mining,266.6,162.5
+2000,C,Manufacturing,100.0,100.0
+2001,C,Manufacturing,101.0,102.0
+2002,C,Manufacturing,102.0,104.1
+2003,C,Manufacturing,103.0,106.2
+2004,C,Manufacturing,104.1,108.3
+2005,C,Manufacturing,105.1,110.5
+2006,C,Manufacturing,106.2,112.7
+2007,C,Manufacturing,107.2,115.0
+2008,C,Manufacturing,108.3,117.3
+2009,C,Manufacturing,109.4,119.7
+2010,C,Manufacturing,110.5,122.1
+2011,C,Manufacturing,111.6,124.6
+2012,C,Manufacturing,112.7,127.1
+2013,C,Manufacturing,113.8,129.7
+2014,C,Manufacturing,114.9,132.3
+2015,C,Manufacturing,116.1,135.0
+2016,C,Manufacturing,117.3,137.7
+2017,C,Manufacturing,118.4,140.5
+2018,C,Manufacturing,119.6,143.3
+2019,C,Manufacturing,120.8,146.2
+2020,C,Manufacturing,122.0,149.2
+2021,C,Manufacturing,123.2,152.2
+2022,C,Manufacturing,124.5,155.3
+2023,C,Manufacturing,125.7,158.4
+2024,C,Manufacturing,127.0,161.6
+2025,C,Manufacturing,128.2,164.9
+2000,D,"Electricity, Gas, Water and Waste Services",100.0,100.0
+2001,D,"Electricity, Gas, Water and Waste Services",102.0,101.0
+2002,D,"Electricity, Gas, Water and Waste Services",104.0,102.0
+2003,D,"Electricity, Gas, Water and Waste Services",106.1,103.0
+2004,D,"Electricity, Gas, Water and Waste Services",108.2,104.0
+2005,D,"Electricity, Gas, Water and Waste Services",110.4,105.0
+2006,D,"Electricity, Gas, Water and Waste Services",112.6,106.1
+2007,D,"Electricity, Gas, Water and Waste Services",114.9,107.1
+2008,D,"Electricity, Gas, Water and Waste Services",117.2,108.2
+2009,D,"Electricity, Gas, Water and Waste Services",119.5,109.3
+2010,D,"Electricity, Gas, Water and Waste Services",121.9,110.3
+2011,D,"Electricity, Gas, Water and Waste Services",124.3,111.4
+2012,D,"Electricity, Gas, Water and Waste Services",126.8,112.5
+2013,D,"Electricity, Gas, Water and Waste Services",129.4,113.7
+2014,D,"Electricity, Gas, Water and Waste Services",131.9,114.8
+2015,D,"Electricity, Gas, Water and Waste Services",134.6,115.9
+2016,D,"Electricity, Gas, Water and Waste Services",137.3,117.1
+2017,D,"Electricity, Gas, Water and Waste Services",140.0,118.2
+2018,D,"Electricity, Gas, Water and Waste Services",142.8,119.4
+2019,D,"Electricity, Gas, Water and Waste Services",145.7,120.6
+2020,D,"Electricity, Gas, Water and Waste Services",148.6,121.8
+2021,D,"Electricity, Gas, Water and Waste Services",151.6,123.0
+2022,D,"Electricity, Gas, Water and Waste Services",154.6,124.2
+2023,D,"Electricity, Gas, Water and Waste Services",157.7,125.4
+2024,D,"Electricity, Gas, Water and Waste Services",160.8,126.7
+2025,D,"Electricity, Gas, Water and Waste Services",164.1,127.9
+2000,E,Construction,100.0,100.0
+2001,E,Construction,103.0,100.5
+2002,E,Construction,106.1,101.0
+2003,E,Construction,109.3,101.5
+2004,E,Construction,112.6,102.0
+2005,E,Construction,115.9,102.5
+2006,E,Construction,119.4,103.0
+2007,E,Construction,123.0,103.5
+2008,E,Construction,126.7,104.0
+2009,E,Construction,130.5,104.5
+2010,E,Construction,134.4,105.0
+2011,E,Construction,138.4,105.5
+2012,E,Construction,142.6,106.0
+2013,E,Construction,146.9,106.5
+2014,E,Construction,151.3,107.0
+2015,E,Construction,155.8,107.6
+2016,E,Construction,160.5,108.1
+2017,E,Construction,165.3,108.6
+2018,E,Construction,170.2,109.2
+2019,E,Construction,175.4,109.7
+2020,E,Construction,180.6,110.2
+2021,E,Construction,186.0,110.8
+2022,E,Construction,191.6,111.3
+2023,E,Construction,197.4,111.8
+2024,E,Construction,203.3,112.4
+2025,E,Construction,209.4,112.9
+2000,F,Wholesale Trade,100.0,100.0
+2001,F,Wholesale Trade,102.0,101.5
+2002,F,Wholesale Trade,104.0,103.0
+2003,F,Wholesale Trade,106.1,104.5
+2004,F,Wholesale Trade,108.2,106.1
+2005,F,Wholesale Trade,110.4,107.7
+2006,F,Wholesale Trade,112.6,109.3
+2007,F,Wholesale Trade,114.9,110.9
+2008,F,Wholesale Trade,117.2,112.6
+2009,F,Wholesale Trade,119.5,114.3
+2010,F,Wholesale Trade,121.9,116.0
+2011,F,Wholesale Trade,124.3,117.7
+2012,F,Wholesale Trade,126.8,119.5
+2013,F,Wholesale Trade,129.4,121.2
+2014,F,Wholesale Trade,131.9,123.0
+2015,F,Wholesale Trade,134.6,124.9
+2016,F,Wholesale Trade,137.3,126.7
+2017,F,Wholesale Trade,140.0,128.6
+2018,F,Wholesale Trade,142.8,130.6
+2019,F,Wholesale Trade,145.7,132.5
+2020,F,Wholesale Trade,148.6,134.5
+2021,F,Wholesale Trade,151.6,136.5
+2022,F,Wholesale Trade,154.6,138.5
+2023,F,Wholesale Trade,157.7,140.6
+2024,F,Wholesale Trade,160.8,142.7
+2025,F,Wholesale Trade,164.1,144.8
+2000,G,Retail Trade,100.0,100.0
+2001,G,Retail Trade,102.0,101.0
+2002,G,Retail Trade,104.0,102.0
+2003,G,Retail Trade,106.1,103.0
+2004,G,Retail Trade,108.2,104.0
+2005,G,Retail Trade,110.4,105.1
+2006,G,Retail Trade,112.6,106.1
+2007,G,Retail Trade,114.9,107.1
+2008,G,Retail Trade,117.2,108.2
+2009,G,Retail Trade,119.5,109.3
+2010,G,Retail Trade,121.9,110.4
+2011,G,Retail Trade,124.3,111.4
+2012,G,Retail Trade,126.8,112.6
+2013,G,Retail Trade,129.4,113.7
+2014,G,Retail Trade,131.9,114.8
+2015,G,Retail Trade,134.6,115.9
+2016,G,Retail Trade,137.3,117.1
+2017,G,Retail Trade,140.0,118.2
+2018,G,Retail Trade,142.8,119.4
+2019,G,Retail Trade,145.7,120.6
+2020,G,Retail Trade,148.6,121.8
+2021,G,Retail Trade,151.6,123.0
+2022,G,Retail Trade,154.6,124.2
+2023,G,Retail Trade,157.7,125.4
+2024,G,Retail Trade,160.8,126.7
+2025,G,Retail Trade,164.1,127.9
+2000,H,Accommodation and Food Services,100.0,100.0
+2001,H,Accommodation and Food Services,103.0,101.0
+2002,H,Accommodation and Food Services,106.1,102.0
+2003,H,Accommodation and Food Services,109.3,103.0
+2004,H,Accommodation and Food Services,112.6,104.0
+2005,H,Accommodation and Food Services,115.9,105.0
+2006,H,Accommodation and Food Services,119.4,106.0
+2007,H,Accommodation and Food Services,123.0,107.1
+2008,H,Accommodation and Food Services,126.7,108.1
+2009,H,Accommodation and Food Services,130.5,109.2
+2010,H,Accommodation and Food Services,134.4,110.3
+2011,H,Accommodation and Food Services,138.4,111.3
+2012,H,Accommodation and Food Services,142.6,112.4
+2013,H,Accommodation and Food Services,146.9,113.5
+2014,H,Accommodation and Food Services,151.3,114.6
+2015,H,Accommodation and Food Services,155.8,115.8
+2016,H,Accommodation and Food Services,160.5,116.9
+2017,H,Accommodation and Food Services,165.3,118.0
+2018,H,Accommodation and Food Services,170.2,119.2
+2019,H,Accommodation and Food Services,175.4,120.4
+2020,H,Accommodation and Food Services,180.6,121.5
+2021,H,Accommodation and Food Services,186.0,122.7
+2022,H,Accommodation and Food Services,191.6,123.9
+2023,H,Accommodation and Food Services,197.4,125.2
+2024,H,Accommodation and Food Services,203.3,126.4
+2025,H,Accommodation and Food Services,209.4,127.6
+2000,I,"Transport, Postal and Warehousing",100.0,100.0
+2001,I,"Transport, Postal and Warehousing",102.0,100.5
+2002,I,"Transport, Postal and Warehousing",104.0,101.0
+2003,I,"Transport, Postal and Warehousing",106.1,101.5
+2004,I,"Transport, Postal and Warehousing",108.2,102.0
+2005,I,"Transport, Postal and Warehousing",110.4,102.5
+2006,I,"Transport, Postal and Warehousing",112.6,103.0
+2007,I,"Transport, Postal and Warehousing",114.9,103.5
+2008,I,"Transport, Postal and Warehousing",117.2,104.0
+2009,I,"Transport, Postal and Warehousing",119.5,104.5
+2010,I,"Transport, Postal and Warehousing",121.9,105.0
+2011,I,"Transport, Postal and Warehousing",124.3,105.6
+2012,I,"Transport, Postal and Warehousing",126.8,106.1
+2013,I,"Transport, Postal and Warehousing",129.4,106.6
+2014,I,"Transport, Postal and Warehousing",131.9,107.1
+2015,I,"Transport, Postal and Warehousing",134.6,107.7
+2016,I,"Transport, Postal and Warehousing",137.3,108.2
+2017,I,"Transport, Postal and Warehousing",140.0,108.7
+2018,I,"Transport, Postal and Warehousing",142.8,109.3
+2019,I,"Transport, Postal and Warehousing",145.7,109.8
+2020,I,"Transport, Postal and Warehousing",148.6,110.3
+2021,I,"Transport, Postal and Warehousing",151.6,110.9
+2022,I,"Transport, Postal and Warehousing",154.6,111.4
+2023,I,"Transport, Postal and Warehousing",157.7,112.0
+2024,I,"Transport, Postal and Warehousing",160.8,112.5
+2025,I,"Transport, Postal and Warehousing",164.1,113.1
+2000,J,Information Media and Telecommunications,100.0,100.0
+2001,J,Information Media and Telecommunications,103.0,102.0
+2002,J,Information Media and Telecommunications,106.1,104.0
+2003,J,Information Media and Telecommunications,109.3,106.1
+2004,J,Information Media and Telecommunications,112.6,108.2
+2005,J,Information Media and Telecommunications,115.9,110.3
+2006,J,Information Media and Telecommunications,119.4,112.5
+2007,J,Information Media and Telecommunications,123.0,114.7
+2008,J,Information Media and Telecommunications,126.7,117.0
+2009,J,Information Media and Telecommunications,130.5,119.3
+2010,J,Information Media and Telecommunications,134.4,121.7
+2011,J,Information Media and Telecommunications,138.4,124.1
+2012,J,Information Media and Telecommunications,142.6,126.5
+2013,J,Information Media and Telecommunications,146.9,129.0
+2014,J,Information Media and Telecommunications,151.3,131.6
+2015,J,Information Media and Telecommunications,155.8,134.2
+2016,J,Information Media and Telecommunications,160.5,136.9
+2017,J,Information Media and Telecommunications,165.3,139.6
+2018,J,Information Media and Telecommunications,170.2,142.3
+2019,J,Information Media and Telecommunications,175.4,145.2
+2020,J,Information Media and Telecommunications,180.6,148.0
+2021,J,Information Media and Telecommunications,186.0,151.0
+2022,J,Information Media and Telecommunications,191.6,153.9
+2023,J,Information Media and Telecommunications,197.4,157.0
+2024,J,Information Media and Telecommunications,203.3,160.1
+2025,J,Information Media and Telecommunications,209.4,163.3
+2000,K,Financial and Insurance Services,100.0,100.0
+2001,K,Financial and Insurance Services,104.0,102.5
+2002,K,Financial and Insurance Services,108.2,105.0
+2003,K,Financial and Insurance Services,112.5,107.6
+2004,K,Financial and Insurance Services,117.0,110.2
+2005,K,Financial and Insurance Services,121.7,112.9
+2006,K,Financial and Insurance Services,126.5,115.7
+2007,K,Financial and Insurance Services,131.6,118.6
+2008,K,Financial and Insurance Services,136.9,121.5
+2009,K,Financial and Insurance Services,142.3,124.5
+2010,K,Financial and Insurance Services,148.0,127.5
+2011,K,Financial and Insurance Services,153.9,130.7
+2012,K,Financial and Insurance Services,160.1,133.9
+2013,K,Financial and Insurance Services,166.5,137.2
+2014,K,Financial and Insurance Services,173.2,140.6
+2015,K,Financial and Insurance Services,180.1,144.0
+2016,K,Financial and Insurance Services,187.3,147.6
+2017,K,Financial and Insurance Services,194.8,151.2
+2018,K,Financial and Insurance Services,202.6,155.0
+2019,K,Financial and Insurance Services,210.7,158.8
+2020,K,Financial and Insurance Services,219.1,162.7
+2021,K,Financial and Insurance Services,227.9,166.7
+2022,K,Financial and Insurance Services,237.0,170.8
+2023,K,Financial and Insurance Services,246.5,175.0
+2024,K,Financial and Insurance Services,256.3,179.3
+2025,K,Financial and Insurance Services,266.6,183.7
+2000,L,"Rental, Hiring and Real Estate Services",100.0,100.0
+2001,L,"Rental, Hiring and Real Estate Services",103.0,101.0
+2002,L,"Rental, Hiring and Real Estate Services",106.1,102.0
+2003,L,"Rental, Hiring and Real Estate Services",109.3,103.0
+2004,L,"Rental, Hiring and Real Estate Services",112.5,104.0
+2005,L,"Rental, Hiring and Real Estate Services",115.9,105.0
+2006,L,"Rental, Hiring and Real Estate Services",119.4,106.0
+2007,L,"Rental, Hiring and Real Estate Services",123.0,107.1
+2008,L,"Rental, Hiring and Real Estate Services",126.7,108.1
+2009,L,"Rental, Hiring and Real Estate Services",130.5,109.2
+2010,L,"Rental, Hiring and Real Estate Services",134.4,110.3
+2011,L,"Rental, Hiring and Real Estate Services",138.4,111.3
+2012,L,"Rental, Hiring and Real Estate Services",142.6,112.4
+2013,L,"Rental, Hiring and Real Estate Services",146.9,113.5
+2014,L,"Rental, Hiring and Real Estate Services",151.3,114.6
+2015,L,"Rental, Hiring and Real Estate Services",155.8,115.8
+2016,L,"Rental, Hiring and Real Estate Services",160.5,116.9
+2017,L,"Rental, Hiring and Real Estate Services",165.3,118.0
+2018,L,"Rental, Hiring and Real Estate Services",170.2,119.2
+2019,L,"Rental, Hiring and Real Estate Services",175.3,120.4
+2020,L,"Rental, Hiring and Real Estate Services",180.6,121.5
+2021,L,"Rental, Hiring and Real Estate Services",186.0,122.7
+2022,L,"Rental, Hiring and Real Estate Services",191.6,123.9
+2023,L,"Rental, Hiring and Real Estate Services",197.4,125.2
+2024,L,"Rental, Hiring and Real Estate Services",203.3,126.4
+2025,L,"Rental, Hiring and Real Estate Services",209.4,127.6
+2000,M,"Professional, Scientific and Technical Services",100.0,100.0
+2001,M,"Professional, Scientific and Technical Services",104.0,101.0
+2002,M,"Professional, Scientific and Technical Services",108.2,101.9
+2003,M,"Professional, Scientific and Technical Services",112.5,102.9
+2004,M,"Professional, Scientific and Technical Services",117.0,103.9
+2005,M,"Professional, Scientific and Technical Services",121.7,104.9
+2006,M,"Professional, Scientific and Technical Services",126.5,106.0
+2007,M,"Professional, Scientific and Technical Services",131.6,107.0
+2008,M,"Professional, Scientific and Technical Services",136.9,108.0
+2009,M,"Professional, Scientific and Technical Services",142.3,109.1
+2010,M,"Professional, Scientific and Technical Services",148.0,110.1
+2011,M,"Professional, Scientific and Technical Services",153.9,111.2
+2012,M,"Professional, Scientific and Technical Services",160.1,112.3
+2013,M,"Professional, Scientific and Technical Services",166.5,113.4
+2014,M,"Professional, Scientific and Technical Services",173.2,114.5
+2015,M,"Professional, Scientific and Technical Services",180.1,115.6
+2016,M,"Professional, Scientific and Technical Services",187.3,116.7
+2017,M,"Professional, Scientific and Technical Services",194.8,117.8
+2018,M,"Professional, Scientific and Technical Services",202.6,119.0
+2019,M,"Professional, Scientific and Technical Services",210.7,120.1
+2020,M,"Professional, Scientific and Technical Services",219.1,121.3
+2021,M,"Professional, Scientific and Technical Services",227.9,122.5
+2022,M,"Professional, Scientific and Technical Services",237.0,123.7
+2023,M,"Professional, Scientific and Technical Services",246.5,124.9
+2024,M,"Professional, Scientific and Technical Services",256.3,126.1
+2025,M,"Professional, Scientific and Technical Services",266.6,127.3
+2000,N,Administrative and Support Services,100.0,100.0
+2001,N,Administrative and Support Services,103.0,101.0
+2002,N,Administrative and Support Services,106.1,102.0
+2003,N,Administrative and Support Services,109.3,103.0
+2004,N,Administrative and Support Services,112.5,104.0
+2005,N,Administrative and Support Services,115.9,105.0
+2006,N,Administrative and Support Services,119.4,106.0
+2007,N,Administrative and Support Services,123.0,107.1
+2008,N,Administrative and Support Services,126.7,108.1
+2009,N,Administrative and Support Services,130.5,109.2
+2010,N,Administrative and Support Services,134.4,110.2
+2011,N,Administrative and Support Services,138.4,111.3
+2012,N,Administrative and Support Services,142.6,112.4
+2013,N,Administrative and Support Services,146.9,113.5
+2014,N,Administrative and Support Services,151.3,114.6
+2015,N,Administrative and Support Services,155.8,115.8
+2016,N,Administrative and Support Services,160.5,116.9
+2017,N,Administrative and Support Services,165.3,118.0
+2018,N,Administrative and Support Services,170.2,119.2
+2019,N,Administrative and Support Services,175.4,120.4
+2020,N,Administrative and Support Services,180.6,121.5
+2021,N,Administrative and Support Services,186.0,122.7
+2022,N,Administrative and Support Services,191.6,123.9
+2023,N,Administrative and Support Services,197.4,125.2
+2024,N,Administrative and Support Services,203.3,126.4
+2025,N,Administrative and Support Services,209.4,127.6
+2000,O,Public Administration and Safety,100.0,100.0
+2001,O,Public Administration and Safety,102.0,100.5
+2002,O,Public Administration and Safety,104.0,101.0
+2003,O,Public Administration and Safety,106.1,101.5
+2004,O,Public Administration and Safety,108.2,102.0
+2005,O,Public Administration and Safety,110.4,102.5
+2006,O,Public Administration and Safety,112.6,103.0
+2007,O,Public Administration and Safety,114.9,103.5
+2008,O,Public Administration and Safety,117.2,104.0
+2009,O,Public Administration and Safety,119.5,104.5
+2010,O,Public Administration and Safety,121.9,105.0
+2011,O,Public Administration and Safety,124.3,105.6
+2012,O,Public Administration and Safety,126.8,106.1
+2013,O,Public Administration and Safety,129.4,106.6
+2014,O,Public Administration and Safety,131.9,107.1
+2015,O,Public Administration and Safety,134.6,107.6
+2016,O,Public Administration and Safety,137.3,108.2
+2017,O,Public Administration and Safety,140.0,108.7
+2018,O,Public Administration and Safety,142.8,109.2
+2019,O,Public Administration and Safety,145.7,109.8
+2020,O,Public Administration and Safety,148.6,110.3
+2021,O,Public Administration and Safety,151.6,110.9
+2022,O,Public Administration and Safety,154.6,111.4
+2023,O,Public Administration and Safety,157.7,112.0
+2024,O,Public Administration and Safety,160.8,112.5
+2025,O,Public Administration and Safety,164.1,113.1
+2000,P,Education and Training,100.0,100.0
+2001,P,Education and Training,103.0,101.0
+2002,P,Education and Training,106.1,102.0
+2003,P,Education and Training,109.3,103.0
+2004,P,Education and Training,112.6,104.0
+2005,P,Education and Training,115.9,105.0
+2006,P,Education and Training,119.4,106.0
+2007,P,Education and Training,123.0,107.1
+2008,P,Education and Training,126.7,108.1
+2009,P,Education and Training,130.5,109.2
+2010,P,Education and Training,134.4,110.2
+2011,P,Education and Training,138.4,111.3
+2012,P,Education and Training,142.6,112.4
+2013,P,Education and Training,146.9,113.5
+2014,P,Education and Training,151.3,114.6
+2015,P,Education and Training,155.8,115.7
+2016,P,Education and Training,160.5,116.9
+2017,P,Education and Training,165.3,118.0
+2018,P,Education and Training,170.2,119.2
+2019,P,Education and Training,175.3,120.4
+2020,P,Education and Training,180.6,121.5
+2021,P,Education and Training,186.0,122.7
+2022,P,Education and Training,191.6,123.9
+2023,P,Education and Training,197.4,125.1
+2024,P,Education and Training,203.3,126.4
+2025,P,Education and Training,209.4,127.6
+2000,Q,Health Care and Social Assistance,100.0,100.0
+2001,Q,Health Care and Social Assistance,104.0,101.0
+2002,Q,Health Care and Social Assistance,108.2,102.0
+2003,Q,Health Care and Social Assistance,112.5,102.9
+2004,Q,Health Care and Social Assistance,117.0,103.9
+2005,Q,Health Care and Social Assistance,121.7,105.0
+2006,Q,Health Care and Social Assistance,126.5,106.0
+2007,Q,Health Care and Social Assistance,131.6,107.0
+2008,Q,Health Care and Social Assistance,136.9,108.0
+2009,Q,Health Care and Social Assistance,142.3,109.1
+2010,Q,Health Care and Social Assistance,148.0,110.1
+2011,Q,Health Care and Social Assistance,153.9,111.2
+2012,Q,Health Care and Social Assistance,160.1,112.3
+2013,Q,Health Care and Social Assistance,166.5,113.4
+2014,Q,Health Care and Social Assistance,173.2,114.5
+2015,Q,Health Care and Social Assistance,180.1,115.6
+2016,Q,Health Care and Social Assistance,187.3,116.7
+2017,Q,Health Care and Social Assistance,194.8,117.9
+2018,Q,Health Care and Social Assistance,202.6,119.0
+2019,Q,Health Care and Social Assistance,210.7,120.1
+2020,Q,Health Care and Social Assistance,219.1,121.3
+2021,Q,Health Care and Social Assistance,227.9,122.5
+2022,Q,Health Care and Social Assistance,237.0,123.7
+2023,Q,Health Care and Social Assistance,246.5,124.9
+2024,Q,Health Care and Social Assistance,256.3,126.1
+2025,Q,Health Care and Social Assistance,266.6,127.3
+2000,R,Arts and Recreation Services,100.0,100.0
+2001,R,Arts and Recreation Services,102.0,100.5
+2002,R,Arts and Recreation Services,104.0,101.0
+2003,R,Arts and Recreation Services,106.1,101.5
+2004,R,Arts and Recreation Services,108.2,102.0
+2005,R,Arts and Recreation Services,110.4,102.5
+2006,R,Arts and Recreation Services,112.6,103.0
+2007,R,Arts and Recreation Services,114.9,103.5
+2008,R,Arts and Recreation Services,117.2,104.0
+2009,R,Arts and Recreation Services,119.5,104.5
+2010,R,Arts and Recreation Services,121.9,105.0
+2011,R,Arts and Recreation Services,124.3,105.6
+2012,R,Arts and Recreation Services,126.8,106.1
+2013,R,Arts and Recreation Services,129.4,106.6
+2014,R,Arts and Recreation Services,131.9,107.1
+2015,R,Arts and Recreation Services,134.6,107.6
+2016,R,Arts and Recreation Services,137.3,108.2
+2017,R,Arts and Recreation Services,140.0,108.7
+2018,R,Arts and Recreation Services,142.8,109.2
+2019,R,Arts and Recreation Services,145.7,109.8
+2020,R,Arts and Recreation Services,148.6,110.3
+2021,R,Arts and Recreation Services,151.6,110.9
+2022,R,Arts and Recreation Services,154.6,111.4
+2023,R,Arts and Recreation Services,157.7,112.0
+2024,R,Arts and Recreation Services,160.8,112.5
+2025,R,Arts and Recreation Services,164.1,113.1
+2000,S,Other Services,100.0,100.0
+2001,S,Other Services,102.0,101.0
+2002,S,Other Services,104.0,102.0
+2003,S,Other Services,106.1,103.0
+2004,S,Other Services,108.2,104.0
+2005,S,Other Services,110.4,105.0
+2006,S,Other Services,112.6,106.1
+2007,S,Other Services,114.9,107.1
+2008,S,Other Services,117.2,108.2
+2009,S,Other Services,119.5,109.3
+2010,S,Other Services,121.9,110.3
+2011,S,Other Services,124.3,111.4
+2012,S,Other Services,126.8,112.6
+2013,S,Other Services,129.4,113.7
+2014,S,Other Services,131.9,114.8
+2015,S,Other Services,134.6,115.9
+2016,S,Other Services,137.3,117.1
+2017,S,Other Services,140.0,118.2
+2018,S,Other Services,142.8,119.4
+2019,S,Other Services,145.7,120.6
+2020,S,Other Services,148.6,121.8
+2021,S,Other Services,151.6,123.0
+2022,S,Other Services,154.6,124.2
+2023,S,Other Services,157.7,125.4
+2024,S,Other Services,160.8,126.7
+2025,S,Other Services,164.1,127.9
+2000,TOTAL,All Industries,100.0,100.0
+2001,TOTAL,All Industries,102.8,101.4
+2002,TOTAL,All Industries,105.7,102.8
+2003,TOTAL,All Industries,108.7,104.1
+2004,TOTAL,All Industries,111.7,105.6
+2005,TOTAL,All Industries,114.9,107.0
+2006,TOTAL,All Industries,118.2,108.4
+2007,TOTAL,All Industries,121.6,109.9
+2008,TOTAL,All Industries,125.0,111.3
+2009,TOTAL,All Industries,128.6,112.8
+2010,TOTAL,All Industries,132.3,114.3
+2011,TOTAL,All Industries,136.2,115.8
+2012,TOTAL,All Industries,140.1,117.3
+2013,TOTAL,All Industries,144.2,118.9
+2014,TOTAL,All Industries,148.4,120.4
+2015,TOTAL,All Industries,152.8,122.0
+2016,TOTAL,All Industries,157.2,123.6
+2017,TOTAL,All Industries,161.9,125.2
+2018,TOTAL,All Industries,166.7,126.8
+2019,TOTAL,All Industries,171.6,128.4
+2020,TOTAL,All Industries,176.7,130.1
+2021,TOTAL,All Industries,182.0,131.8
+2022,TOTAL,All Industries,187.4,133.4
+2023,TOTAL,All Industries,193.0,135.1
+2024,TOTAL,All Industries,198.8,136.9
+2025,TOTAL,All Industries,204.8,138.6
