@@ -351,6 +351,95 @@ if industries_with_data:
         methodology=methodology_c3,
     )
     st.plotly_chart(fig3b, use_container_width=True)
+
+    # Growth Comparison Metrics
+    st.subheader("Growth Comparison")
+
+    # Determine requirement column based on methodology
+    if methodology_c3 in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
+
+    # Get requirements for selected industry at start and end years
+    industry_leg_start = leg_ts_df[
+        (leg_ts_df["anzsic_code"] == selected_industry_3b) &
+        (leg_ts_df["as_of_year"] == year_range[0])
+    ]
+    industry_leg_end = leg_ts_df[
+        (leg_ts_df["anzsic_code"] == selected_industry_3b) &
+        (leg_ts_df["as_of_year"] == year_range[1])
+    ]
+
+    req_start = industry_leg_start[req_col].sum() if not industry_leg_start.empty else None
+    req_end = industry_leg_end[req_col].sum() if not industry_leg_end.empty else None
+
+    # Get economic data for selected industry at start and end years
+    industry_econ_start = econ_df[
+        (econ_df["anzsic_code"] == selected_industry_3b) &
+        (econ_df["year"] == year_range[0])
+    ]
+    industry_econ_end = econ_df[
+        (econ_df["anzsic_code"] == selected_industry_3b) &
+        (econ_df["year"] == year_range[1])
+    ]
+
+    gva_start = industry_econ_start["gva_millions"].iloc[0] if not industry_econ_start.empty and pd.notna(industry_econ_start["gva_millions"].iloc[0]) else None
+    gva_end = industry_econ_end["gva_millions"].iloc[0] if not industry_econ_end.empty and pd.notna(industry_econ_end["gva_millions"].iloc[0]) else None
+
+    # Calculate productivity (GVA per hour worked)
+    if not industry_econ_start.empty and pd.notna(industry_econ_start["gva_millions"].iloc[0]) and pd.notna(industry_econ_start["hours_worked_millions"].iloc[0]) and industry_econ_start["hours_worked_millions"].iloc[0] != 0:
+        productivity_start = industry_econ_start["gva_millions"].iloc[0] / industry_econ_start["hours_worked_millions"].iloc[0]
+    else:
+        productivity_start = None
+
+    if not industry_econ_end.empty and pd.notna(industry_econ_end["gva_millions"].iloc[0]) and pd.notna(industry_econ_end["hours_worked_millions"].iloc[0]) and industry_econ_end["hours_worked_millions"].iloc[0] != 0:
+        productivity_end = industry_econ_end["gva_millions"].iloc[0] / industry_econ_end["hours_worked_millions"].iloc[0]
+    else:
+        productivity_end = None
+
+    # Calculate growth percentages
+    req_growth = ((req_end - req_start) / req_start * 100) if req_start and req_end and req_start != 0 else None
+    gva_growth = ((gva_end - gva_start) / gva_start * 100) if gva_start and gva_end and gva_start != 0 else None
+    productivity_growth = ((productivity_end - productivity_start) / productivity_start * 100) if productivity_start and productivity_end and productivity_start != 0 else None
+
+    # Display metrics
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        if req_growth is not None:
+            st.metric(
+                "Requirements Growth",
+                f"{req_growth:+.1f}%",
+                help=f"Change in requirement count from {year_range[0]} to {year_range[1]}"
+            )
+        else:
+            st.metric("Requirements Growth", "N/A")
+    with col2:
+        if gva_growth is not None:
+            # Delta shows if regulations grew faster or slower than GVA
+            delta_vs_gva = (req_growth - gva_growth) if req_growth is not None else None
+            st.metric(
+                "GVA Growth",
+                f"{gva_growth:+.1f}%",
+                delta=f"{delta_vs_gva:+.1f}pp vs reqs" if delta_vs_gva is not None else None,
+                delta_color="inverse",
+                help=f"Change in Gross Value Added from {year_range[0]} to {year_range[1]}. Delta shows how much faster/slower regulations grew."
+            )
+        else:
+            st.metric("GVA Growth", "N/A")
+    with col3:
+        if productivity_growth is not None:
+            # Delta shows if regulations grew faster or slower than productivity
+            delta_vs_prod = (req_growth - productivity_growth) if req_growth is not None else None
+            st.metric(
+                "GVA per Hour Growth",
+                f"{productivity_growth:+.1f}%",
+                delta=f"{delta_vs_prod:+.1f}pp vs reqs" if delta_vs_prod is not None else None,
+                delta_color="inverse",
+                help=f"Change in productivity (GVA per hour worked) from {year_range[0]} to {year_range[1]}. Delta shows how much faster/slower regulations grew."
+            )
+        else:
+            st.metric("GVA per Hour Growth", "N/A")
 else:
     st.info("No industry-level data available.")
 
