@@ -90,10 +90,10 @@ st.markdown("*Assessing the growth in regulations by industry and over time in m
 st.divider()
 
 # --- Chart 1: Growth in Legislation and Requirements ---
-st.header("Growth in the number of primary and secondary legislation in Australia, and related requirements")
+st.header("Chart 1: Growth in the number of primary and secondary legislation in Australia, and related requirements")
 st.markdown("""
-This chart shows the cumulative count of in-force federal legislation (bars, stacked by primary/secondary)
-and the total number of binding requirements within that legislation (line).
+This chart shows the cumulative count of in-force federal legislation and the requirements within it,
+both broken down by primary (Acts) and secondary (Legislative/Notifiable Instruments) legislation.
 """)
 
 if not leg_ts_df.empty:

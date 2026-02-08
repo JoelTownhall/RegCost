@@ -1,16 +1,14 @@
 """Chart 1: Growth in Legislation and Legislative Requirements."""
 
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import pandas as pd
 import streamlit as st
 
-from config.colours import LEG_COLOURS
 from utils.helpers import truncate_list, format_number, format_percentage
 
 
 # Colours for Primary/Secondary legislation
-LEG_TYPE_COLOURS = {
+COLOURS = {
     "Primary": "#1f4e79",      # Dark blue for Acts
     "Secondary": "#2e86ab",    # Lighter blue for Instruments
 }
@@ -23,7 +21,11 @@ def create_legislation_growth_chart(
     methodology: str = "BC Method"
 ) -> go.Figure:
     """
-    Create dual-axis chart showing cumulative legislation (bars) and requirements (line).
+    Create grouped stacked bar chart showing:
+    - Stacked bar 1: Legislation counts (Primary + Secondary)
+    - Stacked bar 2: Requirements counts (Primary + Secondary)
+
+    Both grouped by year.
 
     Args:
         df: Time series DataFrame with legislation data
@@ -55,86 +57,77 @@ def create_legislation_growth_chart(
     grouped = df_filtered.groupby(["as_of_year", "type"]).agg(
         leg_count=("register_id", "count"),
         req_count=(req_col, "sum"),
-        titles=("title", lambda x: list(x.head(15)))
     ).reset_index()
 
-    # Pivot for stacked bars
-    pivot_counts = grouped.pivot(index="as_of_year", columns="type", values="leg_count").fillna(0)
-    pivot_titles = grouped.pivot(index="as_of_year", columns="type", values="titles")
+    # Get unique years
+    years = sorted(grouped["as_of_year"].unique())
 
-    # Total requirements by year (for line chart)
-    total_reqs = grouped.groupby("as_of_year")["req_count"].sum().reset_index()
-    total_reqs["yoy_change"] = total_reqs["req_count"].diff()
-    total_reqs["yoy_pct"] = (total_reqs["yoy_change"] / total_reqs["req_count"].shift(1) * 100).round(1)
+    # Prepare data for each type
+    primary_data = grouped[grouped["type"] == "Primary"].set_index("as_of_year")
+    secondary_data = grouped[grouped["type"] == "Secondary"].set_index("as_of_year")
 
-    # Create figure with secondary y-axis
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
+    # Create arrays for plotting
+    primary_leg = [primary_data.loc[y, "leg_count"] if y in primary_data.index else 0 for y in years]
+    secondary_leg = [secondary_data.loc[y, "leg_count"] if y in secondary_data.index else 0 for y in years]
+    primary_req = [primary_data.loc[y, "req_count"] if y in primary_data.index else 0 for y in years]
+    secondary_req = [secondary_data.loc[y, "req_count"] if y in secondary_data.index else 0 for y in years]
 
-    # Add stacked bars for Primary and Secondary
-    leg_types = ["Primary", "Secondary"]
-    for leg_type in leg_types:
-        if leg_type not in pivot_counts.columns:
-            continue
+    # Create figure
+    fig = go.Figure()
 
-        # Build hover text
-        hover_texts = []
-        for year in pivot_counts.index:
-            count = int(pivot_counts.loc[year, leg_type])
-            titles_list = pivot_titles.loc[year, leg_type] if leg_type in pivot_titles.columns else []
-            if isinstance(titles_list, list) and len(titles_list) > 0:
-                titles_str = truncate_list(titles_list, 10)
-            else:
-                titles_str = "No titles"
-            hover_texts.append(
-                f"<b>{leg_type} Legislation</b><br>"
-                f"Year: {year}<br>"
-                f"Count: {format_number(count)}<br>"
-                f"<br>Sample titles:<br>{titles_str}"
-            )
+    # Add legislation bars (offset to the left)
+    fig.add_trace(go.Bar(
+        name="Primary Legislation",
+        x=years,
+        y=primary_leg,
+        marker_color=COLOURS["Primary"],
+        offsetgroup=0,
+        legendgroup="legislation",
+        legendgrouptitle_text="Legislation Count",
+        hovertemplate="<b>Primary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+    ))
 
-        fig.add_trace(
-            go.Bar(
-                name=f"{leg_type} Legislation",
-                x=pivot_counts.index,
-                y=pivot_counts[leg_type],
-                marker_color=LEG_TYPE_COLOURS.get(leg_type, "#999"),
-                hovertemplate="%{customdata}<extra></extra>",
-                customdata=hover_texts,
-            ),
-            secondary_y=False,
-        )
+    fig.add_trace(go.Bar(
+        name="Secondary Legislation",
+        x=years,
+        y=secondary_leg,
+        marker_color=COLOURS["Secondary"],
+        offsetgroup=0,
+        base=primary_leg,  # Stack on top of primary
+        legendgroup="legislation",
+        hovertemplate="<b>Secondary Legislation</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+    ))
 
-    # Add line for cumulative requirements
-    hover_reqs = []
-    for _, row in total_reqs.iterrows():
-        yoy = format_percentage(row["yoy_pct"]) if pd.notna(row["yoy_pct"]) else "N/A"
-        change = format_number(row["yoy_change"]) if pd.notna(row["yoy_change"]) else "N/A"
-        hover_reqs.append(
-            f"<b>Requirements ({methodology})</b><br>"
-            f"Year: {int(row['as_of_year'])}<br>"
-            f"Total: {format_number(row['req_count'])}<br>"
-            f"YoY Change: {change} ({yoy})"
-        )
+    # Add requirements bars (offset to the right)
+    fig.add_trace(go.Bar(
+        name="Primary Requirements",
+        x=years,
+        y=primary_req,
+        marker_color=COLOURS["Primary"],
+        marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+        offsetgroup=1,
+        legendgroup="requirements",
+        legendgrouptitle_text="Requirements Count",
+        hovertemplate="<b>Primary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+    ))
 
-    fig.add_trace(
-        go.Scatter(
-            name=f"Requirements ({methodology})",
-            x=total_reqs["as_of_year"],
-            y=total_reqs["req_count"],
-            mode="lines+markers",
-            line=dict(color="#c0392b", width=3),
-            marker=dict(size=6),
-            hovertemplate="%{customdata}<extra></extra>",
-            customdata=hover_reqs,
-        ),
-        secondary_y=True,
-    )
+    fig.add_trace(go.Bar(
+        name="Secondary Requirements",
+        x=years,
+        y=secondary_req,
+        marker_color=COLOURS["Secondary"],
+        marker_pattern_shape="/",  # Add pattern to distinguish from legislation
+        offsetgroup=1,
+        base=primary_req,  # Stack on top of primary
+        legendgroup="requirements",
+        hovertemplate="<b>Secondary Requirements</b><br>Year: %{x}<br>Count: %{y:,}<extra></extra>",
+    ))
 
     # Update layout
     fig.update_layout(
-        barmode="stack",
+        barmode="group",
         title=dict(
-            text=f"Cumulative Legislation and Requirements",
+            text=f"Legislation and Requirements by Type ({methodology})",
             font=dict(size=16),
         ),
         legend=dict(
@@ -143,28 +136,25 @@ def create_legislation_growth_chart(
             y=1.02,
             xanchor="center",
             x=0.5,
+            groupclick="toggleitem",
         ),
         hovermode="x unified",
         plot_bgcolor="white",
+        bargap=0.15,
+        bargroupgap=0.1,
     )
 
     fig.update_xaxes(
         title_text="Year",
         showgrid=True,
         gridcolor="#eee",
+        dtick=2,  # Show every 2 years
     )
 
     fig.update_yaxes(
-        title_text="Number of Legislation",
+        title_text="Count",
         showgrid=True,
         gridcolor="#eee",
-        secondary_y=False,
-    )
-
-    fig.update_yaxes(
-        title_text="Number of Requirements",
-        showgrid=False,
-        secondary_y=True,
     )
 
     return fig
