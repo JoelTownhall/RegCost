@@ -57,7 +57,7 @@ with st.sidebar:
         "Year Range",
         min_value=MIN_YEAR,
         max_value=MAX_YEAR,
-        value=(2010, MAX_YEAR),
+        value=(2010, 2024),
     )
 
     with st.expander("About this project", expanded=False):
@@ -288,9 +288,25 @@ if not leg_ts_df.empty:
                         firms = stats_row["firm_count"] if "firm_count" in stats_row.index else None
                         st.metric("Number of Firms", f"{int(firms):,}" if pd.notna(firms) else "N/A")
 
-                    # Show firm size breakdown if available (ABS 8165.0 data: 2010-2023)
-                    firm_small = stats_row["firm_count_small"] if "firm_count_small" in stats_row.index else None
-                    firm_large = stats_row["firm_count_large"] if "firm_count_large" in stats_row.index else None
+                # Show firm size breakdown - find nearest year with data if needed
+                firm_stats_row = None
+                firm_year = display_year
+                industry_firm_data = industry_stats_df[
+                    (industry_stats_df["anzsic_code"] == selected_industry) &
+                    (industry_stats_df["firm_count_small"].notna())
+                ]
+                if not industry_firm_data.empty:
+                    # Find nearest year with firm data
+                    available_years = industry_firm_data["year"].values
+                    firm_year = int(min(available_years, key=lambda y: abs(y - display_year)))
+                    firm_stats_row = industry_firm_data[
+                        industry_firm_data["year"] == firm_year
+                    ].iloc[0]
+
+                if firm_stats_row is not None:
+                    firms = firm_stats_row["firm_count"]
+                    firm_small = firm_stats_row["firm_count_small"]
+                    firm_large = firm_stats_row["firm_count_large"]
                     if pd.notna(firm_small) and pd.notna(firm_large) and pd.notna(firms) and firms > 0:
                         col1, col2 = st.columns(2)
                         with col1:
@@ -309,7 +325,9 @@ if not leg_ts_df.empty:
                                 delta=f"{pct_large:.1f}%",
                                 delta_color="off"
                             )
-                        st.caption("Source: ABS 8165.0 (data available 2010-2023)")
+                        year_note = f" ({firm_year})" if firm_year != display_year else ""
+                        st.caption(f"Source: ABS 8165.0{year_note}")
+                if not industry_year_stats.empty:
                     st.divider()
 
             # Show legislation detail
