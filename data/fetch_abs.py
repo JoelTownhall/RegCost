@@ -46,7 +46,6 @@ def get_headline_indicators(year_start: int, year_end: int) -> pd.DataFrame:
     if total_df.empty:
         total_df = df.groupby("year").agg({
             "gva_millions": "sum",
-            "employment_thousands": "sum",
             "hours_worked_millions": "sum",
         }).reset_index()
         total_df["gva_per_hour"] = total_df["gva_millions"] / total_df["hours_worked_millions"]
