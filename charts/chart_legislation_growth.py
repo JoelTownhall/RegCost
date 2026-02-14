@@ -156,7 +156,7 @@ def create_legislation_growth_chart(
         plot_bgcolor="white",
         bargap=0.15,
         bargroupgap=0.1,
-        margin=dict(t=120),  # Add top margin for legend and title
+        margin=dict(l=20, r=20, t=100, b=20),  # Top margin for legend/title
     )
 
     fig.update_xaxes(
@@ -164,6 +164,7 @@ def create_legislation_growth_chart(
         showgrid=True,
         gridcolor="#eee",
         dtick=2,  # Show every 2 years
+        fixedrange=True,
     )
 
     # Update left Y-axis (legislation count)
@@ -172,6 +173,8 @@ def create_legislation_growth_chart(
         showgrid=True,
         gridcolor="#eee",
         secondary_y=False,
+        automargin=True,
+        fixedrange=True,
     )
 
     # Update right Y-axis (requirements count)
@@ -180,6 +183,8 @@ def create_legislation_growth_chart(
         showgrid=True,
         gridcolor="#eee",
         secondary_y=True,
+        automargin=True,
+        fixedrange=True,
     )
 
     return fig

@@ -23,6 +23,7 @@ from charts.chart_industry_impacts import (
 from charts.chart_regulation_vs_economy import (
     create_headline_chart,
     create_industry_chart,
+    create_regulation_vs_productivity_scatter,
 )
 from config.anzsic import ANZSIC_DIVISIONS, get_anzsic_label
 
@@ -512,6 +513,29 @@ if industries_with_data:
             st.metric("GVA per Hour Growth", "N/A")
 else:
     st.info("No industry-level data available.")
+
+st.divider()
+
+# --- Chart 4: Regulation Growth vs Productivity by Industry ---
+st.header("Chart 4: Growth of Regulations vs Productivity by Industry")
+st.markdown(f"""
+This scatter plot compares the percentage change in regulatory requirements against the
+percentage change in GVA per hour worked for each industry, over the selected year range.
+Industries in the top-left quadrant saw productivity gains despite lower regulatory growth;
+those in the bottom-right saw high regulatory growth with weaker productivity.
+""")
+
+if not leg_ts_df.empty and not econ_df.empty:
+    fig4 = create_regulation_vs_productivity_scatter(
+        leg_ts_df,
+        econ_df,
+        year_start=year_range[0],
+        year_end=year_range[1],
+        methodology=methodology_c3,
+    )
+    st.plotly_chart(fig4, use_container_width=True)
+else:
+    st.info("Legislation and economic data required for this chart.")
 
 # --- Footer ---
 st.divider()

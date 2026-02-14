@@ -146,10 +146,11 @@ def create_headline_chart(
         ),
         hovermode="x unified",
         plot_bgcolor="white",
+        margin=dict(l=20, r=20, t=60, b=20),
     )
 
-    fig.update_xaxes(showgrid=True, gridcolor="#eee")
-    fig.update_yaxes(showgrid=True, gridcolor="#eee")
+    fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
+    fig.update_yaxes(showgrid=True, gridcolor="#eee", automargin=True, fixedrange=True)
 
     return fig
 
@@ -274,10 +275,111 @@ def create_industry_chart(
         ),
         hovermode="x unified",
         plot_bgcolor="white",
+        margin=dict(l=20, r=20, t=60, b=20),
     )
 
-    fig.update_xaxes(showgrid=True, gridcolor="#eee")
-    fig.update_yaxes(showgrid=True, gridcolor="#eee")
+    fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
+    fig.update_yaxes(showgrid=True, gridcolor="#eee", automargin=True, fixedrange=True)
+
+    return fig
+
+
+def create_regulation_vs_productivity_scatter(
+    leg_df: pd.DataFrame,
+    econ_df: pd.DataFrame,
+    year_start: int = 2010,
+    year_end: int = 2024,
+    methodology: str = "BC Method",
+) -> go.Figure:
+    """
+    Create scatter plot: % change in requirements vs % change in GVA per hour worked.
+    Each point is an industry.
+    """
+    if methodology in ["Mercatus Method", "RegData Method"]:
+        req_col = "regdata_requirements"
+    else:
+        req_col = "bc_requirements"
+
+    # Get requirements by industry for start and end years
+    def get_industry_reqs(df, year):
+        return df[df["as_of_year"] == year].groupby("anzsic_code").agg(
+            req_count=(req_col, "sum")
+        ).reset_index()
+
+    reqs_start = get_industry_reqs(leg_df, year_start)
+    reqs_end = get_industry_reqs(leg_df, year_end)
+
+    reqs = reqs_start.merge(reqs_end, on="anzsic_code", suffixes=("_start", "_end"))
+    reqs["req_pct_change"] = ((reqs["req_count_end"] - reqs["req_count_start"]) / reqs["req_count_start"] * 100)
+
+    # Get GVA per hour worked by industry for start and end years
+    def get_industry_productivity(df, year):
+        yr = df[df["year"] == year][["anzsic_code", "gva_millions", "hours_worked_millions"]].copy()
+        yr["productivity"] = yr["gva_millions"] / yr["hours_worked_millions"]
+        return yr[["anzsic_code", "productivity"]]
+
+    prod_start = get_industry_productivity(econ_df, year_start)
+    prod_end = get_industry_productivity(econ_df, year_end)
+
+    prod = prod_start.merge(prod_end, on="anzsic_code", suffixes=("_start", "_end"))
+    prod["prod_pct_change"] = ((prod["productivity_end"] - prod["productivity_start"]) / prod["productivity_start"] * 100)
+
+    # Merge
+    combined = reqs.merge(prod, on="anzsic_code")
+    combined["anzsic_name"] = combined["anzsic_code"].map(ANZSIC_DIVISIONS)
+
+    if combined.empty:
+        fig = go.Figure()
+        fig.add_annotation(text="No data available",
+                          xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False)
+        return fig
+
+    # Build hover text
+    hover_texts = []
+    for _, row in combined.iterrows():
+        hover_texts.append(
+            f"<b>{row['anzsic_code']}: {row['anzsic_name']}</b><br>"
+            f"Requirements change: {row['req_pct_change']:+.1f}%<br>"
+            f"GVA/hour change: {row['prod_pct_change']:+.1f}%"
+        )
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(
+        x=combined["req_pct_change"],
+        y=combined["prod_pct_change"],
+        mode="markers+text",
+        text=combined["anzsic_code"],
+        textposition="top center",
+        textfont=dict(size=10),
+        marker=dict(
+            size=12,
+            color=ACCESSIBLE_PALETTE[0],
+            opacity=0.8,
+        ),
+        hovertemplate="%{customdata}<extra></extra>",
+        customdata=hover_texts,
+    ))
+
+    # Add reference lines at 0
+    fig.add_hline(y=0, line_dash="dash", line_color="#ccc")
+    fig.add_vline(x=0, line_dash="dash", line_color="#ccc")
+
+    fig.update_layout(
+        title=dict(
+            text=f"Regulation Growth vs Productivity Growth ({year_start}-{year_end})",
+            font=dict(size=16),
+        ),
+        xaxis_title=f"Change in Requirements (%, {year_start}-{year_end})",
+        yaxis_title=f"Change in GVA per Hour Worked (%, {year_start}-{year_end})",
+        plot_bgcolor="white",
+        hovermode="closest",
+        showlegend=False,
+        margin=dict(l=20, r=20, t=60, b=20),
+    )
+
+    fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True, automargin=True)
+    fig.update_yaxes(showgrid=True, gridcolor="#eee", fixedrange=True, automargin=True)
 
     return fig
 

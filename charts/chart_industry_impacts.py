@@ -120,11 +120,11 @@ def _create_requirements_count_chart(
         yaxis_title="",
         plot_bgcolor="white",
         height=max(400, len(grouped) * 30),  # Dynamic height
-        margin=dict(l=250),  # Space for long labels
+        margin=dict(l=20, r=20, t=60, b=20),  # Standard margins, let automargin handle labels
     )
 
-    fig.update_xaxes(showgrid=True, gridcolor="#eee")
-    fig.update_yaxes(showgrid=False)
+    fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
+    fig.update_yaxes(showgrid=False, automargin=True, fixedrange=True)
 
     return fig
 
@@ -230,7 +230,7 @@ def _create_legislation_count_chart(
         yaxis_title="",
         plot_bgcolor="white",
         height=max(400, len(pivot) * 30),  # Dynamic height
-        margin=dict(l=250),  # Space for long labels
+        margin=dict(l=20, r=20, t=60, b=20),  # Standard margins, let automargin handle labels
         barmode="stack",
         legend=dict(
             orientation="h",
@@ -241,8 +241,8 @@ def _create_legislation_count_chart(
         ),
     )
 
-    fig.update_xaxes(showgrid=True, gridcolor="#eee")
-    fig.update_yaxes(showgrid=False)
+    fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
+    fig.update_yaxes(showgrid=False, automargin=True, fixedrange=True)
 
     return fig
 
