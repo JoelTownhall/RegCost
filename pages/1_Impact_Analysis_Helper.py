@@ -11,7 +11,6 @@ from utils.ai_helper import (
     RATING_CONFIG,
     get_gemini_helper,
     build_ia_index,
-    check_reference_docs,
 )
 
 st.set_page_config(
@@ -151,17 +150,6 @@ helper = get_gemini_helper()
 if not helper.is_available:
     st.error(f"**AI not available:** {helper.error_message}", icon="🔑")
 
-doc_checks = check_reference_docs()
-missing = [name for name, ok in doc_checks.items() if not ok]
-if missing:
-    with st.expander(f"⚠️ {len(missing)} reference document(s) missing — AI guidance will be limited", expanded=False):
-        st.markdown(
-            "Place the following files in the `reference_docs/` directory "
-            "(see `reference_docs/README.md` for the Google Drive link):"
-        )
-        for name in missing:
-            st.markdown(f"- `{name}`")
-
 # Current question banner
 q_idx = st.session_state.ia_current_q - 1
 st.info(
@@ -220,7 +208,7 @@ with chat_col:
 
         st.rerun()
 
-    # Download Draft IA button (below chat)
+    # Buttons below chat
     st.markdown("---")
     col_dl, col_clear = st.columns(2)
     with col_dl:
@@ -251,6 +239,56 @@ with chat_col:
         if st.button("🗑️ Clear conversation", use_container_width=True):
             _start_new_ia()
             st.rerun()
+
+    col_upload, col_search = st.columns(2)
+    with col_upload:
+        uploaded_ia = st.file_uploader(
+            "📤 Upload your draft IA",
+            type=["pdf", "docx", "doc"],
+            key="ia_upload",
+            help="Upload a draft IA document for the AI to review and give feedback on",
+        )
+        if uploaded_ia and st.button("Analyse uploaded draft", use_container_width=True):
+            if not helper.is_available:
+                st.error("AI not available.")
+            else:
+                with st.spinner("Reading your draft…"):
+                    try:
+                        import io
+                        file_bytes = uploaded_ia.read()
+                        if uploaded_ia.name.endswith(".pdf"):
+                            import pdfplumber
+                            with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
+                                doc_text = "\n\n".join(p.extract_text() or "" for p in pdf.pages[:20])
+                        else:
+                            from docx import Document
+                            doc = Document(io.BytesIO(file_bytes))
+                            doc_text = "\n\n".join(p.text for p in doc.paragraphs if p.text.strip())
+                        prompt = (
+                            f"The user has uploaded their draft Impact Analysis document. "
+                            f"Please review it against the OIA Impact Analysis Framework and provide "
+                            f"constructive feedback on each of the 7 IA questions. Here is the document:\n\n"
+                            f"{doc_text[:12000]}"
+                        )
+                        st.session_state.ia_messages.append({"role": "user", "content": f"[Uploaded draft IA: {uploaded_ia.name}]"})
+                        response = helper.send_message(st.session_state.ia_chat, prompt)
+                        full_response = ""
+                        if response:
+                            for chunk in response:
+                                if chunk.text:
+                                    full_response += chunk.text
+                        st.session_state.ia_messages.append({"role": "assistant", "content": full_response})
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Could not read document: {e}")
+
+    with col_search:
+        st.link_button(
+            "🔍 Search previous IAs on OIA website",
+            url="https://oia.pmc.gov.au/published-impact-analyses-and-reports",
+            use_container_width=True,
+            help="Browse all published Impact Analyses on the OIA website",
+        )
 
 # ---------------------------------------------------------------------------
 # Reference examples panel
