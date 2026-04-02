@@ -44,8 +44,8 @@ REGCOST_WORKBOOK = REFERENCE_DOCS_DIR / "regcostworkbook.xlsx"
 
 # --- Google Drive auto-download (for Streamlit Cloud deployment) ---
 _GDRIVE_FILES = {
-    "ia_assessment_table.xlsx": "https://docs.google.com/spreadsheets/d/19ElYYsjiCdoDoNs6nAkTL26gAjdto2zi/export?format=xlsx",
-    "ia_framework.pdf":         "https://docs.google.com/document/d/1HU12LQJq6mACEgjkmWjuGXMeduifDVXa/export?format=pdf",
+    "regcostworkbook.xlsx":         "https://docs.google.com/spreadsheets/d/19ElYYsjiCdoDoNs6nAkTL26gAjdto2zi/export?format=xlsx",
+    "ia_framework.pdf":             "https://docs.google.com/document/d/1HU12LQJq6mACEgjkmWjuGXMeduifDVXa/export?format=pdf",
     "ia_framework_users_guide.pdf": "https://docs.google.com/document/d/1WwQ9l3UkXl8tVPY4NCRjVgkZ7oIxFEEt/export?format=pdf",
 }
 
