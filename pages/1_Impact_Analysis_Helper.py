@@ -1,5 +1,5 @@
 """
-OIA Policy Toolkit — Page 1: Impact Analysis Helper
+IALA Policy Toolkit — Page 1: Impact Analysis Helper
 AI-guided assistant for writing Impact Analyses through the 7 IA questions.
 """
 import streamlit as st
@@ -12,9 +12,10 @@ from utils.ai_helper import (
     get_gemini_helper,
     build_ia_index,
 )
+from utils.pirates import render_pirate_robot
 
 st.set_page_config(
-    page_title="Impact Analysis Helper | OIA Policy Toolkit",
+    page_title="Impact Analysis Helper | IALA Policy Toolkit",
     page_icon="📋",
     layout="wide",
 )
@@ -56,12 +57,12 @@ def _start_new_ia():
 
     if helper.is_available:
         greeting = (
-            "Hi! I'm your Impact Analysis assistant. I'll guide you step by step through "
-            "the 7 OIA Impact Analysis questions.\n\n"
+            "Ahoy! I'm your Impact Analysis assistant from the Impact Analysis Lord Admiralty. "
+            "I'll guide you step by step through the 7 IALA Impact Analysis questions.\n\n"
             "To get started: **what policy proposal are you working on?** Give me a brief "
             "description — the problem you're trying to solve, roughly which agency is leading it, "
             "and whether it involves any regulation. I'll then help you work out the appropriate "
-            "depth of analysis and begin drafting your IA."
+            "depth of analysis and begin drafting your IA. ⚓"
         )
     else:
         greeting = (
@@ -81,13 +82,15 @@ if not st.session_state.ia_messages:
 # ---------------------------------------------------------------------------
 
 with st.sidebar:
-    st.markdown("### ⚖️ OIA Policy Toolkit")
+    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
     st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
     st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
 
+    st.markdown("---")
+    render_pirate_robot(location="inline")
     st.markdown("---")
     st.markdown("#### 📋 IA Questions Progress")
 
@@ -141,7 +144,7 @@ with st.sidebar:
 
 st.title("📋 Impact Analysis Helper")
 st.markdown(
-    "This tool guides you through the 7 OIA Impact Analysis questions using AI. "
+    "This tool guides you through the 7 IALA Impact Analysis questions using AI. "
     "Use the question tracker on the left to navigate. When you're done, download a Word draft."
 )
 
@@ -266,7 +269,7 @@ with chat_col:
                             doc_text = "\n\n".join(p.text for p in doc.paragraphs if p.text.strip())
                         prompt = (
                             f"The user has uploaded their draft Impact Analysis document. "
-                            f"Please review it against the OIA Impact Analysis Framework and provide "
+                            f"Please review it against the IALA Impact Analysis Framework and provide "
                             f"constructive feedback on each of the 7 IA questions. Here is the document:\n\n"
                             f"{doc_text[:12000]}"
                         )
@@ -283,11 +286,10 @@ with chat_col:
                         st.error(f"Could not read document: {e}")
 
     with col_search:
-        st.link_button(
-            "🔍 Search previous IAs on OIA website",
-            url="https://oia.pmc.gov.au/published-impact-analyses-and-reports",
-            use_container_width=True,
-            help="Browse all published Impact Analyses on the OIA website",
+        st.info(
+            "🔍 To browse published Impact Analyses, visit the Australian Government's "
+            "Impact Analysis register via the Department of the Prime Minister and Cabinet website.",
+            icon="📚",
         )
 
 # ---------------------------------------------------------------------------

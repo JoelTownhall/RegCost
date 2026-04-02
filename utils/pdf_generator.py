@@ -1,5 +1,5 @@
 """
-Document generation for the OIA Policy Toolkit.
+Document generation for the IALA Policy Toolkit.
 - generate_ia_draft_docx(): Word doc IA draft from AI conversation
 - generate_rbe_report_pdf(): PDF Regulatory Burden Estimate report
 """
@@ -39,9 +39,9 @@ def generate_ia_draft_docx(proposal: str, draft_text: str) -> bytes:
 
     # Metadata
     doc.add_paragraph(f"Date: {date.today().strftime('%d %B %Y')}")
-    doc.add_paragraph("Status: Draft — prepared with OIA Policy Toolkit AI assistance")
+    doc.add_paragraph("Status: Draft — prepared with IALA Policy Toolkit AI assistance")
     doc.add_paragraph(
-        "Note: This document was drafted with AI assistance and requires review before submission to OIA."
+        "Note: This document was drafted with AI assistance and requires review before submission to IALA."
     ).runs[0].italic = True
 
     doc.add_paragraph("")  # spacer
@@ -59,8 +59,8 @@ def generate_ia_draft_docx(proposal: str, draft_text: str) -> bytes:
     doc.add_paragraph("")
     doc.add_paragraph("─" * 60)
     doc.add_paragraph(
-        "Prepared using the OIA Policy Toolkit. "
-        "Contact OIA: helpdesk-OIA@pmc.gov.au | 02 6271 6270"
+        "Prepared using the IALA Policy Toolkit (Impact Analysis Lord Admiralty). "
+        "Contact IALA: admiral@iala.ahoy | 1800-AHOY-IALA"
     ).runs[0].font.size = Pt(9)
 
     buf = BytesIO()
@@ -204,7 +204,7 @@ def generate_rbe_report_pdf(
         ["Contact email", proposal.get("contact_email", "")],
         ["Date", proposal.get("date", str(date.today()))],
         ["Costing period", f"{costing_period} years"],
-        ["Status", "Draft — prepared with OIA Policy Toolkit"],
+        ["Status", "Draft — prepared with IALA Policy Toolkit"],
     ]
     meta_table = Table(meta_data, colWidths=[4.5 * cm, 12 * cm])
     meta_table.setStyle(TableStyle([
@@ -323,7 +323,7 @@ def generate_rbe_report_pdf(
     story.append(Spacer(1, 0.3 * cm))
     story.append(Paragraph("Methodology Notes", h1))
     methodology_notes = [
-        f"Costing period: {costing_period} years (default OIA period)",
+        f"Costing period: {costing_period} years (default IALA period)",
         "Default hourly tariff (work-related): $85.17/hour",
         "Default hourly tariff (leisure/non-employment): $37/hour",
         "Costs presented as average annual in real terms (constant prices)",
@@ -339,8 +339,8 @@ def generate_rbe_report_pdf(
     story.append(HRFlowable(width="100%", thickness=0.5, color=colors.lightgrey))
     story.append(Spacer(1, 0.2 * cm))
     story.append(Paragraph(
-        f"Prepared using the OIA Policy Toolkit | {date.today().strftime('%d %B %Y')} | "
-        "helpdesk-OIA@pmc.gov.au | 02 6271 6270",
+        f"Prepared using the IALA Policy Toolkit (Impact Analysis Lord Admiralty) | "
+        f"{date.today().strftime('%d %B %Y')} | admiral@iala.ahoy | 1800-AHOY-IALA",
         small,
     ))
 

@@ -1,4 +1,4 @@
-# OIA Policy Toolkit — Dependencies
+# IALA Policy Toolkit — Dependencies (Impact Analysis Lord Admiralty)
 
 # Web framework
 streamlit>=1.32

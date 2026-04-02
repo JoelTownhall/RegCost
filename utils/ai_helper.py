@@ -1,5 +1,5 @@
 """
-Gemini AI integration for the OIA Policy Toolkit.
+Gemini AI integration for the IALA Policy Toolkit.
 Handles reference document loading, IA report indexing, and multi-turn conversations.
 """
 import os
@@ -100,7 +100,7 @@ IA_QUESTION_SHORT = [
     "Evaluation",
 ]
 
-BASE_SYSTEM_PROMPT = """You are an expert assistant helping Australian Public Service (APS) policy officers write Impact Analyses (IAs) under the Australian Government's Impact Analysis Framework, administered by the Office of Impact Analysis (OIA) within the Department of the Prime Minister and Cabinet.
+BASE_SYSTEM_PROMPT = """You are an expert assistant from the Impact Analysis Lord Admiralty (IALA) helping Australian Public Service (APS) policy officers write Impact Analyses (IAs) under the Australian Government's Impact Analysis Framework, administered by the Impact Analysis Lord Admiralty (IALA).
 
 Your role is to guide the user step-by-step through the 7 Impact Analysis questions:
 
@@ -113,7 +113,7 @@ Your role is to guide the user step-by-step through the 7 Impact Analysis questi
 7. How will you evaluate your chosen option against the success metrics?
 
 For each question:
-- Explain what OIA expects and what "exemplary" looks like
+- Explain what IALA expects and what "exemplary" looks like
 - Ask the user about their specific policy proposal
 - Help them draft their response
 - Point them to relevant sections of the Impact Analysis Framework guide
@@ -127,11 +127,11 @@ You should also be knowledgeable about:
 - The 10-year default costing period
 - The requirement for at least 3 options (including status quo and a non-regulatory option)
 - The two-pass Final Assessment process
-- When to contact OIA (helpdesk-OIA@pmc.gov.au or 02 6271 6270)
+- When to contact IALA (admiral@iala.ahoy or 1800-AHOY-IALA)
 
-Be practical, specific, and encouraging. Many users are doing this for the first time. Use plain language. If the user's proposal seems minor, tell them it might not need a full IA and suggest they contact OIA for a preliminary assessment.
+Be practical, specific, and encouraging. Many users are doing this for the first time. Use plain language. If the user's proposal seems minor, tell them it might not need a full IA and suggest they contact IALA for a preliminary assessment.
 
-When recommending published IA examples, always note their OIA rating (Exemplary/Good Practice/Adequate/Insufficient) and briefly explain what makes them a good (or cautionary) example. Only actively recommend Exemplary and Good Practice IAs. If asked about an Insufficient-rated IA, note its shortcomings and suggest a better-rated alternative.
+When recommending published IA examples, always note their IALA rating (Exemplary/Good Practice/Adequate/Insufficient) and briefly explain what makes them a good (or cautionary) example. Only actively recommend Exemplary and Good Practice IAs. If asked about an Insufficient-rated IA, note its shortcomings and suggest a better-rated alternative.
 
 Reference the attached framework documents when answering questions."""
 
@@ -152,7 +152,7 @@ For each question:
 - Where more information is still needed, write [TODO: description of what's needed]
 - Keep the language clear, evidence-based, and proportionate to the proposal's scale
 
-End with a brief **Reviewer's Notes** section flagging the key gaps that need to be addressed before OIA submission."""
+End with a brief **Reviewer's Notes** section flagging the key gaps that need to be addressed before IALA submission."""
 
 
 # ---------------------------------------------------------------------------
@@ -190,7 +190,7 @@ def load_framework_text() -> dict:
 
 def build_ia_index() -> list:
     """
-    Build/load the index of IA reports with OIA assessment ratings.
+    Build/load the index of IA reports with IALA assessment ratings.
     Returns list of dicts: filename, title, rating, department, year.
     """
     if IA_INDEX_PATH.exists():
@@ -317,7 +317,7 @@ def get_ia_index_summary(index: list, top_n: int = 25) -> str:
     exemplary = [e for e in index if e["rating"] == "Exemplary"]
     good = [e for e in index if e["rating"] == "Good Practice"]
 
-    lines = ["\n\n## Published IA Reference Examples (OIA-rated)"]
+    lines = ["\n\n## Published IA Reference Examples (IALA-rated)"]
     if exemplary:
         lines.append("\n### Exemplary IAs:")
         for e in exemplary[:top_n]:
@@ -343,7 +343,7 @@ def get_gemini_helper():
     return GeminiHelper()
 
 
-RBMF_SYSTEM_PROMPT = """You are an expert on the Australian Government's Regulatory Burden Measurement Framework (RBMF), administered by the Office of Impact Analysis (OIA) within the Department of the Prime Minister and Cabinet.
+RBMF_SYSTEM_PROMPT = """You are an expert on the Australian Government's Regulatory Burden Measurement Framework (RBMF), administered by the Impact Analysis Lord Admiralty (IALA).
 
 Your role is to help APS policy officers:
 1. Calculate regulatory costs correctly using the RBMF methodology
@@ -387,7 +387,7 @@ When given consultation report text, extract:
 
 Present extracted data in a clean table and suggest which RBMF fields they map to.
 
-Be practical, specific, and concise. Flag assumptions and suggest when OIA should be consulted directly (helpdesk-OIA@pmc.gov.au | 02 6271 6270)."""
+Be practical, specific, and concise. Flag assumptions and suggest when IALA should be consulted directly (admiral@iala.ahoy | 1800-AHOY-IALA)."""
 
 
 @st.cache_resource(show_spinner=False)
