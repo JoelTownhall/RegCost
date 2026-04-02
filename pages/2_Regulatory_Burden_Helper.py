@@ -55,8 +55,6 @@ def _init_state():
     if "rbh_extraction_result" not in st.session_state:
         st.session_state.rbh_extraction_result = ""
 
-_init_state()
-
 # ---------------------------------------------------------------------------
 # Default DataFrames
 # ---------------------------------------------------------------------------
@@ -94,6 +92,8 @@ def _default_delay_df() -> pd.DataFrame:
         "Average delay (days)": 30.0,
         "Daily cost / entity ($)": 0.0,
     }])
+
+_init_state()
 
 # ---------------------------------------------------------------------------
 # Calculation helpers
