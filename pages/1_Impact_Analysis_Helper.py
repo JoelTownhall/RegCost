@@ -309,13 +309,18 @@ with ref_col:
             dept_str = f" · {entry['department']}" if entry.get("department") else ""
             year_str = f" · {entry['year']}" if entry.get("year") else ""
 
+            href = entry.get("href", "")
+            title_html = (
+                f'<a href="{href}" target="_blank" style="color:inherit;text-decoration:none">'
+                f'{entry["title"]}</a>' if href else entry["title"]
+            )
             st.markdown(
                 f'<div style="border:1px solid {cfg["colour"]}33;border-radius:6px;'
                 f'padding:8px 10px;margin-bottom:6px;background:{cfg["bg"]}22">'
                 f'<span style="background:{cfg["bg"]};color:{cfg["colour"]};'
                 f'font-size:0.75rem;padding:1px 6px;border-radius:3px;font-weight:600">'
                 f'{cfg["emoji"]} {entry["rating"]}</span><br>'
-                f'<span style="font-size:0.85rem;font-weight:500">{entry["title"]}</span>'
+                f'<span style="font-size:0.85rem;font-weight:500">{title_html}</span>'
                 f'<br><span style="font-size:0.75rem;color:#666">{dept_str}{year_str}</span>'
                 f'</div>',
                 unsafe_allow_html=True,
