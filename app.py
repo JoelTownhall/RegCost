@@ -1,13 +1,14 @@
 """
-OIA Policy Toolkit — Landing Page and Entry Point.
+IALA Policy Toolkit — Landing Page and Entry Point.
 """
 import streamlit as st
 from utils.auth import check_auth, logout
 from utils.styles import apply_custom_css
+from utils.pirates import render_pirate
 
 st.set_page_config(
-    page_title="OIA Policy Toolkit",
-    page_icon="⚖️",
+    page_title="IALA Policy Toolkit",
+    page_icon="🏴‍☠️",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -17,7 +18,7 @@ apply_custom_css()
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown("### ⚖️ OIA Policy Toolkit")
+    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
     st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
@@ -26,6 +27,8 @@ with st.sidebar:
     st.markdown("---")
     if st.button("Log out", use_container_width=True):
         logout()
+    st.markdown("---")
+    render_pirate(location="inline")
 
 # --- Hero ---
 st.markdown("""
@@ -39,6 +42,15 @@ st.markdown("""
     }
     .hero-banner h1 { color: white; margin-bottom: 8px; font-size: 2.4rem; }
     .hero-banner p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin: 0; }
+    .hero-banner .vibe-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.4);
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+    }
 
     .tool-card {
         border: 1px solid #dce3ea;
@@ -56,9 +68,14 @@ st.markdown("""
 
 st.markdown("""
 <div class="hero-banner">
-    <h1>⚖️ OIA Policy Toolkit</h1>
-    <p>AI-powered tools to help Australian Public Service policy officers with Impact Analysis
-    and regulatory burden assessment under the Australian Government's Impact Analysis Framework.</p>
+    <div class="vibe-badge">⚓ Vibecoding Club Project — AI-assisted policy tools, arr!</div>
+    <h1>🏴‍☠️ IALA Policy Toolkit</h1>
+    <p>AI-powered tools from the <strong>Impact Analysis Lord Admiralty</strong> to help navigate the
+    seas of policy impact analysis and regulatory burden assessment under the
+    Australian Government's Impact Analysis Framework.</p>
+    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">
+    ⚠️ This is a fun vibecoding club project — a playful way to explore AI-assisted policy work.
+    Not affiliated with any real government department. Use with a sense of adventure!</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -70,7 +87,7 @@ with col1:
     <div class="tool-card">
         <h3>📋 Impact Analysis Helper</h3>
         <p>Get AI-guided help writing your Impact Analysis, step by step through the 7 IA questions.
-        Draws on the OIA's Impact Analysis Framework and corpus of published IAs to give contextual,
+        Draws on the IALA's Impact Analysis Framework and corpus of published IAs to give contextual,
         expert guidance tailored to your proposal.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -85,7 +102,7 @@ with col2:
     st.markdown("""
     <div class="tool-card">
         <h3>💰 Regulatory Burden Helper</h3>
-        <p>Calculate regulatory costs interactively using the OIA's Regulatory Burden Measurement
+        <p>Calculate regulatory costs interactively using the IALA's Regulatory Burden Measurement
         Framework. Replaces the Excel workbook with a web form that auto-calculates totals and
         generates a formatted PDF report.</p>
     </div>
@@ -117,6 +134,6 @@ with col3:
 st.markdown("<br>", unsafe_allow_html=True)
 st.divider()
 st.caption(
-    "OIA Policy Toolkit | Office of Impact Analysis, Department of the Prime Minister and Cabinet | "
-    "helpdesk-OIA@pmc.gov.au | 02 6271 6270"
+    "🏴‍☠️ IALA Policy Toolkit | Impact Analysis Lord Admiralty | "
+    "A Vibecoding Club Project | admiral@iala.ahoy | 1800-AHOY-IALA"
 )

@@ -1,6 +1,6 @@
 """
-OIA Policy Toolkit — Page 2: Regulatory Burden Helper
-Web form replicating the OIA Regulatory Burden Measurement Framework workbook.
+IALA Policy Toolkit — Page 2: Regulatory Burden Helper
+Web form replicating the IALA Regulatory Burden Measurement Framework workbook.
 """
 import io
 from datetime import date
@@ -11,9 +11,10 @@ import streamlit as st
 
 from utils.auth import check_auth, logout
 from utils.ai_helper import get_rbmf_helper
+from utils.pirates import render_pirate_robot
 
 st.set_page_config(
-    page_title="Regulatory Burden Helper | OIA Policy Toolkit",
+    page_title="Regulatory Burden Helper | IALA Policy Toolkit",
     page_icon="💰",
     layout="wide",
 )
@@ -226,12 +227,14 @@ _ensure_rbmf_chat()
 # ---------------------------------------------------------------------------
 
 with st.sidebar:
-    st.markdown("### ⚖️ OIA Policy Toolkit")
+    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
     st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
     st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
+    st.markdown("---")
+    render_pirate_robot(location="inline")
     st.markdown("---")
 
     st.markdown("#### Quick Reference")
@@ -257,7 +260,7 @@ with st.sidebar:
 
 st.title("💰 Regulatory Burden Helper")
 st.markdown(
-    "Calculate regulatory costs using the OIA's Regulatory Burden Measurement Framework. "
+    "Calculate regulatory costs using the IALA's Regulatory Burden Measurement Framework. "
     "Fill in the sections below — totals update automatically."
 )
 
@@ -308,7 +311,7 @@ with tab1:
             "Costing period (years)",
             min_value=1, max_value=30,
             value=st.session_state.rbh_costing_period,
-            help="Default is 10 years per OIA guidance.",
+            help="Default is 10 years per IALA guidance.",
         )
 
     st.session_state.rbh_proposal["description"] = st.text_area(
@@ -490,7 +493,7 @@ with tab5:
     col_pdf, col_csv = st.columns(2)
 
     with col_pdf:
-        st.markdown("**📄 Finalise and Save — a copy of report and underlying data goes to OIA**")
+        st.markdown("**📄 Finalise and Save — generate your Regulatory Burden Estimate report**")
         if st.button("Generate PDF Report", type="primary", use_container_width=True):
             if not st.session_state.rbh_proposal.get("title"):
                 st.error("Please enter a proposal title in the Proposal Details tab first.")

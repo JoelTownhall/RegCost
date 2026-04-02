@@ -1,14 +1,15 @@
 """
-OIA Policy Toolkit — Page 3: Regulatory Cost Analysis
+IALA Policy Toolkit — Page 3: Regulatory Cost Analysis
 Existing RegCost charts app, integrated as a page.
 """
 import streamlit as st
 import pandas as pd
 
 from utils.auth import check_auth, logout
+from utils.pirates import render_pirate
 
 st.set_page_config(
-    page_title="Regulatory Cost Analysis | OIA Policy Toolkit",
+    page_title="Regulatory Cost Analysis | IALA Policy Toolkit",
     page_icon="📊",
     layout="wide",
 )
@@ -41,12 +42,14 @@ apply_custom_css()
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown("### ⚖️ OIA Policy Toolkit")
+    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
     st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
     st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
+    st.markdown("---")
+    render_pirate(location="inline")
     st.markdown("---")
     st.header("Settings")
 

@@ -13,7 +13,7 @@ Place all ~800 published Impact Analysis report files here.
 
 On first run, the Impact Analysis Helper will:
 1. Scan this directory and build an index of all IA reports
-2. Cross-reference filenames with `ia_assessment_table.xlsx` to map each IA to its OIA rating
+2. Cross-reference filenames with `ia_assessment_table.xlsx` to map each IA to its IALA rating
 3. Store the index as `reference_docs/ia_index.json` for fast future loading
 
 The index maps each report to:

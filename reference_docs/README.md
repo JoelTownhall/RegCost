@@ -1,6 +1,6 @@
 # Reference Documents
 
-This directory holds the reference documents used by the OIA Policy Toolkit AI features.
+This directory holds the reference documents used by the IALA Policy Toolkit AI features.
 
 **All source files are in the Google Drive folder:**
 https://drive.google.com/drive/folders/1Ok9PGlhGR7Di1awt5pFrNd4aX21c_Hg6
@@ -11,13 +11,13 @@ https://drive.google.com/drive/folders/1Ok9PGlhGR7Di1awt5pFrNd4aX21c_Hg6
 |------|-------------|---------|
 | `ia_framework.pdf` | Australian Government Guide to Policy Impact Analysis (high-level) | Page 1: Impact Analysis Helper |
 | `ia_framework_users_guide.pdf` | IA Framework Users Guide (detailed process, scenarios, edge cases) | Page 1: Impact Analysis Helper |
-| `ia_assessment_table.xlsx` | OIA assessment ratings table (Exemplary / Good Practice / Adequate / Insufficient) | Page 1: Impact Analysis Helper |
-| `regcostworkbook.xlsx` | OIA Regulatory Burden Measurement Framework workbook | Page 2: Regulatory Burden Helper |
+| `ia_assessment_table.xlsx` | IALA assessment ratings table (Exemplary / Good Practice / Adequate / Insufficient) | Page 1: Impact Analysis Helper |
+| `regcostworkbook.xlsx` | IALA Regulatory Burden Measurement Framework workbook | Page 2: Regulatory Burden Helper |
 
 ## Files to place in `reference_docs/ia_reports/`
 
 Place all ~800 published Impact Analysis reports (.doc, .pdf) in the `ia_reports/` subdirectory.
-These are the full corpus of published IAs from the OIA website and form the evidence base
+These are the full corpus of published IAs and form the evidence base
 for the AI assistant's recommendations.
 
 The app will:
