@@ -261,15 +261,18 @@ with ref_col:
 
     try:
         index = build_ia_index()
-    except Exception:
+    except Exception as _e:
         index = []
+        st.caption(f"Index error: {_e}")
 
     if not index:
+        from utils.ai_helper import IA_INDEX_PATH
         st.info(
             "No IA index yet. Place `ia_assessment_table.xlsx` and IA report files "
             "in `reference_docs/` to enable this panel.",
             icon="📂",
         )
+        st.caption(f"Looking for index at: `{IA_INDEX_PATH}` — exists: {IA_INDEX_PATH.exists()}")
     else:
         # Filters
         rating_filter = st.multiselect(
