@@ -4,7 +4,7 @@
 streamlit>=1.32
 
 # AI
-google-generativeai>=0.8
+google-generativeai
 python-dotenv
 
 # Data
@@ -18,7 +18,7 @@ matplotlib>=3.7.0
 
 # PDF / document handling
 pdfplumber>=0.9.0
-PyPDF2>=3.0
+pypdf>=3.0
 python-docx
 reportlab>=4.0.0
 
@@ -28,5 +28,5 @@ beautifulsoup4>=4.11.0
 lxml>=4.9.0
 
 # ABS / RBA data
-readabs>=0.2
-readrba>=0.2
+readabs
+readrba
