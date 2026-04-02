@@ -33,8 +33,9 @@ def _get_api_key() -> str:
     except Exception:
         return os.environ.get("GOOGLE_API_KEY", "")
 
-# --- Paths ---
-REFERENCE_DOCS_DIR = Path("reference_docs")
+# --- Paths --- (anchored to repo root, not cwd)
+_REPO_ROOT = Path(__file__).parent.parent
+REFERENCE_DOCS_DIR = _REPO_ROOT / "reference_docs"
 IA_REPORTS_DIR = REFERENCE_DOCS_DIR / "ia_reports"
 IA_INDEX_PATH = REFERENCE_DOCS_DIR / "ia_index.json"
 IA_FRAMEWORK_PDF = REFERENCE_DOCS_DIR / "ia_framework.pdf"
