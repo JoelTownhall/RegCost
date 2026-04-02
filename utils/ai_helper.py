@@ -188,18 +188,14 @@ def load_framework_text() -> dict:
 # IA report index
 # ---------------------------------------------------------------------------
 
-@st.cache_data(ttl=None, show_spinner=False)
 def build_ia_index() -> list:
     """
     Build/load the index of IA reports with OIA assessment ratings.
     Returns list of dicts: filename, title, rating, department, year.
     """
     if IA_INDEX_PATH.exists():
-        try:
-            with open(IA_INDEX_PATH) as f:
-                return json.load(f)
-        except Exception:
-            pass
+        with open(IA_INDEX_PATH, encoding="utf-8") as f:
+            return json.load(f)
 
     index = []
     ratings_map = {}  # title_lower -> {title, rating, department, year}
