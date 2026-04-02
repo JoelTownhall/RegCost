@@ -114,13 +114,13 @@ def _create_requirements_count_chart(
     fig.update_layout(
         title=dict(
             text=f"Requirements by Industry ({year}, {methodology})",
-            font=dict(size=16),
+            font=dict(size=14),
         ),
         xaxis_title="Number of Requirements",
         yaxis_title="",
         plot_bgcolor="white",
         height=max(400, len(grouped) * 30),  # Dynamic height
-        margin=dict(l=20, r=20, t=60, b=20),  # Standard margins, let automargin handle labels
+        margin=dict(l=10, r=10, t=60, b=20),  # Reduced side margins
     )
 
     fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
@@ -230,14 +230,14 @@ def _create_legislation_count_chart(
         yaxis_title="",
         plot_bgcolor="white",
         height=max(400, len(pivot) * 30),  # Dynamic height
-        margin=dict(l=20, r=20, t=60, b=20),  # Standard margins, let automargin handle labels
+        margin=dict(l=10, r=10, t=60, b=50),  # Reduced side margins, increased bottom
         barmode="stack",
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1
+            yanchor="top",
+            y=-0.05,
+            xanchor="center",
+            x=0.5
         ),
     )
 

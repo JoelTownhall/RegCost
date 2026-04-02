@@ -133,20 +133,20 @@ def create_headline_chart(
     fig.update_layout(
         title=dict(
             text=f"Regulation in a Macro Economic Context (Indexed to {base_year} = 100)",
-            font=dict(size=16),
+            font=dict(size=14),
         ),
         xaxis_title="Year",
         yaxis_title="Index (Base Year = 100)",
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.02,
+            yanchor="top",
+            y=-0.2,
             xanchor="center",
             x=0.5,
         ),
         hovermode="x unified",
         plot_bgcolor="white",
-        margin=dict(l=20, r=20, t=60, b=20),
+        margin=dict(l=10, r=10, t=60, b=80),
     )
 
     fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)
@@ -262,20 +262,20 @@ def create_industry_chart(
     fig.update_layout(
         title=dict(
             text=f"{anzsic_code}: {industry_name} - Macro Context (Indexed to {base_year} = 100)",
-            font=dict(size=16),
+            font=dict(size=14),
         ),
         xaxis_title="Year",
         yaxis_title="Index (Base Year = 100)",
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.02,
+            yanchor="top",
+            y=-0.2,
             xanchor="center",
             x=0.5,
         ),
         hovermode="x unified",
         plot_bgcolor="white",
-        margin=dict(l=20, r=20, t=60, b=20),
+        margin=dict(l=10, r=10, t=60, b=80),
     )
 
     fig.update_xaxes(showgrid=True, gridcolor="#eee", fixedrange=True)

@@ -141,13 +141,13 @@ def create_legislation_growth_chart(
         barmode="group",
         title=dict(
             text=f"Legislation and Requirements by Type ({methodology})",
-            font=dict(size=16),
-            y=0.98,  # Position title higher
+            font=dict(size=14), # Slightly smaller title
+            y=0.98,
         ),
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.08,  # Move legend higher to avoid overlap with title
+            yanchor="top",
+            y=-0.15,  # Move legend below the chart
             xanchor="center",
             x=0.5,
             groupclick="toggleitem",
@@ -156,7 +156,7 @@ def create_legislation_growth_chart(
         plot_bgcolor="white",
         bargap=0.15,
         bargroupgap=0.1,
-        margin=dict(l=20, r=20, t=100, b=20),  # Top margin for legend/title
+        margin=dict(l=10, r=10, t=60, b=80),  # Reduced side margins, increased bottom for legend
     )
 
     fig.update_xaxes(
