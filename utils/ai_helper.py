@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 from typing import Optional
 
+import requests
 import streamlit as st
 import pandas as pd
 
@@ -40,6 +41,31 @@ IA_FRAMEWORK_PDF = REFERENCE_DOCS_DIR / "ia_framework.pdf"
 IA_USERS_GUIDE_PDF = REFERENCE_DOCS_DIR / "ia_framework_users_guide.pdf"
 IA_ASSESSMENT_TABLE = REFERENCE_DOCS_DIR / "ia_assessment_table.xlsx"
 REGCOST_WORKBOOK = REFERENCE_DOCS_DIR / "regcostworkbook.xlsx"
+
+# --- Google Drive auto-download (for Streamlit Cloud deployment) ---
+_GDRIVE_FILES = {
+    "ia_assessment_table.xlsx": "https://docs.google.com/spreadsheets/d/19ElYYsjiCdoDoNs6nAkTL26gAjdto2zi/export?format=xlsx",
+    "ia_framework.pdf":         "https://docs.google.com/document/d/1HU12LQJq6mACEgjkmWjuGXMeduifDVXa/export?format=pdf",
+    "ia_framework_users_guide.pdf": "https://docs.google.com/document/d/1WwQ9l3UkXl8tVPY4NCRjVgkZ7oIxFEEt/export?format=pdf",
+}
+
+
+def _ensure_reference_docs() -> None:
+    """Download any missing reference docs from Google Drive at startup."""
+    REFERENCE_DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    IA_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    for filename, url in _GDRIVE_FILES.items():
+        dest = REFERENCE_DOCS_DIR / filename
+        if not dest.exists():
+            try:
+                r = requests.get(url, timeout=60)
+                r.raise_for_status()
+                dest.write_bytes(r.content)
+            except Exception:
+                pass
+
+
+_ensure_reference_docs()
 
 MODEL_NAME = "gemini-2.5-flash"
 
