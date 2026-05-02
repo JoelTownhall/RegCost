@@ -383,7 +383,7 @@ with r1c1:
     interp, col = _interp("total_firms", total_firms_now,
                           (total_firms_now - total_firms_prev) if total_firms_prev else None)
     _metric_card(
-        f"Total businesses ({firms_src_yr or '—'})",
+        "Total businesses ({})".format(firms_src_yr if firms_src_yr else 'n/a'),
         f"{total_firms_now:,}" if total_firms_now else "—",
         _count_delta(total_firms_now, total_firms_prev),
         interp, col,
@@ -393,7 +393,7 @@ with r1c2:
     d = _delta_str(entry_now, entry_prev)
     interp, col = _interp("entry_rate", entry_now, d)
     _metric_card(
-        f"Entry rate ({latest_dc_yr or '—'})",
+        "Entry rate ({})".format(latest_dc_yr if latest_dc_yr else 'n/a'),
         f"{entry_now:.1f}%" if entry_now else "—",
         _pct_delta(entry_now, entry_prev),
         interp, col,
@@ -403,7 +403,7 @@ with r1c3:
     d = _delta_str(exit_now, exit_prev)
     interp, col = _interp("exit_rate", exit_now, d)
     _metric_card(
-        f"Exit rate ({latest_dc_yr or '—'})",
+        "Exit rate ({})".format(latest_dc_yr if latest_dc_yr else 'n/a'),
         f"{exit_now:.1f}%" if exit_now else "—",
         _pct_delta(exit_now, exit_prev),
         interp, col,
@@ -447,7 +447,7 @@ with r2c3:
     d = _delta_str(ne_now, ne_prev)
     interp, col = _interp("non_emp_share", ne_now, d)
     _metric_card(
-        f"Non-employing share  ({latest_bc_yr or '—'})",
+        "Non-employing share ({})".format(latest_bc_yr if latest_bc_yr else 'n/a'),
         f"{ne_now:.1f}%" if ne_now else "—",
         _pct_delta(ne_now, ne_prev),
         interp, col,

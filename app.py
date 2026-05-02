@@ -24,6 +24,7 @@ with st.sidebar:
     st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
     st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
+    st.page_link("pages/4_Data.py", label="📈 Economic Data", use_container_width=True)
     st.markdown("---")
     if st.button("Log out", use_container_width=True):
         logout()
