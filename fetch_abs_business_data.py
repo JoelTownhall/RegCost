@@ -414,6 +414,124 @@ def parse_wage_share() -> pd.DataFrame:
     return df
 
 
+
+# ════════════════════════════════════════════════════════════════════════════
+# DATASET 1c  --  8165DC04: Survival by Subdivision x Employment Size
+# ════════════════════════════════════════════════════════════════════════════
+
+def parse_dc04_survival_by_size() -> pd.DataFrame:
+    """
+    Parse 8165DC04.xlsx Table 1 -- Survival of Businesses by State by
+    Subdivision by Employment Size, June 2021-2025.
+
+    There are no pre-computed national totals by subdivision in this file,
+    so we aggregate state rows ourselves: sum cohort and survived counts,
+    then compute rates.
+
+    Column layout (0-indexed):
+      0   State label
+      1   Subdivision code (int, no leading zero)
+      2   Subdivision name
+      3-8  June 2021 cohort: Non-Emp, 1-4, 5-19, 20-199, 200+, Total
+      Per year block (12 cols each, starts at 9 / 21 / 33 / 45):
+        offset 0-1   Non-Employing count + rate
+        offset 2-3   1-4 Employees count + rate
+        offset 4-5   5-19 Employees count + rate
+        offset 6-7   20-199 Employees count + rate
+        offset 8-9   200+ Employees count + rate
+        offset 10-11 Total count + rate
+    """
+    log.info("  Parsing DC04 (survival by subdivision x employment size, 2021-2025) ...")
+    import openpyxl as _xl
+
+    path = DATA_DIR / "8165DC04.xlsx"
+    if not path.exists():
+        log.warning(f"  {path} not found -- skipping")
+        return pd.DataFrame()
+
+    wb = _xl.load_workbook(str(path), read_only=True, data_only=True)
+    ws = wb["Table 1"]
+
+    SKIP_STATES = {
+        "Total Australia", "Total New South Wales", "Total Victoria",
+        "Total Queensland", "Total South Australia", "Total Western Australia ",
+        "Total Tasmania", "Total Northern Territory",
+        "Total Australian Capital Territory",
+        "Total Other Territories/Currently Unknown",
+    }
+    SKIP_PREFIXES = ("(a)", "(b)", "\xa0", "\u00a0", "©")
+
+    # Cohort columns (0-indexed): 3=NonEmp 4=1-4 5=5-19 6=20-199 7=200+ 8=Total
+    COHORT = {"non_employing": 3, "emp_1_4": 4, "emp_5_19": 5,
+              "emp_20_199": 6, "emp_200plus": 7, "total": 8}
+    # Year blocks start at these column offsets; within each block count col = offset+{0,2,4,6,8,10}
+    YEAR_STARTS = {1: 9, 2: 21, 3: 33, 4: 45}
+    BAND_OFFSETS = {"non_employing": 0, "emp_1_4": 2, "emp_5_19": 4,
+                    "emp_20_199": 6, "emp_200plus": 8, "total": 10}
+
+    raw_rows = []
+    for row in ws.iter_rows(min_row=8, values_only=True):
+        state = row[0]
+        code  = row[1]
+        name  = row[2]
+        if not isinstance(state, str):
+            continue
+        if state.strip() in SKIP_STATES:
+            continue
+        if any(state.strip().startswith(p) for p in SKIP_PREFIXES):
+            continue
+        if not isinstance(code, (int, float)) or code is None:
+            continue
+
+        r = {}
+        for band, cidx in COHORT.items():
+            r[f"cohort_{band}"] = to_float(row[cidx]) or 0.0
+        for yr, start in YEAR_STARTS.items():
+            for band, off in BAND_OFFSETS.items():
+                r[f"surv_{band}_yr{yr}"] = to_float(row[start + off]) or 0.0
+        r["code"] = int(code)
+        r["name"] = str(name).strip()
+        raw_rows.append(r)
+
+    wb.close()
+
+    if not raw_rows:
+        log.warning("  DC04: no rows parsed")
+        return pd.DataFrame()
+
+    df_raw = pd.DataFrame(raw_rows)
+    # Sum counts across states for each subdivision
+    agg = df_raw.groupby(["code", "name"]).sum(numeric_only=True).reset_index()
+
+    # Build long-format output: one row per subdivision x size band
+    bands = ["non_employing", "emp_1_4", "emp_5_19", "emp_20_199", "emp_200plus", "total"]
+    out_rows = []
+    for _, r in agg.iterrows():
+        cohort = r[f"cohort_total"]
+        if cohort < 10:
+            continue
+        for band in bands:
+            coh_band = r[f"cohort_{band}"]
+            if coh_band < 1:
+                continue
+            row_out = {
+                "subdivision_code": str(int(r["code"])).zfill(2),
+                "subdivision_name": r["name"],
+                "emp_size_band":    band,
+                "cohort_2021":      int(coh_band),
+            }
+            for yr in [1, 2, 3, 4]:
+                surv_count = r[f"surv_{band}_yr{yr}"]
+                row_out[f"surv_rate_{yr}yr"] = round(surv_count / coh_band * 100, 1) if coh_band > 0 else None
+            row_out["data_source"] = "ABS 8165.0 DC04 Table 1"
+            out_rows.append(row_out)
+
+    df = pd.DataFrame(out_rows)
+    log.info(f"    {len(df)} rows | {df['subdivision_code'].nunique()} subdivisions x {df['emp_size_band'].nunique()} size bands")
+    save_checkpoint(df, "check_05_dc04_survival_by_size.csv",
+                    "Subdivision survival by employment size from 8165DC04")
+    return df
+
 # ════════════════════════════════════════════════════════════════════════════
 # MAIN
 # ════════════════════════════════════════════════════════════════════════════
@@ -423,17 +541,20 @@ def main():
     log.info(f"Output: {OUTPUT_DIR}  |  Checkpoints: {CHECKS_DIR}")
     log.info("")
 
-    log.info("Step 1 of 4: Division entry/exit counts (DC01 Table 1) ...")
+    log.info("Step 1 of 5: Division entry/exit counts (DC01 Table 1) ...")
     df_div_counts   = parse_dc01_counts()
 
-    log.info("Step 2 of 4: Division survival rates (DC01 Table 2) ...")
+    log.info("Step 2 of 5: Division survival rates (DC01 Table 2) ...")
     df_div_survival = parse_dc01_survival()
 
-    log.info("Step 3 of 4: ANZSIC class counts + employment size (DC02) ...")
+    log.info("Step 3 of 5: ANZSIC class counts + employment size (DC02) ...")
     df_class        = parse_dc02_class_counts()
 
-    log.info("Step 4 of 4: Wage share (DO001) ...")
+    log.info("Step 4 of 5: Wage share (DO001) ...")
     df_ws           = parse_wage_share()
+
+    log.info("Step 5 of 5: Subdivision survival by employment size (DC04) ...")
+    df_subdiv_surv  = parse_dc04_survival_by_size()
 
     # ── Save output CSVs ─────────────────────────────────────────────────────
     log.info("")
@@ -456,6 +577,7 @@ def main():
             "emp_20_199", "emp_200plus", "total_businesses", "data_source"
         ]],
         "abs_wage_share.csv":        df_ws,
+        "abs_subdivision_survival.csv": df_subdiv_surv,
     }
 
     for fname, df in outputs.items():

@@ -1,0 +1,511 @@
+subdivision_code,subdivision_name,emp_size_band,cohort_2021,surv_rate_1yr,surv_rate_2yr,surv_rate_3yr,surv_rate_4yr,data_source
+01,Agriculture,non_employing,107549,91.5,84.4,78.2,73.0,ABS 8165.0 DC04 Table 1
+01,Agriculture,emp_1_4,30282,96.0,91.9,88.0,84.2,ABS 8165.0 DC04 Table 1
+01,Agriculture,emp_5_19,8828,97.5,94.1,90.9,87.9,ABS 8165.0 DC04 Table 1
+01,Agriculture,emp_20_199,1473,98.4,95.0,92.3,89.5,ABS 8165.0 DC04 Table 1
+01,Agriculture,emp_200plus,68,100.0,95.6,92.6,89.7,ABS 8165.0 DC04 Table 1
+01,Agriculture,total,148198,92.9,86.6,81.1,76.3,ABS 8165.0 DC04 Table 1
+02,Aquaculture,non_employing,617,87.5,76.3,67.9,64.3,ABS 8165.0 DC04 Table 1
+02,Aquaculture,emp_1_4,286,94.4,88.1,82.9,79.0,ABS 8165.0 DC04 Table 1
+02,Aquaculture,emp_5_19,120,96.7,90.8,84.2,81.7,ABS 8165.0 DC04 Table 1
+02,Aquaculture,emp_20_199,39,97.4,94.9,82.1,79.5,ABS 8165.0 DC04 Table 1
+02,Aquaculture,emp_200plus,6,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+02,Aquaculture,total,1070,90.8,82.0,74.5,70.9,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,non_employing,2620,82.1,69.4,59.9,52.6,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,emp_1_4,639,92.0,82.8,74.5,67.9,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,emp_5_19,217,94.5,92.2,89.9,86.6,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,emp_20_199,89,95.5,95.5,93.3,86.5,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,emp_200plus,3,100.0,100.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+03,Forestry and Logging,total,3570,85.1,73.9,65.3,58.4,ABS 8165.0 DC04 Table 1
+04,"Fishing, Hunting and Trapping",non_employing,3631,88.7,80.0,72.1,66.2,ABS 8165.0 DC04 Table 1
+04,"Fishing, Hunting and Trapping",emp_1_4,1285,94.9,88.8,83.9,79.5,ABS 8165.0 DC04 Table 1
+04,"Fishing, Hunting and Trapping",emp_5_19,228,96.9,93.9,88.2,82.0,ABS 8165.0 DC04 Table 1
+04,"Fishing, Hunting and Trapping",emp_20_199,40,100.0,100.0,97.5,95.0,ABS 8165.0 DC04 Table 1
+04,"Fishing, Hunting and Trapping",total,5184,90.6,83.0,76.0,70.4,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",non_employing,9671,86.0,75.4,67.1,60.4,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",emp_1_4,3617,92.6,85.9,80.3,75.4,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",emp_5_19,1222,93.5,87.9,82.4,77.6,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",emp_20_199,519,94.0,87.5,79.8,74.0,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",emp_200plus,9,66.7,66.7,66.7,66.7,ABS 8165.0 DC04 Table 1
+05,"Agriculture, Forestry and Fishing Support Services",total,15036,88.5,79.4,72.0,65.9,ABS 8165.0 DC04 Table 1
+06,Coal Mining,non_employing,130,80.0,64.6,56.2,50.0,ABS 8165.0 DC04 Table 1
+06,Coal Mining,emp_1_4,94,83.0,76.6,70.2,68.1,ABS 8165.0 DC04 Table 1
+06,Coal Mining,emp_5_19,33,97.0,87.9,87.9,78.8,ABS 8165.0 DC04 Table 1
+06,Coal Mining,emp_20_199,21,81.0,81.0,81.0,81.0,ABS 8165.0 DC04 Table 1
+06,Coal Mining,emp_200plus,42,97.6,97.6,88.1,85.7,ABS 8165.0 DC04 Table 1
+06,Coal Mining,total,314,86.3,79.0,74.2,69.4,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,non_employing,170,85.3,71.8,64.1,56.5,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,emp_1_4,84,88.1,82.1,76.2,69.0,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,emp_5_19,26,96.2,80.8,76.9,73.1,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,emp_20_199,36,80.6,69.4,61.1,52.8,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,emp_200plus,16,81.2,75.0,56.2,56.2,ABS 8165.0 DC04 Table 1
+07,Oil and Gas Extraction,total,318,91.2,81.4,75.2,67.9,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,non_employing,594,87.2,77.6,69.9,64.1,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,emp_1_4,205,94.6,88.3,83.9,80.5,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,emp_5_19,108,93.5,90.7,89.8,87.0,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,emp_20_199,56,100.0,92.9,87.5,78.6,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,emp_200plus,63,96.8,95.2,90.5,87.3,ABS 8165.0 DC04 Table 1
+08,Metal Ore Mining,total,1034,90.6,82.7,77.0,72.1,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,non_employing,1016,88.1,79.0,72.6,67.4,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,emp_1_4,458,91.7,84.7,79.5,75.1,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,emp_5_19,255,97.6,93.7,91.0,89.0,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,emp_20_199,101,97.0,95.0,94.1,91.1,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,emp_200plus,10,40.0,40.0,40.0,40.0,ABS 8165.0 DC04 Table 1
+09,Non-Metallic Mineral Mining and Quarrying,total,1837,91.2,83.8,78.5,74.1,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,non_employing,2596,85.4,74.9,67.6,61.6,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,emp_1_4,1311,91.9,86.6,80.8,75.9,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,emp_5_19,374,96.5,92.8,89.8,87.7,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,emp_20_199,189,97.9,94.7,93.1,90.5,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,emp_200plus,40,92.5,80.0,77.5,72.5,ABS 8165.0 DC04 Table 1
+10,Exploration and Other Mining Support Services,total,4509,88.8,80.7,74.6,69.4,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,non_employing,3572,78.5,64.1,54.7,47.6,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,emp_1_4,3144,87.4,76.0,67.0,59.7,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,emp_5_19,2699,92.7,85.1,78.0,71.1,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,emp_20_199,1232,96.8,92.9,89.2,84.4,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,emp_200plus,136,97.1,91.9,90.4,87.5,ABS 8165.0 DC04 Table 1
+11,Food Product Manufacturing,total,10780,87.0,76.5,68.5,61.8,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,non_employing,1735,86.1,75.4,66.3,58.9,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,emp_1_4,900,93.3,86.1,81.1,76.4,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,emp_5_19,514,96.3,92.4,89.5,84.8,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,emp_20_199,285,99.6,97.2,95.8,93.7,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,emp_200plus,17,100.0,94.1,88.2,88.2,ABS 8165.0 DC04 Table 1
+12,Beverage and Tobacco Product Manufacturing,total,3452,90.7,82.7,76.2,70.5,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",non_employing,3027,82.8,70.0,60.8,52.4,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",emp_1_4,1666,90.8,81.9,74.9,67.8,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",emp_5_19,774,96.9,92.2,87.1,81.8,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",emp_20_199,202,97.0,97.0,94.1,92.1,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",emp_200plus,6,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+13,"Textile, Leather, Clothing and Footwear Manufacturing",total,5675,87.6,77.6,69.8,62.4,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,non_employing,2582,83.9,70.8,61.9,54.8,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,emp_1_4,1949,92.3,83.8,77.0,70.4,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,emp_5_19,1216,97.5,93.6,90.3,85.3,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,emp_20_199,400,97.0,93.0,90.2,86.5,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,emp_200plus,18,83.3,83.3,83.3,83.3,ABS 8165.0 DC04 Table 1
+14,Wood Product Manufacturing,total,6164,90.1,80.9,74.2,67.9,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",non_employing,287,80.8,69.7,57.1,50.9,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",emp_1_4,158,90.5,79.1,74.1,65.8,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",emp_5_19,133,97.0,91.7,86.5,82.0,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",emp_20_199,79,96.2,96.2,92.4,89.9,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",emp_200plus,15,100.0,93.3,93.3,93.3,ABS 8165.0 DC04 Table 1
+15,"Pulp, Paper and Converted Paper Product Manufacturing",total,672,89.0,81.2,73.5,67.9,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),non_employing,2363,84.0,70.2,61.0,54.0,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),emp_1_4,1919,93.3,85.3,77.7,71.3,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),emp_5_19,869,96.7,92.9,88.3,83.3,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),emp_20_199,221,97.7,97.3,95.5,88.2,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),emp_200plus,9,88.9,88.9,88.9,77.8,ABS 8165.0 DC04 Table 1
+16,Printing (including the Reproduction of Recorded Media),total,5382,89.9,80.4,72.8,66.4,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,non_employing,139,77.7,68.3,59.0,53.2,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,emp_1_4,73,93.2,86.3,78.1,68.5,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,emp_5_19,47,93.6,85.1,80.9,78.7,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,emp_20_199,24,100.0,95.8,91.7,91.7,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,emp_200plus,6,50.0,0.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+17,Petroleum and Coal Product Manufacturing,total,296,86.1,78.4,70.3,65.9,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,non_employing,1543,82.3,68.4,57.4,48.8,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,emp_1_4,787,90.3,80.1,72.8,66.7,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,emp_5_19,450,96.0,93.3,90.9,86.4,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,emp_20_199,277,98.6,96.0,93.1,91.0,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,emp_200plus,46,95.7,95.7,93.5,93.5,ABS 8165.0 DC04 Table 1
+18,Basic Chemical and Chemical Product Manufacturing,total,3103,88.2,78.0,70.1,63.5,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,non_employing,1164,84.5,72.9,63.1,56.0,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,emp_1_4,808,90.6,84.5,76.6,69.8,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,emp_5_19,672,97.8,94.6,90.0,86.2,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,emp_20_199,357,99.4,96.1,93.8,91.6,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,emp_200plus,18,100.0,94.4,94.4,94.4,ABS 8165.0 DC04 Table 1
+19,Polymer Product and Rubber Product Manufacturing,total,3020,91.0,83.7,76.7,71.1,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,non_employing,1520,81.8,69.7,60.0,54.3,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,emp_1_4,1140,91.1,83.1,77.2,70.5,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,emp_5_19,719,96.8,91.9,87.8,83.9,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,emp_20_199,248,97.2,94.4,91.1,89.1,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,emp_200plus,27,100.0,100.0,100.0,85.2,ABS 8165.0 DC04 Table 1
+20,Non-Metallic Mineral Product Manufacturing,total,3650,89.0,80.3,73.4,67.9,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,non_employing,682,83.1,73.2,66.4,58.1,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,emp_1_4,488,94.5,85.7,80.3,74.2,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,emp_5_19,420,97.1,93.6,89.3,85.2,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,emp_20_199,204,98.5,96.6,96.6,92.6,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,emp_200plus,28,89.3,89.3,82.1,82.1,ABS 8165.0 DC04 Table 1
+21,Primary Metal and Metal Product Manufacturing,total,1823,91.4,84.4,79.3,73.1,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,non_employing,6329,82.8,70.2,61.4,54.0,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,emp_1_4,5046,91.6,84.7,78.1,71.5,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,emp_5_19,2889,96.3,92.7,88.5,83.6,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,emp_20_199,990,98.2,96.1,94.0,90.6,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,emp_200plus,52,96.2,96.2,94.2,88.5,ABS 8165.0 DC04 Table 1
+22,Fabricated Metal Product Manufacturing,total,15308,89.3,81.0,74.2,67.8,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,non_employing,3002,83.6,71.8,62.5,54.6,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,emp_1_4,1955,90.2,82.6,76.9,70.8,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,emp_5_19,992,97.0,93.3,89.3,85.0,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,emp_20_199,418,95.2,91.9,89.2,88.5,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,emp_200plus,47,93.6,91.5,87.2,83.0,ABS 8165.0 DC04 Table 1
+23,Transport Equipment Manufacturing,total,6413,88.6,80.0,73.0,66.8,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,non_employing,5037,83.7,72.1,63.1,56.7,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,emp_1_4,3598,93.1,86.1,79.8,73.7,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,emp_5_19,2094,97.6,94.0,90.3,86.9,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,emp_20_199,827,98.8,96.1,94.2,91.7,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,emp_200plus,58,96.6,89.7,87.9,86.2,ABS 8165.0 DC04 Table 1
+24,Machinery and Equipment Manufacturing,total,11610,90.2,82.2,75.6,70.1,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,non_employing,4328,84.8,72.6,63.4,55.8,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,emp_1_4,2653,92.3,84.6,78.1,71.2,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,emp_5_19,1209,96.4,91.7,88.1,82.6,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,emp_20_199,253,97.2,95.3,91.3,88.5,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,emp_200plus,3,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+25,Furniture and Other Manufacturing,total,8446,89.3,79.8,72.4,65.6,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,non_employing,1194,85.1,76.4,69.0,64.7,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,emp_1_4,294,92.5,85.7,81.3,74.8,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,emp_5_19,95,93.7,87.4,82.1,80.0,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,emp_20_199,77,93.5,92.2,90.9,90.9,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,emp_200plus,36,91.7,91.7,83.3,83.3,ABS 8165.0 DC04 Table 1
+26,Electricity Supply,total,1703,87.6,79.9,73.6,69.3,ABS 8165.0 DC04 Table 1
+27,Gas Supply,non_employing,114,89.5,76.3,68.4,61.4,ABS 8165.0 DC04 Table 1
+27,Gas Supply,emp_1_4,48,95.8,91.7,89.6,81.2,ABS 8165.0 DC04 Table 1
+27,Gas Supply,emp_5_19,21,100.0,100.0,95.2,95.2,ABS 8165.0 DC04 Table 1
+27,Gas Supply,emp_20_199,9,66.7,66.7,66.7,33.3,ABS 8165.0 DC04 Table 1
+27,Gas Supply,emp_200plus,6,100.0,50.0,50.0,50.0,ABS 8165.0 DC04 Table 1
+27,Gas Supply,total,196,92.3,85.2,81.1,75.0,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",non_employing,470,88.9,81.1,74.7,70.4,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",emp_1_4,185,95.7,90.3,84.9,76.2,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",emp_5_19,95,95.8,90.5,89.5,86.3,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",emp_20_199,49,91.8,91.8,85.7,85.7,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",emp_200plus,22,63.6,63.6,50.0,50.0,ABS 8165.0 DC04 Table 1
+28,"Water Supply, Sewerage and Drainage Services",total,816,91.5,85.4,80.4,75.6,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",non_employing,2299,82.3,69.9,60.8,53.1,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",emp_1_4,1897,89.9,80.7,73.9,67.9,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",emp_5_19,801,95.1,90.9,86.1,82.1,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",emp_20_199,216,96.3,94.0,90.7,84.7,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",emp_200plus,18,100.0,83.3,77.8,77.8,ABS 8165.0 DC04 Table 1
+29,"Waste Collection, Treatment and Disposal Services",total,5232,87.7,78.2,70.9,64.4,ABS 8165.0 DC04 Table 1
+30,Building Construction,non_employing,59142,80.5,66.0,56.5,49.2,ABS 8165.0 DC04 Table 1
+30,Building Construction,emp_1_4,30618,90.8,82.9,76.3,70.6,ABS 8165.0 DC04 Table 1
+30,Building Construction,emp_5_19,5530,97.0,93.6,89.6,85.8,ABS 8165.0 DC04 Table 1
+30,Building Construction,emp_20_199,1016,97.6,95.6,92.3,90.4,ABS 8165.0 DC04 Table 1
+30,Building Construction,emp_200plus,51,90.2,90.2,86.3,82.4,ABS 8165.0 DC04 Table 1
+30,Building Construction,total,96355,84.9,73.3,65.1,58.6,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,non_employing,4439,81.7,69.5,61.6,54.8,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,emp_1_4,3623,90.9,82.3,76.0,69.4,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,emp_5_19,1342,97.6,93.6,91.0,87.6,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,emp_20_199,561,97.3,94.5,91.6,87.5,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,emp_200plus,70,94.3,90.0,80.0,80.0,ABS 8165.0 DC04 Table 1
+31,Heavy and Civil Engineering Construction,total,10031,88.1,79.0,72.6,66.6,ABS 8165.0 DC04 Table 1
+32,Construction Services,non_employing,167937,82.5,69.3,60.0,52.7,ABS 8165.0 DC04 Table 1
+32,Construction Services,emp_1_4,110511,91.3,82.7,75.6,69.5,ABS 8165.0 DC04 Table 1
+32,Construction Services,emp_5_19,21768,96.1,91.9,87.3,83.0,ABS 8165.0 DC04 Table 1
+32,Construction Services,emp_20_199,3961,97.1,94.7,92.3,89.1,ABS 8165.0 DC04 Table 1
+32,Construction Services,emp_200plus,82,95.1,93.9,90.2,89.0,ABS 8165.0 DC04 Table 1
+32,Construction Services,total,304260,86.9,76.1,68.0,61.4,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,non_employing,6948,83.9,72.5,64.4,57.8,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,emp_1_4,4884,90.8,82.9,76.8,71.3,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,emp_5_19,2820,97.1,93.5,90.1,85.8,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,emp_20_199,873,97.5,95.2,93.2,90.3,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,emp_200plus,55,96.4,94.5,94.5,90.9,ABS 8165.0 DC04 Table 1
+33,Basic Material Wholesaling,total,15582,89.3,80.9,74.7,69.0,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,non_employing,6138,81.3,68.4,60.1,53.3,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,emp_1_4,5079,92.0,85.2,79.3,73.7,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,emp_5_19,2780,97.8,94.5,91.3,88.3,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,emp_20_199,1040,98.4,96.3,94.4,93.2,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,emp_200plus,117,97.4,96.6,94.0,94.0,ABS 8165.0 DC04 Table 1
+34,Machinery and Equipment Wholesaling,total,15153,89.2,81.0,74.9,69.6,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,non_employing,2423,81.2,67.9,59.7,53.8,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,emp_1_4,1858,90.1,81.2,73.9,67.5,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,emp_5_19,775,96.3,91.7,85.7,81.5,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,emp_20_199,228,96.9,92.5,90.4,87.3,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,emp_200plus,37,83.8,81.1,81.1,81.1,ABS 8165.0 DC04 Table 1
+35,Motor Vehicle and Motor Vehicle Parts Wholesaling,total,5325,87.2,77.2,70.0,64.3,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",non_employing,5450,80.4,66.8,56.8,50.2,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",emp_1_4,4441,89.9,79.9,71.6,64.5,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",emp_5_19,2170,95.3,90.4,85.1,81.1,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",emp_20_199,816,97.3,94.9,92.5,88.8,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",emp_200plus,41,90.2,87.8,87.8,87.8,ABS 8165.0 DC04 Table 1
+36,"Grocery, Liquor and Tobacco Product Wholesaling",total,12918,87.3,77.1,69.0,62.9,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,non_employing,8823,82.1,69.2,59.8,52.1,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,emp_1_4,6093,91.8,83.5,76.3,70.1,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,emp_5_19,2679,97.2,93.3,89.7,85.6,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,emp_20_199,799,98.4,96.0,94.2,90.9,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,emp_200plus,64,100.0,100.0,95.3,87.5,ABS 8165.0 DC04 Table 1
+37,Other Goods Wholesaling,total,18460,88.3,78.7,71.2,64.7,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,non_employing,7573,75.8,60.4,49.8,41.7,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,emp_1_4,4523,86.0,74.6,66.6,59.3,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,emp_5_19,762,94.9,91.1,86.5,81.4,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,emp_20_199,119,97.5,97.5,92.4,89.9,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,emp_200plus,6,100.0,50.0,50.0,50.0,ABS 8165.0 DC04 Table 1
+38,Commission-Based Wholesaling,total,12985,80.7,67.5,58.3,50.6,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,non_employing,4018,84.9,72.6,63.8,56.6,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,emp_1_4,3934,92.5,84.0,77.5,71.3,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,emp_5_19,2047,96.3,92.2,86.7,81.7,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,emp_20_199,745,97.4,94.4,90.2,86.0,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,emp_200plus,41,90.2,82.9,82.9,73.2,ABS 8165.0 DC04 Table 1
+39,Motor Vehicle and Motor Vehicle Parts Retailing,total,10789,90.7,82.0,75.0,68.8,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,non_employing,1023,78.6,68.4,60.4,55.7,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,emp_1_4,1292,85.1,71.9,63.5,56.8,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,emp_5_19,1348,91.5,84.5,77.4,72.1,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,emp_20_199,164,90.2,84.1,80.5,79.3,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,emp_200plus,10,90.0,90.0,90.0,90.0,ABS 8165.0 DC04 Table 1
+40,Fuel Retailing,total,3836,85.9,76.0,68.5,63.0,ABS 8165.0 DC04 Table 1
+41,Food Retailing,non_employing,7840,79.8,65.6,55.8,48.1,ABS 8165.0 DC04 Table 1
+41,Food Retailing,emp_1_4,10161,87.0,75.3,65.6,58.0,ABS 8165.0 DC04 Table 1
+41,Food Retailing,emp_5_19,5003,93.0,85.3,76.8,69.9,ABS 8165.0 DC04 Table 1
+41,Food Retailing,emp_20_199,1376,96.1,92.4,86.8,82.0,ABS 8165.0 DC04 Table 1
+41,Food Retailing,emp_200plus,50,92.0,92.0,88.0,88.0,ABS 8165.0 DC04 Table 1
+41,Food Retailing,total,24430,86.4,75.2,66.0,58.7,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,non_employing,34236,81.9,67.9,57.0,48.5,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,emp_1_4,32434,91.4,82.2,74.2,66.7,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,emp_5_19,15176,95.0,89.1,83.2,76.4,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,emp_20_199,2795,94.9,90.8,87.2,82.0,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,emp_200plus,217,97.2,94.0,90.3,86.6,ABS 8165.0 DC04 Table 1
+42,Other Store-Based Retailing,total,84857,88.4,78.0,69.4,61.7,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,non_employing,16936,77.8,60.7,47.7,37.9,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,emp_1_4,6769,87.6,75.6,67.1,59.5,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,emp_5_19,1196,92.6,84.7,79.9,74.1,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,emp_20_199,196,94.4,89.8,83.7,79.6,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,emp_200plus,14,100.0,92.9,85.7,85.7,ABS 8165.0 DC04 Table 1
+43,Non-Store Retailing and Retail Commission-Based Buying and/or Selling,total,25113,81.3,66.1,54.8,45.8,ABS 8165.0 DC04 Table 1
+44,Accommodation,non_employing,6338,85.0,73.8,64.8,58.1,ABS 8165.0 DC04 Table 1
+44,Accommodation,emp_1_4,4341,90.7,80.5,72.1,64.6,ABS 8165.0 DC04 Table 1
+44,Accommodation,emp_5_19,2650,93.7,86.9,78.6,71.1,ABS 8165.0 DC04 Table 1
+44,Accommodation,emp_20_199,865,96.6,90.4,86.2,81.4,ABS 8165.0 DC04 Table 1
+44,Accommodation,emp_200plus,68,95.6,86.8,85.3,80.9,ABS 8165.0 DC04 Table 1
+44,Accommodation,total,14263,89.1,79.4,71.0,64.0,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,non_employing,19950,74.2,58.3,48.2,41.5,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,emp_1_4,37609,84.9,70.0,58.6,50.0,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,emp_5_19,27020,90.0,78.7,68.5,59.9,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,emp_20_199,6798,95.7,90.0,83.4,77.9,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,emp_200plus,306,98.4,96.1,92.8,87.9,ABS 8165.0 DC04 Table 1
+45,Food and Beverage Services,total,91684,84.9,71.6,61.2,53.2,ABS 8165.0 DC04 Table 1
+46,Road Transport,non_employing,64099,76.4,61.8,52.6,45.6,ABS 8165.0 DC04 Table 1
+46,Road Transport,emp_1_4,23700,90.3,80.0,72.0,65.4,ABS 8165.0 DC04 Table 1
+46,Road Transport,emp_5_19,4343,96.0,91.1,86.2,81.3,ABS 8165.0 DC04 Table 1
+46,Road Transport,emp_20_199,1252,97.6,95.4,92.0,88.9,ABS 8165.0 DC04 Table 1
+46,Road Transport,emp_200plus,100,95.0,90.0,85.0,83.0,ABS 8165.0 DC04 Table 1
+46,Road Transport,total,93489,81.2,68.2,59.7,52.9,ABS 8165.0 DC04 Table 1
+47,Rail Transport,non_employing,42,73.8,52.4,45.2,42.9,ABS 8165.0 DC04 Table 1
+47,Rail Transport,emp_1_4,15,86.7,40.0,40.0,20.0,ABS 8165.0 DC04 Table 1
+47,Rail Transport,emp_5_19,6,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+47,Rail Transport,emp_20_199,9,100.0,100.0,66.7,66.7,ABS 8165.0 DC04 Table 1
+47,Rail Transport,emp_200plus,11,90.9,63.6,63.6,36.4,ABS 8165.0 DC04 Table 1
+47,Rail Transport,total,92,82.6,69.6,59.8,57.6,ABS 8165.0 DC04 Table 1
+48,Water Transport,non_employing,389,82.5,72.0,64.0,57.6,ABS 8165.0 DC04 Table 1
+48,Water Transport,emp_1_4,178,90.4,83.7,76.4,70.2,ABS 8165.0 DC04 Table 1
+48,Water Transport,emp_5_19,58,98.3,93.1,93.1,84.5,ABS 8165.0 DC04 Table 1
+48,Water Transport,emp_20_199,35,91.4,91.4,88.6,88.6,ABS 8165.0 DC04 Table 1
+48,Water Transport,emp_200plus,15,60.0,60.0,60.0,60.0,ABS 8165.0 DC04 Table 1
+48,Water Transport,total,676,87.3,78.7,72.0,65.8,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,non_employing,857,85.5,74.6,65.7,60.0,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,emp_1_4,316,88.0,81.0,75.3,71.2,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,emp_5_19,148,93.2,91.2,88.5,84.5,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,emp_20_199,63,100.0,96.8,95.2,95.2,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,emp_200plus,17,58.8,58.8,41.2,41.2,ABS 8165.0 DC04 Table 1
+49,Air and Space Transport,total,1396,88.0,79.4,72.1,67.2,ABS 8165.0 DC04 Table 1
+50,Other Transport,non_employing,2098,84.2,72.7,63.0,55.1,ABS 8165.0 DC04 Table 1
+50,Other Transport,emp_1_4,1121,92.8,83.5,77.2,69.9,ABS 8165.0 DC04 Table 1
+50,Other Transport,emp_5_19,315,97.1,89.8,84.8,77.1,ABS 8165.0 DC04 Table 1
+50,Other Transport,emp_20_199,109,93.6,91.7,91.7,89.0,ABS 8165.0 DC04 Table 1
+50,Other Transport,emp_200plus,3,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+50,Other Transport,total,3645,88.4,78.2,70.2,62.8,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,non_employing,23387,72.1,52.1,40.5,32.4,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,emp_1_4,7993,87.8,75.4,66.2,59.1,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,emp_5_19,912,92.8,84.4,77.9,71.9,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,emp_20_199,210,98.1,92.9,88.1,81.4,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,emp_200plus,10,100.0,100.0,90.0,90.0,ABS 8165.0 DC04 Table 1
+51,Postal and Courier Pick-up and Delivery Services,total,32513,76.7,59.0,48.2,40.4,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,non_employing,59242,73.9,58.0,49.2,42.1,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,emp_1_4,2803,91.6,82.6,75.7,68.1,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,emp_5_19,641,95.3,90.6,87.4,84.1,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,emp_20_199,292,97.3,95.2,92.5,90.1,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,emp_200plus,66,97.0,97.0,90.9,89.4,ABS 8165.0 DC04 Table 1
+52,Transport Support Services,total,63046,75.1,59.6,51.0,44.0,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,non_employing,1152,88.1,77.3,70.2,65.3,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,emp_1_4,498,90.6,83.3,77.3,72.5,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,emp_5_19,219,95.9,92.7,85.8,82.6,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,emp_20_199,105,91.4,87.6,83.8,81.0,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,emp_200plus,15,100.0,100.0,100.0,100.0,ABS 8165.0 DC04 Table 1
+53,Warehousing and Storage Services,total,1988,90.0,81.3,74.8,70.3,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),non_employing,1934,82.9,70.6,59.5,52.8,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),emp_1_4,994,91.9,84.5,78.3,72.6,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),emp_5_19,359,97.8,94.2,88.6,83.6,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),emp_20_199,143,87.4,84.6,81.8,78.3,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),emp_200plus,29,86.2,86.2,86.2,82.8,ABS 8165.0 DC04 Table 1
+54,Publishing (except Internet and Music Publishing),total,3455,87.4,77.9,69.1,63.2,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,non_employing,6440,84.5,71.7,61.6,53.9,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,emp_1_4,3193,92.8,85.3,78.4,72.9,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,emp_5_19,612,95.3,88.1,81.0,75.8,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,emp_20_199,268,92.5,82.5,73.9,69.4,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,emp_200plus,32,93.8,78.1,71.9,68.8,ABS 8165.0 DC04 Table 1
+55,Motion Picture and Sound Recording Activities,total,10543,87.9,77.1,68.2,61.4,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),non_employing,172,84.9,73.8,64.0,54.7,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),emp_1_4,108,88.9,79.6,70.4,65.7,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),emp_5_19,64,93.8,92.2,89.1,84.4,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),emp_20_199,22,100.0,90.9,77.3,77.3,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),emp_200plus,11,90.9,90.9,90.9,90.9,ABS 8165.0 DC04 Table 1
+56,Broadcasting (except Internet),total,381,89.5,80.6,72.7,66.9,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,non_employing,1203,79.9,63.8,54.3,45.7,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,emp_1_4,446,91.0,83.2,76.5,70.6,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,emp_5_19,133,95.5,92.5,89.5,87.2,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,emp_20_199,32,90.6,90.6,87.5,87.5,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,emp_200plus,8,62.5,62.5,62.5,62.5,ABS 8165.0 DC04 Table 1
+57,Internet Publishing and Broadcasting,total,1821,84.0,71.4,63.0,55.6,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,non_employing,1376,78.2,63.4,53.3,46.4,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,emp_1_4,1331,86.6,73.7,64.8,58.5,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,emp_5_19,295,90.8,80.0,72.2,67.8,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,emp_20_199,91,98.9,91.2,90.1,86.8,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,emp_200plus,11,100.0,100.0,100.0,90.9,ABS 8165.0 DC04 Table 1
+58,Telecommunications Services,total,3103,83.7,70.4,61.2,54.9,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",non_employing,2339,77.0,59.5,48.1,40.3,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",emp_1_4,1174,87.8,76.3,69.3,62.5,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",emp_5_19,309,93.2,88.7,85.8,82.2,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",emp_20_199,122,93.4,90.2,83.6,81.1,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",emp_200plus,13,46.2,46.2,46.2,46.2,ABS 8165.0 DC04 Table 1
+59,"Internet Service Providers, Web Search Portals and Data Processing Services",total,3952,82.1,67.8,58.7,51.6,ABS 8165.0 DC04 Table 1
+60,Library and Other Information Services,non_employing,175,81.1,68.0,57.1,55.4,ABS 8165.0 DC04 Table 1
+60,Library and Other Information Services,emp_1_4,76,84.2,75.0,71.1,69.7,ABS 8165.0 DC04 Table 1
+60,Library and Other Information Services,emp_5_19,23,91.3,78.3,73.9,73.9,ABS 8165.0 DC04 Table 1
+60,Library and Other Information Services,emp_20_199,7,85.7,85.7,85.7,85.7,ABS 8165.0 DC04 Table 1
+60,Library and Other Information Services,total,282,83.0,73.0,65.2,63.8,ABS 8165.0 DC04 Table 1
+62,Finance,non_employing,43424,86.7,77.4,70.7,64.8,ABS 8165.0 DC04 Table 1
+62,Finance,emp_1_4,9893,90.9,83.9,78.0,72.6,ABS 8165.0 DC04 Table 1
+62,Finance,emp_5_19,1649,95.3,91.1,87.0,82.4,ABS 8165.0 DC04 Table 1
+62,Finance,emp_20_199,461,96.3,93.3,91.5,87.9,ABS 8165.0 DC04 Table 1
+62,Finance,emp_200plus,69,89.9,88.4,82.6,81.2,ABS 8165.0 DC04 Table 1
+62,Finance,total,55490,87.8,79.1,72.7,66.9,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,non_employing,89,76.4,62.9,46.1,38.2,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,emp_1_4,69,91.3,81.2,76.8,75.4,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,emp_5_19,32,87.5,87.5,87.5,84.4,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,emp_20_199,56,100.0,91.1,83.9,83.9,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,emp_200plus,38,94.7,86.8,84.2,84.2,ABS 8165.0 DC04 Table 1
+63,Insurance and Superannuation Funds,total,286,90.2,83.2,75.9,73.1,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,non_employing,32156,83.9,72.4,64.4,57.8,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,emp_1_4,20846,93.0,85.9,80.1,75.0,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,emp_5_19,3379,96.7,93.3,89.1,85.1,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,emp_20_199,610,97.4,92.6,87.5,85.6,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,emp_200plus,71,93.0,88.7,87.3,87.3,ABS 8165.0 DC04 Table 1
+64,Auxiliary Finance and Insurance Services,total,57061,88.2,78.8,71.9,66.0,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),non_employing,19880,86.6,76.9,68.8,62.5,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),emp_1_4,5793,91.1,82.6,75.6,69.8,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),emp_5_19,1981,95.8,91.0,85.9,82.0,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),emp_20_199,628,97.3,93.6,91.6,88.2,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),emp_200plus,35,100.0,91.4,85.7,80.0,ABS 8165.0 DC04 Table 1
+66,Rental and Hiring Services (except Real Estate),total,28316,88.4,79.4,71.9,65.9,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,non_employing,211723,91.0,83.8,78.2,73.5,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,emp_1_4,24711,92.3,84.8,78.7,73.6,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,emp_5_19,6672,97.0,92.5,88.2,83.2,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,emp_20_199,886,98.1,94.6,91.6,88.3,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,emp_200plus,38,97.4,94.7,92.1,92.1,ABS 8165.0 DC04 Table 1
+67,Property Operators and Real Estate Services,total,244034,91.3,84.2,78.6,73.8,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",non_employing,137802,82.4,69.4,59.9,52.6,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",emp_1_4,94930,92.2,84.4,77.9,72.1,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",emp_5_19,19909,96.9,92.9,88.8,84.6,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",emp_20_199,4792,97.3,94.6,90.7,87.5,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",emp_200plus,248,98.0,95.2,92.3,91.1,ABS 8165.0 DC04 Table 1
+69,"Professional, Scientific and Technical Services (Except Computer System Design and Related Services)",total,257679,87.4,77.2,69.4,62.9,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,non_employing,28335,80.6,66.2,55.9,48.6,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,emp_1_4,23164,91.2,82.5,75.5,69.1,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,emp_5_19,3703,96.6,93.2,90.0,86.5,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,emp_20_199,1188,97.9,94.6,91.6,88.7,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,emp_200plus,65,95.4,92.3,87.7,87.7,ABS 8165.0 DC04 Table 1
+70,Computer System Design and Related Services,total,56457,86.4,75.3,67.0,60.4,ABS 8165.0 DC04 Table 1
+72,Administrative Services,non_employing,25037,76.7,61.1,50.9,43.7,ABS 8165.0 DC04 Table 1
+72,Administrative Services,emp_1_4,17310,89.3,79.0,71.7,65.6,ABS 8165.0 DC04 Table 1
+72,Administrative Services,emp_5_19,6871,93.2,87.1,80.8,75.7,ABS 8165.0 DC04 Table 1
+72,Administrative Services,emp_20_199,3503,94.8,88.5,82.7,77.6,ABS 8165.0 DC04 Table 1
+72,Administrative Services,emp_200plus,522,96.7,93.3,87.7,84.9,ABS 8165.0 DC04 Table 1
+72,Administrative Services,total,53246,84.3,72.4,64.0,57.6,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",non_employing,33365,79.2,63.9,53.5,45.6,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",emp_1_4,15685,88.7,77.1,68.9,61.9,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",emp_5_19,3796,93.0,85.6,78.5,73.3,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",emp_20_199,938,95.3,90.0,86.0,81.8,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",emp_200plus,66,93.9,89.4,86.4,83.3,ABS 8165.0 DC04 Table 1
+73,"Building Cleaning, Pest Control and Other Support Services",total,53849,83.2,69.8,60.4,53.0,ABS 8165.0 DC04 Table 1
+75,Public Administration,non_employing,56,80.4,62.5,57.1,48.2,ABS 8165.0 DC04 Table 1
+75,Public Administration,emp_1_4,19,78.9,68.4,47.4,47.4,ABS 8165.0 DC04 Table 1
+75,Public Administration,emp_5_19,11,45.5,45.5,45.5,45.5,ABS 8165.0 DC04 Table 1
+75,Public Administration,emp_20_199,3,0.0,0.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+75,Public Administration,emp_200plus,3,0.0,0.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+75,Public Administration,total,93,81.7,64.5,55.9,47.3,ABS 8165.0 DC04 Table 1
+76,Defence,non_employing,14,85.7,78.6,57.1,35.7,ABS 8165.0 DC04 Table 1
+76,Defence,emp_1_4,3,0.0,0.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+76,Defence,total,23,60.9,43.5,43.5,43.5,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",non_employing,3313,77.5,62.5,53.1,46.3,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",emp_1_4,2182,86.8,76.9,69.3,63.1,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",emp_5_19,881,92.3,84.4,78.3,71.7,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",emp_20_199,515,93.6,88.2,82.3,75.3,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",emp_200plus,42,92.9,88.1,81.0,71.4,ABS 8165.0 DC04 Table 1
+77,"Public Order, Safety and Regulatory Services",total,6931,83.6,72.0,63.8,57.2,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,non_employing,561,85.0,75.8,69.2,64.0,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,emp_1_4,386,93.8,87.3,80.3,74.1,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,emp_5_19,1078,97.7,95.3,92.3,90.4,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,emp_20_199,749,99.2,98.3,95.3,94.8,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,emp_200plus,148,98.6,98.0,98.0,98.0,ABS 8165.0 DC04 Table 1
+80,Preschool and School Education,total,2920,95.3,91.5,87.5,84.9,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,non_employing,5109,80.7,66.0,55.6,48.8,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,emp_1_4,3575,90.4,81.4,74.5,69.0,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,emp_5_19,964,96.0,91.7,89.1,85.6,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,emp_20_199,402,98.8,96.5,92.8,91.3,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,emp_200plus,41,100.0,97.6,95.1,87.8,ABS 8165.0 DC04 Table 1
+81,Tertiary Education,total,10091,86.4,75.2,67.1,61.3,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",non_employing,12714,81.7,67.4,56.7,48.7,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",emp_1_4,7583,90.8,80.6,73.2,66.3,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",emp_5_19,3101,94.5,87.8,81.1,75.7,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",emp_20_199,838,98.0,93.3,88.5,85.1,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",emp_200plus,22,86.4,54.5,50.0,50.0,ABS 8165.0 DC04 Table 1
+82,"Adult, Community and Other Education",total,24253,86.8,75.1,66.1,59.0,ABS 8165.0 DC04 Table 1
+84,Hospitals,non_employing,660,90.8,81.1,76.4,71.4,ABS 8165.0 DC04 Table 1
+84,Hospitals,emp_1_4,169,91.1,84.6,80.5,76.3,ABS 8165.0 DC04 Table 1
+84,Hospitals,emp_5_19,67,98.5,97.0,94.0,91.0,ABS 8165.0 DC04 Table 1
+84,Hospitals,emp_20_199,84,100.0,97.6,82.1,79.8,ABS 8165.0 DC04 Table 1
+84,Hospitals,emp_200plus,40,100.0,92.5,92.5,87.5,ABS 8165.0 DC04 Table 1
+84,Hospitals,total,1023,93.1,85.1,79.8,75.3,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,non_employing,76946,89.8,81.5,74.9,69.3,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,emp_1_4,42452,94.2,88.0,82.6,77.5,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,emp_5_19,14833,97.0,92.8,88.3,84.0,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,emp_20_199,1375,97.5,94.1,90.3,88.0,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,emp_200plus,105,91.4,89.5,87.6,85.7,ABS 8165.0 DC04 Table 1
+85,Medical and Other Health Care Services,total,135712,92.1,84.9,78.9,73.7,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,non_employing,1035,88.0,79.6,71.9,67.4,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,emp_1_4,432,88.7,81.2,75.5,71.1,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,emp_5_19,417,97.1,94.0,89.2,85.1,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,emp_20_199,661,97.9,95.3,92.9,89.1,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,emp_200plus,183,97.8,95.6,93.4,90.2,ABS 8165.0 DC04 Table 1
+86,Residential Care Services,total,2727,92.6,86.9,81.6,77.5,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,non_employing,11421,77.7,62.1,51.4,44.3,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,emp_1_4,3893,83.7,70.5,63.6,57.7,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,emp_5_19,3137,93.2,86.7,81.4,75.4,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,emp_20_199,2082,97.1,93.0,89.4,86.5,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,emp_200plus,106,92.5,84.9,81.1,78.3,ABS 8165.0 DC04 Table 1
+87,Social Assistance Services,total,20638,83.2,70.7,62.3,56.0,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,non_employing,269,81.8,69.5,62.1,56.5,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,emp_1_4,124,93.5,79.8,69.4,62.9,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,emp_5_19,65,92.3,84.6,78.5,75.4,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,emp_20_199,42,100.0,88.1,81.0,81.0,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,emp_200plus,3,0.0,0.0,0.0,0.0,ABS 8165.0 DC04 Table 1
+89,Heritage Activities,total,508,87.4,76.0,69.9,65.0,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,non_employing,13348,84.8,71.5,61.3,53.7,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,emp_1_4,3039,90.6,82.2,75.5,69.8,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,emp_5_19,472,96.0,89.8,83.7,77.3,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,emp_20_199,154,92.9,87.0,80.5,77.3,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,emp_200plus,6,50.0,50.0,50.0,50.0,ABS 8165.0 DC04 Table 1
+90,Creative and Performing Arts Activities,total,17019,86.3,74.1,64.6,57.5,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,non_employing,5976,82.4,69.8,60.6,53.4,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,emp_1_4,5543,90.3,79.6,70.8,63.1,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,emp_5_19,2634,93.3,84.6,76.8,70.8,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,emp_20_199,719,96.0,91.1,88.2,85.4,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,emp_200plus,73,90.4,90.4,84.9,84.9,ABS 8165.0 DC04 Table 1
+91,Sports and Recreation Activities,total,14945,88.0,77.2,68.7,61.8,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,non_employing,449,82.0,69.9,59.5,54.8,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,emp_1_4,624,86.7,72.3,60.7,52.6,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,emp_5_19,172,92.4,81.4,76.2,66.9,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,emp_20_199,26,100.0,76.9,73.1,73.1,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,emp_200plus,16,100.0,100.0,62.5,62.5,ABS 8165.0 DC04 Table 1
+92,Gambling Activities,total,1286,86.3,73.5,64.1,56.9,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,non_employing,27685,84.4,72.3,63.6,56.5,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,emp_1_4,26533,92.3,84.0,77.1,71.2,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,emp_5_19,7161,96.0,91.5,87.0,82.5,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,emp_20_199,728,97.1,93.4,90.5,86.4,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,emp_200plus,30,83.3,80.0,80.0,80.0,ABS 8165.0 DC04 Table 1
+94,Repair and Maintenance,total,62136,89.3,79.8,72.4,66.2,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,non_employing,22620,80.1,64.0,53.7,45.9,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,emp_1_4,23152,89.3,77.6,68.5,61.0,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,emp_5_19,5776,93.6,84.7,76.2,68.2,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,emp_20_199,544,95.4,91.0,86.2,79.0,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,emp_200plus,21,100.0,95.2,95.2,95.2,ABS 8165.0 DC04 Table 1
+95,Personal and Other Services,total,52116,85.8,72.6,63.1,55.4,ABS 8165.0 DC04 Table 1
+99,Currently Unknown,non_employing,1960,79.4,64.6,52.5,48.1,ABS 8165.0 DC04 Table 1
+99,Currently Unknown,emp_1_4,169,72.2,47.9,36.1,33.1,ABS 8165.0 DC04 Table 1
+99,Currently Unknown,emp_5_19,42,76.2,66.7,59.5,40.5,ABS 8165.0 DC04 Table 1
+99,Currently Unknown,emp_20_199,13,46.2,23.1,23.1,23.1,ABS 8165.0 DC04 Table 1
+99,Currently Unknown,total,2179,79.1,63.6,51.9,47.5,ABS 8165.0 DC04 Table 1
