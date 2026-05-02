@@ -38,18 +38,25 @@ def load_all() -> dict:
 
     dc = read("abs_division_counts.csv")
     ds = read("abs_division_survival.csv")
-    bc = read("abs_business_counts.csv")
-    ed = read("abs_employment_dist.csv")
+    _code_dtypes = {"anzsic_class_code": str, "anzsic_group_code": str}
+    bc = (pd.read_csv(DATA_DIR / "abs_business_counts.csv", dtype=_code_dtypes)
+          if (DATA_DIR / "abs_business_counts.csv").exists() else pd.DataFrame())
+    ed = (pd.read_csv(DATA_DIR / "abs_employment_dist.csv", dtype=_code_dtypes)
+          if (DATA_DIR / "abs_employment_dist.csv").exists() else pd.DataFrame())
     ws = read("abs_wage_share.csv")
 
+    # Normalise subdivision codes to zero-padded 2-digit strings throughout
     subdiv_to_div: dict = {}
     if not ws.empty:
+        ws["subdivision_code"] = ws["subdivision_code"].apply(
+            lambda x: str(int(float(x))).zfill(2) if pd.notna(x) else x
+        )
         for _, r in ws[["subdivision_code","division"]].drop_duplicates().iterrows():
-            subdiv_to_div[r["subdivision_code"]] = r["division"]
+            subdiv_to_div[str(r["subdivision_code"])] = r["division"]
 
     for df in [bc, ed]:
         if not df.empty:
-            df["subdivision_code"] = df["anzsic_group_code"].str[:2]
+            df["subdivision_code"] = df["anzsic_group_code"].astype(str).str[:2]
             df["division"] = df["subdivision_code"].map(subdiv_to_div)
 
     return dict(div_counts=dc, div_survival=ds, biz_counts=bc,
