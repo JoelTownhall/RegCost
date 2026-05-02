@@ -23,6 +23,17 @@ st.set_page_config(
 )
 check_auth()
 
+# --- Sidebar nav ---
+with st.sidebar:
+    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
+    st.markdown("---")
+    st.page_link("app.py", label="🏠 Home", use_container_width=True)
+    st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
+    st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
+    st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
+    st.page_link("pages/4_Data.py", label="📈 Economic Data", use_container_width=True)
+    st.markdown("---")
+
 DATA_DIR = Path(__file__).parent.parent / "output"
 
 
@@ -59,8 +70,12 @@ def load_all() -> dict:
             df["subdivision_code"] = df["anzsic_group_code"].astype(str).str[:2]
             df["division"] = df["subdivision_code"].map(subdiv_to_div)
 
+    ss = (pd.read_csv(DATA_DIR / "abs_subdivision_survival.csv", dtype={"subdivision_code": str})
+          if (DATA_DIR / "abs_subdivision_survival.csv").exists() else pd.DataFrame())
+
     return dict(div_counts=dc, div_survival=ds, biz_counts=bc,
-                emp_dist=ed, wage_share=ws, subdiv_to_div=subdiv_to_div)
+                emp_dist=ed, wage_share=ws, subdiv_to_div=subdiv_to_div,
+                subdiv_survival=ss)
 
 
 def build_options(dfs: dict, level: int) -> list:
@@ -118,7 +133,18 @@ def filter_dfs(dfs: dict, level: int, codes: list) -> dict:
         ws = ws[ws["subdivision_code"].isin(psubs)]
         bc = bc[bc["anzsic_group_code"].isin(codes)]
         ed = ed[ed["anzsic_group_code"].isin(codes)]
-    return dict(div_counts=dc, div_survival=ds, biz_counts=bc, emp_dist=ed, wage_share=ws)
+    ss = dfs.get("subdiv_survival", pd.DataFrame())
+    if not ss.empty:
+        if level == 1:
+            pdivs_ss = set(codes)
+            ss = ss[ss["subdivision_code"].str[:2].isin(
+                [k for k,v in s2d.items() if v in pdivs_ss])] if codes else ss
+        elif level == 2:
+            ss = ss[ss["subdivision_code"].isin(codes)]
+        else:
+            psubs = {c[:2] for c in codes}
+            ss = ss[ss["subdivision_code"].isin(psubs)]
+    return dict(div_counts=dc, div_survival=ds, biz_counts=bc, emp_dist=ed, wage_share=ws, subdiv_survival=ss)
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -287,6 +313,7 @@ ds = filt["div_survival"]
 bc = filt["biz_counts"]
 ed = filt["emp_dist"]
 ws = filt["wage_share"]
+ss = filt.get("subdiv_survival", pd.DataFrame())
 
 # ── Availability note for sub-division selections ────────────────────────────
 if level_choice > 1:
@@ -504,6 +531,8 @@ with tab_counts:
                           labels={"op_end":"Businesses at year-end","year":"Year","division":""})
             fig.update_layout(legend=dict(orientation="h", y=-0.3, font_size=10))
         fig.update_layout(yaxis_tickformat=",", height=380)
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         st.plotly_chart(fig, use_container_width=True)
         st.caption("ABS 8165.0 DC01 — division level, 2022–2025")
     elif not bc.empty:
@@ -512,6 +541,8 @@ with tab_counts:
                      labels={"total_businesses":"Businesses","year":"Year"},
                      color_discrete_sequence=["#4C72B0"])
         fig.update_layout(yaxis_tickformat=",", height=380)
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         st.plotly_chart(fig, use_container_width=True)
         st.caption("ABS 8165.0 DC02 — class level, 2024 & 2025 only")
     else:
@@ -545,6 +576,8 @@ with tab_entry:
                     color_discrete_map={"entry_rate":"#2ca02c","exit_rate":"#d62728"},
                 )
             fig.update_layout(height=360, title="Entry & Exit Rates Over Time")
+            fig.update_xaxes(fixedrange=True)
+            fig.update_yaxes(fixedrange=True)
             st.plotly_chart(fig, use_container_width=True)
         with col_b:
             # Latest year: entry vs exit scatter by division
@@ -559,6 +592,8 @@ with tab_entry:
                            line=dict(dash="dot", color="grey"))
             fig2.update_traces(textposition="top center", textfont_size=8)
             fig2.update_layout(height=360)
+            fig2.update_xaxes(fixedrange=True)
+            fig2.update_yaxes(fixedrange=True)
             st.plotly_chart(fig2, use_container_width=True)
         if level_choice > 1:
             st.caption("⚠️ Entry/exit rates shown at parent division level.")
@@ -582,6 +617,8 @@ with tab_size:
                          color_discrete_sequence=px.colors.sequential.Blues[::-1][1:], hole=0.38)
             fig.update_traces(textposition="inside", textinfo="percent+label")
             fig.update_layout(showlegend=False, height=340, title=f"Size mix — June {int(sel_yr)}")
+            fig.update_xaxes(fixedrange=True)
+            fig.update_yaxes(fixedrange=True)
             st.plotly_chart(fig, use_container_width=True)
         with col_b:
             # Stacked bar comparing both years
@@ -595,6 +632,8 @@ with tab_size:
                           title="Size structure over time",
                           color_discrete_sequence=px.colors.sequential.Blues[1:])
             fig2.update_layout(yaxis_tickformat=",", height=340, legend_title="")
+            fig2.update_xaxes(fixedrange=True)
+            fig2.update_yaxes(fixedrange=True)
             st.plotly_chart(fig2, use_container_width=True)
         st.caption("ABS 8165.0 DC02 — class level")
     else:
@@ -603,9 +642,51 @@ with tab_size:
 # ── Survival ──────────────────────────────────────────────────────────────────
 with tab_surv:
     surv_rate_cols = ["surv_rate_1yr","surv_rate_2yr","surv_rate_3yr","surv_rate_4yr"]
-    if not ds.empty and all(c in ds.columns for c in surv_rate_cols):
+    _surv_view = st.radio("View", ["Subdivision detail", "Large vs Average"],
+                          horizontal=True, key="surv_view", label_visibility="collapsed")
+
+    if _surv_view == "Large vs Average" and not ss.empty:
+        # Compare 200+ survival vs all-firm total at subdivision level
+        _ss_tot   = ss[ss["emp_size_band"] == "total"][["subdivision_code","subdivision_name","surv_rate_4yr"]].rename(columns={"surv_rate_4yr":"All firms"})
+        _ss_large = ss[ss["emp_size_band"] == "emp_200plus"][["subdivision_code","surv_rate_4yr"]].rename(columns={"surv_rate_4yr":"200+ employees"})
+        _df_cmp   = _ss_tot.merge(_ss_large, on="subdivision_code", how="left").dropna(subset=["All firms"])
+        _df_cmp   = _df_cmp.sort_values("All firms").tail(30)
+        _df_melt  = _df_cmp.melt(id_vars="subdivision_name", value_vars=["All firms","200+ employees"],
+                                  var_name="Firm type", value_name="4-yr survival %")
+        fig = px.bar(_df_melt, x="4-yr survival %", y="subdivision_name", color="Firm type",
+                     barmode="group", orientation="h",
+                     labels={"subdivision_name":""},
+                     color_discrete_map={"All firms":"#4C72B0","200+ employees":"#DD8452"},
+                     height=max(350, len(_df_cmp)*28))
+        fig.update_layout(yaxis=dict(tickfont_size=10), legend_title="", margin=dict(l=5))
+        fig.update_xaxes(fixedrange=True, range=[0,100])
+        fig.update_yaxes(fixedrange=True)
+        st.plotly_chart(fig, use_container_width=True)
+        st.caption("ABS 8165.0 DC04 Table 1 — June 2021 cohort, survived to June 2025 (national)")
+
+    elif not ss.empty and "surv_rate_1yr" in ss.columns:
+        # Subdivision-level survival curves (total band), all 4 years
+        _ss_tot = ss[ss["emp_size_band"] == "total"].copy()
+        _cols   = ["surv_rate_1yr","surv_rate_2yr","surv_rate_3yr","surv_rate_4yr"]
+        _df_sm  = _ss_tot.melt(id_vars=["subdivision_code","subdivision_name"],
+                               value_vars=_cols, var_name="period", value_name="survival_pct")
+        _df_sm["years"] = _df_sm["period"].str.extract(r"(\d+)yr").astype(int)
+        n_subs = _ss_tot["subdivision_name"].nunique()
+        color_col = "subdivision_name" if n_subs <= 12 else "subdivision_code"
+        fig = px.line(_df_sm.sort_values([color_col,"years"]),
+                      x="years", y="survival_pct", color=color_col, markers=True,
+                      labels={"years":"Years since June 2021","survival_pct":"% surviving", color_col:""})
+        fig.update_layout(xaxis=dict(tickvals=[1,2,3,4]), yaxis_range=[0,100], height=420,
+                          legend=dict(orientation="h", y=-0.3, font_size=9))
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
+        st.plotly_chart(fig, use_container_width=True)
+        st.caption("ABS 8165.0 DC04 Table 1 — subdivision level, June 2021 cohort (national aggregate)")
+
+    elif not ds.empty and all(c in ds.columns for c in surv_rate_cols):
+        # Fallback: division-level from DC01
         if level_choice > 1:
-            st.caption("⚠️ Survival is published at Division level — showing parent division(s).")
+            st.caption("Subdivision survival not available for this selection; showing parent division(s).")
         df_sm = ds.melt(id_vars=["division"], value_vars=surv_rate_cols,
                         var_name="period", value_name="survival_pct")
         df_sm["years"] = df_sm["period"].str.extract(r"(\d+)yr").astype(int)
@@ -617,12 +698,13 @@ with tab_surv:
         else:
             fig = px.line(df_sm.sort_values(["division","years"]),
                           x="years", y="survival_pct", color="division", markers=True,
-                          labels={"years":"Years since June 2021","survival_pct":"% surviving",
-                                  "division":""})
+                          labels={"years":"Years since June 2021","survival_pct":"% surviving","division":""})
             fig.update_layout(legend=dict(orientation="h", y=-0.25, font_size=10))
         fig.update_layout(xaxis=dict(tickvals=[1,2,3,4]), yaxis_range=[0,100], height=400)
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         st.plotly_chart(fig, use_container_width=True)
-        st.caption("ABS 8165.0 DC01 Table 2 - cohort of businesses operating June 2021, tracked to June 2025")
+        st.caption("ABS 8165.0 DC01 Table 2 - June 2021 cohort, division level")
     else:
         st.info("No survival data for this selection.")
 
@@ -644,6 +726,8 @@ with tab_ls:
         fig.add_hline(y=50, line_dash="dot", line_color="lightgrey", annotation_text="50%")
         fig.update_layout(yaxis_range=[0,100], height=420, legend_title="",
                           legend=dict(orientation="h", y=-0.3, font_size=10))
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         st.plotly_chart(fig, use_container_width=True)
         note = "subdivision" if n_subs <= 12 else "division (averaged)"
         lvl_note = " -- parent subdivision shown" if level_choice == 3 else ""
