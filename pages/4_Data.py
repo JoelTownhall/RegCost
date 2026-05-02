@@ -615,4 +615,38 @@ with tab_surv:
             fig.update_layout(legend=dict(orientation="h", y=-0.25, font_size=10))
         fig.update_layout(xaxis=dict(tickvals=[1,2,3,4]), yaxis_range=[0,100], height=400)
         st.plotly_chart(fig, use_container_width=True)
-        st.caption("ABS 8165.0 DC01 Table 2 — cohort of businesses operating June 2021, trac
+        st.caption("ABS 8165.0 DC01 Table 2 - cohort of businesses operating June 2021, tracked to June 2025")
+    else:
+        st.info("No survival data for this selection.")
+
+# Labour Share tab
+with tab_ls:
+    if not ws.empty and "labour_share_pct" in ws.columns:
+        n_subs = ws["subdivision_name"].nunique()
+        if n_subs <= 12:
+            df_ls = ws.sort_values(["subdivision_name","year"])
+            colour_col = "subdivision_name"
+        else:
+            df_ls = (ws.groupby(["division","year"])
+                     .agg(labour_share_pct=("labour_share_pct","mean"))
+                     .reset_index())
+            colour_col = "division"
+        fig = px.line(df_ls, x="year", y="labour_share_pct",
+                      color=colour_col, markers=True,
+                      labels={"labour_share_pct":"Labour share (%)","year":"Year",colour_col:""})
+        fig.add_hline(y=50, line_dash="dot", line_color="lightgrey", annotation_text="50%")
+        fig.update_layout(yaxis_range=[0,100], height=420, legend_title="",
+                          legend=dict(orientation="h", y=-0.3, font_size=10))
+        st.plotly_chart(fig, use_container_width=True)
+        note = "subdivision" if n_subs <= 12 else "division (averaged)"
+        lvl_note = " -- parent subdivision shown" if level_choice == 3 else ""
+        st.caption(f"ABS 8155.0 DO001, 2022-2024 ({note} level{lvl_note})")
+    else:
+        st.info("No labour share data for this selection.")
+
+st.divider()
+st.caption(
+    "Data: ABS 8165.0 (Counts of Australian Businesses, Jun 2021-2025) and "
+    "ABS 8155.0 (Australian Industry, 2023-24). "
+    "Run `python fetch_abs_business_data.py` to refresh from local ABS Data Manual/ files."
+)
