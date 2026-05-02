@@ -134,7 +134,16 @@ with col3:
 # --- Footer ---
 st.markdown("<br>", unsafe_allow_html=True)
 st.divider()
+
+import datetime, subprocess as _sp
+_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S AEST")
+try:
+    _commit = _sp.check_output(["git","rev-parse","--short","HEAD"], stderr=_sp.DEVNULL).decode().strip()
+except Exception:
+    _commit = "unknown"
+
 st.caption(
     "🏴‍☠️ IALA Policy Toolkit | Impact Analysis Lord Admiralty | "
     "A Vibecoding Club Project | admiral@iala.ahoy | 1800-AHOY-IALA"
 )
+st.caption(f"🕑 Page rendered: {_now} | git: {_commit}")
