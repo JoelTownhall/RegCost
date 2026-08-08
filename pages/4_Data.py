@@ -1,6 +1,6 @@
 """
-IALA Policy Toolkit — Page 4: Economic Data Dashboard
-======================================================
+RegCost — Page 4: Economic Data Dashboard
+==========================================
 Select ANZSIC industries at the top of the page, then see:
   1. Snapshot — latest value of every indicator + direction + interpretation
   2. Data Explorer — time series and breakdowns for deeper investigation
@@ -13,23 +13,17 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils.auth import check_auth
-from utils.pirates import render_pirate_robot
-
 st.set_page_config(
-    page_title="Economic Data | IALA Policy Toolkit",
-    page_icon="📊",
+    page_title="Economic Data | RegCost",
+    page_icon="📈",
     layout="wide",
 )
-check_auth()
 
 # --- Sidebar nav ---
 with st.sidebar:
-    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
+    st.markdown("### 📊 RegCost")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
-    st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
-    st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
     st.page_link("pages/4_Data.py", label="📈 Economic Data", use_container_width=True)
     st.markdown("---")
@@ -244,24 +238,6 @@ def _metric_card(label: str, value_str: str, delta_str, interp: str, colour: str
     icon = "✅" if colour == "good" else "⚠️" if colour == "warn" else "ℹ️"
     if interp:
         st.caption(f"{icon} {interp}")
-
-
-# ════════════════════════════════════════════════════════════════════════════
-# SIDEBAR (navigation only)
-# ════════════════════════════════════════════════════════════════════════════
-
-with st.sidebar:
-    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
-    st.markdown("---")
-    st.page_link("app.py",                              label="🏠 Home",                     use_container_width=True)
-    st.page_link("pages/1_Impact_Analysis_Helper.py",   label="📋 Impact Analysis Helper",   use_container_width=True)
-    st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
-    st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
-    st.page_link("pages/4_Data.py",                     label="📈 Economic Data",             use_container_width=True)
-    st.markdown("---")
-    render_pirate_robot(location="inline")
-    st.markdown("---")
-    st.caption("Data: ABS 8165.0 + ABS 8155.0\nRefresh: `python fetch_abs_business_data.py`")
 
 
 # ════════════════════════════════════════════════════════════════════════════
