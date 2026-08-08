@@ -1,15 +1,13 @@
 """
-IALA Policy Toolkit — Page 3: Regulatory Cost Analysis
-Existing RegCost charts app, integrated as a page.
+RegCost — Page 3: Regulatory Cost Analysis
 """
 import streamlit as st
 import pandas as pd
 
-from utils.auth import check_auth, logout
-from utils.pirates import render_pirate
+from utils.auth import check_auth
 
 st.set_page_config(
-    page_title="Regulatory Cost Analysis | IALA Policy Toolkit",
+    page_title="Regulatory Cost Analysis | RegCost",
     page_icon="📊",
     layout="wide",
 )
@@ -42,15 +40,11 @@ apply_custom_css()
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown("### 🏴‍☠️ IALA Policy Toolkit")
+    st.markdown("### 📊 RegCost")
     st.markdown("---")
     st.page_link("app.py", label="🏠 Home", use_container_width=True)
-    st.page_link("pages/1_Impact_Analysis_Helper.py", label="📋 Impact Analysis Helper", use_container_width=True)
-    st.page_link("pages/2_Regulatory_Burden_Helper.py", label="💰 Regulatory Burden Helper", use_container_width=True)
     st.page_link("pages/3_Regulatory_Cost_Analysis.py", label="📊 Regulatory Cost Analysis", use_container_width=True)
     st.page_link("pages/4_Data.py", label="📈 Economic Data", use_container_width=True)
-    st.markdown("---")
-    render_pirate(location="inline")
     st.markdown("---")
     st.header("Settings")
 
@@ -113,10 +107,6 @@ commitment to better regulation and harmonisation.
 Recommends regulatory reform as a key priority, targeting $10bn reduction
 in regulatory burden.
         """)
-
-    st.markdown("---")
-    if st.button("Log out", use_container_width=True):
-        logout()
 
 # Fixed year range bounds
 MIN_YEAR = 2005
