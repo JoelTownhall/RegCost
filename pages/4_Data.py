@@ -712,6 +712,34 @@ with tab_ls:
         st.info("No labour share data for this selection.")
 
 st.divider()
+st.subheader("⬇️ Download data")
+st.caption("CSV downloads reflect the industry selection at the top of the page.")
+_dl_sets = [
+    ("Business counts (division)", dc, "abs_division_counts"),
+    ("Entry / exit / survival (division)", ds, "abs_division_survival"),
+    ("Business counts (group/class)", bc, "abs_business_counts"),
+    ("Employment size distribution", ed, "abs_employment_dist"),
+    ("Labour / wage share", ws, "abs_wage_share"),
+    ("Survival (subdivision)", ss, "abs_subdivision_survival"),
+]
+_dl_cols = st.columns(3)
+_i = 0
+for _label, _df, _fname in _dl_sets:
+    if _df is not None and not _df.empty:
+        with _dl_cols[_i % 3]:
+            st.download_button(
+                f"{_label} (CSV)",
+                _df.to_csv(index=False).encode("utf-8"),
+                file_name=f"{_fname}.csv",
+                mime="text/csv",
+                key=f"dl_{_fname}",
+                use_container_width=True,
+            )
+        _i += 1
+if _i == 0:
+    st.info("Select at least one industry to enable downloads.")
+
+st.divider()
 st.caption(
     "Data: ABS 8165.0 (Counts of Australian Businesses, Jun 2021-2025) and "
     "ABS 8155.0 (Australian Industry, 2023-24). "

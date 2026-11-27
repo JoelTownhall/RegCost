@@ -523,6 +523,35 @@ else:
     st.info("Legislation and economic data required for this chart.")
 
 st.divider()
+st.subheader("⬇️ Download data")
+st.caption(
+    "The Chart 1 download reflects the options and year range selected above. "
+    "The full time-series file (~58 MB) is available in the repository under output/."
+)
+_dl = [
+    ("Chart 1 data (filtered legislation time series)",
+     filtered_ts_df if "filtered_ts_df" in globals() else pd.DataFrame(),
+     "regcost_chart1_filtered.csv"),
+    ("Legislation base data", leg_base_df, "webapp_data_base.csv"),
+    ("Industry statistics", industry_stats_df, "anzsic_industry_stats.csv"),
+    ("Economic indicators", econ_df, "economic_indicators.csv"),
+]
+_cols = st.columns(2)
+_n = 0
+for _label, _df, _fname in _dl:
+    if _df is not None and not _df.empty:
+        with _cols[_n % 2]:
+            st.download_button(
+                f"{_label} (CSV)",
+                _df.to_csv(index=False).encode("utf-8"),
+                file_name=_fname,
+                mime="text/csv",
+                key=f"dl_{_fname}",
+                use_container_width=True,
+            )
+        _n += 1
+
+st.divider()
 st.caption(
     "Data sources: Federal Register of Legislation, Australian Bureau of Statistics. "
     "Methodology based on British Columbia requirements counting and Mercatus Center RegData approach. "
